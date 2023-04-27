@@ -1,0 +1,16 @@
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "bat has a property for rated-temperature of Toleranced(-25.0 <= 30.0 <= 85.0)C")
+    (locators = D307)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "bat has a rated temperature Toleranced(-25.0 <= 30.0 <= 85.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L345/D295(relative))
