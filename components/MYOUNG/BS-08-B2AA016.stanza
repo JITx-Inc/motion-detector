@@ -104,7 +104,7 @@ public pcb-component int-component :
   property(self.y) = 15.7089999999999
   property(self.area) = 357.631093999998
   property(self.case) = "SMD"
-  property(self.rated-temperature) = Toleranced(30.0, 85.0, -25.0)
+  property(self.rated-temperature) = min-max(-25.0, 85.0)
 
 
 

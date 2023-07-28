@@ -10,6 +10,7 @@ defpackage ocdb/designs/nrf-motion:
   import ocdb/utils/generator-utils
   import ocdb/utils/design-vars
   import ocdb/artwork/jitx-logo
+  import ocdb/modules/amplifiers
 
   import ocdb/components/samtec/FTSH-105-01-DV
 
@@ -17,7 +18,7 @@ val board-shape = Rectangle(45.0, 20.0)
 
 OPTIMIZE-FOR = ["area"]
 DESIGN-QUANTITY = 100
-OPERATING-TEMPERATURE = min-max(-40.0 90.0)
+OPERATING-TEMPERATURE = min-max(0.0 50.0)
 
 
 ; Setup the board
@@ -144,8 +145,9 @@ pcb-module RF-frontend :
 pcb-module nrf-motion :
 
   ; Coin Cell 
-  inst bat : components/MYOUNG/BS-08-B2AA016/component  
-  setup-supply-rail(bat.vout, min-max(2.8, 3.0))
+  inst bat : components/MYOUNG/BS-08-B2AA016/component
+  val vbat-range = min-max(2.8, 3.0)
+  setup-supply-rail(bat.vout, vbat-range)
 
   inst mcu : nRF-mcu 
 
@@ -154,9 +156,10 @@ pcb-module nrf-motion :
 
   ; MCU and Accelerometer (XL) are in the same power domain because 
   ;   the XL will generate a WAKE signal to wake the MCU out of 
-  ;   sleep.
+  ;   sleep. 
   net always-on (bat.vout, xl.power, mcu.supply)
-  
+  net (xl.vio, self.VDD)
+
   ; Connect the XL to the NRF's i2c bus  
   net (mcu.i2c-bus, xl.i2c)
   ;  We use the interrupt from the XL to wake the 
@@ -183,10 +186,14 @@ pcb-module nrf-motion :
   ;   and give it is own symbol for clarity. 
   net VDDA (load-sw.vout.vdd)
   symbol(VDDA) = ocdb/utils/symbols/supply-sym
+  property(VDDA.voltage) = vbat-range
 
   ; Analog Interface
   inst mic : components/ALLPOWER-ShenZhen-Quan-Li-Semiconductor-/AP3722AT/component
-  inst amp :  ocdb/modules/amplifiers/microphone-preamp
+  val OpAmpType = components/Microchip-Tech/MCP6001T-EOT/component
+  val bandpass = BandpassConfig(34.0, 100.0, 20.0e3)
+  val preampType = ocdb/modules/amplifiers/microphone-preamp(OpAmpType, bandpass) 
+  inst amp : preampType
 
   schematic-group([mic, amp]) = audio
 
@@ -208,7 +215,7 @@ pcb-module nrf-motion :
   val M2-clear = 4.5 ; mm diam
 
   inst MNT : mounting-hole(radius(M2-hole), radius(M2-clear))[2]
-  inst jitx : logo()
+  inst jitx : logo(3.0)
 
   
   ; 6.6, 2.8 -> 23, 10
@@ -229,8 +236,6 @@ pcb-module nrf-motion :
     cPt = sPt + Point(w / 2.0, (- h / 2.0)) 
     copper-pour(LayerIndex(1), isolate = 0.2) = Rectangle(w, h, loc(cPt))
 
-    ; copper-pour(LayerIndex(1), isolate = 0.2) = board-shape
-
   geom(VDDA): 
     ; This is not great :(
     val sPt = center(pose(board-shape)) - Point(width(board-shape) / 2.0, (- height(board-shape) / 2.0))
@@ -248,8 +253,6 @@ pcb-module nrf-motion :
     
     cPt = Point(-1.5, 5.0)
     copper-pour(LayerIndex(2), isolate = 0.2) = Rectangle(10.0, 10.0, loc(cPt))
-
-
 
   ; Run the schematic review
   check-design(self)

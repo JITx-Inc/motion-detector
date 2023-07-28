@@ -956,6 +956,7 @@ public pcb-module component:
 
   public inst uFL : int-component
   net (sig, uFL.SIG)
+  net (gnd, uFL.GND0)
 
   eval-when not connected?(uFL.GND1):
     net (uFL.GND0, uFL.GND1)

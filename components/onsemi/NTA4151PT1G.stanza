@@ -129,6 +129,8 @@ public pcb-component component :
   property(self.y) = 1.70000000000005
   property(self.area) = 2.03999999999994
   property(self.case) = "-"
+  ; Junction Temperature Range
+  property(self.temperature-range) = min-max(-55.0, 150.0)
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; User Properties

@@ -8,3 +8,4 @@ package components/MYOUNG/BS-08-B2AA016 defined-in "components/MYOUNG/BS-08-B2AA
 package components/onsemi/NTA4151PT1G defined-in "components/onsemi/NTA4151PT1G.stanza"
 package components/Bourns/_1130-272K-RC defined-in "components/Bourns/_1130-272K-RC.stanza"
 package components/HRS/U-FL-R-SMT-10- defined-in "components/HRS/U-FL-R-SMT-10-.stanza"
+package components/Microchip-Tech/MCP6001T-EOT defined-in "components/Microchip-Tech/MCP6001T-EOT.stanza"

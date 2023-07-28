@@ -44,23 +44,23 @@ pcb-symbol sym-AP3722AT :
   pin VDD at Point(-6.3500127000254, 1.27000254000508) with :
     direction = Left
     length = 2.54000508001016
-    ;number-size = 1.0
-    ;name-size = 1.0
+    number-size = 1.0
+    name-size = 1.0
   pin GND0 at Point(-6.3500127000254, -1.27000254000508) with :
     direction = Left
     length = 2.54000508001016
-    ;number-size = 1.0
-    ;name-size = 1.0
+    number-size = 1.0
+    name-size = 1.0
   pin GND1 at Point(6.3500127000254, -1.27000254000508) with :
     direction = Right
     length = 2.54000508001016
-    ;number-size = 1.0
-    ;name-size = 1.0
+    number-size = 1.0
+    name-size = 1.0
   pin OUT at Point(6.3500127000254, 1.27000254000508) with :
     direction = Right
     length = 2.54000508001016
-    ;number-size = 1.0
-    ;name-size = 1.0
+    number-size = 1.0
+    name-size = 1.0
 
   layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.27000254000508), "", TrueTypeFont, false, false)
   layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.27000254000508), "", TrueTypeFont, false, false)
@@ -95,9 +95,7 @@ pcb-component int-component :
   property(self.area) = 9.6768
   property(self.case) = "SMD-4P,2.2x3.8mm"
   property(self.\|vendor_part_numbers.lcsc|) = "C918198"
-  property(self.minimum_quantity) = 5
-  property(self.price) = 0.141323529
-  property(self.stock) = 1042
+  property(self.temperature-range) = min-max(-40.0, 105.0)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; User Provided Modifications
@@ -106,7 +104,7 @@ public pcb-module component:
   pin out
   port vin : power
 
-  inst mic : int-component
+  public inst mic : int-component
   net (mic.OUT, out)
 
   net (vin.vdd, mic.VDD)
@@ -119,5 +117,7 @@ public pcb-module component:
   ; There are two grounds for the casing. I'm leaving 
   ;   the option open for the user to connected GND1 differently
   ;   but if they don't then it will short to GND0
+  ; NOTE: This only works because GND1 is not connected in this 
+  ;   module. If you add a connection here this will not work. 
   eval-when not connected?(mic.GND1):
     net (mic.GND0, mic.GND1)
