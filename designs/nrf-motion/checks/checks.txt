@@ -1,4 +1,4 @@
-open-components-database/components/nordic/nRF52840.stanza:203.2: Check 'connected' passed.
+open-components-database/components/nordic/nRF52840.stanza:205.2: Check 'connected' passed.
   Defined at open-components-database/utils/checks.stanza:150.7.
   open-components-database/utils/checks.stanza:178.2: Assertion passed:
     (name = "Connected pin checks")
@@ -6,9 +6,9 @@ open-components-database/components/nordic/nRF52840.stanza:203.2: Check 'connect
     (category = "Connected Checks")
     (subcheck-description = "Verify the design object is connected")
     (message = "Object mcu.nrf.mcu.SWDCLK is connected")
-    (locators = L646119/D646022(relative))
+    (locators = L250027/D249930(relative))
 
-open-components-database/components/nordic/nRF52840.stanza:204.2: Check 'connected' passed.
+open-components-database/components/nordic/nRF52840.stanza:206.2: Check 'connected' passed.
   Defined at open-components-database/utils/checks.stanza:150.7.
   open-components-database/utils/checks.stanza:178.2: Assertion passed:
     (name = "Connected pin checks")
@@ -16,7 +16,7 @@ open-components-database/components/nordic/nRF52840.stanza:204.2: Check 'connect
     (category = "Connected Checks")
     (subcheck-description = "Verify the design object is connected")
     (message = "Object mcu.nrf.mcu.SWDIO is connected")
-    (locators = L646120/D646022(relative))
+    (locators = L250028/D249930(relative))
 
 open-components-database/utils/passive-checks/resonator-checks.stanza:24.4: Check 'resonator-frequency-check' passed.
   Defined at open-components-database/utils/passive-checks/resonator-checks.stanza:55.7.
@@ -26,14 +26,14 @@ open-components-database/utils/passive-checks/resonator-checks.stanza:24.4: Chec
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.hfosc has properties crystal-resonator")
     (message = "mcu.nrf.hfosc has properties: crystal-resonator")
-    (locators = L625335/D623883(relative), D623883)
+    (locators = L228161/D226700(relative), D226700)
   open-components-database/utils/passive-checks/resonator-checks.stanza:59.2: Assertion passed:
     (name = "mcu.nrf.hfosc")
     (description = "mcu.nrf.hfosc crystal resonator properties")
     (category = "Component Checks")
     (subcheck-description = "Check the crystal has the correct frequency which meets the design specs")
     (message = "Crystal mcu.nrf.hfosc does have the correct frequency 32000000.0 to meet design specs 32000000.0")
-    (locators = L625335/D623883(relative))
+    (locators = L228161/D226700(relative))
 
 open-components-database/utils/passive-checks/resonator-checks.stanza:25.4: Check 'resonator-gain-check' passed.
   Defined at open-components-database/utils/passive-checks/resonator-checks.stanza:73.7.
@@ -43,14 +43,14 @@ open-components-database/utils/passive-checks/resonator-checks.stanza:25.4: Chec
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.hfosc has properties crystal-resonator")
     (message = "mcu.nrf.hfosc has properties: crystal-resonator")
-    (locators = L625335/D623883(relative), D623883)
+    (locators = L228161/D226700(relative), D226700)
   open-components-database/utils/passive-checks/resonator-checks.stanza:79.2: Assertion passed:
     (name = "mcu.nrf.hfosc")
     (description = "mcu.nrf.hfosc crystal resonator properties")
     (category = "Component Checks")
     (subcheck-description = "Check the crystal circuit gain meets the design criteria for max-critical-gain")
     (message = "Crystal mcu.nrf.hfosc gain 0.00114587115470181 meets the design criteria for max-critical-gain 0.0035")
-    (locators = L625335/D623883(relative))
+    (locators = L228161/D226700(relative))
 
 open-components-database/utils/passive-checks/resonator-checks.stanza:26.4: Check 'resonator-drive-check' passed.
   Defined at open-components-database/utils/passive-checks/resonator-checks.stanza:93.7.
@@ -60,17 +60,38 @@ open-components-database/utils/passive-checks/resonator-checks.stanza:26.4: Chec
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.hfosc has properties crystal-resonator")
     (message = "mcu.nrf.hfosc has properties: crystal-resonator")
-    (locators = L625335/D623883(relative), D623883)
+    (locators = L228161/D226700(relative), D226700)
   open-components-database/utils/passive-checks/resonator-checks.stanza:97.2: Assertion passed:
     (name = "mcu.nrf.hfosc")
     (description = "mcu.nrf.hfosc crystal resonator properties")
     (category = "Component Checks")
     (subcheck-description = "Check the crystal resonator circuit has the correct drive-level property to match crystal")
     (message = "Crystal circuit mcu.nrf.hfosc has the correct drive-level property 0.0001 that matches the crystal spec 0.0001")
-    (locators = L625335/D623883(relative))
+    (locators = L228161/D226700(relative))
 
-open-components-database/utils/passive-checks/resonator-checks.stanza:27.4: Error during check execution. false
-
+open-components-database/utils/passive-checks/resonator-checks.stanza:27.4: Check 'resonator-pullability-check' passed.
+  Defined at open-components-database/utils/passive-checks/resonator-checks.stanza:111.7.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+    (name = "Crystal Resonator Checks")
+    (description = "mcu.nrf.cap data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "mcu.nrf.cap has properties tolerance, capacitance")
+    (message = "mcu.nrf.cap has properties: tolerance, capacitance")
+    (locators = L228196/D226700(relative), D226700)
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+    (name = "Crystal Resonator Checks")
+    (description = "mcu.nrf.hfosc data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "mcu.nrf.hfosc has properties crystal-resonator")
+    (message = "mcu.nrf.hfosc has properties: crystal-resonator")
+    (locators = L228161/D226700(relative), D226700)
+  open-components-database/utils/passive-checks/resonator-checks.stanza:127.2: Assertion passed:
+    (name = "mcu.nrf.hfosc")
+    (description = "mcu.nrf.hfosc crystal resonator properties")
+    (category = "Component Checks")
+    (subcheck-description = "Check the crystal frequency tolerance with pullability meets the design specification")
+    (message = "Crystal mcu.nrf.cap has the correct frequency tolerance 320.0 that meets the design spec 960.0")
+    (locators = L228196/D226700(relative))
 
 open-components-database/components/st-microelectronics/LIS3DH.stanza:70.2: Check 'connected' passed.
   Defined at open-components-database/utils/checks.stanza:150.7.
@@ -80,34 +101,111 @@ open-components-database/components/st-microelectronics/LIS3DH.stanza:70.2: Chec
     (category = "Connected Checks")
     (subcheck-description = "Verify the design object is connected")
     (message = "Objects xl.acc.RES, xl.acc.GND are connected")
-    (locators = L646782/D646022(relative), L646778/D646022(relative))
+    (locators = L250690/D249930(relative), L250686/D249930(relative))
 
-open-components-database/components/st-microelectronics/LIS3DH.stanza:71.2: Check 'connected' passed.
-  Defined at open-components-database/utils/checks.stanza:150.7.
-  open-components-database/utils/checks.stanza:178.2: Assertion passed:
-    (name = "Connected pin checks")
-    (description = "Check that the object(s) are connected")
-    (category = "Connected Checks")
-    (subcheck-description = "Verify the design object is connected")
-    (message = "Object xl.acc.VDD-IO is connected")
-    (locators = L646787/D646022(relative))
+open-components-database/modules/amplifiers.stanza:150.4: Check 'within-accepted?' passed.
+  Defined at open-components-database/modules/amplifiers.stanza:86.7.
+  open-components-database/modules/amplifiers.stanza:89.2: Assertion passed:
+    (name = "Rf")
+    (description = "Check that %_ is within an acceptable range")
+    (category = "Value checks")
+    (subcheck-description = "Check that a value is within a given range")
+    (message = "Range Toleranced(51000.0 <= 51000.0 <= 51000.0) is correctly within Toleranced(1000.0 <= 500500.0 <= 1000000.0)")
+    (locators = )
 
-open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' failed.
+open-components-database/modules/amplifiers.stanza:151.4: Check 'within-accepted?' passed.
+  Defined at open-components-database/modules/amplifiers.stanza:86.7.
+  open-components-database/modules/amplifiers.stanza:89.2: Assertion passed:
+    (name = "Rg")
+    (description = "Check that %_ is within an acceptable range")
+    (category = "Value checks")
+    (subcheck-description = "Check that a value is within a given range")
+    (message = "Range Toleranced(1500.0 <= 1500.0 <= 1500.0) is correctly within Toleranced(1000.0 <= 500500.0 <= 1000000.0)")
+    (locators = )
+
+open-components-database/modules/amplifiers.stanza:167.4: Check 'within-accepted?' passed.
+  Defined at open-components-database/modules/amplifiers.stanza:86.7.
+  open-components-database/modules/amplifiers.stanza:89.2: Assertion passed:
+    (name = "Cf")
+    (description = "Check that %_ is within an acceptable range")
+    (category = "Value checks")
+    (subcheck-description = "Check that a value is within a given range")
+    (message = "Range Toleranced(1.5e-10 <= 1.5e-10 <= 1.5e-10) is correctly within Toleranced(9.9999999999584e-12 <= 5.00005e-07 <= 1.0e-06)")
+    (locators = )
+
+open-components-database/modules/amplifiers.stanza:168.4: Check 'within-accepted?' passed.
+  Defined at open-components-database/modules/amplifiers.stanza:86.7.
+  open-components-database/modules/amplifiers.stanza:89.2: Assertion passed:
+    (name = "Cin")
+    (description = "Check that %_ is within an acceptable range")
+    (category = "Value checks")
+    (subcheck-description = "Check that a value is within a given range")
+    (message = "Range Toleranced(1.0e-06 <= 1.0e-06 <= 1.0e-06) is correctly within Toleranced(9.9999999999584e-12 <= 5.00005e-07 <= 1.0e-06)")
+    (locators = )
+
+open-components-database/modules/amplifiers.stanza:186.4: Check 'slew-rate-check' passed.
+  Defined at open-components-database/modules/amplifiers.stanza:69.0.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+    (name = "Has \'slew-rate\' Property?")
+    (description = "amp.opa.IC data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "amp.opa.IC has properties slew-rate")
+    (message = "amp.opa.IC has properties: slew-rate")
+    (locators = L250858/D249930(relative), D226504)
+  open-components-database/modules/amplifiers.stanza:72.2: Assertion passed:
+    (name = "Amplifier Slew Rate")
+    (description = "Check that this amplifier has a slew rate that is sufficient to drive expected frequencies of interest")
+    (category = "Component Checks")
+    (subcheck-description = "Check amplifier Slew Rate (V/S)")
+    (message = "Slew-Rate OK: 4000000.0 > 263893.782901543")
+    (locators = L231317/D231242(relative))
+
+open-components-database/modules/amplifiers.stanza:223.4: Check 'within-accepted?' passed.
+  Defined at open-components-database/modules/amplifiers.stanza:86.7.
+  open-components-database/modules/amplifiers.stanza:89.2: Assertion passed:
+    (name = "Vref")
+    (description = "Check that %_ is within an acceptable range")
+    (category = "Value checks")
+    (subcheck-description = "Check that a value is within a given range")
+    (message = "Range Toleranced(1.47029702970297 <= 1.5 <= 1.53030303030303) is correctly within Toleranced(1.4 <= 1.5 <= 1.6)")
+    (locators = )
+
+open-components-database/modules/amplifiers.stanza:236.4: Check 'within-accepted?' passed.
+  Defined at open-components-database/modules/amplifiers.stanza:86.7.
+  open-components-database/modules/amplifiers.stanza:89.2: Assertion passed:
+    (name = "Signal Offset")
+    (description = "Check that %_ is within an acceptable range")
+    (category = "Value checks")
+    (subcheck-description = "Check that a value is within a given range")
+    (message = "Range Toleranced(1.4356101610161 <= 1.5 <= 1.5649898989899) is correctly within Toleranced(1.4 <= 1.5 <= 1.6)")
+    (locators = )
+
+open-components-database/modules/amplifiers.stanza:248.4: Check 'within-accepted?' passed.
+  Defined at open-components-database/modules/amplifiers.stanza:86.7.
+  open-components-database/modules/amplifiers.stanza:89.2: Assertion passed:
+    (name = "Vref Rise Time (S)")
+    (description = "Check that %_ is within an acceptable range")
+    (category = "Value checks")
+    (subcheck-description = "Check that a value is within a given range")
+    (message = "Range Toleranced(0.00080784 <= 0.00102 <= 0.00123624) is correctly within Toleranced(9.99999999999998e-05 <= 0.00255 <= 0.005)")
+    (locators = )
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
   open-components-database/utils/checks.stanza:95.2: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "bat.holder has a property for rated-temperature of Toleranced(55.0 <= 30.0 <= 115.0)C")
-    (locators = D623679)
-  open-components-database/utils/checks.stanza:108.4: Assertion failed:
+    (message = "bat.holder has a property for rated-temperature of Toleranced(-25.0 <= 30.0 <= 85.0)C")
+    (locators = D226491)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "bat.holder does not have a rated temperature Toleranced(55.0 <= 30.0 <= 115.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L623815/D623745(relative))
+    (message = "bat.holder has a rated temperature Toleranced(-25.0 <= 30.0 <= 85.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L226632/D226562(relative))
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -117,17 +215,24 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' inc
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "tpHeader does not have the rated-temperature property attached")
-    (locators = D623839)
+    (locators = D226656)
 
-open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
-  open-components-database/utils/checks.stanza:95.2: Assertion incomplete:
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "mcu.nrf.mcu does not have the rated-temperature property attached")
-    (locators = D623730)
+    (message = "mcu.nrf.mcu has a property for rated-temperature of Toleranced(-40.0 <= 22.5 <= 85.0)C")
+    (locators = D226554)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "mcu.nrf.mcu has a rated temperature Toleranced(-40.0 <= 22.5 <= 85.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229288/D226562(relative))
 
 open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
   Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
@@ -137,21 +242,21 @@ open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'p
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
     (message = "Pin mcu.nrf.mcu.VDD[0] has the correct PowerPin property attached")
-    (locators = L626520/D623745(relative))
+    (locators = L229355/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[0]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has a correct voltage property")
     (message = "Pin mcu.nrf.mcu.VDD[0] has a voltage property of Toleranced(2.8 <= 2.9 <= 3.0)V")
-    (locators = L626520/D623745(relative))
+    (locators = L229355/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[0]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks")
     (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
     (message = "voltage Toleranced(2.8 <= 2.9 <= 3.0)V on pin mcu.nrf.mcu.VDD[0] is within the recommended operating range Toleranced(1.7 <= 3.0 <= 3.6)V")
-    (locators = L626520/D623745(relative))
+    (locators = L229355/D226562(relative))
 
 open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
   Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
@@ -161,21 +266,21 @@ open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'p
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
     (message = "Pin mcu.nrf.mcu.VDD[1] has the correct PowerPin property attached")
-    (locators = L626521/D623745(relative))
+    (locators = L229356/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[1]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has a correct voltage property")
     (message = "Pin mcu.nrf.mcu.VDD[1] has a voltage property of Toleranced(2.8 <= 2.9 <= 3.0)V")
-    (locators = L626521/D623745(relative))
+    (locators = L229356/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[1]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks")
     (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
     (message = "voltage Toleranced(2.8 <= 2.9 <= 3.0)V on pin mcu.nrf.mcu.VDD[1] is within the recommended operating range Toleranced(1.7 <= 3.0 <= 3.6)V")
-    (locators = L626521/D623745(relative))
+    (locators = L229356/D226562(relative))
 
 open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
   Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
@@ -185,21 +290,21 @@ open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'p
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
     (message = "Pin mcu.nrf.mcu.VDD[2] has the correct PowerPin property attached")
-    (locators = L626522/D623745(relative))
+    (locators = L229357/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[2]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has a correct voltage property")
     (message = "Pin mcu.nrf.mcu.VDD[2] has a voltage property of Toleranced(2.8 <= 2.9 <= 3.0)V")
-    (locators = L626522/D623745(relative))
+    (locators = L229357/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[2]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks")
     (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
     (message = "voltage Toleranced(2.8 <= 2.9 <= 3.0)V on pin mcu.nrf.mcu.VDD[2] is within the recommended operating range Toleranced(1.7 <= 3.0 <= 3.6)V")
-    (locators = L626522/D623745(relative))
+    (locators = L229357/D226562(relative))
 
 open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
   Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
@@ -209,21 +314,21 @@ open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'p
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
     (message = "Pin mcu.nrf.mcu.VDD[3] has the correct PowerPin property attached")
-    (locators = L626523/D623745(relative))
+    (locators = L229358/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[3]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has a correct voltage property")
     (message = "Pin mcu.nrf.mcu.VDD[3] has a voltage property of Toleranced(2.8 <= 2.9 <= 3.0)V")
-    (locators = L626523/D623745(relative))
+    (locators = L229358/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[3]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks")
     (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
     (message = "voltage Toleranced(2.8 <= 2.9 <= 3.0)V on pin mcu.nrf.mcu.VDD[3] is within the recommended operating range Toleranced(1.7 <= 3.0 <= 3.6)V")
-    (locators = L626523/D623745(relative))
+    (locators = L229358/D226562(relative))
 
 open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
   Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
@@ -233,21 +338,21 @@ open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'p
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
     (message = "Pin mcu.nrf.mcu.VDD[4] has the correct PowerPin property attached")
-    (locators = L626524/D623745(relative))
+    (locators = L229359/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[4]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has a correct voltage property")
     (message = "Pin mcu.nrf.mcu.VDD[4] has a voltage property of Toleranced(2.8 <= 2.9 <= 3.0)V")
-    (locators = L626524/D623745(relative))
+    (locators = L229359/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDD[4]")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks")
     (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
     (message = "voltage Toleranced(2.8 <= 2.9 <= 3.0)V on pin mcu.nrf.mcu.VDD[4] is within the recommended operating range Toleranced(1.7 <= 3.0 <= 3.6)V")
-    (locators = L626524/D623745(relative))
+    (locators = L229359/D226562(relative))
 
 open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
   Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
@@ -257,21 +362,21 @@ open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'p
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
     (message = "Pin mcu.nrf.mcu.VDDH has the correct PowerPin property attached")
-    (locators = L626525/D623745(relative))
+    (locators = L229360/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDDH")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has a correct voltage property")
     (message = "Pin mcu.nrf.mcu.VDDH has a voltage property of Toleranced(2.8 <= 2.9 <= 3.0)V")
-    (locators = L626525/D623745(relative))
+    (locators = L229360/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
     (name = "mcu.nrf.mcu.VDDH")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks")
     (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
     (message = "voltage Toleranced(2.8 <= 2.9 <= 3.0)V on pin mcu.nrf.mcu.VDDH is within the recommended operating range Toleranced(1.7 <= 3.0 <= 3.6)V")
-    (locators = L626525/D623745(relative))
+    (locators = L229360/D226562(relative))
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -281,14 +386,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D625137)
+    (locators = D227954)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L626942/D623745(relative))
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229777/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -297,8 +402,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L626942/D623745(relative))
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229777/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -307,8 +412,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L626942/D623745(relative), D623883)
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229777/D226562(relative), D226700)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -317,8 +422,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L626942/D623745(relative), D623883)
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229777/D226562(relative), D226700)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -328,14 +433,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D625165)
+    (locators = D227982)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L626948/D623745(relative))
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229783/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -344,8 +449,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L626948/D623745(relative))
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229783/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -354,8 +459,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L626948/D623745(relative), D623883)
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229783/D226562(relative), D226700)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -364,8 +469,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L626948/D623745(relative), D623883)
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229783/D226562(relative), D226700)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -375,14 +480,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D625180)
+    (locators = D228006)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L626954/D623745(relative))
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229789/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -391,8 +496,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L626954/D623745(relative))
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229789/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -401,8 +506,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L626954/D623745(relative), D623883)
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229789/D226562(relative), D226700)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -411,116 +516,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L626954/D623745(relative), D623883)
-
-open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
-  Defined at open-components-database/utils/checks.stanza:91.0.
-  open-components-database/utils/checks.stanza:95.2: Assertion passed:
-    (name = "Rated temperature check")
-    (description = "Check rated temperatures for components versus design constraints")
-    (category = "Component Checks (Data)")
-    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
-    (locators = D625195)
-  open-components-database/utils/checks.stanza:108.4: Assertion passed:
-    (name = "Rated temperature check")
-    (description = "Check rated temperatures for components versus design constraints")
-    (category = "Component Checks")
-    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L626960/D623745(relative))
-
-open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
-  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:67.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 25.0 <= 105.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L626960/D623745(relative))
-
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
-  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap data consistency")
-    (category = "Component Checks (Data)")
-    (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L626960/D623745(relative), D623883)
-
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
-  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap data consistency")
-    (category = "Component Checks (Data)")
-    (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L626960/D623745(relative), D623883)
-
-open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
-  Defined at open-components-database/utils/checks.stanza:91.0.
-  open-components-database/utils/checks.stanza:95.2: Assertion passed:
-    (name = "Rated temperature check")
-    (description = "Check rated temperatures for components versus design constraints")
-    (category = "Component Checks (Data)")
-    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
-    (locators = D625210)
-  open-components-database/utils/checks.stanza:108.4: Assertion passed:
-    (name = "Rated temperature check")
-    (description = "Check rated temperatures for components versus design constraints")
-    (category = "Component Checks")
-    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L626966/D623745(relative))
-
-open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
-  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:67.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 25.0 <= 105.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L626966/D623745(relative))
-
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
-  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap data consistency")
-    (category = "Component Checks (Data)")
-    (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626966/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the worst-case derating voltage 14.375V")
-    (locators = L626966/D623745(relative))
-
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
-  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap data consistency")
-    (category = "Component Checks (Data)")
-    (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626966/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the nominal derating voltage 10.625V")
-    (locators = L626966/D623745(relative))
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229789/D226562(relative), D226700)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -530,14 +527,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D625234)
+    (locators = D228030)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L626972/D623745(relative))
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229795/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -546,42 +543,75 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L626972/D623745(relative))
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229795/D226562(relative))
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626972/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the worst-case derating voltage 28.75V")
-    (locators = L626972/D623745(relative))
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229795/D226562(relative), D226700)
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626972/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229795/D226562(relative), D226700)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 15.0 <= 85.0)C")
+    (locators = D228045)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 15.0 <= 85.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229801/D226562(relative))
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
+  open-components-database/utils/passive-checks/capacitor-checks.stanza:67.2: Assertion passed:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the nominal derating voltage 21.25V")
-    (locators = L626972/D623745(relative))
+    (subcheck-description = "Check rated temperature meets the design requirements.")
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 15.0 <= 85.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229801/D226562(relative))
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
+    (name = "Capacitor Checks")
+    (description = "mcu.nrf.cap data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229801/D226562(relative), D226700)
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
+    (name = "Capacitor Checks")
+    (description = "mcu.nrf.cap data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229801/D226562(relative), D226700)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -591,14 +621,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D625249)
+    (locators = D228060)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L626978/D623745(relative))
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229807/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -607,42 +637,28 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L626978/D623745(relative))
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229807/D226562(relative))
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626978/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the worst-case derating voltage 28.75V")
-    (locators = L626978/D623745(relative))
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229807/D226562(relative), D226700)
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626978/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the nominal derating voltage 21.25V")
-    (locators = L626978/D623745(relative))
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229807/D226562(relative), D226700)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -652,14 +668,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D625264)
+    (locators = D228075)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L626984/D623745(relative))
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229813/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -668,42 +684,28 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L626984/D623745(relative))
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229813/D226562(relative))
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626984/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the worst-case derating voltage 28.75V")
-    (locators = L626984/D623745(relative))
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229813/D226562(relative), D226700)
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626984/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the nominal derating voltage 21.25V")
-    (locators = L626984/D623745(relative))
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229813/D226562(relative), D226700)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -712,15 +714,15 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
-    (locators = D625279)
+    (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
+    (locators = D228090)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L626990/D623745(relative))
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229819/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -729,42 +731,75 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 25.0 <= 105.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L626990/D623745(relative))
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229819/D226562(relative))
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626990/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "mcu.nrf.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the worst-case derating voltage 9.2V")
-    (locators = L626990/D623745(relative))
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229819/D226562(relative), D226700)
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap has properties: rated-voltage, operating-point")
-    (locators = L626990/D623745(relative), D623883)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229819/D226562(relative), D226700)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
+    (locators = D228105)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229825/D226562(relative))
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
+  open-components-database/utils/passive-checks/capacitor-checks.stanza:67.2: Assertion passed:
     (name = "Capacitor Checks")
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "mcu.nrf.cap peak voltage 3.0V is below the nominal derating voltage 6.8V")
-    (locators = L626990/D623745(relative))
+    (subcheck-description = "Check rated temperature meets the design requirements.")
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229825/D226562(relative))
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
+    (name = "Capacitor Checks")
+    (description = "mcu.nrf.cap data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229825/D226562(relative), D226700)
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
+    (name = "Capacitor Checks")
+    (description = "mcu.nrf.cap data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
+    (message = "mcu.nrf.cap is missing properties: rated-voltage")
+    (locators = L229825/D226562(relative), D226700)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -774,7 +809,7 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' inc
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.nrf.hfosc does not have the rated-temperature property attached")
-    (locators = D625314)
+    (locators = D228140)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -784,14 +819,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D625352)
+    (locators = D228178)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627012/D623745(relative))
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229847/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -800,8 +835,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L627012/D623745(relative))
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229847/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -810,8 +845,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L627012/D623745(relative), D623883)
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229847/D226562(relative), D226700)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -820,8 +855,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L627012/D623745(relative), D623883)
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229847/D226562(relative), D226700)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -831,14 +866,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.nrf.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D625366)
+    (locators = D228192)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627018/D623745(relative))
+    (message = "mcu.nrf.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229853/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -847,8 +882,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mcu.nrf.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L627018/D623745(relative))
+    (message = "mcu.nrf.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L229853/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -857,8 +892,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L627018/D623745(relative), D623883)
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229853/D226562(relative), D226700)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -867,8 +902,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mcu.nrf.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.nrf.cap has properties rated-voltage, operating-point")
-    (message = "mcu.nrf.cap is missing properties: operating-point")
-    (locators = L627018/D623745(relative), D623883)
+    (message = "mcu.nrf.cap is missing properties: rated-voltage, operating-point")
+    (locators = L229853/D226562(relative), D226700)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -878,14 +913,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.rs.r[0] has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
-    (locators = D626085)
+    (locators = D228911)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.rs.r[0] has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627049/D623745(relative))
+    (message = "mcu.rs.r[0] has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229884/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' passed.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -895,14 +930,14 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.rs.r[0] has properties operating-point, resistance, rated-power")
     (message = "mcu.rs.r[0] has properties: operating-point, resistance, rated-power")
-    (locators = L627049/D623745(relative), D626084)
+    (locators = L229884/D226562(relative), D228910)
   open-components-database/utils/passive-checks/resistor-checks.stanza:52.2: Assertion passed:
     (name = "Resistor Checks")
     (description = "mcu.rs.r[0] resistor properties")
     (category = "Component Checks")
     (subcheck-description = "Check that resistor power derating meets the design requirements")
-    (message = "Derated power for mcu.rs.r[0]  meets the design requirements: 0.00109756097560976W < 0.054W")
-    (locators = L627049/D623745(relative))
+    (message = "Derated power for mcu.rs.r[0]  meets the design requirements: 0.00109756097560976W < 0.0378W")
+    (locators = L229884/D226562(relative))
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -912,14 +947,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.rs.r[1] has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
-    (locators = D626085)
+    (locators = D228911)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.rs.r[1] has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627053/D623745(relative))
+    (message = "mcu.rs.r[1] has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229888/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' passed.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -929,16 +964,16 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.rs.r[1] has properties operating-point, resistance, rated-power")
     (message = "mcu.rs.r[1] has properties: operating-point, resistance, rated-power")
-    (locators = L627053/D623745(relative), D626084)
+    (locators = L229888/D226562(relative), D228910)
   open-components-database/utils/passive-checks/resistor-checks.stanza:52.2: Assertion passed:
     (name = "Resistor Checks")
     (description = "mcu.rs.r[1] resistor properties")
     (category = "Component Checks")
     (subcheck-description = "Check that resistor power derating meets the design requirements")
-    (message = "Derated power for mcu.rs.r[1]  meets the design requirements: 0.00109756097560976W < 0.054W")
-    (locators = L627053/D623745(relative))
+    (message = "Derated power for mcu.rs.r[1]  meets the design requirements: 0.00109756097560976W < 0.0378W")
+    (locators = L229888/D226562(relative))
 
-open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' failed.
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
   open-components-database/utils/checks.stanza:95.2: Assertion passed:
     (name = "Rated temperature check")
@@ -946,14 +981,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' fai
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.rgb.led has a property for rated-temperature of Toleranced(-30.0 <= 27.5 <= 85.0)C")
-    (locators = D623568)
-  open-components-database/utils/checks.stanza:108.4: Assertion failed:
+    (locators = D226383)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.rgb.led does not have a rated temperature Toleranced(-30.0 <= 27.5 <= 85.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627110/D623745(relative))
+    (message = "mcu.rgb.led has a rated temperature Toleranced(-30.0 <= 27.5 <= 85.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229945/D226562(relative))
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -963,14 +998,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.rgb.rid has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
-    (locators = D626317)
+    (locators = D229143)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.rgb.rid has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627116/D623745(relative))
+    (message = "mcu.rgb.rid has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229951/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' incomplete.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -980,7 +1015,7 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.rgb.rid has properties operating-point, resistance, rated-power")
     (message = "mcu.rgb.rid is missing properties: operating-point")
-    (locators = L627116/D623745(relative), D626276)
+    (locators = L229951/D226562(relative), D229102)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -990,14 +1025,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mcu.rgb.rid has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
-    (locators = D626333)
+    (locators = D229159)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.rgb.rid has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627122/D623745(relative))
+    (message = "mcu.rgb.rid has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229957/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' incomplete.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -1007,7 +1042,7 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.rgb.rid has properties operating-point, resistance, rated-power")
     (message = "mcu.rgb.rid is missing properties: operating-point")
-    (locators = L627122/D623745(relative), D626276)
+    (locators = L229957/D226562(relative), D229102)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1016,15 +1051,15 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "mcu.rgb.rid has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D626349)
+    (message = "mcu.rgb.rid has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
+    (locators = D229175)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mcu.rgb.rid has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627128/D623745(relative))
+    (message = "mcu.rgb.rid has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L229963/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' incomplete.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -1034,9 +1069,9 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "mcu.rgb.rid has properties operating-point, resistance, rated-power")
     (message = "mcu.rgb.rid is missing properties: operating-point")
-    (locators = L627128/D623745(relative), D626276)
+    (locators = L229963/D226562(relative), D229102)
 
-open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' failed.
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
   open-components-database/utils/checks.stanza:95.2: Assertion passed:
     (name = "Rated temperature check")
@@ -1044,14 +1079,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' fai
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "xl.acc has a property for rated-temperature of Toleranced(-40.0 <= 22.5 <= 85.0)C")
-    (locators = D623673)
-  open-components-database/utils/checks.stanza:108.4: Assertion failed:
+    (locators = D226485)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "xl.acc does not have a rated temperature Toleranced(-40.0 <= 22.5 <= 85.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627544/D623745(relative))
+    (message = "xl.acc has a rated temperature Toleranced(-40.0 <= 22.5 <= 85.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L230379/D226562(relative))
 
 open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
   Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
@@ -1061,21 +1096,21 @@ open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'p
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
     (message = "Pin xl.acc.VDD has the correct PowerPin property attached")
-    (locators = L627558/D623745(relative))
+    (locators = L230393/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
     (name = "xl.acc.VDD")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has a correct voltage property")
     (message = "Pin xl.acc.VDD has a voltage property of Toleranced(2.8 <= 2.9 <= 3.0)V")
-    (locators = L627558/D623745(relative))
+    (locators = L230393/D226562(relative))
   open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
     (name = "xl.acc.VDD")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks")
     (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
     (message = "voltage Toleranced(2.8 <= 2.9 <= 3.0)V on pin xl.acc.VDD is within the recommended operating range Toleranced(1.71 <= 2.5 <= 3.6)V")
-    (locators = L627558/D623745(relative))
+    (locators = L230393/D226562(relative))
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1084,15 +1119,15 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "xl.cap has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
-    (locators = D627449)
+    (message = "xl.cap has a property for rated-temperature of Toleranced(-55.0 <= 15.0 <= 85.0)C")
+    (locators = D230284)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "xl.cap has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627568/D623745(relative))
+    (message = "xl.cap has a rated temperature Toleranced(-55.0 <= 15.0 <= 85.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L230403/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -1101,42 +1136,28 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "xl.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "xl.cap rated-temperature Toleranced(-55.0 <= 25.0 <= 105.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L627568/D623745(relative))
+    (message = "xl.cap rated-temperature Toleranced(-55.0 <= 15.0 <= 85.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L230403/D226562(relative))
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "xl.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "xl.cap has properties rated-voltage, operating-point")
-    (message = "xl.cap has properties: rated-voltage, operating-point")
-    (locators = L627568/D623745(relative), D623674)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "xl.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "xl.cap peak voltage 3.0V is below the worst-case derating voltage 5.75V")
-    (locators = L627568/D623745(relative))
+    (message = "xl.cap is missing properties: rated-voltage")
+    (locators = L230403/D226562(relative), D226486)
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' passed.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion passed:
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
     (name = "Capacitor Checks")
     (description = "xl.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "xl.cap has properties rated-voltage, operating-point")
-    (message = "xl.cap has properties: rated-voltage, operating-point")
-    (locators = L627568/D623745(relative), D623674)
-  open-components-database/utils/passive-checks/capacitor-checks.stanza:108.2: Assertion passed:
-    (name = "Capacitor Checks")
-    (description = "xl.cap capacitor properties")
-    (category = "Component Checks")
-    (subcheck-description = "Check the ceramic capacitor voltage derating matches the operating-point voltage")
-    (message = "xl.cap peak voltage 3.0V is below the nominal derating voltage 4.25V")
-    (locators = L627568/D623745(relative))
+    (message = "xl.cap is missing properties: rated-voltage")
+    (locators = L230403/D226562(relative), D226486)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1146,14 +1167,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "xl.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D627472)
+    (locators = D230307)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "xl.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L627574/D623745(relative))
+    (message = "xl.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L230409/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -1162,8 +1183,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "xl.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "xl.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L627574/D623745(relative))
+    (message = "xl.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L230409/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1172,8 +1193,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "xl.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "xl.cap has properties rated-voltage, operating-point")
-    (message = "xl.cap is missing properties: operating-point")
-    (locators = L627574/D623745(relative), D623674)
+    (message = "xl.cap is missing properties: rated-voltage")
+    (locators = L230409/D226562(relative), D226486)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1182,8 +1203,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "xl.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "xl.cap has properties rated-voltage, operating-point")
-    (message = "xl.cap is missing properties: operating-point")
-    (locators = L627574/D623745(relative), D623674)
+    (message = "xl.cap is missing properties: rated-voltage")
+    (locators = L230409/D226562(relative), D226486)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1193,14 +1214,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "RF.filter.C-F has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D627653)
+    (locators = D230490)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "RF.filter.C-F has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628020/D623745(relative))
+    (message = "RF.filter.C-F has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L230876/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -1209,8 +1230,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "RF.filter.C-F capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "RF.filter.C-F rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L628020/D623745(relative))
+    (message = "RF.filter.C-F rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L230876/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1219,8 +1240,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "RF.filter.C-F data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "RF.filter.C-F has properties rated-voltage, operating-point")
-    (message = "RF.filter.C-F is missing properties: operating-point")
-    (locators = L628020/D623745(relative), D623743)
+    (message = "RF.filter.C-F is missing properties: rated-voltage, operating-point")
+    (locators = L230876/D226562(relative), D226560)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1229,8 +1250,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "RF.filter.C-F data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "RF.filter.C-F has properties rated-voltage, operating-point")
-    (message = "RF.filter.C-F is missing properties: operating-point")
-    (locators = L628020/D623745(relative), D623743)
+    (message = "RF.filter.C-F is missing properties: rated-voltage, operating-point")
+    (locators = L230876/D226562(relative), D226560)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1240,14 +1261,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "RF.filter.C-R has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D627661)
+    (locators = D230507)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "RF.filter.C-R has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628024/D623745(relative))
+    (message = "RF.filter.C-R has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L230880/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -1256,8 +1277,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "RF.filter.C-R capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "RF.filter.C-R rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L628024/D623745(relative))
+    (message = "RF.filter.C-R rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L230880/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1266,8 +1287,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "RF.filter.C-R data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "RF.filter.C-R has properties rated-voltage, operating-point")
-    (message = "RF.filter.C-R is missing properties: operating-point")
-    (locators = L628024/D623745(relative), D623743)
+    (message = "RF.filter.C-R is missing properties: rated-voltage, operating-point")
+    (locators = L230880/D226562(relative), D226560)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1276,8 +1297,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "RF.filter.C-R data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "RF.filter.C-R has properties rated-voltage, operating-point")
-    (message = "RF.filter.C-R is missing properties: operating-point")
-    (locators = L628024/D623745(relative), D623743)
+    (message = "RF.filter.C-R is missing properties: rated-voltage, operating-point")
+    (locators = L230880/D226562(relative), D226560)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1287,14 +1308,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "RF.filter.L has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D627669)
+    (locators = D230515)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "RF.filter.L has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628028/D623745(relative))
+    (message = "RF.filter.L has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L230884/D226562(relative))
 
 open-components-database/utils/passive-checks/inductor-checks.stanza:22.4: Check 'inductor-power' incomplete.
   Defined at open-components-database/utils/passive-checks/inductor-checks.stanza:33.0.
@@ -1304,7 +1325,7 @@ open-components-database/utils/passive-checks/inductor-checks.stanza:22.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "RF.filter.L has properties operating-point, rated-power, inductance, dc-resistance")
     (message = "RF.filter.L is missing properties: operating-point, rated-power")
-    (locators = L628028/D623745(relative), D623743)
+    (locators = L230884/D226562(relative), D226560)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1314,7 +1335,7 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "RF.ant has a property for rated-temperature of falseC")
-    (locators = D623660)
+    (locators = D226473)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1324,7 +1345,7 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' inc
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "load-sw.Psw does not have the rated-temperature property attached")
-    (locators = D623684)
+    (locators = D226508)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1334,7 +1355,7 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' inc
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "load-sw.Nctl does not have the rated-temperature property attached")
-    (locators = D628136)
+    (locators = D230995)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1344,14 +1365,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "load-sw.rid has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
-    (locators = D628186)
+    (locators = D231045)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "load-sw.rid has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628223/D623745(relative))
+    (message = "load-sw.rid has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231096/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' incomplete.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -1361,7 +1382,54 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "load-sw.rid has properties operating-point, resistance, rated-power")
     (message = "load-sw.rid is missing properties: operating-point")
-    (locators = L628223/D623745(relative), D628095)
+    (locators = L231096/D226562(relative), D230954)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "load-sw.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
+    (locators = D231059)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "load-sw.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231102/D226562(relative))
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
+  open-components-database/utils/passive-checks/capacitor-checks.stanza:67.2: Assertion passed:
+    (name = "Capacitor Checks")
+    (description = "load-sw.cap capacitor properties")
+    (category = "Component Checks")
+    (subcheck-description = "Check rated temperature meets the design requirements.")
+    (message = "load-sw.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L231102/D226562(relative))
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
+    (name = "Capacitor Checks")
+    (description = "load-sw.cap data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "load-sw.cap has properties rated-voltage, operating-point")
+    (message = "load-sw.cap is missing properties: rated-voltage")
+    (locators = L231102/D226562(relative), D230954)
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
+    (name = "Capacitor Checks")
+    (description = "load-sw.cap data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "load-sw.cap has properties rated-voltage, operating-point")
+    (message = "load-sw.cap is missing properties: rated-voltage")
+    (locators = L231102/D226562(relative), D230954)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1371,9 +1439,9 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' inc
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mic.mic does not have the rated-temperature property attached")
-    (locators = D623688)
+    (locators = D226512)
 
-open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' incomplete.
+open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
   Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
   open-components-database/utils/pin-checks/power-pin-checks.stanza:20.2: Assertion passed:
     (name = "mic.mic.VDD")
@@ -1381,14 +1449,21 @@ open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'p
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
     (message = "Pin mic.mic.VDD has the correct PowerPin property attached")
-    (locators = L628335/D623745(relative))
-  open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion incomplete:
+    (locators = L231218/D226562(relative))
+  open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
     (name = "mic.mic.VDD")
     (description = "Check voltage on power pins")
     (category = "Power Pin Checks (Data)")
     (subcheck-description = "Verify the power pin has a correct voltage property")
-    (message = "Pin mic.mic.VDD does not have known voltage property.")
-    (locators = L628335/D623745(relative))
+    (message = "Pin mic.mic.VDD has a voltage property of Toleranced(2.8 <= 2.9 <= 3.0)V")
+    (locators = L231218/D226562(relative))
+  open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
+    (name = "mic.mic.VDD")
+    (description = "Check voltage on power pins")
+    (category = "Power Pin Checks")
+    (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
+    (message = "voltage Toleranced(2.8 <= 2.9 <= 3.0)V on pin mic.mic.VDD is within the recommended operating range Toleranced(1.6 <= 2.6 <= 3.6)V")
+    (locators = L231218/D226562(relative))
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1398,14 +1473,14 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "mic.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D628311)
+    (locators = D231194)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "mic.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628339/D623745(relative))
+    (message = "mic.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231222/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -1414,8 +1489,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "mic.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "mic.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L628339/D623745(relative))
+    (message = "mic.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L231222/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1424,8 +1499,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mic.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mic.cap has properties rated-voltage, operating-point")
-    (message = "mic.cap is missing properties: operating-point")
-    (locators = L628339/D623745(relative), D623689)
+    (message = "mic.cap is missing properties: rated-voltage")
+    (locators = L231222/D226562(relative), D226513)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1434,8 +1509,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "mic.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "mic.cap has properties rated-voltage, operating-point")
-    (message = "mic.cap is missing properties: operating-point")
-    (locators = L628339/D623745(relative), D623689)
+    (message = "mic.cap is missing properties: rated-voltage")
+    (locators = L231222/D226562(relative), D226513)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1444,8 +1519,32 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' inc
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.op-amp does not have the rated-temperature property attached")
-    (locators = D628364)
+    (message = "amp.opa.IC does not have the rated-temperature property attached")
+    (locators = D226503)
+
+open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
+  Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
+  open-components-database/utils/pin-checks/power-pin-checks.stanza:20.2: Assertion passed:
+    (name = "amp.opa.IC.VCC")
+    (description = "Check voltage on power pins")
+    (category = "Power Pin Checks (Data)")
+    (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
+    (message = "Pin amp.opa.IC.VCC has the correct PowerPin property attached")
+    (locators = L231539/D226562(relative))
+  open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
+    (name = "amp.opa.IC.VCC")
+    (description = "Check voltage on power pins")
+    (category = "Power Pin Checks (Data)")
+    (subcheck-description = "Verify the power pin has a correct voltage property")
+    (message = "Pin amp.opa.IC.VCC has a voltage property of Toleranced(2.8 <= 2.9 <= 3.0)V")
+    (locators = L231539/D226562(relative))
+  open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
+    (name = "amp.opa.IC.VCC")
+    (description = "Check voltage on power pins")
+    (category = "Power Pin Checks")
+    (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
+    (message = "voltage Toleranced(2.8 <= 2.9 <= 3.0)V on pin amp.opa.IC.VCC is within the recommended operating range Toleranced(2.7 <= 6.35 <= 10.0)V")
+    (locators = L231539/D226562(relative))
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1454,15 +1553,15 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.cap has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
-    (locators = D628406)
+    (message = "amp.cap has a property for rated-temperature of Toleranced(-55.0 <= 15.0 <= 85.0)C")
+    (locators = D231358)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "amp.cap has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628551/D623745(relative))
+    (message = "amp.cap has a rated temperature Toleranced(-55.0 <= 15.0 <= 85.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231549/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -1471,8 +1570,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "amp.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "amp.cap rated-temperature Toleranced(-55.0 <= 25.0 <= 105.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L628551/D623745(relative))
+    (message = "amp.cap rated-temperature Toleranced(-55.0 <= 15.0 <= 85.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L231549/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1481,8 +1580,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "amp.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.cap has properties rated-voltage, operating-point")
-    (message = "amp.cap is missing properties: operating-point")
-    (locators = L628551/D623745(relative), D623671)
+    (message = "amp.cap is missing properties: rated-voltage")
+    (locators = L231549/D226562(relative), D231242)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1491,8 +1590,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "amp.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.cap has properties rated-voltage, operating-point")
-    (message = "amp.cap is missing properties: operating-point")
-    (locators = L628551/D623745(relative), D623671)
+    (message = "amp.cap is missing properties: rated-voltage")
+    (locators = L231549/D226562(relative), D231242)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1501,15 +1600,15 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.cap has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D628422)
+    (message = "amp.cap has a property for rated-temperature of Toleranced(-55.0 <= 47.5 <= 150.0)C")
+    (locators = D231372)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "amp.cap has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628557/D623745(relative))
+    (message = "amp.cap has a rated temperature Toleranced(-55.0 <= 47.5 <= 150.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231555/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -1518,8 +1617,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "amp.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "amp.cap rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L628557/D623745(relative))
+    (message = "amp.cap rated-temperature Toleranced(-55.0 <= 47.5 <= 150.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L231555/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1528,8 +1627,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "amp.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.cap has properties rated-voltage, operating-point")
-    (message = "amp.cap is missing properties: operating-point")
-    (locators = L628557/D623745(relative), D623671)
+    (message = "amp.cap is missing properties: rated-voltage")
+    (locators = L231555/D226562(relative), D231242)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1538,20 +1637,35 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "amp.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.cap has properties rated-voltage, operating-point")
-    (message = "amp.cap is missing properties: operating-point")
-    (locators = L628557/D623745(relative), D623671)
+    (message = "amp.cap is missing properties: rated-voltage")
+    (locators = L231555/D226562(relative), D231242)
 
-open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
-  open-components-database/utils/checks.stanza:95.2: Assertion incomplete:
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.Cin does not have the rated-temperature property attached")
-    (locators = D628442)
+    (message = "amp.Cin has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
+    (locators = D231424)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "amp.Cin has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231572/D226562(relative))
 
-open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Error during check execution. open-components-database/utils/passive-checks/capacitor-checks.stanza:56.19: Object amp.Cin does not have a property named 'rated-temperature'.
+open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
+  open-components-database/utils/passive-checks/capacitor-checks.stanza:67.2: Assertion passed:
+    (name = "Capacitor Checks")
+    (description = "amp.Cin capacitor properties")
+    (category = "Component Checks")
+    (subcheck-description = "Check rated temperature meets the design requirements.")
+    (message = "amp.Cin rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L231572/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1561,7 +1675,7 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.Cin has properties rated-voltage, operating-point")
     (message = "amp.Cin is missing properties: rated-voltage, operating-point")
-    (locators = L628565/D623745(relative), D623671)
+    (locators = L231572/D226562(relative), D231242)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1571,7 +1685,7 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.Cin has properties rated-voltage, operating-point")
     (message = "amp.Cin is missing properties: rated-voltage, operating-point")
-    (locators = L628565/D623745(relative), D623671)
+    (locators = L231572/D226562(relative), D231242)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1580,15 +1694,15 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.Rg has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D628450)
+    (message = "amp.Rg has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
+    (locators = D231432)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "amp.Rg has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628569/D623745(relative))
+    (message = "amp.Rg has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231576/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' incomplete.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -1598,39 +1712,7 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.Rg has properties operating-point, resistance, rated-power")
     (message = "amp.Rg is missing properties: operating-point")
-    (locators = L628569/D623745(relative), D623671)
-
-open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
-  Defined at open-components-database/utils/checks.stanza:91.0.
-  open-components-database/utils/checks.stanza:95.2: Assertion incomplete:
-    (name = "Rated temperature check")
-    (description = "Check rated temperatures for components versus design constraints")
-    (category = "Component Checks (Data)")
-    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.Cf does not have the rated-temperature property attached")
-    (locators = D628470)
-
-open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Error during check execution. open-components-database/utils/passive-checks/capacitor-checks.stanza:56.19: Object amp.Cf does not have a property named 'rated-temperature'.
-
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
-  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
-    (name = "Capacitor Checks")
-    (description = "amp.Cf data consistency")
-    (category = "Component Checks (Data)")
-    (subcheck-description = "amp.Cf has properties rated-voltage, operating-point")
-    (message = "amp.Cf is missing properties: rated-voltage, operating-point")
-    (locators = L628576/D623745(relative), D623671)
-
-open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
-  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
-  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
-    (name = "Capacitor Checks")
-    (description = "amp.Cf data consistency")
-    (category = "Component Checks (Data)")
-    (subcheck-description = "amp.Cf has properties rated-voltage, operating-point")
-    (message = "amp.Cf is missing properties: rated-voltage, operating-point")
-    (locators = L628576/D623745(relative), D623671)
+    (locators = L231576/D226562(relative), D231242)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1639,15 +1721,62 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.Rf has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D628478)
+    (message = "amp.Cf has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
+    (locators = D231450)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "amp.Rf has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628580/D623745(relative))
+    (message = "amp.Cf has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231583/D226562(relative))
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
+  open-components-database/utils/passive-checks/capacitor-checks.stanza:67.2: Assertion passed:
+    (name = "Capacitor Checks")
+    (description = "amp.Cf capacitor properties")
+    (category = "Component Checks")
+    (subcheck-description = "Check rated temperature meets the design requirements.")
+    (message = "amp.Cf rated-temperature Toleranced(-55.0 <= 35.0 <= 125.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L231583/D226562(relative))
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
+    (name = "Capacitor Checks")
+    (description = "amp.Cf data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "amp.Cf has properties rated-voltage, operating-point")
+    (message = "amp.Cf is missing properties: rated-voltage, operating-point")
+    (locators = L231583/D226562(relative), D231242)
+
+open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
+  Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
+  open-components-database/utils/passive-checks/utils.stanza:29.2: Assertion incomplete:
+    (name = "Capacitor Checks")
+    (description = "amp.Cf data consistency")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "amp.Cf has properties rated-voltage, operating-point")
+    (message = "amp.Cf is missing properties: rated-voltage, operating-point")
+    (locators = L231583/D226562(relative), D231242)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "amp.Rf has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
+    (locators = D231458)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "amp.Rf has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231587/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' incomplete.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -1657,7 +1786,7 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.Rf has properties operating-point, resistance, rated-power")
     (message = "amp.Rf is missing properties: operating-point")
-    (locators = L628580/D623745(relative), D623671)
+    (locators = L231587/D226562(relative), D231242)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1666,15 +1795,15 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.R1 has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D628496)
+    (message = "amp.R1 has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
+    (locators = D231475)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "amp.R1 has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628586/D623745(relative))
+    (message = "amp.R1 has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231593/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' incomplete.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -1684,7 +1813,7 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.R1 has properties operating-point, resistance, rated-power")
     (message = "amp.R1 is missing properties: operating-point")
-    (locators = L628586/D623745(relative), D623671)
+    (locators = L231593/D226562(relative), D231242)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1693,15 +1822,15 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.R2 has a property for rated-temperature of Toleranced(-55.0 <= 35.0 <= 125.0)C")
-    (locators = D628504)
+    (message = "amp.R2 has a property for rated-temperature of Toleranced(-55.0 <= 50.0 <= 155.0)C")
+    (locators = D231483)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "amp.R2 has a rated temperature Toleranced(-55.0 <= 35.0 <= 125.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628590/D623745(relative))
+    (message = "amp.R2 has a rated temperature Toleranced(-55.0 <= 50.0 <= 155.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231597/D226562(relative))
 
 open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check 'resistor-power' incomplete.
   Defined at open-components-database/utils/passive-checks/resistor-checks.stanza:39.0.
@@ -1711,7 +1840,7 @@ open-components-database/utils/passive-checks/resistor-checks.stanza:28.4: Check
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.R2 has properties operating-point, resistance, rated-power")
     (message = "amp.R2 is missing properties: operating-point")
-    (locators = L628590/D623745(relative), D623671)
+    (locators = L231597/D226562(relative), D231242)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1720,15 +1849,15 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
-    (message = "amp.cap has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
-    (locators = D628525)
+    (message = "amp.cap has a property for rated-temperature of Toleranced(-55.0 <= 47.5 <= 150.0)C")
+    (locators = D231506)
   open-components-database/utils/checks.stanza:108.4: Assertion passed:
     (name = "Rated temperature check")
     (description = "Check rated temperatures for components versus design constraints")
     (category = "Component Checks")
     (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
-    (message = "amp.cap has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(-40.0 <= 25.0 <= 90.0)")
-    (locators = L628598/D623745(relative))
+    (message = "amp.cap has a rated temperature Toleranced(-55.0 <= 47.5 <= 150.0) containing the operating temperature Toleranced(0.0 <= 25.0 <= 50.0)")
+    (locators = L231607/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Check 'capacitor-temp' passed.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:54.0.
@@ -1737,8 +1866,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:137.4: Che
     (description = "amp.cap capacitor properties")
     (category = "Component Checks")
     (subcheck-description = "Check rated temperature meets the design requirements.")
-    (message = "amp.cap rated-temperature Toleranced(-55.0 <= 25.0 <= 105.0) meets design requirements, min:-40.0C, max:90.0C")
-    (locators = L628598/D623745(relative))
+    (message = "amp.cap rated-temperature Toleranced(-55.0 <= 47.5 <= 150.0) meets design requirements, min:0.0C, max:50.0C")
+    (locators = L231607/D226562(relative))
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1747,8 +1876,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "amp.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.cap has properties rated-voltage, operating-point")
-    (message = "amp.cap is missing properties: operating-point")
-    (locators = L628598/D623745(relative), D623671)
+    (message = "amp.cap is missing properties: rated-voltage, operating-point")
+    (locators = L231607/D226562(relative), D231242)
 
 open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Check 'capacitor-voltage' incomplete.
   Defined at open-components-database/utils/passive-checks/capacitor-checks.stanza:88.0.
@@ -1757,8 +1886,8 @@ open-components-database/utils/passive-checks/capacitor-checks.stanza:139.6: Che
     (description = "amp.cap data consistency")
     (category = "Component Checks (Data)")
     (subcheck-description = "amp.cap has properties rated-voltage, operating-point")
-    (message = "amp.cap is missing properties: operating-point")
-    (locators = L628598/D623745(relative), D623671)
+    (message = "amp.cap is missing properties: rated-voltage, operating-point")
+    (locators = L231607/D226562(relative), D231242)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1768,7 +1897,7 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "MNT[0] has a property for rated-temperature of falseC")
-    (locators = D628657)
+    (locators = D231681)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1778,7 +1907,7 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' pas
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "MNT[1] has a property for rated-temperature of falseC")
-    (locators = D628657)
+    (locators = D231681)
 
 open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' incomplete.
   Defined at open-components-database/utils/checks.stanza:91.0.
@@ -1788,7 +1917,7 @@ open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' inc
     (category = "Component Checks (Data)")
     (subcheck-description = "Check the rated-temperature of component versus the design constraints")
     (message = "jitx does not have the rated-temperature property attached")
-    (locators = D628667)
+    (locators = D231691)
 
 open-components-database/utils/netlist-checks/io-checks.stanza:122.6: Check 'not-tied-to-supply-net' passed.
   Defined at open-components-database/utils/netlist-checks/io-checks.stanza:154.0.
@@ -1798,7 +1927,7 @@ open-components-database/utils/netlist-checks/io-checks.stanza:122.6: Check 'not
     (category = "IO Checks")
     (subcheck-description = "Check that open-collector pins are not directly connected to a net driven by a power-supply-pin.")
     (message = "xl.acc.SDO is not connected to a power supply net.")
-    (locators = L638253/D637491(relative))
+    (locators = L241707/D240945(relative))
 
 open-components-database/utils/netlist-checks/io-checks.stanza:124.4: Check 'pullup-resistor-exists' passed.
   Defined at open-components-database/utils/netlist-checks/io-checks.stanza:192.0.
@@ -1808,7 +1937,7 @@ open-components-database/utils/netlist-checks/io-checks.stanza:124.4: Check 'pul
     (category = "IO Checks")
     (subcheck-description = "Check that open collector pins have at least one pullup resistor")
     (message = "open-collector pin xl.acc.SDO has at least one pullup resistor")
-    (locators = L638253/D637491(relative))
+    (locators = L241707/D240945(relative))
 
 open-components-database/utils/netlist-checks/io-checks.stanza:132.8: Check 'sink-current' passed.
   Defined at open-components-database/utils/netlist-checks/io-checks.stanza:203.0.
@@ -1818,17 +1947,24 @@ open-components-database/utils/netlist-checks/io-checks.stanza:132.8: Check 'sin
     (category = "IO Checks")
     (subcheck-description = "Check that open collector pins have a finite pullup resistance.")
     (message = "xl.acc.SDO has a finite pullup resistance")
-    (locators = L638253/D637491(relative))
+    (locators = L241707/D240945(relative))
   open-components-database/utils/netlist-checks/io-checks.stanza:219.2: Assertion passed:
     (name = "xl.acc.SDO")
     (description = "IO Checks")
     (category = "IO Checks")
     (subcheck-description = "Check an open collector pin\'s peak sink current is in spec")
     (message = "xl.acc.SDO current sink specification 0.015A satisfies the design requirement 0.000365853658536585A")
-    (locators = L638253/D637491(relative))
+    (locators = L241707/D240945(relative))
 
-open-components-database/utils/netlist-checks/io-checks.stanza:133.8: Error during check execution. false
-
+open-components-database/utils/netlist-checks/io-checks.stanza:133.8: Check 'pullup-voltage-above-vih' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:230.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:240.6: Assertion passed:
+    (name = "xl.acc.SDO")
+    (description = "xl.acc.SDO Open collector checks")
+    (category = "IO Checks")
+    (subcheck-description = "Check the net has enough voltage to drive open collector.")
+    (message = "xl.acc.SDO\'s vih (Toleranced(2.24 <= 2.32 <= 2.4)V) is lower than the net voltage (Toleranced(0.0 <= 1.5 <= 3.0)V)")
+    (locators = L241707/D240945(relative))
 
 open-components-database/utils/netlist-checks/io-checks.stanza:122.6: Check 'not-tied-to-supply-net' passed.
   Defined at open-components-database/utils/netlist-checks/io-checks.stanza:154.0.
@@ -1838,7 +1974,7 @@ open-components-database/utils/netlist-checks/io-checks.stanza:122.6: Check 'not
     (category = "IO Checks")
     (subcheck-description = "Check that open-collector pins are not directly connected to a net driven by a power-supply-pin.")
     (message = "xl.acc.SPC is not connected to a power supply net.")
-    (locators = L638254/D637491(relative))
+    (locators = L241708/D240945(relative))
 
 open-components-database/utils/netlist-checks/io-checks.stanza:124.4: Check 'pullup-resistor-exists' passed.
   Defined at open-components-database/utils/netlist-checks/io-checks.stanza:192.0.
@@ -1848,7 +1984,7 @@ open-components-database/utils/netlist-checks/io-checks.stanza:124.4: Check 'pul
     (category = "IO Checks")
     (subcheck-description = "Check that open collector pins have at least one pullup resistor")
     (message = "open-collector pin xl.acc.SPC has at least one pullup resistor")
-    (locators = L638254/D637491(relative))
+    (locators = L241708/D240945(relative))
 
 open-components-database/utils/netlist-checks/io-checks.stanza:132.8: Check 'sink-current' passed.
   Defined at open-components-database/utils/netlist-checks/io-checks.stanza:203.0.
@@ -1858,17 +1994,24 @@ open-components-database/utils/netlist-checks/io-checks.stanza:132.8: Check 'sin
     (category = "IO Checks")
     (subcheck-description = "Check that open collector pins have a finite pullup resistance.")
     (message = "xl.acc.SPC has a finite pullup resistance")
-    (locators = L638254/D637491(relative))
+    (locators = L241708/D240945(relative))
   open-components-database/utils/netlist-checks/io-checks.stanza:219.2: Assertion passed:
     (name = "xl.acc.SPC")
     (description = "IO Checks")
     (category = "IO Checks")
     (subcheck-description = "Check an open collector pin\'s peak sink current is in spec")
     (message = "xl.acc.SPC current sink specification 0.015A satisfies the design requirement 0.000365853658536585A")
-    (locators = L638254/D637491(relative))
+    (locators = L241708/D240945(relative))
 
-open-components-database/utils/netlist-checks/io-checks.stanza:133.8: Error during check execution. false
-
+open-components-database/utils/netlist-checks/io-checks.stanza:133.8: Check 'pullup-voltage-above-vih' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:230.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:240.6: Assertion passed:
+    (name = "xl.acc.SPC")
+    (description = "xl.acc.SPC Open collector checks")
+    (category = "IO Checks")
+    (subcheck-description = "Check the net has enough voltage to drive open collector.")
+    (message = "xl.acc.SPC\'s vih (Toleranced(2.24 <= 2.32 <= 2.4)V) is lower than the net voltage (Toleranced(0.0 <= 1.5 <= 3.0)V)")
+    (locators = L241708/D240945(relative))
 
 open-components-database/utils/netlist-checks/io-checks.stanza:51.6: Check 'digital-output' passed.
   Defined at open-components-database/utils/netlist-checks/io-checks.stanza:72.0.
@@ -1878,4 +2021,4 @@ open-components-database/utils/netlist-checks/io-checks.stanza:51.6: Check 'digi
     (category = "IO Checks")
     (subcheck-description = "Check there is at least one non-tristateable output pin")
     (message = "Output pins xl.acc.INT[1] are connected together and at most 1 of them is non-tristateable")
-    (locators = L638249/D637491(relative))
+    (locators = L241703/D240945(relative))
