@@ -7,6 +7,8 @@ defpackage ocdb/designs/nrf-motion:
   import ocdb/utils/bundles
   import ocdb/utils/checks
   import ocdb/utils/generic-components
+  import ocdb/utils/parametric-components
+
   import ocdb/utils/generator-utils
   import ocdb/utils/design-vars
   import ocdb/artwork/jitx-logo
@@ -17,9 +19,9 @@ defpackage ocdb/designs/nrf-motion:
 val board-shape = Rectangle(45.0, 20.0)
 
 OPTIMIZE-FOR = ["area"]
-DESIGN-QUANTITY = 100
+DESIGN-QUANTITY = 10
 OPERATING-TEMPERATURE = min-max(0.0 50.0)
-
+MIN-PKG = "0603"
 
 ; Setup the board
 defn setup-board () :
@@ -27,10 +29,14 @@ defn setup-board () :
   set-rules(ocdb/manufacturers/rules/jlcpcb-basic-rules)
   set-use-layout-groups()
 
-public defn setup-supply-rail (pwr : JITXObject, supply-V : Toleranced) : 
+  set-bom-vendors([
+   "LCSC",
+  ])
+
+public defn setup-supply-rail (pwr : JITXObject, supply-V : Toleranced) :
   inside pcb-module:
     public net VDD (pwr.vdd)
-    public net GND (pwr.gnd) 
+    public net GND (pwr.gnd)
 
     symbol(GND) = ocdb/utils/symbols/ground-sym
     symbol(VDD) = ocdb/utils/symbols/supply-sym
@@ -48,14 +54,14 @@ public defn setup-supply-rail (pwr : JITXObject, supply-V : Toleranced) :
     property(VDD.net-class) = NetClass(`Power, [`min-trace => 0.35])
 
 
-pcb-module nRF-mcu : 
+pcb-module nRF-mcu :
   port supply : power
   port i2c-bus : i2c
 
   pin ant
   pin wake
   pin vdda-en
-  pin mic-in 
+  pin mic-in
 
   ; Nordic MCU with Wireless Interface
   inst nrf : ocdb/components/nordic/nRF52840/module(include-LFO? = false, include-antenna? = false, power-config = 6)
@@ -83,10 +89,10 @@ pcb-module nRF-mcu :
   net (dbg-conn.swd         debug)
   net (dbg-conn.reset-n     reset-ctl)
 
-  ; Debugging - we will need to detect when we are connected to the 
-  ;   appropriate network. 
+  ; Debugging - we will need to detect when we are connected to the
+  ;   appropriate network.
   val RGB = add-rgb-indicator(5.0, nrf.mcu, supply.vdd)
-  
+
   schematic-group(self) = MCU
 
 pcb-module pi-filter :
@@ -99,7 +105,7 @@ pcb-module pi-filter :
   inst C-R : ceramic-cap(["capacitance" => 0.5e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
   inst L : smd-inductor(["inductance" => 4.7e-9 "min-self-resonant-frequency" => 7.0e6 "min-quality-factor" => 8.0 "case" => "0402"])
 
-  ; @TODO - here is where I want to use `Network.stanza` to make this 
+  ; @TODO - here is where I want to use `Network.stanza` to make this
   ;   more expressive and readable.
   net (vin C-F.p[1] L.p[1])
   net (vout L.p[2] C-R.p[1])
@@ -107,19 +113,19 @@ pcb-module pi-filter :
 
   schematic-group(self) = PI-FILTER
 
-pcb-module RF-frontend : 
+pcb-module RF-frontend :
   pin sig
   pin gnd
 
   inst filter : pi-filter
   inst ant : inverted-f-antenna-cmp
-  
+
   net (gnd filter.gnd, ant.gnd)
   net FEED (sig, filter.vin)
-  net LAUNCH (filter.vout, ant.launch)  
+  net LAUNCH (filter.vout, ant.launch)
 
-  ; We add a u.FL connector with a separate inductor and capacitor that are 
-  ;   generally DNP. This will be used for FCC verfication. 
+  ; We add a u.FL connector with a separate inductor and capacitor that are
+  ;   generally DNP. This will be used for FCC verfication.
   inst C-R : ceramic-cap(["capacitance" => 0.5e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
   inst L : smd-inductor(["inductance" => 4.7e-9 "min-self-resonant-frequency" => 7.0e6 "min-quality-factor" => 8.0 "case" => "0402"])
   inst test-uFL : components/HRS/U-FL-R-SMT-10-/component
@@ -129,7 +135,7 @@ pcb-module RF-frontend :
   net (gnd, C-R.p[2], test-uFL.gnd)
 
   dnp([C-R, L, test-uFL])
- 
+
   ; 50 ohm line on a 1.5mm h CBCPW
   ;   This is temporary - all this is likely to change
   ;   with the SI in the future.
@@ -144,55 +150,60 @@ pcb-module RF-frontend :
 
 pcb-module nrf-motion :
 
-  ; Coin Cell 
+  ; Coin Cell
   inst bat : components/MYOUNG/BS-08-B2AA016/component
   val vbat-range = min-max(2.8, 3.0)
   setup-supply-rail(bat.vout, vbat-range)
 
-  inst mcu : nRF-mcu 
+  inst mcu : nRF-mcu
 
     ; Accelerometer
   inst xl : ocdb/components/st-microelectronics/LIS3DH/module
 
-  ; MCU and Accelerometer (XL) are in the same power domain because 
-  ;   the XL will generate a WAKE signal to wake the MCU out of 
-  ;   sleep. 
+  ; MCU and Accelerometer (XL) are in the same power domain because
+  ;   the XL will generate a WAKE signal to wake the MCU out of
+  ;   sleep.
   net always-on (bat.vout, xl.power, mcu.supply)
   net (xl.vio, self.VDD)
 
-  ; Connect the XL to the NRF's i2c bus  
+  ; Connect the XL to the NRF's i2c bus
   net (mcu.i2c-bus, xl.i2c)
-  ;  We use the interrupt from the XL to wake the 
+  ;  We use the interrupt from the XL to wake the
   ;   MCU from deep sleep
   net (mcu.wake, xl.int[1])
 
 
-  ; RF Interface for the MCU 
+  ; RF Interface for the MCU
   inst RF : RF-frontend
-  net (mcu.ant, RF.sig) 
+  net (mcu.ant, RF.sig)
   net (self.GND RF.gnd)
 
   ; Power swith for the Analog Power Domain
-  ;   We want to be able to turn this section off while we 
-  ;   are sleeping to reduce power usage. 
+  ;   We want to be able to turn this section off while we
+  ;   are sleeping to reduce power usage.
 
   val PMOS_def = components/onsemi/NTA4151PT1G/component
   inst load-sw : ocdb/modules/load-switch/high-side-mosfet-switch(PMOS_def)
-  
-  net (always-on, load-sw.vin)  
+
+  net (always-on, load-sw.vin)
   net (mcu.vdda-en, load-sw.control)
 
   ; Establish a Supply rail for the output of the load switch
-  ;   and give it is own symbol for clarity. 
+  ;   and give it is own symbol for clarity.
   net VDDA (load-sw.vout.vdd)
   symbol(VDDA) = ocdb/utils/symbols/supply-sym
   property(VDDA.voltage) = vbat-range
 
   ; Analog Interface
   inst mic : components/ALLPOWER-ShenZhen-Quan-Li-Semiconductor-/AP3722AT/component
-  val OpAmpType = components/Microchip-Tech/MCP6001T-EOT/component
+  ; Gain bandwidth of this opamp is insufficient and causes the low pass
+  ;   edge of the bandpass to be lower than expected.
+  ; val OpAmpType = components/Microchip-Tech/MCP6001T-EOT/component
+  ; This opamp shows proper corner frequency at 20kHz as expected.
+  val OpAmpType = components/STMicroelectronics/TS971ILT/component
+
   val bandpass = BandpassConfig(34.0, 100.0, 20.0e3)
-  val preampType = ocdb/modules/amplifiers/microphone-preamp(OpAmpType, bandpass) 
+  val preampType = ocdb/modules/amplifiers/microphone-preamp(OpAmpType, bandpass)
   inst amp : preampType
 
   schematic-group([mic, amp]) = audio
@@ -208,8 +219,8 @@ pcb-module nrf-motion :
   ;  The pre-amp bone is connected to the ADC bone
   net (amp.out, mcu.mic-in)
 
-  defn radius (x:Double) -> Double: 
-    x / 2.0 
+  defn radius (x:Double) -> Double:
+    x / 2.0
 
   val M2-hole = 2.3 ; mm diam
   val M2-clear = 4.5 ; mm diam
@@ -217,9 +228,9 @@ pcb-module nrf-motion :
   inst MNT : mounting-hole(radius(M2-hole), radius(M2-clear))[2]
   inst jitx : logo(3.0)
 
-  
+
   ; 6.6, 2.8 -> 23, 10
-  ; This does not work. 
+  ; This does not work.
   ; layer(ForbidCopper(LayerIndex(1), LayerIndex(0, Bottom))) = Rectangle(7.0, 10.0) ; at loc(4.0, 4.0)
 
   ; Let's get Physical
@@ -233,15 +244,15 @@ pcb-module nrf-motion :
     sPt = center(pose(board-shape)) - Point(width(board-shape) / 2.0, (- height(board-shape) / 2.0))
     w = 27.0
     h = 9.0
-    cPt = sPt + Point(w / 2.0, (- h / 2.0)) 
+    cPt = sPt + Point(w / 2.0, (- h / 2.0))
     copper-pour(LayerIndex(1), isolate = 0.2) = Rectangle(w, h, loc(cPt))
 
-  geom(VDDA): 
+  geom(VDDA):
     ; This is not great :(
     val sPt = center(pose(board-shape)) - Point(width(board-shape) / 2.0, (- height(board-shape) / 2.0))
     val w = 15.0
     val h = 9.0
-    val cPt = sPt + Point(w / 2.0, (- h / 2.0)) 
+    val cPt = sPt + Point(w / 2.0, (- h / 2.0))
     copper-pour(LayerIndex(2), isolate = 0.2) = Rectangle(w, h, loc(cPt))
 
   geom(self.VDD):
@@ -250,22 +261,24 @@ pcb-module nrf-motion :
     val w = width(board-shape)
     var cPt = sPt + Point(w / 2.0, h / 2.0)
     copper-pour(LayerIndex(2), isolate = 0.2) = Rectangle(w, h, loc(cPt))
-    
+
     cPt = Point(-1.5, 5.0)
     copper-pour(LayerIndex(2), isolate = 0.2) = Rectangle(10.0, 10.0, loc(cPt))
 
   ; Run the schematic review
   check-design(self)
-  
+
 set-current-design("nrf-motion")
 set-paper(ANSI-A)
 setup-board()
 
-val main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
+var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
 set-main-module(main-module) ; Treat the provided module as a design, and compile it.
-run-checks("checks.txt")
 
+run-checks("checks.txt")
 ; View the results
+
 view-board()
 view-schematic()
 view-design-explorer()
+export-bom()
