@@ -1,0 +1,73 @@
+Notes	Description	Instances	Datasheet	References	Manufacturer	MPN	Vendor	SKU	Qty	Price	Cost	Total	4.22249706794672
+Auto Selected	Battery base -25℃~+85℃ CR2032 SMD  Battery Connectors ROHS	bat.holder		U1	MYoung	BS-08-B2AA016	LCSC	C964792	1	$0.357496084356007	$0.357496084356007
+Auto Selected	Advanced Bluetooth 5, Thread and Zigbee multiprotocol SoC	mcu.nrf.mcu	http://datasheet.octopart.com/NRF52840-QIAA-R-Nordic-Semiconductor-datasheet-138104127.pdf	U2	Nordic Semiconductor	NRF52840-QIAA-R	LCSC	C190794	1	$3.86500098359071	$3.86500098359071
+No Matching Part	50V 220mA 3.5Ω@10V,220mA 360mW 1.5V@1mA N Channel SOT-23(SOT-23-3)  MOSFETs ROHS	load-sw.Nctl		Q1		BSS138			1		$0.0
+No Matching Part	16V 100nF X7R ±20% 0603  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	load-sw.cap		C17		CC0603MRX7R7BB104			1		$0.0
+No Matching Part	RES 510 OHM 0.5% 1/10W 0603	mcu.rgb.rid		R5		RNCF0603DTE510R			1		$0.0
+No Matching Part	RES 1.5K OHM 1% 1/10W 0603	amp.Rg		R8		RMCF0603FT1K50			1		$0.0
+No Matching Part	1.6V~3.6V Omnidirectional 95uA -42dB 220Ω 57dB SMD-4P,2.2x3.8mm  MEMS Microphones ROHS	mic.mic		U7		AP3722AT			1		$0.0
+No Matching Part		mcu.nrf.cap, mcu.nrf.cap		C11 C10		06032U150FAT2A			2		$0.0
+No Matching Part	RES 1.8K OHM 5% 1/16W 0603	mcu.rgb.rid, mcu.rgb.rid		R4 R3		SR1-0603-218			2		$0.0
+No Matching Part		RF.filter.C-F		C14		0402H500N0R8BCT			1		$0.0
+No Matching Part	RES 8.2K OHM 5% 1/16W 0603	mcu.rs.r[1], mcu.rs.r[0]		R2 R1		SR1-0603-282			2		$0.0
+No Matching Part	Generic pin-header	tpHeader		J1		2X1-pin-header			1		$0.0
+No Matching Part	50V 820pF X7R ±20% 0603  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	mcu.nrf.cap		C3		GMC10X7R821M50NT			1		$0.0
+No Matching Part	2020 RGB LED	mcu.rgb.led		U3		FM-B2020RGBA-HG			1		$0.0
+No Matching Part	50V 100nF ±10% 0603  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	mic.cap, xl.cap, mcu.nrf.cap, mcu.nrf.cap, mcu.nrf.cap, mcu.nrf.cap		C18 C13 C8 C7 C6 C1		0603BB104K500YT			6		$0.0
+No Matching Part	RES 51K OHM 1% 1/10W 0603	amp.R2, amp.R1, amp.Rf		R11 R10 R9		RMCF0603FT51K0			3		$0.0
+No Matching Part	JITX Logo	jitx		JITX1		non-BOM			1		$0.0
+No Matching Part		mcu.nrf.cap		C2		06035U101GAT2A			1		$0.0
+No Matching Part	10V 10uF X5R ±20% 0603  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	amp.cap, xl.cap		C19 C12		C0603C106M8PACTU			2		$0.0
+No Matching Part	300mA 4.7nH 0402  Inductors (SMD) ROHS	RF.filter.L		L1		HK10054N7S-TV			1		$0.0
+No Matching Part	RF reference MHz Range Crystal	mcu.nrf.hfosc		X1		TSX-3225 32.0000MF10Z-W6			1		$0.0
+No Matching Part	 SOT-23-5  Operational Amplifier ROHS	amp.opa.IC		U8		TS971ILT			1		$0.0
+No Matching Part	16V 4.7uF X5R ±10% 0603  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	mcu.nrf.cap		C5		GMC10X5R475K16NT			1		$0.0
+No Matching Part	50V 10nF X8R ±20% 0603  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	amp.cap		C23		CGA3E2X8R1H103M080AA			1		$0.0
+No Matching Part	RES 910K OHM 5% 1/16W 0603	load-sw.rid		R6		SR1-0603-491			1		$0.0
+No Matching Part	20V 760mA 360mΩ@4.5V,350mA 301mW P Channel -  MOSFETs ROHS	load-sw.Psw		U6		NTA4151PT1G			1		$0.0
+No Matching Part		amp.cap		C20		VJ0603Y103JXXAC			1		$0.0
+No Matching Part		RF.filter.C-R		C15		0402H101N0R5BCT			1		$0.0
+No Matching Part	150pF ±1% 0603  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	amp.Cf		C22		GCM1885C2A151FA16D			1		$0.0
+No Matching Part	16V 1uF ±10% 0603  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	amp.Cin, mcu.nrf.cap, mcu.nrf.cap		C21 C9 C4		0603BB105K160NGT			3		$0.0
+No Information		MNT[1]		U10					1		$0.0
+No Information		RF.ant		ANT1					1		$0.0
+No Information		MNT[0]		U9					1		$0.0
+Not Enough Stock	Digital Accelerometer, 3-Axis, 2g/4g/8g/16g, 16-bit, I2C/SPI interfaces, LGA16, STM	xl.acc	http://datasheet.octopart.com/LIS3DHTR-STMicroelectronics-datasheet-10026716.pdf	U4	STMicroelectronics	LIS3DHTR			1		$0.0
+
+Messages:
+The instances bat.holder (U1) were assigned part BS-08-B2AA016, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  LCSC for $0.357496084356007 (SKU = C964792)
+The instances mcu.nrf.mcu (U2) were assigned part NRF52840-QIAA-R, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  LCSC for $3.86500098359071 (SKU = C190794)
+The instances load-sw.Nctl (Q1) were assigned part BSS138, but there is not enough stock.
+The instances load-sw.cap (C17) were assigned part CC0603MRX7R7BB104, but there is not enough stock.
+The instances mcu.rgb.rid (R5) were assigned part RNCF0603DTE510R, but there is not enough stock.
+The instances amp.Rg (R8) were assigned part RMCF0603FT1K50, but there is not enough stock.
+The instances mic.mic (U7) were assigned part AP3722AT, but there is not enough stock.
+The instances mcu.nrf.cap (C11), mcu.nrf.cap (C10) were assigned part 06032U150FAT2A, but there is not enough stock.
+The instances mcu.rgb.rid (R4), mcu.rgb.rid (R3) were assigned part SR1-0603-218, but there is not enough stock.
+The instances RF.filter.C-F (C14) were assigned part 0402H500N0R8BCT, but there is not enough stock.
+The instances mcu.rs.r[1] (R2), mcu.rs.r[0] (R1) were assigned part SR1-0603-282, but there is not enough stock.
+The instances tpHeader (J1) were assigned part 2X1-pin-header, but there is not enough stock.
+The instances mcu.nrf.cap (C3) were assigned part GMC10X7R821M50NT, but there is not enough stock.
+The instances mcu.rgb.led (U3) were assigned part FM-B2020RGBA-HG, but there is not enough stock.
+The instances mic.cap (C18), xl.cap (C13), mcu.nrf.cap (C8), mcu.nrf.cap (C7), mcu.nrf.cap (C6), mcu.nrf.cap (C1) were assigned part 0603BB104K500YT, but there is not enough stock.
+The instances amp.R2 (R11), amp.R1 (R10), amp.Rf (R9) were assigned part RMCF0603FT51K0, but there is not enough stock.
+The instances jitx (JITX1) were assigned part non-BOM, but there is not enough stock.
+The instances mcu.nrf.cap (C2) were assigned part 06035U101GAT2A, but there is not enough stock.
+The instances amp.cap (C19), xl.cap (C12) were assigned part C0603C106M8PACTU, but there is not enough stock.
+The instances RF.filter.L (L1) were assigned part HK10054N7S-TV, but there is not enough stock.
+The instances mcu.nrf.hfosc (X1) were assigned part TSX-3225 32.0000MF10Z-W6, but there is not enough stock.
+The instances amp.opa.IC (U8) were assigned part TS971ILT, but there is not enough stock.
+The instances mcu.nrf.cap (C5) were assigned part GMC10X5R475K16NT, but there is not enough stock.
+The instances amp.cap (C23) were assigned part CGA3E2X8R1H103M080AA, but there is not enough stock.
+The instances load-sw.rid (R6) were assigned part SR1-0603-491, but there is not enough stock.
+The instances load-sw.Psw (U6) were assigned part NTA4151PT1G, but there is not enough stock.
+The instances amp.cap (C20) were assigned part VJ0603Y103JXXAC, but there is not enough stock.
+The instances RF.filter.C-R (C15) were assigned part 0402H101N0R5BCT, but there is not enough stock.
+The instances amp.Cf (C22) were assigned part GCM1885C2A151FA16D, but there is not enough stock.
+The instances amp.Cin (C21), mcu.nrf.cap (C9), mcu.nrf.cap (C4) were assigned part 0603BB105K160NGT, but there is not enough stock.
+The instance MNT[1] (U10) has no assigned part.
+The instance RF.ant (ANT1) has no assigned part.
+The instance MNT[0] (U9) has no assigned part.
+The instances xl.acc (U4) were assigned part LIS3DHTR, but there is not enough stock.
