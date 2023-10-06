@@ -16,21 +16,21 @@ defpackage ocdb/designs/nrf-motion:
 
   import ocdb/components/samtec/FTSH-105-01-DV
 
-val board-shape = Rectangle(45.0, 20.0)
+val board-shape = Rectangle(32.0, 20.0)
 
 OPTIMIZE-FOR = ["area"]
 DESIGN-QUANTITY = 10
 OPERATING-TEMPERATURE = min-max(0.0 50.0)
-MIN-PKG = "0603"
+MIN-PKG = "0402"
 
 ; Setup the board
 defn setup-board () :
-  set-board(ocdb/utils/defaults/default-board(ocdb/manufacturers/stackups/jlcpcb-jlc2313, board-shape))
+  set-board(ocdb/utils/defaults/default-board(ocdb/manufacturers/stackups/jlcpcb-2-layer, board-shape))
   set-rules(ocdb/manufacturers/rules/jlcpcb-basic-rules)
   set-use-layout-groups()
 
   set-bom-vendors([
-   "LCSC",
+   "JLCPCB",
   ])
 
 public defn setup-supply-rail (pwr : JITXObject, supply-V : Toleranced) :
@@ -51,7 +51,7 @@ public defn setup-supply-rail (pwr : JITXObject, supply-V : Toleranced) :
 
     schematic-group(tpHeader) = misc
 
-    property(VDD.net-class) = NetClass(`Power, [`min-trace => 0.35])
+    property(VDD.net-class) = NetClass(`Power, [`min-trace => 0.8])
 
 
 pcb-module nRF-mcu :
@@ -172,7 +172,6 @@ pcb-module nrf-motion :
   ;   MCU from deep sleep
   net (mcu.wake, xl.int[1])
 
-
   ; RF Interface for the MCU
   inst RF : RF-frontend
   net (mcu.ant, RF.sig)
@@ -228,47 +227,17 @@ pcb-module nrf-motion :
   inst MNT : mounting-hole(radius(M2-hole), radius(M2-clear))[2]
   inst jitx : logo(3.0)
 
+  net GND (self.GND)
+  property(GND.net-class) = NetClass(`Power, [`min-trace => 0.8])
+  property(VDDA.net-class) = NetClass(`Power, [`min-trace => 0.8])
 
-  ; 6.6, 2.8 -> 23, 10
-  ; This does not work.
-  ; layer(ForbidCopper(LayerIndex(1), LayerIndex(0, Bottom))) = Rectangle(7.0, 10.0) ; at loc(4.0, 4.0)
 
-  ; Let's get Physical
-  geom(self.GND):
-    var sPt = center(pose(board-shape)) - Point(width(board-shape) / 2.0, height(board-shape) / 2.0)
-    var h = 12.5
-    var w = width(board-shape)
-    var cPt = sPt + Point(w / 2.0, h / 2.0)
-    copper-pour(LayerIndex(1), isolate = 0.2) = Rectangle(w, h, loc(cPt))
-
-    sPt = center(pose(board-shape)) - Point(width(board-shape) / 2.0, (- height(board-shape) / 2.0))
-    w = 27.0
-    h = 9.0
-    cPt = sPt + Point(w / 2.0, (- h / 2.0))
-    copper-pour(LayerIndex(1), isolate = 0.2) = Rectangle(w, h, loc(cPt))
-
-  geom(VDDA):
-    ; This is not great :(
-    val sPt = center(pose(board-shape)) - Point(width(board-shape) / 2.0, (- height(board-shape) / 2.0))
-    val w = 15.0
-    val h = 9.0
-    val cPt = sPt + Point(w / 2.0, (- h / 2.0))
-    copper-pour(LayerIndex(2), isolate = 0.2) = Rectangle(w, h, loc(cPt))
-
-  geom(self.VDD):
-    var sPt = center(pose(board-shape)) - Point(width(board-shape) / 2.0, height(board-shape) / 2.0)
-    val h = 10.5
-    val w = width(board-shape)
-    var cPt = sPt + Point(w / 2.0, h / 2.0)
-    copper-pour(LayerIndex(2), isolate = 0.2) = Rectangle(w, h, loc(cPt))
-
-    cPt = Point(-1.5, 5.0)
-    copper-pour(LayerIndex(2), isolate = 0.2) = Rectangle(10.0, 10.0, loc(cPt))
-
+  geom(GND) :
+    copper-pour(LayerIndex(1), isolate = 0.1, rank = 1) = board-shape
   ; Run the schematic review
   check-design(self)
 
-set-current-design("nrf-motion")
+set-current-design("nrf-pours")
 set-paper(ANSI-A)
 setup-board()
 

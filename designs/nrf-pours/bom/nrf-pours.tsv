@@ -1,0 +1,79 @@
+Notes	Description	Instances	Datasheet	References	Manufacturer	MPN	Vendor	SKU	Qty	Price	Cost	Total	0.863266198
+Auto Selected	25V 10nF X7R ±20% 0402  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	amp.cap	https://datasheet.lcsc.com/lcsc/2201271000_YAGEO-CC0402MRX7R8BB103_C1852860.pdf	C25	YAGEO	CC0402MRX7R8BB103	JLCPCB	CC0402MRX7R8BB103	1	$0.001012676	$0.001012676
+Auto Selected	2020 RGB LED	mcu.rgb.led	https://datasheet.lcsc.com/lcsc/1810231210_Foshan-NationStar-Optoelectronics-FM-B2020RGBA-HG_C108793.pdf	U3	Foshan NationStar Optoelectronics	FM-B2020RGBA-HG	JLCPCB	FM-B2020RGBA-HG	1	$0.017042254	$0.017042254
+Auto Selected	20V 760mA 360mΩ@4.5V,350mA 301mW P Channel -  MOSFETs ROHS	load-sw.Psw	https://datasheet.lcsc.com/lcsc/1809212222_onsemi-NTA4151PT1G_C54876.pdf	U6	onsemi	NTA4151PT1G	JLCPCB	NTA4151PT1G	1	$0.093943662	$0.093943662
+Auto Selected	50V 220mA 3.5Ω@10V,220mA 360mW N Channel SOT-23  MOSFETs ROHS	load-sw.Nctl	https://datasheet.lcsc.com/lcsc/1809291614_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--BSS138_C78284.pdf	Q1	Changjiang Electronics Tech (CJ)	BSS138	JLCPCB	BSS138	1	$0.02028169	$0.02028169
+Auto Selected	Battery base -25℃~+85℃ CR2032 SMD  Battery Connectors ROHS	bat.holder	https://datasheet.lcsc.com/lcsc/2012181809_MYOUNG-BS-08-B2AA016_C964792.pdf	U1	MYOUNG	BS-08-B2AA016	JLCPCB	BS-08-B2AA016	1	$0.325352113	$0.325352113
+Auto Selected	 LGA-16(3x3)  Attitude Sensor/Gyroscope ROHS	xl.acc	https://datasheet.lcsc.com/lcsc/1811031937_STMicroelectronics-LIS3DHTR_C15134.pdf	U4	STMicroelectronics	LIS3DHTR	JLCPCB	LIS3DHTR	1	$0.405633803	$0.405633803
+No Matching Part		RF.filter.C-R		C17		0402H101N0R5BCT			1		$0.0
+No Matching Part		mcu.nrf.cap		C3		GMC04CG821J50NT			1		$0.0
+No Matching Part	RES SMD 51K OHM 1% 1/5W 0402	amp.R2, amp.R1, amp.Rf		R11 R10 R9		CRCW040251K0FKEDHP			3		$0.0
+No Matching Part	JITX Logo	jitx		JITX1		non-BOM			1		$0.0
+No Matching Part	RES SMD 910K OHM 5% 1/16W 0402	load-sw.rid		R6		CR20914J			1		$0.0
+No Matching Part	Generic pin-header	tpHeader		J1		2X1-pin-header			1		$0.0
+No Matching Part		amp.cap		C22		0402YC103J4T2A			1		$0.0
+No Matching Part	RF reference MHz Range Crystal	mcu.nrf.hfosc		X1		TSX-3225 32.0000MF10Z-W6			1		$0.0
+No Matching Part	Advanced Bluetooth 5, Thread and Zigbee multiprotocol SoC	mcu.nrf.mcu		U2		NRF52840-QIAA-R			1		$0.0
+No Matching Part		mcu.nrf.cap, mcu.nrf.cap		C9 C4		GRT155R61E105ME01D			2		$0.0
+No Matching Part		RF.filter.C-F		C16		0402H500N0R8BCT			1		$0.0
+No Matching Part	RES 1.5K OHM 1% 1/16W 0402	amp.Rg		R8		RMCF0402FT1K50			1		$0.0
+No Information		MNT[1]		U10					1		$0.0
+No Information		RF.ant		ANT1					1		$0.0
+No Information		MNT[0]		U9					1		$0.0
+Not Enough Stock	300mA 4.7nH 0402  Inductors (SMD) ROHS	RF.filter.L	https://ds.yuden.co.jp/TYCOMPAS/ut/detail?pn=HK10054N7S-TV  &u=M	L1	Taiyo Yuden	HK10054N7S-TV			1		$0.0
+Not Enough Stock		mcu.nrf.cap	https://datasheets.avx.com/LD-Series.pdf	C2	KYOCERA AVX	LD025C101KAB2A			1		$0.0
+Not Enough Stock	 SOT-23-5  Operational Amplifier ROHS	amp.opa.IC	https://datasheet.lcsc.com/lcsc/2304140030_STMicroelectronics-TS971ILT_C2802553.pdf	U8	STMicroelectronics	TS971ILT			1		$0.0
+Not Enough Stock	RES 8.2K OHM 5% 1/16W 0402	mcu.rs.r[1], mcu.rs.r[0]	https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf	R2 R1	SEI	RMCF0402JT8K20			2		$0.0
+Not Enough Stock		mcu.nrf.cap	https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf?ref_disty=digikey	C5	TDK	C1005X5R1A475K050BC			1		$0.0
+Not Enough Stock		amp.Cf	https://www.vishay.com/docs/28548/vjw1bcbascomseries.pdf	C24	Vishay	VJ0402A151FXACW1BC			1		$0.0
+Not Enough Stock	62.5mW Thin Film Resistor 25V ±0.5% ±25ppm/℃ -55℃~+125℃ 510Ω 0402  Chip Resistor - Surface Mount ROHS	mcu.rgb.rid	https://datasheet.lcsc.com/lcsc/2202012300_SUSUMU-RR0510P-511-D_C2085189.pdf	R5	Susumu SCT	RR0510P-511-D			1		$0.0
+Not Enough Stock	1.6V~3.6V Omnidirectional 95uA -42dB 220Ω 57dB SMD-4P,2.2x3.8mm  MEMS Microphones ROHS	mic.mic	https://datasheet.lcsc.com/lcsc/2011200934_ALLPOWER-ShenZhen-Quan-Li-Semiconductor-AP3722AT_C918198.pdf	U7	ALLPOWER(ShenZhen Quan Li Semiconductor)	AP3722AT			1		$0.0
+Not Enough Stock	62.5mW Thick Film Resistors ±100ppm/℃ ±1% 1.8kΩ 0402  Chip Resistor - Surface Mount ROHS	mcu.rgb.rid, mcu.rgb.rid	https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-AF_51_RoHS_L_6.pdf	R4 R3	YAGEO	AF0402FR-071K8L			2		$0.0
+Not Enough Stock	100V 15pF C0G ±5% 0402  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	mcu.nrf.cap, mcu.nrf.cap	https://datasheet.lcsc.com/lcsc/2211282000_Taiyo-Yuden-HMK105CG150JV-F_C2174294.pdf	C13 C12	Taiyo Yuden	HMK105CG150JV-F			2		$0.0
+Not Enough Stock	10V 10uF X5R ±20% 0402  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	amp.cap, xl.cap	http://www.calchipelectronics.com/pdf/gmc_series.pdf	C21 C14	Cal-Chip Electronics	GMC04X5R106M10NT			2		$0.0
+Not Enough Stock	10V 1uF X5R ±10% 0402  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	amp.Cin	https://datasheet.lcsc.com/lcsc/2202040330_TDK-CGB2A1X5R1A105K033BC_C2169193.pdf	C23	TDK	CGB2A1X5R1A105K033BC			1		$0.0
+Not Enough Stock	16V 100nF Y5V -20%~+80% 0402  Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS	mic.cap, xl.cap, mcu.nrf.cap, mcu.nrf.cap, mcu.nrf.cap, mcu.nrf.cap	https://datasheet.lcsc.com/lcsc/2202040300_KEMET-C0402C104Z4VAC7867_C2168399.pdf	C20 C15 C8 C7 C6 C1	YAGEO	C0402C104Z4VACTU			6		$0.0
+Not Enough Stock		load-sw.cap	https://datasheets.avx.com/X7RDielectric.pdf	C19	KYOCERA AVX	0402YC104MAT2A			1		$0.0
+
+Messages:
+The instances amp.cap (C25) were assigned part CC0402MRX7R8BB103, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  JLCPCB for $0.001012676 (SKU = CC0402MRX7R8BB103)
+The instances mcu.rgb.led (U3) were assigned part FM-B2020RGBA-HG, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  JLCPCB for $0.017042254 (SKU = FM-B2020RGBA-HG)
+The instances load-sw.Psw (U6) were assigned part NTA4151PT1G, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  JLCPCB for $0.093943662 (SKU = NTA4151PT1G)
+The instances load-sw.Nctl (Q1) were assigned part BSS138, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  JLCPCB for $0.02028169 (SKU = BSS138)
+The instances bat.holder (U1) were assigned part BS-08-B2AA016, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  JLCPCB for $0.325352113 (SKU = BS-08-B2AA016)
+The instances xl.acc (U4) were assigned part LIS3DHTR, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  JLCPCB for $0.405633803 (SKU = LIS3DHTR)
+The instances RF.filter.C-R (C17) were assigned part 0402H101N0R5BCT, but there is not enough stock.
+The instances mcu.nrf.cap (C3) were assigned part GMC04CG821J50NT, but there is not enough stock.
+The instances amp.R2 (R11), amp.R1 (R10), amp.Rf (R9) were assigned part CRCW040251K0FKEDHP, but there is not enough stock.
+The instances jitx (JITX1) were assigned part non-BOM, but there is not enough stock.
+The instances load-sw.rid (R6) were assigned part CR20914J, but there is not enough stock.
+The instances tpHeader (J1) were assigned part 2X1-pin-header, but there is not enough stock.
+The instances amp.cap (C22) were assigned part 0402YC103J4T2A, but there is not enough stock.
+The instances mcu.nrf.hfosc (X1) were assigned part TSX-3225 32.0000MF10Z-W6, but there is not enough stock.
+The instances mcu.nrf.mcu (U2) were assigned part NRF52840-QIAA-R, but there is not enough stock.
+The instances mcu.nrf.cap (C9), mcu.nrf.cap (C4) were assigned part GRT155R61E105ME01D, but there is not enough stock.
+The instances RF.filter.C-F (C16) were assigned part 0402H500N0R8BCT, but there is not enough stock.
+The instances amp.Rg (R8) were assigned part RMCF0402FT1K50, but there is not enough stock.
+The instance MNT[1] (U10) has no assigned part.
+The instance RF.ant (ANT1) has no assigned part.
+The instance MNT[0] (U9) has no assigned part.
+The instances RF.filter.L (L1) were assigned part HK10054N7S-TV, but there is not enough stock.
+The instances mcu.nrf.cap (C2) were assigned part LD025C101KAB2A, but there is not enough stock.
+The instances amp.opa.IC (U8) were assigned part TS971ILT, but there is not enough stock.
+The instances mcu.rs.r[1] (R2), mcu.rs.r[0] (R1) were assigned part RMCF0402JT8K20, but there is not enough stock.
+The instances mcu.nrf.cap (C5) were assigned part C1005X5R1A475K050BC, but there is not enough stock.
+The instances amp.Cf (C24) were assigned part VJ0402A151FXACW1BC, but there is not enough stock.
+The instances mcu.rgb.rid (R5) were assigned part RR0510P-511-D, but there is not enough stock.
+The instances mic.mic (U7) were assigned part AP3722AT, but there is not enough stock.
+The instances mcu.rgb.rid (R4), mcu.rgb.rid (R3) were assigned part AF0402FR-071K8L, but there is not enough stock.
+The instances mcu.nrf.cap (C13), mcu.nrf.cap (C12) were assigned part HMK105CG150JV-F, but there is not enough stock.
+The instances amp.cap (C21), xl.cap (C14) were assigned part GMC04X5R106M10NT, but there is not enough stock.
+The instances amp.Cin (C23) were assigned part CGB2A1X5R1A105K033BC, but there is not enough stock.
+The instances mic.cap (C20), xl.cap (C15), mcu.nrf.cap (C8), mcu.nrf.cap (C7), mcu.nrf.cap (C6), mcu.nrf.cap (C1) were assigned part C0402C104Z4VACTU, but there is not enough stock.
+The instances load-sw.cap (C19) were assigned part 0402YC104MAT2A, but there is not enough stock.
