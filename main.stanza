@@ -7,7 +7,7 @@ defpackage ocdb/designs/nrf-motion:
   import ocdb/utils/bundles
   import ocdb/utils/checks
   import ocdb/utils/generic-components
-  import ocdb/utils/parametric-components
+  import ocdb/utils/placeholder-components
 
   import ocdb/utils/generator-utils
   import ocdb/utils/design-vars
