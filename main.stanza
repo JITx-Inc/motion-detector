@@ -29,10 +29,6 @@ defn setup-board () :
   set-rules(ocdb/manufacturers/rules/jlcpcb-basic-rules)
   set-use-layout-groups()
 
-  set-bom-vendors([
-   "LCSC",
-  ])
-
 public defn setup-supply-rail (pwr : JITXObject, supply-V : Toleranced) :
   inside pcb-module:
     public net VDD (pwr.vdd)
@@ -278,7 +274,31 @@ set-main-module(main-module) ; Treat the provided module as a design, and compil
 run-checks("checks.txt")
 ; View the results
 
-view-board()
-view-schematic()
 view-design-explorer()
-export-bom()
+view-schematic()
+view-board()
+; export-bom()
+
+
+set-bom-vendors(ocdb/utils/design-vars/APPROVED-DISTRIBUTOR-LIST)
+set-bom-design-quantity(100)
+
+set-bom-metrics([
+  BOMMetric(BOMMetricLineItems, "Line Items"),
+  BOMMetric(BOMMetricComponentCount, "Components"),
+  BOMMetric(BOMMetricTotalCost, "Cost")
+])
+
+set-bom-columns([
+  BOMColumn(BOMFieldStatus, "Status", 10.0)
+  BOMColumn(BOMFieldInsts, "References", 10.0)
+  BOMColumn(BOMFieldMPN, "MPN", 10.0)
+  BOMColumn(BOMFieldDescription, "Description", 20.0)
+  BOMColumn(BOMFieldVendor, "Supplier", 10.0)
+  BOMColumn(BOMFieldQuantity, "Qty", 5.0)
+  BOMColumn(BOMFieldSubtotal, "Total", 5.0)
+  BOMColumn(BOMFieldPreferred, "Preferred", 5.0)
+])
+
+view-bom(BOM-STD)
+
