@@ -8,7 +8,7 @@ defpackage ocdb/designs/nrf-motion:
   import ocdb/utils/checks
   import ocdb/utils/generic-components
   import ocdb/utils/parametric-components
-
+  
   import ocdb/utils/generator-utils
   import ocdb/utils/design-vars
   import ocdb/artwork/jitx-logo
@@ -118,11 +118,11 @@ pcb-module RF-frontend :
   pin gnd
 
   inst filter : pi-filter
-  inst ant : inverted-f-antenna-cmp
+  ; inst ant : inverted-f-antenna-cmp
 
-  net (gnd filter.gnd, ant.gnd)
-  net FEED (sig, filter.vin)
-  net LAUNCH (filter.vout, ant.launch)
+  ;net (gnd filter.gnd, ant.gnd)
+  ;net FEED (sig, filter.vin)
+  ;net LAUNCH (filter.vout, ant.launch)
 
   ; We add a u.FL connector with a separate inductor and capacitor that are
   ;   generally DNP. This will be used for FCC verfication.
@@ -140,9 +140,9 @@ pcb-module RF-frontend :
   ;   This is temporary - all this is likely to change
   ;   with the SI in the future.
   val CBCPW = NetClass(`ANT, [`min-trace => 0.5 `min-space => 0.2])
-  property(LAUNCH.net-class) = CBCPW
+  ; property(LAUNCH.net-class) = CBCPW
   property(TEST-LAUNCH.net-class) = CBCPW
-  property(FEED.net-class) = CBCPW
+  ; property(FEED.net-class) = CBCPW
 
   schematic-group(self) = RF
   layout-group(self) = RF-layout
@@ -174,7 +174,7 @@ pcb-module nrf-motion :
 
   ; RF Interface for the MCU
   inst RF : RF-frontend
-  net (mcu.ant, RF.sig)
+  ; net (mcu.ant, RF.sig)
   net (self.GND RF.gnd)
 
   ; Power swith for the Analog Power Domain
