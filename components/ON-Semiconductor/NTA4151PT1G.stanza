@@ -1,0 +1,198 @@
+; This file is generated based on the parts database query below:")
+;   database-part(["manufacturer" => "ON Semiconductor", "mpn" => "NTA4151PT1G"])
+#use-added-syntax(jitx)
+defpackage components/ON-Semiconductor/NTA4151PT1G :
+  import core
+  import jitx
+  import jitx/commands
+  import ocdb/utils/box-symbol
+
+
+pcb-pad rectangle-smd-pad :
+  name = "rectangle-smd-pad"
+  type = SMD
+  shape = Rectangle(0.400, 0.700)
+  layer(SolderMask(Top)) = Rectangle(0.502, 0.802)
+  layer(Paste(Top)) = Rectangle(0.502, 0.802)
+
+pcb-landpattern lp :
+  pad p[1] : rectangle-smd-pad at loc(0.600, -0.509, 90.000) on Top
+  pad p[2] : rectangle-smd-pad at loc(0.600, 0.507, 90.000) on Top
+  pad p[3] : rectangle-smd-pad at loc(-0.600, -0.000999999999976353, 90.000) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Text(">REF", 0.5, W, loc(-0.750, 2.683))
+  layer(CustomLayer("Fab", Top)) = Text(">VALUE", 0.5, W, loc(-0.750, 1.683))
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.400, 0.850), Point(-0.400, 0.427)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.400, -0.428), Point(-0.400, -0.850)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.400, 0.850), Point(0.068, 0.850)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-0.400, -0.850), Point(0.068, -0.850)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(0.400, 0.076), Point(0.400, -0.077)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.060, [
+    Arc(0.800, -0.801, 0.030, 0.0, -360.000)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.100, [
+    Arc(1.025, -0.500, 0.050, 0.0, -360.000)])
+  layer(Courtyard(Top)) = Rectangle(1.702, 1.954)
+
+  model3d = Model3D("../../3d-models/jitx-64d1420ab789d8dc4b7a5690.stp",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.000, 1.000, 1.000),
+    Vec3D(0.0, 0.0, 0.0),
+    [],
+    )
+
+pcb-symbol sym-NTA4151PT1G :
+  pin D at Point(2.540, 5.080) with :
+    direction = Up
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+  pin G at Point(-5.080, -2.540) with :
+    direction = Left
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+  pin S at Point(2.540, -2.540) with :
+    direction = Down
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+
+  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 6.207))
+  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 7.207))
+  layer("foreground") = Circle(-5.080, -2.540, 0.127)
+  layer("foreground") = Circle(2.540, -2.540, 0.127)
+  layer("foreground") = Circle(2.540, 0.0, 0.127)
+  layer("foreground") = Circle(2.540, 5.080, 0.127)
+  layer("foreground") = Circle(2.540, 0.762, 0.127)
+  layer("foreground") = Polyline(0.254, [
+    Point(2.540, 0.0)
+    Point(5.080, 0.0)
+    Point(5.080, 2.032)])
+  layer("foreground") = Polyline(0.254, [
+    Point(2.540, 4.318)
+    Point(2.540, 5.080)
+    Point(5.080, 5.080)
+    Point(5.080, 3.302)])
+  layer("foreground") = Polyline(0.254, [
+    Point(2.540, 4.318)
+    Point(0.0, 4.318)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, 2.540)
+    Point(2.540, 2.540)
+    Point(2.540, 0.0)])
+  layer("foreground") = Polyline(0.254, [
+    Point(2.540, 0.762)
+    Point(0.0, 0.762)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-0.508, 4.826)
+    Point(-0.508, 0.254)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, 3.810)
+    Point(0.0, 4.826)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, 2.032)
+    Point(0.0, 3.048)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, 0.254)
+    Point(0.0, 1.270)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-2.540, 2.540)
+    Point(-0.508, 2.540)])
+  layer("foreground") = Polyline(0.254, [
+    Point(5.842, 2.032)
+    Point(5.588, 2.032)
+    Point(4.572, 2.032)
+    Point(4.318, 2.032)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-1.016, -3.302)
+    Point(-1.016, -1.778)
+    Point(0.0, -2.540)
+    Point(-1.016, -3.302)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-2.794, -3.556)
+    Point(-2.794, -1.524)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-2.794, -2.540)
+    Point(-1.778, -3.302)
+    Point(-1.778, -1.778)
+    Point(-2.794, -2.540)])
+  layer("foreground") = Polyline(0.254, [
+    Point(2.540, -2.540)
+    Point(-5.080, -2.540)])
+  layer("foreground") = Polyline(0.254, [
+    Point(2.540, -2.540)
+    Point(2.540, 0.0)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-2.540, 2.540)
+    Point(-2.794, 3.048)
+    Point(-3.048, 2.032)
+    Point(-3.556, 3.048)
+    Point(-3.810, 2.032)
+    Point(-4.318, 3.048)
+    Point(-4.572, 2.032)
+    Point(-4.826, 2.540)
+    Point(-5.080, 2.540)
+    Point(-5.080, -2.540)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-2.286, -4.064)
+    Point(-2.794, -3.556)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-2.794, -1.524)
+    Point(-3.302, -1.016)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, -3.556)
+    Point(0.0, -1.524)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.508, -4.064)
+    Point(0.0, -3.556)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, -1.524)
+    Point(-0.508, -1.016)])
+  layer("foreground") = Polygon([
+    Point(2.540, 2.540)
+    Point(1.016, 3.048)
+    Point(1.016, 2.032)])
+  layer("foreground") = Polygon([
+    Point(5.080, 2.032)
+    Point(5.842, 3.302)
+    Point(4.318, 3.302)])
+
+public pcb-component component :
+  name = "C54876"
+  description = "20V 760mA 360mΩ@4.5V,350mA 301mW P Channel -  MOSFETs ROHS"
+  manufacturer = "ON Semiconductor"
+  mpn = "NTA4151PT1G"
+  datasheet = "https://datasheet.lcsc.com/lcsc/1809212222_onsemi-NTA4151PT1G_C54876.pdf"
+  reference-prefix = "Q"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir | electrical-type:String | bank:Int]
+    [D | p[3] | Up | "unspecified" | 0]
+    [G | p[1] | Left | "unspecified" | 0]
+    [S | p[2] | Down | "unspecified" | 0]
+
+  assign-landpattern(lp)
+  assign-symbol(sym-NTA4151PT1G)
+
+  property(self.category) = "transistor"
+  property(self.manufacturer_aliases) = ["onsemi"]
+  property(self.mpn_aliases) = ["NTA4151PT1G"]
+  property(self.cofactr_id) = "TRN0ZRVK28J5"
+  property(self.reference_prefix) = "Q"
+  property(self.trust) = "low"
+  property(self.x) = 1.702
+  property(self.y) = 1.954
+  property(self.area) = 3.326
+  property(self.case) = "-"
+
+  ; Junction Temperature Range
+  property(self.temperature-range) = min-max(-55.0, 150.0)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; User Properties
+  property(self.Vds) = -20.0 ; V
+  property(self.Vgs) = min-max(-6.0, 6.0)
+  property(self.Vgs-th) = min-max(-1.2, -0.45)
+  property(self.Id-cont) = -0.76 ; A
+  ; @TODO - want to have an enum definition for 
+  ;   PMOS vs NMOS ? 
+  property(self.mode) = "P" ; as opposed to N

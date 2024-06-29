@@ -1,0 +1,327 @@
+#use-added-syntax(jitx)
+defpackage amplifiers :
+  import core
+  import collections
+  import math
+  import jitx
+  import jitx/commands
+  import ocdb/utils/defaults
+  import ocdb/utils/generic-components
+  import ocdb/utils/generator-utils
+
+  import ocdb/utils/checks
+  import ocdb/utils/passive-checks/utils
+  import ocdb/utils/design-vars
+
+  import ocdb/utils/property-structs
+  import ocdb/utils/bundles
+  import noise
+
+public defstruct BandpassConfig :
+  ; Gain expressed as `vout/vin`
+  gain:Double
+  ; Low 3dB Cutoff frequency in Hz - this is the start of the passband
+  low-cut:Double
+  ; Filter order (number of poles) - ie first order is 20dB/decade, 2nd order is 40db/decade, etc
+  low-order:Int
+  ; High 3dB Cutoff frequency in Hz - this is the end of the passband
+  high-cut:Double
+  ; Filter Order (number of poles)
+  high-order:Int
+
+public defn BandpassConfig (gain:Double, low-cut:Double, high-cut:Double) -> BandpassConfig:
+  BandpassConfig(gain, low-cut, 1, high-cut, 1)
+
+defmethod print (o:OutputStream, c:BandpassConfig) :
+  print(o, "Bandpass: G=%_, low=%_, high=%_" % [gain(c), low-cut(c), high-cut(c)])
+
+public defstruct InvalidBandpassError <: Exception :
+  msg:String
+  config:BandpassConfig
+
+defmethod print (o:OutputStream, e:InvalidBandpassError) :
+  print(o, "Invalid Bandpass Config: %_ config=%_" % [msg, config])
+
+;  Given a Bandpass configuration - compute the maximum achievable gain in the
+;   pass band and check any other features of use.
+public defn check-bandpass-config (config:BandpassConfig) :
+  val f-low = low-cut(config)
+  val f-high = high-cut(config)
+
+  if not ((f-low > 0.0) and (f-high > 0.0)) :
+    throw(InvalidBandpassError("low-cut and high-cut must be greater than 0", config))
+
+  if not (f-low < f-high) :
+    throw(InvalidBandpassError("low-cut must be less then high-cut", config))
+
+  if not (low-order(config) > 0 or high-order(config) > 0):
+    throw(InvalidBandpassError("Filter order must be greater than 0", config))
+
+  if not (gain(config) > 0.0) :
+    throw(InvalidBandpassError("Gain must be greater than zero", config))
+
+  ; Check that low and high are not too close together - we want
+  ;  to use the `f1 / f2 => 0.0` approximattion.
+  val ratio = f-low / f-high
+  if ratio > 0.03 :
+    throw(InvalidBandpassError("Filter Band Calculation Assumes f-low << f-high", config))
+
+pcb-check slew-rate-check (opAmp:JITXObject, min-slew-rate:Double) :
+  check-has-properties("Has 'slew-rate' Property?", opAmp.IC, [`slew-rate])
+  val slewRate = property(opAmp.IC.slew-rate)
+  #CHECK(
+    condition =            slewRate >= min-slew-rate,
+    name =                 "Amplifier Slew Rate",
+    description =          "Check that this amplifier has a slew rate that is sufficient to drive expected frequencies of interest",
+    category =             "Component Checks"
+    subcheck-description = "Check amplifier Slew Rate (V/S)"
+    pass-message =         "Slew-Rate OK: %_ > %_"  % [slewRate, min-slew-rate]
+    fail-message =         "Slew Rate '%_ V/S' does not meet minimum slew rate '%_ V/S'" % [slewRate, min-slew-rate]
+    locators =             [opAmp]
+    )
+
+; I defined this instead of using `within?` because it allowed me to name
+;   these `within?` clauses and have them show up as some named entity.
+;   I think we may want to consider adding an optional arg to `within?`
+public pcb-check within-accepted? (t:Toleranced, value:Toleranced, name:String) :
+  val desc = "Check that %_ is within an acceptable range"
+  val category = "Value checks"
+  #CHECK(
+    condition =            in-range?(t, value),
+    name =                 name,
+    description =          desc,
+    category =             category,
+    subcheck-description = "Check that a value is within a given range",
+    pass-message =         "Range %_ is correctly within %_" % [value t],
+    fail-message =         "Value %_ to %_ is not within the range of %_ to %_" % [min-value(value) max-value(value) min-value(t) max-value(t)],
+    locators =             []
+    )
+
+; Helper for Percentages - working on (1 %) operator.
+defn perc (v:Int) -> Double :
+  to-double(v) / 100.0
+
+; App Note for pre-amp circuit to a MEMS microhpone.
+; https://www.st.com/resource/en/application_note/an4598-preamplifying-the-analog-output-of-a-mems-microphone-stmicroelectronics.pdf
+
+; This circuit implements a microphone preamp circuit
+;  The user must pass in an OpAmp component type 'AMP_t' that
+;  this module will use to construct the circuit.
+;
+; @NOTE- I'm using a closure here because `config` isn't a JITX object
+public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
+  pcb-module microphone-preamp-mod :
+    pin in
+    pin out
+    port vin : power
+
+    inst opa : AMP_t
+    net (opa.supply, vin)
+
+    bypass-cap-strap(opa.supply.vdd, opa.supply.gnd, 10.0e-6)
+    bypass-cap-strap(opa.supply.vdd, opa.supply.gnd, 10.0e-9)
+
+    ;  Amplifier is a standard inverting amplifier in a bandpass
+    ;    configuration.
+    val G = gain(config)
+    if G > 50.0 :
+      throw(InvalidBandpassError("Gain is too high - choose a lower gain setting", config))
+
+    if (low-order(config) != 1) or (high-order(config) != 1) :
+      throw(InvalidBandpassError("This module only supports first order filters", config))
+
+    check-bandpass-config(config)
+
+    val f-low = low-cut(config)
+    val f-high = high-cut(config)
+
+    ; Shorting resistor to test amplifier noise
+    ;   This will be DNP except for testing.
+    val R-short = res-strap(in, vin.gnd, 0.0)
+    dnp(R-short)
+
+    ; Feedback for setting the gain in the
+    ;  pass band.
+
+    val Rf_v = 51.0e3
+    val Rg_v = closest-std-val(Rf_v / G, 1.0)
+
+    val valid-R-values = min-max(1.0e3, 1.0e6)
+    check within-accepted?(valid-R-values, typ(Rf_v), "Rf")
+    check within-accepted?(valid-R-values, typ(Rg_v), "Rg")
+
+    ; f = Freq in Hz
+    ; R = Resistance in ohms
+    defn compute-C (f:Double, R:Double) -> Double :
+      1. / (2. * PI * R * f)
+
+    ; Compute the capacitor values.
+    ;  The feedback cap sets the upper freq limit
+    ;    for the bandpass filter.
+    val capTol = 10.0
+    val Cf_v = closest-std-val{_, capTol} $ compute-C(f-high, Rf_v)
+    ;  The input blocking cap sets the lower freq limit
+    val Cin_v = closest-std-val{_, capTol} $ compute-C(f-low, Rg_v)
+
+    val valid-C-values = min-max(10.0e-12, 1.0e-6)
+    check within-accepted?(valid-C-values, typ(Cf_v), "Cf")
+    check within-accepted?(valid-C-values, typ(Cin_v), "Cin")
+
+    ; Slew rate check -
+    ;  The output voltage swing and the frequency determine
+    ;  the minimum slew rate.
+    ;   Vout(pp) <= Slew-rate / (pi * freq)
+
+    ; Margin between the vout and the rails
+    val margin = 0.2 ; V
+
+    ; Check that the opamp has the slew-rate property
+    val vdd = 3.0
+    val maxVpp = vdd - margin
+    ; Add some margin on the slew rate so that we
+    ;   don't prematurely enter the region where the
+    ;   dominant pole of the opamp cuts the frequency.
+    val slewRateMargin = 1.5
+    val minSlewRate = maxVpp * PI * f-high * slewRateMargin
+    check slew-rate-check(opa, minSlewRate)
+
+    ; Input High Pass
+    inst Cin : ceramic-cap(Cin_v, perc(10))
+    inst Rg : chip-resistor(Rg_v, perc(1))
+
+    net signal (in, Cin.p[1])
+    net (Cin.p[2], Rg.p[1])
+    net op- (opa.amp.in-, Rg.p[2] )
+
+    ; Feedback Low Pass
+    inst Cf : ceramic-cap(Cf_v, perc(1))
+    inst Rf : chip-resistor(Rf_v, perc(1))
+
+    net (op- Cf.p[1], Rf.p[1])
+    net vout (Cf.p[2], Rf.p[2], opa.amp.out, out)
+
+    ; Set the reference voltage of the output
+    ;  by applying a voltage divider.
+    ;  This is reusing the feedback resistance to
+    ;  create a reference that is 0.5 * VDD
+
+    inst R1 : chip-resistor(Rf_v, perc(1))
+    inst R2 : chip-resistor(Rf_v, perc(1))
+
+    net (R1.p[1] vin.vdd)
+    net vref (R1.p[2] R2.p[1])
+    net (R2.p[2] vin.gnd)
+    net (vref opa.amp.in+)
+    val R1t = tol%(Rf_v, 1.0)
+    val Vref-ratio = R1t / (2.0 * R1t)
+    val Vref = vdd * Vref-ratio
+
+    ; @TODO - check input voltage offset for noise
+    ; First check that the voltage reference is within
+    ;   our available offset range.
+    val offsetRange = tol(vdd / 2.0, margin / 2.0)
+    check within-accepted?(offsetRange, Vref, "Vref")
+
+    ; Next use our gain to check if the input offset error
+    ;   of the opamp is going to cause us problems with
+    ;   staying in the viable range.
+    ; check check-has-properties("Has 'input-offset-V' Property?", opa.IC, [`input-offset-V])
+    val inputOffset = property(opa.IC.input-offset-V)
+    val Rft = tol%(Rf_v, 1.0)
+    val Rgt = tol%(Rg_v, 1.0)
+    val gain_t = Rft / Rgt
+    val outputOffset = inputOffset * gain_t
+
+    val outputRange = Vref + outputOffset
+    check within-accepted?(offsetRange, outputRange, "Signal Offset")
+
+    ; Add a touch of filtering to the ref set point.
+    ;  @TODO - check rise time on reference from power off.
+    ; bypass-cap-strap(op-amp.VIN+, vin.gnd, 1.0e-6)
+
+    val Cref_t = tol%(10.0e-9, 20.0)
+    bypass-cap-strap(opa.amp.in+, vin.gnd, typ(Cref_t), 0.20)
+
+    ; time constant for this circuit is t = (R*C) / 2.0
+    val tau = Rft * Cref_t
+    val riseTime = 2.0 * tau
+    check within-accepted?(min-max(100.0e-6, 5.0e-3), riseTime, "Vref Rise Time (S)")
+
+    val T = max-value(OPERATING-TEMPERATURE)
+
+    ; Noise calculation -
+    ;  Examples:
+    ;     https://www.ti.com/lit/pdf/slva043
+    ;     https://www.analog.com/media/en/training-seminars/tutorials/MT-048.pdf
+
+    ; ENB - equivalent noise bandwidth
+    val ENB-low = compute-ENB-hp(f-low, low-order(config))
+    val ENB-high = compute-ENB-lp(f-high, high-order(config))
+    val ENB = ENB-high - ENB-low
+
+    ; Due to superposition - the noise sources can all
+    ;   be summed together.
+    val noise-srcs = Vector<Double>()
+
+    ; Noise Gain of the circuit
+    ; If you set the Rf, Rg to noiseless and ground the input - then
+    ;  this basically becomes a non-inverting amplifier with
+    ;   noise out of the gain defined by the Rf and Rg
+    val ni-gain = 1.0 + (Rf_v / Rg_v)
+
+    defn vref-power-noise () -> Double :
+      ; Power Supply Noise - we're using a coin cell
+      ;  so the noise is very low
+      ; "A Method for Voltage Noise Measurement and Its Application to Primary Batteries"
+      val VBat_RMS = 3.0e-6 ; V RMS
+      val vref_PS_RMS = VBat_RMS * typ(Vref-ratio)
+      ; There basically two resistors in parallel - so need
+      ;  to multiply the noise by 2x - We can't analyze these in
+      ;  parallel like for lumped-circuit impedance.
+      val vref-div = 2.0 * johnson-rms(Rf_v, T, ENB)
+      pow(ni-gain, 2.0) * (vref_PS_RMS + vref-div)
+
+    defn fb-res-noise () -> Double :
+      ; The noise in the source resistor gets multiplied
+      ;   by the gain of the amplifier but the noise in the
+      ;   feedback resistor does not.
+      val A2 = pow( (Rf_v / Rg_v), 2.0)
+      val Eg = A2 * johnson-rms(Rg_v, T, ENB)
+      val Ef = johnson-rms(Rf_v, T, ENB)
+      Eg + Ef
+
+    defn amp-noise () -> Double :
+      ; The opamp noise is modeled as coming from 3 sources:
+      ;  1.  A small voltage source in the differential input
+      ;  2.  A small current source in the positive input
+      ;  3.  A small current source in the negative input
+      val end = property(opa.IC.input-noise-v-density) ; V / sqrt(Hz)
+      val Fc = property(opa.IC.noise-corner-freq)
+
+      ; Compute the integral of the power spectral density of
+      ;   the op-amp with reference to its 3dB noise corner freq
+      val f-integ = sqrt(opamp-noise-integral(Fc, ENB-low, ENB-high))
+
+      val V-noise = end * ni-gain * f-integ
+
+      val ind = property(opa.IC.input-noise-i-density) ; A / sqrt(Hz)
+      val In-noise = ind * Rf_v * f-integ
+      val Ip-noise = ind * ni-gain * (Rf_v / 2.0) * f-integ
+
+      V-noise + In-noise + Ip-noise
+
+    add(noise-srcs, vref-power-noise())
+    add(noise-srcs, fb-res-noise())
+    add(noise-srcs, amp-noise())
+
+    val E_Total_RMS = sqrt(
+      sum(map(pow{_, 2.0}, to-tuple(noise-srcs)))
+      )
+    println("Expected RMS Output Noise: %_" % [E_Total_RMS])
+
+    schematic-group(self) = preamp
+    layout-group(self) = preamp
+
+  microphone-preamp-mod
+
+

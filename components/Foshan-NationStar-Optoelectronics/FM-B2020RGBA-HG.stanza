@@ -1,0 +1,671 @@
+; This file is generated based on the parts database query below:")
+;   database-part(["manufacturer" => "Foshan NationStar Optoelectronics", "mpn" => "FM-B2020RGBA-HG"])
+#use-added-syntax(jitx)
+defpackage components/Foshan-NationStar-Optoelectronics/FM-B2020RGBA-HG :
+  import core
+  import jitx
+  import jitx/commands
+  import ocdb/utils/box-symbol
+  import ocdb/utils/landpatterns
+  import ocdb/utils/symbols
+  import ocdb/utils/bundles
+  import ocdb/utils/generator-utils
+  import ocdb/utils/generic-components
+  import ocdb/utils/property-structs
+
+pcb-pad rectangle-smd-pad :
+  name = "rectangle-smd-pad"
+  type = SMD
+  shape = Rectangle(0.700, 0.800)
+  layer(SolderMask(Top)) = Rectangle(0.802, 0.902)
+  layer(Paste(Top)) = Rectangle(0.802, 0.902)
+
+pcb-landpattern lp :
+  pad p[1] : rectangle-smd-pad at loc(-0.850, 0.550, 270.000) on Top
+  pad p[2] : rectangle-smd-pad at loc(0.850, 0.550, 270.000) on Top
+  pad p[3] : rectangle-smd-pad at loc(0.850, -0.550, 270.000) on Top
+  pad p[4] : rectangle-smd-pad at loc(-0.850, -0.550, 270.000) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Text(">REF", 0.5, W, loc(-0.750, 2.908))
+  layer(CustomLayer("Fab", Top)) = Text(">VALUE", 0.5, W, loc(-0.750, 1.908))
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.152, [
+    Point(-1.126, 0.971)
+    Point(-1.126, 1.127)
+    Point(-1.126, 1.127)
+    Point(1.126, 1.127)
+    Point(1.126, 1.127)
+    Point(1.126, 0.971)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.152, [
+    Point(-1.126, -0.970)
+    Point(-1.126, -1.126)
+    Point(-1.126, -1.126)
+    Point(1.126, -1.126)
+    Point(1.126, -1.126)
+    Point(1.126, -0.970)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.060, [
+    Arc(-1.050, 1.051, 0.030, 0.0, -360.000)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.250, [
+    Arc(-1.620, 0.730, 0.125, 0.0, -360.000)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.530, 0.430)
+    Point(-0.510, 0.430)
+    Point(-0.510, 0.390)
+    Point(-0.530, 0.390)
+    Point(-0.530, 0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.550, 0.430)
+    Point(-0.530, 0.430)
+    Point(-0.530, 0.390)
+    Point(-0.550, 0.390)
+    Point(-0.550, 0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.570, 0.430)
+    Point(-0.550, 0.430)
+    Point(-0.550, 0.390)
+    Point(-0.570, 0.390)
+    Point(-0.570, 0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.590, 0.430)
+    Point(-0.570, 0.430)
+    Point(-0.570, 0.390)
+    Point(-0.590, 0.390)
+    Point(-0.590, 0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.610, 0.430)
+    Point(-0.590, 0.430)
+    Point(-0.590, 0.390)
+    Point(-0.610, 0.390)
+    Point(-0.610, 0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.630, 0.430)
+    Point(-0.610, 0.430)
+    Point(-0.610, 0.390)
+    Point(-0.630, 0.390)
+    Point(-0.630, 0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.650, 0.430)
+    Point(-0.630, 0.430)
+    Point(-0.630, 0.390)
+    Point(-0.650, 0.390)
+    Point(-0.650, 0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.690, 0.310)
+    Point(-0.670, 0.310)
+    Point(-0.670, 0.290)
+    Point(-0.690, 0.290)
+    Point(-0.690, 0.310)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.710, 0.350)
+    Point(-0.690, 0.350)
+    Point(-0.690, 0.290)
+    Point(-0.710, 0.290)
+    Point(-0.710, 0.350)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.730, 0.590)
+    Point(-0.710, 0.590)
+    Point(-0.710, 0.470)
+    Point(-0.730, 0.470)
+    Point(-0.730, 0.590)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.730, 0.390)
+    Point(-0.710, 0.390)
+    Point(-0.710, 0.290)
+    Point(-0.730, 0.290)
+    Point(-0.730, 0.390)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.750, 0.590)
+    Point(-0.730, 0.590)
+    Point(-0.730, 0.450)
+    Point(-0.750, 0.450)
+    Point(-0.750, 0.590)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.750, 0.410)
+    Point(-0.730, 0.410)
+    Point(-0.730, 0.290)
+    Point(-0.750, 0.290)
+    Point(-0.750, 0.410)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.770, 0.610)
+    Point(-0.750, 0.610)
+    Point(-0.750, 0.450)
+    Point(-0.770, 0.450)
+    Point(-0.770, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.770, 0.430)
+    Point(-0.750, 0.430)
+    Point(-0.750, 0.310)
+    Point(-0.770, 0.310)
+    Point(-0.770, 0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.790, 0.610)
+    Point(-0.770, 0.610)
+    Point(-0.770, 0.550)
+    Point(-0.790, 0.550)
+    Point(-0.790, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.790, 0.490)
+    Point(-0.770, 0.490)
+    Point(-0.770, 0.350)
+    Point(-0.790, 0.350)
+    Point(-0.790, 0.490)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.810, 0.610)
+    Point(-0.790, 0.610)
+    Point(-0.790, 0.570)
+    Point(-0.810, 0.570)
+    Point(-0.810, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.810, 0.470)
+    Point(-0.790, 0.470)
+    Point(-0.790, 0.390)
+    Point(-0.810, 0.390)
+    Point(-0.810, 0.470)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.830, 0.610)
+    Point(-0.810, 0.610)
+    Point(-0.810, 0.570)
+    Point(-0.830, 0.570)
+    Point(-0.830, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.830, 0.470)
+    Point(-0.810, 0.470)
+    Point(-0.810, 0.410)
+    Point(-0.830, 0.410)
+    Point(-0.830, 0.470)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.850, 0.610)
+    Point(-0.830, 0.610)
+    Point(-0.830, 0.570)
+    Point(-0.850, 0.570)
+    Point(-0.850, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.850, 0.470)
+    Point(-0.830, 0.470)
+    Point(-0.830, 0.430)
+    Point(-0.850, 0.430)
+    Point(-0.850, 0.470)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.870, 0.610)
+    Point(-0.850, 0.610)
+    Point(-0.850, 0.290)
+    Point(-0.870, 0.290)
+    Point(-0.870, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.890, 0.610)
+    Point(-0.870, 0.610)
+    Point(-0.870, 0.290)
+    Point(-0.890, 0.290)
+    Point(-0.890, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.910, 0.610)
+    Point(-0.890, 0.610)
+    Point(-0.890, 0.290)
+    Point(-0.910, 0.290)
+    Point(-0.910, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.930, 0.610)
+    Point(-0.910, 0.610)
+    Point(-0.910, 0.290)
+    Point(-0.930, 0.290)
+    Point(-0.930, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.490, -0.570)
+    Point(-0.470, -0.570)
+    Point(-0.470, -0.610)
+    Point(-0.490, -0.610)
+    Point(-0.490, -0.570)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.510, -0.570)
+    Point(-0.490, -0.570)
+    Point(-0.490, -0.610)
+    Point(-0.510, -0.610)
+    Point(-0.510, -0.570)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.530, -0.570)
+    Point(-0.510, -0.570)
+    Point(-0.510, -0.610)
+    Point(-0.530, -0.610)
+    Point(-0.530, -0.570)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.550, -0.570)
+    Point(-0.530, -0.570)
+    Point(-0.530, -0.610)
+    Point(-0.550, -0.610)
+    Point(-0.550, -0.570)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.570, -0.570)
+    Point(-0.550, -0.570)
+    Point(-0.550, -0.610)
+    Point(-0.570, -0.610)
+    Point(-0.570, -0.570)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.590, -0.570)
+    Point(-0.570, -0.570)
+    Point(-0.570, -0.610)
+    Point(-0.590, -0.610)
+    Point(-0.590, -0.570)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.610, -0.570)
+    Point(-0.590, -0.570)
+    Point(-0.590, -0.610)
+    Point(-0.610, -0.610)
+    Point(-0.610, -0.570)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.670, -0.550)
+    Point(-0.650, -0.550)
+    Point(-0.650, -0.690)
+    Point(-0.670, -0.690)
+    Point(-0.670, -0.550)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.690, -0.410)
+    Point(-0.670, -0.410)
+    Point(-0.670, -0.450)
+    Point(-0.690, -0.450)
+    Point(-0.690, -0.410)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.690, -0.550)
+    Point(-0.670, -0.550)
+    Point(-0.670, -0.690)
+    Point(-0.690, -0.690)
+    Point(-0.690, -0.550)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.710, -0.390)
+    Point(-0.690, -0.390)
+    Point(-0.690, -0.450)
+    Point(-0.710, -0.450)
+    Point(-0.710, -0.390)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.710, -0.550)
+    Point(-0.690, -0.550)
+    Point(-0.690, -0.710)
+    Point(-0.710, -0.710)
+    Point(-0.710, -0.550)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.730, -0.390)
+    Point(-0.710, -0.390)
+    Point(-0.710, -0.450)
+    Point(-0.730, -0.450)
+    Point(-0.730, -0.390)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.730, -0.550)
+    Point(-0.710, -0.550)
+    Point(-0.710, -0.710)
+    Point(-0.730, -0.710)
+    Point(-0.730, -0.550)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.750, -0.390)
+    Point(-0.730, -0.390)
+    Point(-0.730, -0.430)
+    Point(-0.750, -0.430)
+    Point(-0.750, -0.390)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.750, -0.550)
+    Point(-0.730, -0.550)
+    Point(-0.730, -0.590)
+    Point(-0.750, -0.590)
+    Point(-0.750, -0.550)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.750, -0.670)
+    Point(-0.730, -0.670)
+    Point(-0.730, -0.710)
+    Point(-0.750, -0.710)
+    Point(-0.750, -0.670)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.770, -0.390)
+    Point(-0.750, -0.390)
+    Point(-0.750, -0.430)
+    Point(-0.770, -0.430)
+    Point(-0.770, -0.390)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.770, -0.550)
+    Point(-0.750, -0.550)
+    Point(-0.750, -0.590)
+    Point(-0.770, -0.590)
+    Point(-0.770, -0.550)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.770, -0.670)
+    Point(-0.750, -0.670)
+    Point(-0.750, -0.710)
+    Point(-0.770, -0.710)
+    Point(-0.770, -0.670)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.790, -0.390)
+    Point(-0.770, -0.390)
+    Point(-0.770, -0.430)
+    Point(-0.790, -0.430)
+    Point(-0.790, -0.390)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.790, -0.550)
+    Point(-0.770, -0.550)
+    Point(-0.770, -0.590)
+    Point(-0.790, -0.590)
+    Point(-0.790, -0.550)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.790, -0.670)
+    Point(-0.770, -0.670)
+    Point(-0.770, -0.710)
+    Point(-0.790, -0.710)
+    Point(-0.790, -0.670)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.810, -0.390)
+    Point(-0.790, -0.390)
+    Point(-0.790, -0.430)
+    Point(-0.810, -0.430)
+    Point(-0.810, -0.390)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.810, -0.670)
+    Point(-0.790, -0.670)
+    Point(-0.790, -0.710)
+    Point(-0.810, -0.710)
+    Point(-0.810, -0.670)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.830, -0.390)
+    Point(-0.810, -0.390)
+    Point(-0.810, -0.450)
+    Point(-0.830, -0.450)
+    Point(-0.830, -0.390)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.830, -0.650)
+    Point(-0.810, -0.650)
+    Point(-0.810, -0.710)
+    Point(-0.830, -0.710)
+    Point(-0.830, -0.650)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.850, -0.390)
+    Point(-0.830, -0.390)
+    Point(-0.830, -0.470)
+    Point(-0.850, -0.470)
+    Point(-0.850, -0.390)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.850, -0.650)
+    Point(-0.830, -0.650)
+    Point(-0.830, -0.710)
+    Point(-0.850, -0.710)
+    Point(-0.850, -0.650)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.870, -0.410)
+    Point(-0.850, -0.410)
+    Point(-0.850, -0.490)
+    Point(-0.870, -0.490)
+    Point(-0.870, -0.410)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.870, -0.610)
+    Point(-0.850, -0.610)
+    Point(-0.850, -0.690)
+    Point(-0.870, -0.690)
+    Point(-0.870, -0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.890, -0.430)
+    Point(-0.870, -0.430)
+    Point(-0.870, -0.690)
+    Point(-0.890, -0.690)
+    Point(-0.890, -0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.910, -0.430)
+    Point(-0.890, -0.430)
+    Point(-0.890, -0.670)
+    Point(-0.910, -0.670)
+    Point(-0.910, -0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.930, -0.470)
+    Point(-0.910, -0.470)
+    Point(-0.910, -0.650)
+    Point(-0.930, -0.650)
+    Point(-0.930, -0.470)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.950, -0.510)
+    Point(-0.930, -0.510)
+    Point(-0.930, -0.590)
+    Point(-0.950, -0.590)
+    Point(-0.950, -0.510)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.910, 0.610)
+    Point(0.930, 0.610)
+    Point(0.930, 0.290)
+    Point(0.910, 0.290)
+    Point(0.910, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.890, 0.610)
+    Point(0.910, 0.610)
+    Point(0.910, 0.290)
+    Point(0.890, 0.290)
+    Point(0.890, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.870, 0.610)
+    Point(0.890, 0.610)
+    Point(0.890, 0.290)
+    Point(0.870, 0.290)
+    Point(0.870, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.850, 0.610)
+    Point(0.870, 0.610)
+    Point(0.870, 0.290)
+    Point(0.850, 0.290)
+    Point(0.850, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.830, 0.610)
+    Point(0.850, 0.610)
+    Point(0.850, 0.570)
+    Point(0.830, 0.570)
+    Point(0.830, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.830, 0.470)
+    Point(0.850, 0.470)
+    Point(0.850, 0.430)
+    Point(0.830, 0.430)
+    Point(0.830, 0.470)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.830, 0.330)
+    Point(0.850, 0.330)
+    Point(0.850, 0.290)
+    Point(0.830, 0.290)
+    Point(0.830, 0.330)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.810, 0.610)
+    Point(0.830, 0.610)
+    Point(0.830, 0.570)
+    Point(0.810, 0.570)
+    Point(0.810, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.810, 0.470)
+    Point(0.830, 0.470)
+    Point(0.830, 0.430)
+    Point(0.810, 0.430)
+    Point(0.810, 0.470)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.810, 0.330)
+    Point(0.830, 0.330)
+    Point(0.830, 0.290)
+    Point(0.810, 0.290)
+    Point(0.810, 0.330)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.790, 0.610)
+    Point(0.810, 0.610)
+    Point(0.810, 0.570)
+    Point(0.790, 0.570)
+    Point(0.790, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.790, 0.470)
+    Point(0.810, 0.470)
+    Point(0.810, 0.410)
+    Point(0.790, 0.410)
+    Point(0.790, 0.470)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.790, 0.330)
+    Point(0.810, 0.330)
+    Point(0.810, 0.290)
+    Point(0.790, 0.290)
+    Point(0.790, 0.330)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.770, 0.610)
+    Point(0.790, 0.610)
+    Point(0.790, 0.550)
+    Point(0.770, 0.550)
+    Point(0.770, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.770, 0.490)
+    Point(0.790, 0.490)
+    Point(0.790, 0.290)
+    Point(0.770, 0.290)
+    Point(0.770, 0.490)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.750, 0.610)
+    Point(0.770, 0.610)
+    Point(0.770, 0.290)
+    Point(0.750, 0.290)
+    Point(0.750, 0.610)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.730, 0.590)
+    Point(0.750, 0.590)
+    Point(0.750, 0.450)
+    Point(0.730, 0.450)
+    Point(0.730, 0.590)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.730, 0.430)
+    Point(0.750, 0.430)
+    Point(0.750, 0.310)
+    Point(0.730, 0.310)
+    Point(0.730, 0.430)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.710, 0.590)
+    Point(0.730, 0.590)
+    Point(0.730, 0.470)
+    Point(0.710, 0.470)
+    Point(0.710, 0.590)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.710, 0.410)
+    Point(0.730, 0.410)
+    Point(0.730, 0.330)
+    Point(0.710, 0.330)
+    Point(0.710, 0.410)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.690, 0.550)
+    Point(0.710, 0.550)
+    Point(0.710, 0.490)
+    Point(0.690, 0.490)
+    Point(0.690, 0.550)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.650, 0.510)
+    Point(0.670, 0.510)
+    Point(0.670, 0.470)
+    Point(0.650, 0.470)
+    Point(0.650, 0.510)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.630, 0.510)
+    Point(0.650, 0.510)
+    Point(0.650, 0.470)
+    Point(0.630, 0.470)
+    Point(0.630, 0.510)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.610, 0.510)
+    Point(0.630, 0.510)
+    Point(0.630, 0.470)
+    Point(0.610, 0.470)
+    Point(0.610, 0.510)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.590, 0.510)
+    Point(0.610, 0.510)
+    Point(0.610, 0.470)
+    Point(0.590, 0.470)
+    Point(0.590, 0.510)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.570, 0.510)
+    Point(0.590, 0.510)
+    Point(0.590, 0.470)
+    Point(0.570, 0.470)
+    Point(0.570, 0.510)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.550, 0.510)
+    Point(0.570, 0.510)
+    Point(0.570, 0.470)
+    Point(0.550, 0.470)
+    Point(0.550, 0.510)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.530, 0.510)
+    Point(0.550, 0.510)
+    Point(0.550, 0.470)
+    Point(0.530, 0.470)
+    Point(0.530, 0.510)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.800, 1.150)
+    Point(-1.220, 1.150)
+    Point(-1.220, 0.760)
+    Point(-0.800, 1.150)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.590, -0.480)
+    Point(1.140, -0.480)
+    Point(1.140, -0.630)
+    Point(0.590, -0.630)
+    Point(0.590, -0.620)
+    Point(0.590, -0.480)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(0.790, -0.810)
+    Point(0.790, -0.260)
+    Point(0.940, -0.260)
+    Point(0.940, -0.810)
+    Point(0.930, -0.810)
+    Point(0.790, -0.810)])
+  layer(Courtyard(Top)) = Rectangle(2.502, 2.405)
+
+  model3d = Model3D("../../3d-models/jitx-64d12d60b789d8dc4b778177.stp",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.000, 1.000, 1.000),
+    Vec3D(0.0, 0.0, 0.0),
+    [],
+    )
+
+public pcb-component component :
+  name = "C108793"
+  description = "RGB SMD,2.1x2.1mm  Light Emitting Diodes (LED) ROHS"
+  manufacturer = "Foshan NationStar Optoelectronics"
+  mpn = "FM-B2020RGBA-HG"
+  datasheet = "https://datasheet.lcsc.com/lcsc/1810231210_Foshan-NationStar-Optoelectronics-FM-B2020RGBA-HG_C108793.pdf"
+  reference-prefix = "D"
+
+  port l : rgb-led
+
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir | electrical-type:String | bank:Int]
+    [l.a | p[3] | Left | "unspecified" | 0]
+    [l.r | p[1] | Right | "unspecified" | 0]
+    [l.b | p[2] | Right | "unspecified" | 0]
+    [l.g | p[4] | Right | "unspecified" | 0]
+
+  assign-landpattern(lp)
+  val sym = diode-rgb-led
+  symbol = sym(l.r => sym.r, l.g => sym.g, l.b => sym.b, l.a => sym.a)
+
+  property(self.category) = "diode"
+  property(self.manufacturer_aliases) = ["Foshan NationStar Optoelectronics"]
+  property(self.mpn_aliases) = ["FM-B2020RGBA-HG"]
+  property(self.cofactr_id) = "XXTSXCHHWV32"
+  property(self.reference_prefix) = "D"
+  property(self.trust) = "low"
+  property(self.x) = 2.502
+  property(self.y) = 2.405
+  property(self.area) = 6.017
+  property(self.case) = "SMD,2.1x2.1mm"
+  property(self.mounting) = "smd"
+
+
+  ; val sym = diode-rgb-led
+  ; val pkg = rgb-2020
+  ; symbol = sym(l.r => sym.r, l.g => sym.g, l.b => sym.b, l.a => sym.a)
+  ; landpattern = pkg(l.r => pkg.p[1], l.g => pkg.p[3], l.b => pkg.p[2], l.a => pkg.p[4])
+
+  property(l.r.max-current) = 20.0e-3
+  property(l.r.forward-voltage) = 2.0
+  property(l.r.color) = "red"
+  property(l.r.mcd-current) = [[0.0 0.0] [68.75 10.0e-3]]
+
+  property(l.g.max-current) = 20.0e-3
+  property(l.g.forward-voltage) = 3.0
+  property(l.g.color) = "green"
+  property(l.g.mcd-current) = [[0.0 0.0] [300.0 10.0e-3]]
+
+  property(l.b.max-current) = 20.0e-3
+  property(l.b.forward-voltage) = 3.0
+  property(l.b.color) = "blue"
+  property(l.b.mcd-current) = [[0.0 0.0] [83.0 10.0e-3]]
+
+  property(self.rated-temperature) = min-max(-30.0, 85.0)

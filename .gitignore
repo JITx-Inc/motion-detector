@@ -1,0 +1,5 @@
+.DS_Store
+*backup*
+temp/
+bad-router-info.txt
+*voltage-propagation*

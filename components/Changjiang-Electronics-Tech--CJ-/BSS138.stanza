@@ -1,0 +1,137 @@
+; This file is generated based on the parts database query below:")
+;   database-part(["manufacturer" => "Changjiang Electronics Tech (CJ)", "mpn" => "BSS138"])
+#use-added-syntax(jitx)
+defpackage components/Changjiang-Electronics-Tech--CJ-/BSS138 :
+  import core
+  import jitx
+  import jitx/commands
+  import ocdb/utils/box-symbol
+
+
+pcb-pad rectangle-smd-pad :
+  name = "rectangle-smd-pad"
+  type = SMD
+  shape = Rectangle(1.250, 0.700)
+  layer(SolderMask(Top)) = Rectangle(1.352, 0.802)
+  layer(Paste(Top)) = Rectangle(1.352, 0.802)
+
+pcb-landpattern lp :
+  pad p[1] : rectangle-smd-pad at loc(1.000, -0.949) on Top
+  pad p[2] : rectangle-smd-pad at loc(1.000, 0.950) on Top
+  pad p[3] : rectangle-smd-pad at loc(-1.000, -0.00049999999987449) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Text(">REF", 0.5, W, loc(-0.750, 3.308))
+  layer(CustomLayer("Fab", Top)) = Text(">VALUE", 0.5, W, loc(-0.750, 2.308))
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.152, [
+    Point(0.726, 1.527)
+    Point(-0.726, 1.527)
+    Point(-0.726, 0.495)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.152, [
+    Point(0.726, -1.526)
+    Point(-0.726, -1.526)
+    Point(-0.726, -0.494)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.152, [Point(0.726, 0.456), Point(0.726, -0.455)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.060, [
+    Arc(1.200, -1.450, 0.030, 0.0, -360.000)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.200, [
+    Arc(1.460, -1.100, 0.100, 0.0, -360.000)])
+  layer(Courtyard(Top)) = Rectangle(3.352, 3.205)
+
+  model3d = Model3D("../../3d-models/jitx-64d1421bb789d8dc4b7a5878.stp",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.000, 1.000, 1.000),
+    Vec3D(0.0, 0.0, 0.0),
+    [],
+    )
+
+pcb-symbol sym-BSS138 :
+  pin D at Point(2.540, 2.540) with :
+    direction = Up
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+  pin G at Point(-2.540, 0.0) with :
+    direction = Left
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+  pin S at Point(2.540, -2.540) with :
+    direction = Down
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+
+  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.540))
+  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.540))
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, 1.778)
+    Point(2.540, 1.778)
+    Point(2.540, 2.540)
+    Point(5.080, 2.540)
+    Point(5.080, 0.508)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, 0.0)
+    Point(2.540, 0.0)
+    Point(2.540, -2.540)
+    Point(5.080, -2.540)
+    Point(5.080, -0.762)])
+  layer("foreground") = Polyline(0.254, [
+    Point(2.540, -1.778)
+    Point(0.0, -1.778)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-0.508, 2.286)
+    Point(-0.508, -2.286)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, 2.286)
+    Point(0.0, 1.270)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, -0.508)
+    Point(0.0, 0.508)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.0, -2.286)
+    Point(0.0, -1.270)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-2.540, 0.0)
+    Point(-0.508, 0.0)])
+  layer("foreground") = Polyline(0.254, [
+    Point(6.096, 0.508)
+    Point(5.588, 0.508)
+    Point(4.572, 0.508)
+    Point(4.064, 0.508)])
+  layer("foreground") = Polygon([
+    Point(0.0, 0.0)
+    Point(1.524, -0.508)
+    Point(1.524, 0.508)])
+  layer("foreground") = Polygon([
+    Point(5.080, 0.508)
+    Point(4.318, -0.762)
+    Point(5.842, -0.762)])
+
+public pcb-component component :
+  name = "C78284"
+  description = "50V 220mA 3.5Ω@10V,220mA 360mW N Channel SOT-23  MOSFETs ROHS"
+  manufacturer = "Changjiang Electronics Tech (CJ)"
+  mpn = "BSS138"
+  datasheet = "https://datasheet.lcsc.com/lcsc/1809291614_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--BSS138_C78284.pdf"
+  reference-prefix = "Q"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir | electrical-type:String | bank:Int]
+    [D | p[3] | Up | "unspecified" | 0]
+    [G | p[1] | Left | "unspecified" | 0]
+    [S | p[2] | Down | "unspecified" | 0]
+
+  assign-landpattern(lp)
+  assign-symbol(sym-BSS138)
+
+  property(self.category) = "transistor"
+  property(self.manufacturer_aliases) = ["Changjiang Electronics Tech (CJ)"]
+  property(self.mpn_aliases) = ["BSS138"]
+  property(self.reference_prefix) = "Q"
+  property(self.trust) = "low"
+  property(self.x) = 3.352
+  property(self.y) = 3.205
+  property(self.area) = 10.743
+  property(self.case) = "SOT-23"
+  property(self.mounting) = "smd"
+
+  property(self.rated-temperature) = Toleranced(30.0, 55.0, 55.0)

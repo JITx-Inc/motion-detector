@@ -9,6 +9,9 @@ defpackage helpers :
   import jitx/commands
   import ocdb/utils/checks
   import ocdb/utils/generic-components
+  import ocdb/utils/generator-utils
+  import ocdb/utils/bundles
+  import ocdb/utils/defaults
 
 ; =====================
 ; Run the design checks
@@ -22,8 +25,7 @@ public defn run-check-on-design (circuit:Instantiable) :
 ; Actual Export design
 ; ====================
 public defn export-to-cad () :
-  set-paper(ANSI-A4)
-  set-export-backend(`altium) ; set the CAD software for export to be altium (also supported: `kicad)
+  set-export-backend(`kicad) ; set the CAD software for export to be `altium or `kicad)
   export-cad()
 
 ; ====================
@@ -47,3 +49,106 @@ public defn export-bill-of-materials () :
   set-bom-vendors(ocdb/utils/design-vars/APPROVED-DISTRIBUTOR-LIST)
   set-bom-design-quantity(ocdb/utils/design-vars/DESIGN-QUANTITY)
   export-bom()
+
+
+public defn setup-supply-rail (pwr : JITXObject, supply-V : Toleranced) :
+  inside pcb-module:
+    public net VDD (pwr.vdd)
+    public net GND (pwr.gnd)
+    symbol(GND) = ocdb/utils/symbols/ground-sym
+    symbol(VDD) = ocdb/utils/symbols/supply-sym
+    property(GND.voltage) = typ(0.0)
+    property(VDD.voltage) = supply-V
+    property(VDD.net-class) = NetClass(`Vdd, [`min-trace => 0.250])
+
+
+; Operational Amplifier's are typically a differential input
+;   amplifier with a single-ended output.
+;   They may optionally include a TRIM input for correcting 
+;   input offset voltages.
+
+public pcb-enum helpers/OpAmp :
+  TRIM-OFFSET
+
+public pcb-bundle op-amp (pins:Tuple<helpers/OpAmp>) :
+  pin in+
+  pin in-
+  pin out
+  for p in pins do :
+    switch(p) :
+      TRIM-OFFSET : 
+        make-pin(`trim+)
+        make-pin(`trim-)
+
+; Helper for a simple op-amp bundle without 
+;   trim inputs.
+public defn op-amp () : 
+  op-amp([])
+
+
+; 50 ohm line on a 1.5mm h CBCPW
+;   This is temporary - all this is likely to change
+;   with the SI in the future.
+public val CBCPW = NetClass(`ANT, [`min-trace => 0.5 `min-space => 0.2])
+
+; via stitching function
+public defn via-stitch (board-shape, connection) :
+  inside pcb-module :
+    ; board edge stitching vias
+    val x-span = width(board-shape)
+    val y-span = height(board-shape)
+
+    val bot-y-coord = -1.0 * y-span / 2.0 + 0.5
+    val bot-x-coord-start = -1.0 * x-span / 2.0 + 0.5
+    val num-vias-bottom = to-int((x-span - 5.0 - 2.0))
+    for x in 0 to num-vias-bottom do :
+      val x-d = to-double(x)
+      geom(connection) :
+        via(minimum-via) at Point(bot-x-coord-start + x-d, bot-y-coord)
+
+    val num-vias-left = to-int((y-span - 1.0))
+    val left-x-coord = -1.0 * x-span / 2.0 + 0.5
+    val bot-y-coord-start = -1.0 * y-span / 2.0 + 1.5
+    for y in 0 to num-vias-left do :
+      if y < 7 or y > 10 :
+        val y-d = to-double(y)
+        geom(connection) :
+          via(minimum-via) at Point(left-x-coord, bot-y-coord-start + y-d)
+
+    val top-y-coord = y-span / 2.0 - 0.5
+    val top-x-coord-start = -1.0 * x-span / 2.0 + 1.5
+    val num-vias-top = to-int((x-span / 2.0)) - 1
+    for x in 0 to num-vias-top do :
+      val x-d = to-double(x)
+      geom(connection) :
+        via(minimum-via) at Point(top-x-coord-start + x-d, top-y-coord)
+
+
+; ========================================================
+; =================== Indicators =========================
+; ========================================================
+
+; 50 - 200 mcd for daylight
+; 4 - 10 mcd for indoor
+
+; Adds an RGB led to a processor using PWM pins
+public defn rgb-indicator (brightness:Double, proc:JITXObject, vin:JITXObject):
+  inside pcb-module:
+    pcb-module rgb-indicator :
+      port control-pins : timer[3]
+      val vio = 3.3 ; TODO: get this from the vin pin property
+      ; Calculate resistance to get appropriate brightness
+      defn calc-r (l:JITXObject, brightness:Double, vio:Double):
+        val i = PWL(property(l.mcd-current))[brightness]
+        closest-std-val((vio - property(l.forward-voltage)) / i, 5.0)
+      public inst led : components/Foshan-NationStar-Optoelectronics/FM-B2020RGBA-HG/component ;
+      
+      res-strap(control-pins[0].timer, led.l.r, calc-r(led.l.r, brightness, vio))
+      res-strap(control-pins[1].timer, led.l.g, calc-r(led.l.g, brightness, vio))
+      res-strap(control-pins[2].timer, led.l.b, calc-r(led.l.b, brightness, vio))
+
+    inst rgb:rgb-indicator
+    require control-pins:timer[3] from proc
+    net (vin, rgb.led.l.a)
+    net (control-pins rgb.control-pins)
+    rgb

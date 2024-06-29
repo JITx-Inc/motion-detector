@@ -5,81 +5,107 @@ defpackage components/MYOUNG/BS-08-B2AA016 :
   import core
   import jitx
   import jitx/commands
+  import ocdb/utils/box-symbol
   import ocdb/utils/bundles
 
 pcb-pad rectangle-smd-pad :
   name = "rectangle-smd-pad"
   type = SMD
-  shape = Rectangle(5.7, 2.8)
+  shape = Rectangle(5.700, 2.800)
   layer(SolderMask(Top)) = Rectangle(5.802, 2.902)
-  layer(Paste(Top)) = Rectangle(5.7, 2.8)
+  layer(Paste(Top)) = Rectangle(5.802, 2.902)
 
 pcb-pad rectangle-smd-pad-1 :
   name = "rectangle-smd-pad-1"
   type = SMD
-  shape = Rectangle(3.5, 3.8)
+  shape = Rectangle(3.500, 3.800)
   layer(SolderMask(Top)) = Rectangle(3.602, 3.902)
-  layer(Paste(Top)) = Rectangle(3.5, 3.8)
+  layer(Paste(Top)) = Rectangle(3.602, 3.902)
 
 pcb-landpattern lp :
-  pad p[1] : rectangle-smd-pad-1 at loc(11.117, 0.00450000000000728) on Top
-  pad p[2] : rectangle-smd-pad at loc(-11.3829999999999, 0.00450000000000728) on Top
+  pad p[1] : rectangle-smd-pad-1 at loc(11.800, 0.005) on Top
+  pad p[2] : rectangle-smd-pad at loc(-10.700, 0.005) on Top
 
-  layer(Silkscreen("F-SilkS", Top)) = Text(">REF", 1.0, W, loc(-1.5, 9.56010000000003), "", TrueTypeFont, false, false)
-  layer(Finish(Top)) = Text(">VALUE", 1.0, W, loc(-1.5, 8.56010000000003), "", TrueTypeFont, false, false)
+  layer(Silkscreen("F-SilkS", Top)) = Text(">REF", 0.5, W, loc(-0.750, 9.687))
+  layer(CustomLayer("Fab", Top)) = Text(">VALUE", 0.5, W, loc(-0.750, 8.687))
   layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [
-    Point(11.3820000000001, -2.15949999999998), 
-    Point(11.383, -2.12649999999996), 
-    Point(11.383, -6.47149999999999), 
-    Point(9.06200000000013, -6.47149999999999)])
-  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [Point(9.06200000000013, 6.48250000000007), Point(11.383, 6.4765000000001), Point(11.3820000000001, 2.1585)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(7.00700000000006, 1.40150000000006), Point(7.00700000000006, -1.26549999999997)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(5.86400000000003, 0.00450000000000728), Point(8.27700000000004, 0.00450000000000728)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.75599999999997, -7.8454999999999), Point(-9.74899999999991, -7.85449999999992)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(7.26099999999997, -6.47249999999997), Point(9.06100000000015, -6.47249999999997)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(7.26099999999997, 6.4815000000001), Point(9.06100000000015, 6.4815000000001)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.75599999999997, -7.8454999999999), Point(6.11800000000017, -7.8454999999999)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.75599999999997, 7.85450000000003), Point(6.11800000000017, 7.85450000000003)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.75599999999997, 7.85450000000003), Point(-9.75699999999995, 7.85450000000003)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-9.75699999999995, 7.85450000000003), Point(-10.26, 7.3515000000001)])
-  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-10.265, -7.33749999999998), Point(-9.74899999999991, -7.85449999999992)])
-  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [Arc(-1.88299999999992, 0.00450000000000728, 11.206, 35.3111, 9.143)])
-  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [Arc(-1.88299999999992, 0.00350000000003092, 11.209, 315.5462, 9.143)])
-  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [Arc(-4.55999999999995, 1.65050000000008, 8.061, 135.0001, 44.9999)])
-  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [Arc(-4.57899999999995, -1.65149999999994, 8.042, 180.0, 45.0)])
-  layer(Finish(Top)) = Circle(12.567, 7.85950000000003, 0.03)
-  layer(Finish(Top)) = Polygon([
-    Point(5.70500000000004, 0.145500000000084), 
-    Point(8.39900000000011, 0.145500000000084), 
-    Point(8.39900000000011, -0.208499999999958), 
-    Point(5.70500000000004, -0.208499999999958), 
-    Point(5.70500000000004, -0.164499999999975)])
-  layer(Finish(Top)) = Polygon([
-    Point(6.86900000000014, -1.34249999999997), 
-    Point(6.86900000000014, 1.3515000000001), 
-    Point(7.22299999999996, 1.3515000000001), 
-    Point(7.22299999999996, -1.34249999999997), 
-    Point(7.17900000000009, -1.34249999999997)])
-  layer(Courtyard(Top)) = Rectangle(22.766, 15.7089999999999)
+    Point(12.065, -2.159)
+    Point(12.066, -2.126)
+    Point(12.066, -6.471)
+    Point(9.745, -6.471)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [
+    Point(9.745, 6.483)
+    Point(12.066, 6.477)
+    Point(12.065, 2.159)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(7.690, 1.402), Point(7.690, -1.265)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(6.547, 0.005), Point(8.960, 0.005)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.073, -7.845), Point(-9.066, -7.854)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(7.944, -6.472), Point(9.744, -6.472)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(7.944, 6.482), Point(9.744, 6.482)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.073, -7.845), Point(6.801, -7.845)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.073, 7.855), Point(6.801, 7.855)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-1.073, 7.855), Point(-9.074, 7.855)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-9.074, 7.855), Point(-9.577, 7.352)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-9.582, -7.337), Point(-9.066, -7.854)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [
+    Arc(-1.200, 0.005, 11.206, 35.311, 9.143)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [
+    Arc(-1.200, 0.004, 11.209, 315.546, 9.143)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [
+    Arc(-3.877, 1.651, 8.061, 135.000, 45.000)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [
+    Arc(-3.896, -1.651, 8.042, 180.000, 45.000)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.060, [
+    Arc(13.250, 7.860, 0.030, 0.0, -360.000)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(6.388, 0.146)
+    Point(9.082, 0.146)
+    Point(9.082, -0.208)
+    Point(6.388, -0.208)
+    Point(6.388, -0.164)
+    Point(6.388, 0.146)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(7.552, -1.342)
+    Point(7.552, 1.352)
+    Point(7.906, 1.352)
+    Point(7.906, -1.342)
+    Point(7.862, -1.342)
+    Point(7.552, -1.342)])
+  layer(Courtyard(Top)) = Rectangle(27.202, 15.963)
+
+  model3d = Model3D("../../3d-models/jitx-64d21df0b789d8dc4b936b0c.stp",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.000, 1.000, 1.000),
+    Vec3D(0.0, 0.0, 0.0),
+    [],
+    )
 
 pcb-symbol sym-BS-08-B2AA016 :
-  pin p[2] at Point(1.27000254000508, 0.0) with :
+  pin p[2] at Point(1.270, 0.0) with :
     direction = Right
-    length = 3.81000762001524
-    ;number-size = 1.0
-    ;name-size = 1.0
-  pin p[1] at Point(-1.27000254000508, 0.0) with :
+    length = 3.810
+    number-size = 1.000
+    name-size = 1.000
+  pin p[1] at Point(-1.270, 0.0) with :
     direction = Left
-    length = 3.81000762001524
-    ;number-size = 1.0
-    ;name-size = 1.0
+    length = 3.810
+    number-size = 1.000
+    name-size = 1.000
 
-  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 2.0), "", TrueTypeFont, false, false)
-  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 3.0), "", TrueTypeFont, false, false)
-  layer("foreground") = Polyline(0.254000508001016, [Point(1.01600203200406, 1.27000254000508), Point(1.01600203200406, -1.01600203200406)])
-  layer("foreground") = Polyline(0.254000508001016, [Point(0.254000508001016, 2.28600457200914), Point(0.254000508001016, -1.77800355600711)])
-  layer("foreground") = Polyline(0.254000508001016, [Point(-0.508001016002032, 1.27000254000508), Point(-0.508001016002032, -1.01600203200406)])
-  layer("foreground") = Polyline(0.254000508001016, [Point(-1.27000254000508, 2.28600457200914), Point(-1.27000254000508, -1.77800355600711)])
+  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.286))
+  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.286))
+  layer("foreground") = Polyline(0.254, [
+    Point(1.016, 1.270)
+    Point(1.016, -1.016)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.254, 2.286)
+    Point(0.254, -1.778)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-0.508, 1.270)
+    Point(-0.508, -1.016)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-1.270, 2.286)
+    Point(-1.270, -1.778)])
 
 public pcb-component int-component :
   name = "C964792"
@@ -87,6 +113,7 @@ public pcb-component int-component :
   manufacturer = "MYOUNG"
   mpn = "BS-08-B2AA016"
   datasheet = "https://datasheet.lcsc.com/lcsc/2012181809_MYOUNG-BS-08-B2AA016_C964792.pdf"
+  reference-prefix = "J"
   pin-properties :
     [pin:Ref | pads:Ref ... | side:Dir | electrical-type:String | bank:Int]
     [p[2] | p[2] | Right | "input" | 0]
@@ -96,27 +123,28 @@ public pcb-component int-component :
   assign-symbol(sym-BS-08-B2AA016)
 
   property(self.category) = "connector"
-  property(self.manufacturer) = "MYOUNG"
-  property(self.mpn) = "BS-08-B2AA016"
-  property(self.reference_prefix) = "BT"
+  property(self.manufacturer_aliases) = ["MYOUNG"]
+  property(self.mpn_aliases) = ["BS-08-B2AA016"]
+  property(self.cofactr_id) = "XXA1BQLJG9Y8"
+  property(self.reference_prefix) = "J"
   property(self.trust) = "low"
-  property(self.x) = 22.766
-  property(self.y) = 15.7089999999999
-  property(self.area) = 357.631093999998
+  property(self.x) = 27.202
+  property(self.y) = 15.963
+  property(self.area) = 434.226
   property(self.case) = "SMD"
-  property(self.rated-temperature) = min-max(-25.0, 85.0)
-
+  property(self.mounting) = "smd"
+  property(self.rated-temperature) = Toleranced(30.0, 55.0, 55.0)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;User Provided Modifications
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-public pcb-module component : 
+public pcb-module module : 
   ; Provide the Power bundle port for easier integration.
   port vout : power
 
-  inst holder : int-component 
+  public inst holder : components/MYOUNG/BS-08-B2AA016/int-component 
 
   net (vout.vdd, holder.p[1])
   net (vout.gnd, holder.p[2])
