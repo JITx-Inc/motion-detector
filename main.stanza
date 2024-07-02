@@ -178,7 +178,8 @@ pcb-module nrf-motion :
   via-stitch(board-shape, GND)
 
   geom(VDD) :
-    copper-pour(LayerIndex(0, Top), isolate = 0.1, rank = 99) = RoundedRectangle(3.0, 3.0, 0.2, loc(-11.70, 0.00))
+    copper-pour(LayerIndex(0,    Top), isolate = 0.1, rank = 99) = RoundedRectangle(3.0, 3.0, 0.2, loc(-11.70, 0.00))
+    copper-pour(LayerIndex(0, Bottom), isolate = 0.1, rank = 99) = RoundedRectangle(3.0, 3.0, 0.2, loc(-11.70, 0.00))
 
   ; Run the schematic review
   check-design(self)
