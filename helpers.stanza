@@ -110,14 +110,13 @@ public defn via-stitch (board-shape, connection) :
     val left-x-coord = -1.0 * x-span / 2.0 + 0.5
     val bot-y-coord-start = -1.0 * y-span / 2.0 + 1.5
     for y in 0 to num-vias-left do :
-      if y < 7 or y > 10 :
-        val y-d = to-double(y)
-        geom(connection) :
-          via(minimum-via) at Point(left-x-coord, bot-y-coord-start + y-d)
+      val y-d = to-double(y)
+      geom(connection) :
+        via(minimum-via) at Point(left-x-coord, bot-y-coord-start + y-d)
 
     val top-y-coord = y-span / 2.0 - 0.5
     val top-x-coord-start = -1.0 * x-span / 2.0 + 1.5
-    val num-vias-top = to-int((x-span / 2.0)) - 1
+    val num-vias-top = to-int((x-span - 5.0 - 2.0)) - 1
     for x in 0 to num-vias-top do :
       val x-d = to-double(x)
       geom(connection) :
