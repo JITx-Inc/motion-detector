@@ -84,6 +84,9 @@ public pcb-module inverted-f-antenna :
   pin gnd
 
   public inst ant : inverted-f-antenna-component
+  instance-status(ant) :
+    bom-status = NotInBOM
+
   place(ant) at loc(0.0, 0.0, 0.0) on Top
   ; PI filter
   public inst pi : pi-filter
