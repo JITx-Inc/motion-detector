@@ -1,0 +1,174 @@
+; This file is generated based on the parts database query below:")
+;   database-part(["manufacturer" => "MYOUNG", "mpn" => "MY-1632-03"])
+#use-added-syntax(jitx)
+defpackage components/MYOUNG/MY-1632-03 :
+  import core
+  import jitx
+  import jitx/commands
+  import ocdb/utils/box-symbol
+  import ocdb/utils/bundles
+
+pcb-pad rectangle-smd-pad :
+  name = "rectangle-smd-pad"
+  type = SMD
+  shape = Rectangle(4.150, 4.200)
+  layer(SolderMask(Top)) = Rectangle(4.250, 4.300)
+  layer(Paste(Top)) = Rectangle(4.250, 4.300)
+
+pcb-pad circle-smd-pad :
+  name = "circle-smd-pad"
+  type = SMD
+  shape = Circle(3.500)
+  layer(SolderMask(Top)) = Circle(3.551)
+  layer(Paste(Top)) = Circle(3.551)
+
+pcb-landpattern lp :
+  pad p[1] : rectangle-smd-pad at loc(10.000, -2.413) on Top
+  pad p[2] : circle-smd-pad at loc(0.0, -2.413) on Top
+  pad p[3] : rectangle-smd-pad at loc(-10.000, -2.413) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Text(">REF", 0.5, W, loc(-0.750, 7.675))
+  layer(CustomLayer("Fab", Top)) = Text(">VALUE", 0.5, W, loc(-0.750, 6.675))
+  layer(CustomLayer("Fab", Top)) = Line(0.254, [Point(3.302, -4.953), Point(3.302, -0.635)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.254, [
+    Point(3.302, -4.953)
+    Point(5.588, -4.953)
+    Point(5.588, -0.635)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.254, [
+    Point(-5.588, -4.953)
+    Point(-3.302, -4.953)
+    Point(-3.302, -0.635)])
+  layer(CustomLayer("Fab", Top)) = Line(0.254, [Point(-5.588, -4.953), Point(-5.588, -0.635)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [
+    Point(-3.175, 5.842)
+    Point(-8.001, 1.016)
+    Point(-8.001, -0.081)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [
+    Point(3.175, 5.842)
+    Point(8.001, 1.016)
+    Point(8.001, -0.081)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-3.175, 5.842), Point(3.175, 5.842)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(8.001, -4.744), Point(8.001, -5.842)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.254, [Point(-8.001, -4.744), Point(-8.001, -5.842)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.254, [
+    Arc(4.445, -0.635, 1.143, 0.0, 180.000)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.254, [
+    Arc(-4.445, -0.635, 1.143, 0.0, 180.000)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.254, [
+    Arc(-4.362, -5.185, 3.698, 190.234, 94.385)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.254, [
+    Arc(4.362, -5.185, 3.698, 349.766, -94.385)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.254, [
+    Arc(0.0, -12.182, 4.843, 44.922, 90.156)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.060, [
+    Arc(-11.651, -8.798, 0.030, 0.0, -360.000)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.254, [
+    Arc(4.445, -0.508, 1.984, 0.0, -360.000)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.254, [
+    Arc(-4.445, -0.508, 1.984, 0.0, -360.000)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-1.524, 3.429)
+    Point(1.524, 3.429)
+    Point(1.524, 3.175)
+    Point(-1.524, 3.175)
+    Point(-1.524, 3.429)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-0.127, 1.778)
+    Point(-0.127, 4.826)
+    Point(0.127, 4.826)
+    Point(0.127, 1.778)
+    Point(-0.127, 1.778)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Arc(3.175, 5.842, 0.127, 90.000, -180.000)
+    Arc(-3.175, 5.842, 0.127, 270.000, -180.000)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Point(-7.874, 0.964)
+    Arc(-8.001, -0.081, 0.127, 0.0, -180.000)
+    Arc(-8.001, 1.017, 0.127, 180.011, -45.003)
+    Arc(-3.175, 5.842, 0.127, 135.000, -180.000)])
+  layer(CustomLayer("Fab", Top)) = PolygonWithArcs([
+    Arc(8.001, 1.017, 0.127, 44.992, -45.003)
+    Arc(8.001, -0.081, 0.127, 0.0, -180.000)
+    Point(7.874, 0.964)
+    Arc(3.175, 5.842, 0.127, 225.000, -180.000)])
+  layer(Silkscreen("F-SilkS", Top)) = PolygonWithArcs([
+    Point(-1.524, 3.429)
+    Point(1.524, 3.429)
+    Point(1.524, 3.175)
+    Point(-1.524, 3.175)
+    Point(-1.524, 3.429)])
+  layer(Silkscreen("F-SilkS", Top)) = PolygonWithArcs([
+    Point(-0.127, 1.778)
+    Point(-0.127, 4.826)
+    Point(0.127, 4.826)
+    Point(0.127, 1.778)
+    Point(-0.127, 1.778)])
+  layer(Courtyard(Top)) = Rectangle(24.250, 11.938)
+
+pcb-symbol sym-MY-1632-03 :
+  pin p[1] at Point(-1.270, 0.0) with :
+    direction = Left
+    length = 3.810
+    number-size = 1.000
+    name-size = 1.000
+  pin p[2] at Point(1.016, 0.0) with :
+    direction = Right
+    length = 3.810
+    number-size = 1.000
+    name-size = 1.000
+
+  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.286))
+  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.286))
+  layer("foreground") = Polyline(0.254, [
+    Point(-1.270, 2.286)
+    Point(-1.270, -1.778)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-0.508, 1.270)
+    Point(-0.508, -1.016)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.254, 2.286)
+    Point(0.254, -1.778)])
+  layer("foreground") = Polyline(0.254, [
+    Point(1.016, 1.270)
+    Point(1.016, -1.016)])
+
+public pcb-component component :
+  name = "C2902337"
+  description = "Battery button CR1632 SMD  Battery Connectors ROHS"
+  manufacturer = "MYOUNG"
+  mpn = "MY-1632-03"
+  datasheet = "https://datasheet.lcsc.com/lcsc/2109301830_MYOUNG-MY-1632-03_C2902337.pdf"
+  reference-prefix = "J"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir | electrical-type:String | bank:Int]
+    [p[1] | p[1] p[3] | Left | "input" | 0]
+    [p[2] | p[2] | Right | "input" | 0]
+
+  assign-landpattern(lp)
+  assign-symbol(sym-MY-1632-03)
+
+  property(self.category) = "connector"
+  property(self.manufacturer_aliases) = ["MYOUNG"]
+  property(self.mpn_aliases) = ["MY-1632-03"]
+  property(self.cofactr_id) = "XXJA9GFINA62"
+  property(self.reference_prefix) = "J"
+  property(self.trust) = "low"
+  property(self.x) = 24.250
+  property(self.y) = 11.938
+  property(self.area) = 289.496
+  property(self.case) = "SMD"
+  property(self.mounting) = "smd"
+  property(self.rated-temperature) = Toleranced(30.0, 55.0, 55.0)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;User Provided Modifications
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+public pcb-module module : 
+  ; Provide the Power bundle port for easier integration.
+  port vout : power
+
+  public inst holder : components/MYOUNG/MY-1632-03/component 
+
+  net (vout.vdd, holder.p[1])
+  net (vout.gnd, holder.p[2])

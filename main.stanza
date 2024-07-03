@@ -100,8 +100,8 @@ pcb-module RF-frontend :
 pcb-module nrf-motion :
 
   ; Coin Cell
-  inst bat : components/MYOUNG/BS-08-B2AA016/module
-  place(bat.holder) at loc(-2.8, 0.0, 0.0) on Bottom
+  inst bat : components/MYOUNG/MY-1632-03/module
+  place(bat.holder) at loc(-1.4, 2.413, 0.0) on Bottom
   val vbat-range = min-max(2.8, 3.0)
   setup-supply-rail(bat.vout, vbat-range)
 
@@ -178,8 +178,8 @@ pcb-module nrf-motion :
   via-stitch(board-shape, GND)
 
   geom(VDD) :
-    copper-pour(LayerIndex(0,    Top), isolate = 0.1, rank = 99) = RoundedRectangle(3.0, 3.0, 0.2, loc(-11.70, 0.00))
-    copper-pour(LayerIndex(0, Bottom), isolate = 0.1, rank = 99) = RoundedRectangle(3.0, 3.0, 0.2, loc(-11.70, 0.00))
+    copper-pour(LayerIndex(0,    Top), isolate = 0.1, rank = 99) = RoundedRectangle(2.0, 2.0, 0.2, loc(-10.200, -2.500))
+    ; copper-pour(LayerIndex(0, Bottom), isolate = 0.1, rank = 99) = RoundedRectangle(3.0, 3.0, 0.2, loc(-11.70, 0.00))
 
   ; Run the schematic review
   check-design(self)

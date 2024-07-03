@@ -100,7 +100,7 @@ public pcb-module inverted-f-antenna :
 
   val y = -0.1
   for x in 0 to 19 do :
-    if x < 4 or x > 5:
+    if (x < 4 or x > 5) and (x < 7 or x > 11):
       val x-d = to-double(x)
       geom(GND) :
         via(minimum-via) at Point(x-d - 4.4, y)
