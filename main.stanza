@@ -16,23 +16,11 @@ defpackage nrf-motion:
   import amplifiers
   import helpers
 
-val board-shape = Rectangle(31.0, 20.0)
+public val board-shape = Rectangle(31.0, 20.0)
 
 OPTIMIZE-FOR = ["area"]
-DESIGN-QUANTITY = 10
 OPERATING-TEMPERATURE = min-max(0.0 50.0)
 MIN-PKG = "0402"
-
-; Setup the board
-defn setup-board () :
-  set-board(ocdb/utils/defaults/default-board(ocdb/manufacturers/stackups/jlcpcb-2-layer, board-shape))
-  set-rules(ocdb/manufacturers/rules/jlcpcb-basic-rules)
-  set-use-layout-groups()
-
-  set-bom-vendors([
-   "JLCPCB"
-  ])
-
 
 pcb-module nRF-mcu :
   port supply : power
@@ -184,22 +172,25 @@ pcb-module nrf-motion :
   ; Run the schematic review
   check-design(self)
 
-set-current-design("nrf-pours")
-set-paper(ANSI-B)
-setup-board()
-
-var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
-set-main-module(main-module) ; Treat the provided module as a design, and compile it.
-
-; run-checks("checks.txt")
-; View the results
-view-design-explorer()
-view-schematic()
-view-board()
-; export-bom()
+; set-current-design("nrf-pours")
 
 for disti in ["DigiKey" "Mouser" "JLCPCB"] do :
   for qty in [10 10000] do :
     val d-name = to-string("nrf-%_-%_" % [disti qty])
     set-current-design(d-name)
-    manage-bill-of-materials(qty, disti)
+    setup-bill-of-materials(qty, disti)
+
+    set-paper(ANSI-B)
+    setup-board(board-shape)
+
+    var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
+    set-main-module(main-module) ; Treat the provided module as a design, and compile it.
+
+    ; run-checks("checks.txt")
+    ; View the results
+    ; view-design-explorer()
+    view-schematic()
+    view-board()
+    bom-view-export()
+
+

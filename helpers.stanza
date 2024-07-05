@@ -13,6 +13,16 @@ defpackage helpers :
   import ocdb/utils/property-structs
   import ocdb/utils/bundles
   import ocdb/utils/defaults
+  import ocdb/utils/design-vars
+
+
+; =====================
+; Setup the board
+; =====================
+public defn setup-board (board-shape:Shape) :
+  set-board(ocdb/utils/defaults/default-board(ocdb/manufacturers/stackups/jlcpcb-2-layer, board-shape))
+  set-rules(ocdb/manufacturers/rules/jlcpcb-basic-rules)
+  set-use-layout-groups()
 
 ; =====================
 ; Run the design checks
@@ -44,10 +54,9 @@ public defn update-design () :
   export-to-cad()
 
 ; =================
-; Export BOM to tsv
+; Setup BOM stuff
 ; =================
-public defn manage-bill-of-materials (qty:Int, vendors:String) :
-
+public defn setup-bill-of-materials (qty:Int, vendors:String) :
   set-bom-metrics([
     BOMMetric(BOMMetricLineItems, "Line Items"),
     BOMMetric(BOMMetricComponentCount, "Components"),
@@ -76,13 +85,16 @@ public defn manage-bill-of-materials (qty:Int, vendors:String) :
     BOMColumn(BOMFieldVendor, "Supplier", 10.0)
     BOMColumn(BOMFieldSKU, "SKU", 10.0)
     BOMColumn(BOMFieldDatasheet, "Datasheet", 10.0)
-    ; BOMColumn(BOMFieldPreferred, "Preferred", 5.0)
   ])
+
+  APPROVED-DISTRIBUTOR-LIST = [vendors]
   set-bom-vendors([vendors])
+  DESIGN-QUANTITY = qty
   set-bom-design-quantity(qty)
+
+public defn bom-view-export () :
   view-bom(BOM-STD)
   export-bom()
-
 
 public defn setup-supply-rail (pwr : JITXObject, supply-V : Toleranced) :
   inside pcb-module:
