@@ -22,6 +22,8 @@ defpackage components/Nordic-Semicon/NRF52840-QIAA-R :
   import ocdb/utils/checks
   import ocdb/utils/passive-checks/resonator-checks
 
+  import helpers
+
 defn nrf-bga-pad (copper-diameter:Double) :
   val pastemask-diameter = 0.3
   val soldermask-diameter = 0.375
@@ -441,11 +443,11 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
     val lf-cb = add-xtal-caps(lfosc, gnd)
     check-resonator(lfosc, property(mcu.P0[1].crystal-oscillator), lf-cb)
 
-  inst hfosc : ocdb/components/epson/TSX-3225/component(32.0e6)
-  net (mcu.XC1 hfosc.p[1])
-  net (mcu.XC2 hfosc.p[2])
-  net (hfosc.gnd gnd)
-  val hf-cb = add-xtal-caps(hfosc, gnd)
+  inst hfosc : components/Seiko-Epson/TSX-3225-32_0000MF10Z-W6/component ; ocdb/components/epson/TSX-3225/component(32.0e6)
+  net (mcu.XC1 hfosc.OSC1)
+  net (mcu.XC2 hfosc.OSC2)
+  net (hfosc.GND0 hfosc.GND1 gnd)
+  val hf-cb = add-xtal-load-caps(hfosc, gnd)
   check-resonator(hfosc, property(mcu.XC2.crystal-oscillator), hf-cb)
 
   ; Antenna

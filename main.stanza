@@ -30,7 +30,7 @@ defn setup-board () :
   set-use-layout-groups()
 
   set-bom-vendors([
-   "JLCPCB",
+   "JLCPCB"
   ])
 
 
@@ -197,3 +197,9 @@ view-design-explorer()
 view-schematic()
 view-board()
 ; export-bom()
+
+for disti in ["DigiKey" "Mouser" "JLCPCB"] do :
+  for qty in [10 10000] do :
+    val d-name = to-string("nrf-%_-%_" % [disti qty])
+    set-current-design(d-name)
+    manage-bill-of-materials(qty, disti)

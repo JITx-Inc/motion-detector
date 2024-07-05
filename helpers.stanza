@@ -10,6 +10,7 @@ defpackage helpers :
   import ocdb/utils/checks
   import ocdb/utils/generic-components
   import ocdb/utils/generator-utils
+  import ocdb/utils/property-structs
   import ocdb/utils/bundles
   import ocdb/utils/defaults
 
@@ -45,9 +46,41 @@ public defn update-design () :
 ; =================
 ; Export BOM to tsv
 ; =================
-public defn export-bill-of-materials () :
-  set-bom-vendors(ocdb/utils/design-vars/APPROVED-DISTRIBUTOR-LIST)
-  set-bom-design-quantity(ocdb/utils/design-vars/DESIGN-QUANTITY)
+public defn manage-bill-of-materials (qty:Int, vendors:String) :
+
+  set-bom-metrics([
+    BOMMetric(BOMMetricLineItems, "Line Items"),
+    BOMMetric(BOMMetricComponentCount, "Components"),
+    BOMMetric(BOMMetricTotalCost, "Cost")
+  ])
+  ; BOMField
+  ; jitx/BOMFieldStatus
+  ; jitx/BOMFieldDescription
+  ; jitx/BOMFieldInsts
+  ; jitx/BOMFieldDatasheet
+  ; jitx/BOMFieldManufacturer
+  ; jitx/BOMFieldMPN
+  ; jitx/BOMFieldVendor
+  ; jitx/BOMFieldSKU
+  ; jitx/BOMFieldQuantity
+  ; jitx/BOMFieldPrice
+  ; jitx/BOMFieldSubtotal
+  ; jitx/BOMFieldPreferred
+  set-bom-columns([
+    BOMColumn(BOMFieldStatus, "Status", 10.0)
+    BOMColumn(BOMFieldQuantity, "Qty", 5.0)
+    BOMColumn(BOMFieldInsts, "References", 10.0)
+    BOMColumn(BOMFieldMPN, "MPN", 10.0)
+    BOMColumn(BOMFieldManufacturer, "Manufacturer", 10.0)
+    BOMColumn(BOMFieldDescription, "Description", 20.0)
+    BOMColumn(BOMFieldVendor, "Supplier", 10.0)
+    BOMColumn(BOMFieldSKU, "SKU", 10.0)
+    BOMColumn(BOMFieldDatasheet, "Datasheet", 10.0)
+    ; BOMColumn(BOMFieldPreferred, "Preferred", 5.0)
+  ])
+  set-bom-vendors([vendors])
+  set-bom-design-quantity(qty)
+  view-bom(BOM-STD)
   export-bom()
 
 
@@ -151,3 +184,16 @@ public defn rgb-indicator (brightness:Double, proc:JITXObject, vin:JITXObject):
     net (vin, rgb.led.l.a)
     net (control-pins rgb.control-pins)
     rgb
+
+
+; Add load balancing caps to crystal oscillator
+public defn add-xtal-load-caps (xtal:JITXObject, gnd:JITXObject, stray-capacitance:Double) :
+  inside pcb-module:
+    val c-load = load-capacitance(property(xtal.crystal-resonator))
+    val c-bal = closest-std-val(2.0 * (c-load - stray-capacitance), 5.0)
+    cap-strap(xtal.OSC1, gnd, ["capacitance" => c-bal "temperature-coefficient.code" => "C0G" ])
+    val c = cap-strap(xtal.OSC2, gnd, ["capacitance" => c-bal "temperature-coefficient.code" => "C0G" ])
+    c 
+; Default stray capacitance assumed 5pf. 
+public defn add-xtal-load-caps (xtal:JITXObject, gnd:JITXObject) :
+  add-xtal-load-caps(xtal, gnd, 5.0e-12)

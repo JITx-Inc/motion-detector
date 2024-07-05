@@ -1,0 +1,144 @@
+; This file is generated based on the parts database query below:")
+;   database-part(["manufacturer" => "Seiko Epson", "mpn" => "TSX-3225 32.0000MF10Z-W6"])
+#use-added-syntax(jitx)
+defpackage components/Seiko-Epson/TSX-3225-32_0000MF10Z-W6 :
+  import core
+  import jitx
+  import jitx/commands
+  import ocdb/utils/box-symbol
+
+
+pcb-pad rectangle-smd-pad :
+  name = "rectangle-smd-pad"
+  type = SMD
+  shape = Rectangle(1.400, 1.150)
+  layer(SolderMask(Top)) = Rectangle(1.45, 1.2)
+  layer(Paste(Top)) = Rectangle(1.45, 1.2)
+
+pcb-landpattern lp :
+  pad p[1] : rectangle-smd-pad at loc(-1.1, -0.8) on Top
+  pad p[2] : rectangle-smd-pad at loc(1.1, -0.8) on Top
+  pad p[3] : rectangle-smd-pad at loc(1.1, 0.8) on Top
+  pad p[4] : rectangle-smd-pad at loc(-1.1, 0.8) on Top
+
+  layer(Silkscreen("F-SilkS", Top)) = Text(">REF", 0.5, W, loc(-0.750, 3.575))
+  layer(CustomLayer("Fab", Top)) = Text(">VALUE", 0.5, W, loc(-0.750, 2.575))
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.152, [
+    Point(-2.00, -1.50)
+    Point(-2.00,  1.50)
+    Point( 2.00,  1.50)
+    Point( 2.00, -1.50)
+    Point(-2.00, -1.50)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.152, [
+    Point(-2.100, -0.100)
+    Point(-2.100, -1.600)
+    Point(-0.100, -1.600)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.060, [
+    Arc(-1.486, -1.136, 0.030, 0.0, -360.000)])
+  layer(CustomLayer("Fab", Top)) = Polyline(0.360, [
+    Arc(-1.029, -0.775, 0.180, 0.0, -360.000)])
+  layer(Courtyard(Top)) = Rectangle(4.00, 3.00)
+
+  model3d = Model3D("../../3d-models/jitx-64d1aba6b789d8dc4b86a345.stp",
+    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(1.000, 1.000, 1.000),
+    Vec3D(0.0, 0.0, 0.0),
+    [],
+    )
+
+pcb-symbol sym-TSX-3225_32_0000MF10Z-W6 :
+  pin GND0 at Point(-5.080, 2.540) with :
+    direction = Left
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+  pin GND1 at Point(5.080, -2.540) with :
+    direction = Right
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+  pin OSC1 at Point(-5.080, -2.540) with :
+    direction = Left
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+  pin OSC2 at Point(5.080, 2.540) with :
+    direction = Right
+    length = 2.540
+    number-size = 1.000
+    name-size = 1.000
+
+  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.540))
+  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.540))
+  layer("foreground") = Rectangle(10.160, 10.160)
+  layer("foreground") = Polyline(0.254, [
+    Point(-1.270, -1.016)
+    Point(-1.270, 1.016)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.762, -1.778)
+    Point(-0.762, -1.778)])
+  layer("foreground") = Polyline(0.254, [
+    Point(1.270, -1.016)
+    Point(1.270, 1.016)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-0.762, -1.778)
+    Point(-0.762, 1.778)
+    Point(0.762, 1.778)
+    Point(0.762, -1.778)])
+  layer("foreground") = Polyline(0.254, [
+    Point(5.080, 2.540)
+    Point(2.540, 2.540)
+    Point(2.540, 0.0)
+    Point(1.524, 0.0)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-5.080, -2.540)
+    Point(-2.540, -2.540)
+    Point(-2.540, 0.0)
+    Point(-1.524, 0.0)])
+  layer("foreground") = Polyline(0.254, [
+    Point(1.270, -1.778)
+    Point(1.270, 1.778)])
+  layer("foreground") = Polyline(0.254, [
+    Point(-1.270, -1.778)
+    Point(-1.270, 1.778)])
+  layer("foreground") = Polyline(0.254, [
+    Point(0.762, 1.778)
+    Point(0.762, -1.778)
+    Point(-0.762, -1.778)
+    Point(-0.762, 1.778)
+    Point(0.762, 1.778)])
+
+public pcb-component component :
+  name = "C1986412"
+  description = "32 MHz ±10ppm Crystal 12pF 40 Ohms 4-SMD, No Lead"
+  manufacturer = "Seiko Epson"
+  mpn = "TSX-3225 32.0000MF10Z-W6"
+  datasheet = "https://datasheet.lcsc.com/lcsc/2201301130_Seiko-Epson-TSX-3225-32-0000MF10Z-W6_C1986412.pdf"
+  reference-prefix = "X"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir | electrical-type:String | bank:Int]
+    [GND0 | p[4] | Left | "unspecified" | 0]
+    [GND1 | p[2] | Right | "unspecified" | 0]
+    [OSC1 | p[1] | Left | "unspecified" | 0]
+    [OSC2 | p[3] | Right | "unspecified" | 0]
+
+  assign-landpattern(lp)
+  assign-symbol(sym-TSX-3225_32_0000MF10Z-W6)
+
+  property(self.category) = "mechanical"
+  property(self.manufacturer_aliases) = ["Seiko Epson"]
+  property(self.mpn_aliases) = ["TSX-3225 32.0000MF10Z-W6"]
+  property(self.cofactr_id) = "OSE9WB7RHGPY"
+  property(self.reference_prefix) = "M"
+  property(self.trust) = "low"
+  property(self.x) = 4.438
+  property(self.y) = 3.738
+  property(self.area) = 16.589
+  property(self.case) = "SMD-4P"
+  property(self.mounting) = "smd"
+
+  val [cl cs cm esr f df dl] = [12.0e-12  1.31e-12  4.41e-15  40.0  32.0e6  10.0e-6 100.0e-6]
+
+  property(self.crystal-resonator) = ocdb/utils/property-structs/CrystalResonator(cl, cs, cm, esr, f, df * f, dl)
+
+  property(self.rated-temperature) = min-max(-20.0, 75.0)
