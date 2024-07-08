@@ -16,7 +16,9 @@ defpackage nrf-motion:
   import amplifiers
   import helpers
 
-public val board-shape = Rectangle(31.0, 20.0)
+public val board-shape:Shape = Rectangle(31.0, 20.0)
+
+public val explore-BOM:True|False = false
 
 OPTIMIZE-FOR = ["area"]
 OPERATING-TEMPERATURE = min-max(0.0 50.0)
@@ -172,25 +174,38 @@ pcb-module nrf-motion :
   ; Run the schematic review
   check-design(self)
 
-; set-current-design("nrf-pours")
+if explore-BOM :
+  for disti in ["DigiKey" "Mouser" "JLCPCB"] do :
+    for qty in [10 10000] do :
+      val d-name = to-string("nrf-%_-%_" % [disti qty])
+      set-current-design(d-name)
+      setup-bill-of-materials(qty, disti)
 
-for disti in ["DigiKey" "Mouser" "JLCPCB"] do :
-  for qty in [10 10000] do :
-    val d-name = to-string("nrf-%_-%_" % [disti qty])
-    set-current-design(d-name)
-    setup-bill-of-materials(qty, disti)
+      set-paper(ANSI-B)
+      setup-board(board-shape)
 
-    set-paper(ANSI-B)
-    setup-board(board-shape)
+      var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
+      set-main-module(main-module) ; Treat the provided module as a design, and compile it.
 
-    var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
-    set-main-module(main-module) ; Treat the provided module as a design, and compile it.
+      ; run-checks("checks.txt")
+      ; View the results
+      ; view-design-explorer()
+      view-schematic()
+      view-board()
+      bom-view-export()
+else :
+  set-current-design("nrf-pours")
+  set-paper(ANSI-B)
+  setup-board(board-shape)
 
-    ; run-checks("checks.txt")
-    ; View the results
-    ; view-design-explorer()
-    view-schematic()
-    view-board()
-    bom-view-export()
+  var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
+  set-main-module(main-module) ; Treat the provided module as a design, and compile it.
+
+  ; run-checks("checks.txt")
+  ; View the results
+  ; view-design-explorer()
+  view-schematic()
+  view-board()
+
 
 
