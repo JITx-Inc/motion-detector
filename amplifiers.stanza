@@ -14,8 +14,9 @@ defpackage amplifiers :
   import ocdb/utils/design-vars
 
   import ocdb/utils/property-structs
-  import ocdb/utils/bundles
   import noise
+
+  import jsl/bundles
 
 public defstruct BandpassConfig :
   ; Gain expressed as `vout/vin`
@@ -118,8 +119,8 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
     inst opa : AMP_t
     net (opa.supply, vin)
 
-    bypass-cap-strap(opa.supply.vdd, opa.supply.gnd, 10.0e-6)
-    bypass-cap-strap(opa.supply.vdd, opa.supply.gnd, 10.0e-9)
+    bypass-cap-strap(opa.supply.V+, opa.supply.V-, 10.0e-6)
+    bypass-cap-strap(opa.supply.V+, opa.supply.V-, 10.0e-9)
 
     ;  Amplifier is a standard inverting amplifier in a bandpass
     ;    configuration.
@@ -137,7 +138,7 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
 
     ; Shorting resistor to test amplifier noise
     ;   This will be DNP except for testing.
-    val R-short = res-strap(in, vin.gnd, 0.0)
+    val R-short = res-strap(in, vin.V-, 0.0)
     dnp(R-short)
 
     ; Feedback for setting the gain in the
@@ -208,9 +209,9 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
     inst R1 : chip-resistor(Rf_v, perc(1))
     inst R2 : chip-resistor(Rf_v, perc(1))
 
-    net (R1.p[1] vin.vdd)
+    net (R1.p[1] vin.V+)
     net vref (R1.p[2] R2.p[1])
-    net (R2.p[2] vin.gnd)
+    net (R2.p[2] vin.V-)
     net (vref opa.amp.in+)
     val R1t = tol%(Rf_v, 1.0)
     val Vref-ratio = R1t / (2.0 * R1t)
@@ -240,7 +241,7 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
     ; bypass-cap-strap(op-amp.VIN+, vin.gnd, 1.0e-6)
 
     val Cref_t = tol%(10.0e-9, 20.0)
-    bypass-cap-strap(opa.amp.in+, vin.gnd, typ(Cref_t), 0.20)
+    bypass-cap-strap(opa.amp.in+, vin.V-, typ(Cref_t), 0.20)
 
     ; time constant for this circuit is t = (R*C) / 2.0
     val tau = Rft * Cref_t

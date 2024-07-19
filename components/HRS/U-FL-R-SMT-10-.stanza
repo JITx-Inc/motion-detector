@@ -7,6 +7,7 @@ defpackage components/HRS/U-FL-R-SMT-10- :
   import jitx/commands
   import ocdb/utils/box-symbol
 
+  import jsl/si
 
 pcb-pad rectangle-smd-pad :
   name = "rectangle-smd-pad"
@@ -1100,7 +1101,7 @@ pcb-symbol sym-U_FL-R-SMT-10- :
   layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 9.620))
   layer("foreground") = Rectangle(15.240, 10.160, loc(0.0, 2.540))
 
-public pcb-component int-component :
+public pcb-component component :
   name = "u.FL Connector"
   description = "1 Inner needle IPEX Board Edge 1.25mm -40℃~+90℃ 6GHz 50Ω 2mm SMD  RF Connectors / Coaxial Connectors ROHS"
   manufacturer = "HIROSE ELECTRIC CO LTD"
@@ -1128,12 +1129,13 @@ public pcb-component int-component :
   property(self.case) = "SMD"
   property(self.mounting) = "smd"
   property(self.rated-temperature) = Toleranced(25.0, 65.0, 65.0)
-public pcb-module component: 
-  pin sig
-  pin gnd
 
-  public inst uFL : components/HRS/U-FL-R-SMT-10-/int-component
-  net (sig, uFL.SIG)
+public pcb-module module: 
+  port sig
+  port gnd
+
+  public inst uFL : components/HRS/U-FL-R-SMT-10-/component
+  topo-net(sig uFL.SIG)
   net (gnd, uFL.GND0)
   net (gnd, uFL.GND1)
 

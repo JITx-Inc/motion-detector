@@ -8,10 +8,14 @@ defpackage components/Foshan-NationStar-Optoelectronics/FM-B2020RGBA-HG :
   import ocdb/utils/box-symbol
   import ocdb/utils/landpatterns
   import ocdb/utils/symbols
-  import ocdb/utils/bundles
+  ; import ocdb/utils/bundles
   import ocdb/utils/generator-utils
   import ocdb/utils/generic-components
   import ocdb/utils/property-structs
+
+  import jsl/bundles
+
+  import bundles
 
 pcb-pad rectangle-smd-pad :
   name = "rectangle-smd-pad"
@@ -622,18 +626,18 @@ public pcb-component component :
   datasheet = "https://datasheet.lcsc.com/lcsc/1810231210_Foshan-NationStar-Optoelectronics-FM-B2020RGBA-HG_C108793.pdf"
   reference-prefix = "D"
 
-  port l : rgb-led
+  port led : rgb-led
 
   pin-properties :
     [pin:Ref | pads:Ref ... | side:Dir | electrical-type:String | bank:Int]
-    [l.a | p[3] | Left | "unspecified" | 0]
-    [l.r | p[1] | Right | "unspecified" | 0]
-    [l.b | p[2] | Right | "unspecified" | 0]
-    [l.g | p[4] | Right | "unspecified" | 0]
+    [led.a | p[3] | Up    | "unspecified" | 0]
+    [led.r | p[1] | Right | "unspecified" | 0]
+    [led.b | p[2] | Right | "unspecified" | 0]
+    [led.g | p[4] | Right | "unspecified" | 0]
 
   assign-landpattern(lp)
   val sym = diode-rgb-led
-  symbol = sym(l.r => sym.r, l.g => sym.g, l.b => sym.b, l.a => sym.a)
+  symbol = sym(led.r => sym.r, led.g => sym.g, led.b => sym.b, led.a => sym.a)
 
   property(self.category) = "diode"
   property(self.manufacturer_aliases) = ["Foshan NationStar Optoelectronics"]
@@ -647,25 +651,19 @@ public pcb-component component :
   property(self.case) = "SMD,2.1x2.1mm"
   property(self.mounting) = "smd"
 
+  property(led.r.max-current) = 20.0e-3
+  property(led.r.forward-voltage) = 2.0
+  property(led.r.color) = "red"
+  property(led.r.mcd-current) = [[0.0 0.0] [68.75 10.0e-3]]
 
-  ; val sym = diode-rgb-led
-  ; val pkg = rgb-2020
-  ; symbol = sym(l.r => sym.r, l.g => sym.g, l.b => sym.b, l.a => sym.a)
-  ; landpattern = pkg(l.r => pkg.p[1], l.g => pkg.p[3], l.b => pkg.p[2], l.a => pkg.p[4])
+  property(led.g.max-current) = 20.0e-3
+  property(led.g.forward-voltage) = 3.0
+  property(led.g.color) = "green"
+  property(led.g.mcd-current) = [[0.0 0.0] [300.0 10.0e-3]]
 
-  property(l.r.max-current) = 20.0e-3
-  property(l.r.forward-voltage) = 2.0
-  property(l.r.color) = "red"
-  property(l.r.mcd-current) = [[0.0 0.0] [68.75 10.0e-3]]
-
-  property(l.g.max-current) = 20.0e-3
-  property(l.g.forward-voltage) = 3.0
-  property(l.g.color) = "green"
-  property(l.g.mcd-current) = [[0.0 0.0] [300.0 10.0e-3]]
-
-  property(l.b.max-current) = 20.0e-3
-  property(l.b.forward-voltage) = 3.0
-  property(l.b.color) = "blue"
-  property(l.b.mcd-current) = [[0.0 0.0] [83.0 10.0e-3]]
+  property(led.b.max-current) = 20.0e-3
+  property(led.b.forward-voltage) = 3.0
+  property(led.b.color) = "blue"
+  property(led.b.mcd-current) = [[0.0 0.0] [83.0 10.0e-3]]
 
   property(self.rated-temperature) = min-max(-30.0, 85.0)

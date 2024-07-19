@@ -11,10 +11,11 @@ defpackage helpers :
   import ocdb/utils/generic-components
   import ocdb/utils/generator-utils
   import ocdb/utils/property-structs
-  import ocdb/utils/bundles
+  ; import ocdb/utils/bundles
   import ocdb/utils/defaults
   import ocdb/utils/design-vars
 
+  import jsl/bundles
 
 ; =====================
 ; Setup the board
@@ -96,45 +97,51 @@ public defn bom-view-export () :
   view-bom(BOM-STD)
   export-bom()
 
+
+
+doc: \<DOC>
+The pcb-routing-structure(s) below are just examples of the routing structures that need to be maintained
+in the project code because they are dependant on the stack-up and other factors.
+<DOC>
+public pcb-routing-structure rf-constraint :
+  name = "50 Ohm RF single-ended routing structure"
+  layer(Top) :
+    trace-width = 0.500  ; mm
+    clearance   = 0.200  ; mm
+    velocity = 0.19e12   ; mm/s
+    insertion-loss = 0.008  ; db/mm @ 1GHz
+    neck-down = NeckDown(
+      trace-width = 0.127
+      clearance = 0.127
+    )
+
+doc: \<DOC>
+@brief Apply the RF routing structure to a signal.
+The function applies the provided pcb-routing-structure
+to the signal between the start and endpoint. Note that both start and end points
+need to be connected to physical component pins either directly or via pin assignment.
+<DOC>
+
+public defn rf-routing-structure (rs:RoutingStructure, x:JITXObject, y:JITXObject) :
+  inside pcb-module :
+    structure(x => y) = rs
+
 public defn setup-supply-rail (pwr : JITXObject, supply-V : Toleranced) :
   inside pcb-module:
-    public net VDD (pwr.vdd)
-    public net GND (pwr.gnd)
+    public net VDD (pwr.V+)
+    public net GND (pwr.V-)
     symbol(GND) = ocdb/utils/symbols/ground-sym
     symbol(VDD) = ocdb/utils/symbols/supply-sym
     property(GND.voltage) = typ(0.0)
     property(VDD.voltage) = supply-V
-    property(VDD.net-class) = NetClass(`Vdd, [`min-trace => 0.250])
+    ; use routing structure instead of net=class property here
 
-
-; Operational Amplifier's are typically a differential input
-;   amplifier with a single-ended output.
-;   They may optionally include a TRIM input for correcting 
-;   input offset voltages.
-
-public pcb-enum helpers/OpAmp :
-  TRIM-OFFSET
-
-public pcb-bundle op-amp (pins:Tuple<helpers/OpAmp>) :
-  pin in+
-  pin in-
-  pin out
-  for p in pins do :
-    switch(p) :
-      TRIM-OFFSET : 
-        make-pin(`trim+)
-        make-pin(`trim-)
-
-; Helper for a simple op-amp bundle without 
-;   trim inputs.
-public defn op-amp () : 
-  op-amp([])
+    ; property(VDD.net-class) = NetClass(`Vdd, [`min-trace => 0.250])
 
 
 ; 50 ohm line on a 1.5mm h CBCPW
-;   This is temporary - all this is likely to change
-;   with the SI in the future.
-public val CBCPW = NetClass(`ANT, [`min-trace => 0.5 `min-space => 0.2])
+
+; public val CBCPW = NetClass(`ANT, [`min-trace => 0.5 `min-space => 0.2])
 
 ; via stitching function
 public defn via-stitch (board-shape, connection) :
@@ -180,20 +187,20 @@ public defn rgb-indicator (brightness:Double, proc:JITXObject, vin:JITXObject):
   inside pcb-module:
     pcb-module rgb-indicator :
       port control-pins : timer[3]
-      val vio = 3.3 ; TODO: get this from the vin pin property
+      val vio = 3.3
       ; Calculate resistance to get appropriate brightness
       defn calc-r (l:JITXObject, brightness:Double, vio:Double):
         val i = PWL(property(l.mcd-current))[brightness]
         closest-std-val((vio - property(l.forward-voltage)) / i, 5.0)
       public inst led : components/Foshan-NationStar-Optoelectronics/FM-B2020RGBA-HG/component ;
       
-      res-strap(control-pins[0].timer, led.l.r, calc-r(led.l.r, brightness, vio))
-      res-strap(control-pins[1].timer, led.l.g, calc-r(led.l.g, brightness, vio))
-      res-strap(control-pins[2].timer, led.l.b, calc-r(led.l.b, brightness, vio))
+      res-strap(control-pins[0].timer, led.led.r, calc-r(led.led.r, brightness, vio))
+      res-strap(control-pins[1].timer, led.led.g, calc-r(led.led.g, brightness, vio))
+      res-strap(control-pins[2].timer, led.led.b, calc-r(led.led.b, brightness, vio))
 
     inst rgb:rgb-indicator
     require control-pins:timer[3] from proc
-    net (vin, rgb.led.l.a)
+    net (vin, rgb.led.led.a)
     net (control-pins rgb.control-pins)
     rgb
 

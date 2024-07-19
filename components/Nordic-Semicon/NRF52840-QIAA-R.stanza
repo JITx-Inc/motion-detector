@@ -16,11 +16,14 @@ defpackage components/Nordic-Semicon/NRF52840-QIAA-R :
   import ocdb/utils/symbol-utils
   import ocdb/utils/generic-components
   import ocdb/utils/box-symbol
-  import ocdb/utils/bundles
   import ocdb/utils/property-structs
   import ocdb/utils/generator-utils
   import ocdb/utils/checks
   import ocdb/utils/passive-checks/resonator-checks
+
+  import jsl/bundles
+  import jsl/protocols
+  import bundles
 
   import helpers
 
@@ -261,12 +264,12 @@ public pcb-component component :
   pcb-bundle io-pin : 
     pin p
 
-  for p  in pins(self.P0) do :
+  for p in pins(self.P0) do :
     supports io-pin :
       io-pin.p => p
     property(p.digital-io) = driver
     
-  for p  in pins(self.P1) do :
+  for p in pins(self.P1) do :
     supports io-pin :
       io-pin.p => p
     property(p.digital-io) = driver
@@ -292,26 +295,31 @@ public pcb-component component :
       i2c.sda => pins[0].p
       i2c.scl => pins[1].p
 
+
+  val spi = spi-with-cs()
   for i in 0 to 3 do :
-    supports spi-controller() :
+    supports spi :
       require pins:io-pin[4] 
-      spi-controller().copi => pins[0].p
-      spi-controller().cipo => pins[1].p
-      spi-controller().sck => pins[2].p
-      spi-controller().cs => pins[3].p
+      spi.copi => pins[0].p
+      spi.cipo => pins[1].p
+      spi.sck => pins[2].p
+      spi.cs => pins[3].p
 
+
+  val uart = uart(UART-RX UART-TX UART-CTS UART-RTS)
   for i in 0 to 2 do :
-    supports uart([UART-RX UART-TX UART-CTS UART-RTS]) :
+    supports uart :
       require pins:io-pin[4]
-      uart([UART-RX UART-TX UART-CTS UART-RTS]).tx => pins[0].p
-      uart([UART-RX UART-TX UART-CTS UART-RTS]).rx => pins[1].p
-      uart([UART-RX UART-TX UART-CTS UART-RTS]).rts => pins[2].p
-      uart([UART-RX UART-TX UART-CTS UART-RTS]).cts => pins[3].p
+      uart.tx => pins[0].p
+      uart.rx => pins[1].p
+      uart.rts => pins[2].p
+      uart.cts => pins[3].p
 
-  supports swd-swo() :
-    swd-swo().swdio  => self.SWDIO
-    swd-swo().swdclk => self.SWDCLK
-    swd-swo().swo => self.P1[00]
+  val swd = swd(SWD-SWO)
+  supports swd :
+    swd.swdio  => self.SWDIO
+    swd.swdclk => self.SWDCLK
+    swd.swo => self.P1[00]
 
   supports reset :
     reset.reset => self.P0[18]
@@ -322,8 +330,8 @@ public pcb-component component :
   property(self.P0[01].crystal-oscillator) = CrystalOscillator(3.1e-6, 0.5e-6, 4.0e-12, 50.0e-6 * 32.768e3, 32.768e3)
 
   supports low-freq-oscillator :
-    low-freq-oscillator.in => self.P0[0]
-    low-freq-oscillator.out => self.P0[1]
+    low-freq-oscillator.lo-in => self.P0[0]
+    low-freq-oscillator.lo-out => self.P0[1]
 
 doc: \<DOC>
   NRF52840 reference module.
@@ -343,15 +351,15 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
   port vin : power
 
   public inst mcu : components/Nordic-Semicon/NRF52840-QIAA-R/component
-  net gnd (vin.gnd, mcu.VSS, mcu.VSS_PA)
+  net gnd (vin.V-, mcu.VSS, mcu.VSS_PA)
 
   ; Setup Bypass caps
   switch(power-config) :
     5 : 
-      port usb : usb-2 ; USB enabled
+      port usb : usb-2-connector ; USB enabled
       
-      net (gnd, usb.vbus.gnd)
-      net (mcu.VBUS, usb.vbus.vdd)
+      net (gnd, usb.vbus.V-)
+      net (mcu.VBUS, usb.vbus.V+)
       ; Configure to be in normal voltage mode, DCDC1 enabled (config 5 from datasheet)
       for [pin_, cap_] in kvs([
         mcu.DEC1    => 100.0e-9,
@@ -385,7 +393,7 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
       net (mcu.DEC4 mcu.DEC6 filt-ind.p[2])
 
       for i in 0 through 4 do : 
-        net (vin.vdd mcu.VDDH mcu.VDD[i])
+        net (vin.V+ mcu.VDDH mcu.VDD[i])
     6 :
       ; Battery power only, no USB, no NFC
       for [pin_, cap_] in kvs([
@@ -417,11 +425,11 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
 
       net (mcu.VBUS gnd)
       net (mcu.DEC4 mcu.DEC6)
-      net (vin.vdd mcu.VDDH)
+      net (vin.V+ mcu.VDDH)
       no-connect(mcu.D+)
       no-connect(mcu.D-)
       for i in 0 through 4 do : 
-        net (vin.vdd mcu.VDD[i])
+        net (vin.V+ mcu.VDD[i])
         ; Normal voltage mode.
         property(mcu.VDD[i].power-pin) = PowerPin(min-typ-max(1.7, 3.0, 3.6))
       property(mcu.VDDH.power-pin) = PowerPin(min-typ-max(1.7, 3.0, 3.6))
@@ -438,8 +446,8 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
   if include-LFO? :  
     inst lfosc : ocdb/components/epson/FC-135/component
     require lfo : low-freq-oscillator from mcu
-    net (lfo.in lfosc.p[1])
-    net (lfo.out lfosc.p[2])
+    net (lfo.lo-in lfosc.p[1])
+    net (lfo.lo-out lfosc.p[2])
     val lf-cb = add-xtal-caps(lfosc, gnd)
     check-resonator(lfosc, property(mcu.P0[1].crystal-oscillator), lf-cb)
 
@@ -450,19 +458,19 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
   val hf-cb = add-xtal-load-caps(hfosc, gnd)
   check-resonator(hfosc, property(mcu.XC2.crystal-oscillator), hf-cb)
 
-  ; Antenna
-  if include-antenna? :
-    inst ant : inverted-f-antenna-cmp
-    inst c3 : ceramic-cap(["capacitance" => 0.8e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
-    inst c4 : ceramic-cap(["capacitance" => 0.5e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
-    inst l2 : smd-inductor(["inductance" => 4.7e-9 "min-self-resonant-frequency" => 7.0e6 "min-quality-factor" => 8.0 "case" => "0402"])
-    net (gnd c3.p[2] c4.p[2] ant.gnd)
-    net (mcu.ANT c3.p[1] l2.p[1])
-    net launch (l2.p[2] c4.p[1] ant.launch)
-    ; 50 ohm line on a 1.5mm h CBCPW
-    property(launch.net-class) = NetClass(`ANT, [`min-trace => 0.5 `min-space => 0.2])
-    schematic-group([ant c3 c4 l2]) = util
-    layout-group([ant c3 c4 l2]) = util
+  ; ; Antenna
+  ; if include-antenna? :
+  ;   inst ant : inverted-f-antenna-cmp
+  ;   inst c3 : ceramic-cap(["capacitance" => 0.8e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
+  ;   inst c4 : ceramic-cap(["capacitance" => 0.5e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
+  ;   inst l2 : smd-inductor(["inductance" => 4.7e-9 "min-self-resonant-frequency" => 7.0e6 "min-quality-factor" => 8.0 "case" => "0402"])
+  ;   net (gnd c3.p[2] c4.p[2] ant.gnd)
+  ;   topo-net(mcu.ANT => c3.p[1] => l2.p[1])
+  ;   topo-net(l2.p[2] => c4.p[1] => ant.launch)
+  ;   ; 50 ohm line on a 1.5mm h CBCPW
+  ;   ; property(launch.net-class) = NetClass(`ANT, [`min-trace => 0.5 `min-space => 0.2])
+  ;   schematic-group([ant c3 c4 l2]) = util
+  ;   layout-group([ant c3 c4 l2]) = util
 
   schematic-group(mcu, 2) = util
   schematic-group(mcu, 3) = power

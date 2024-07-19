@@ -7,9 +7,10 @@ defpackage components/ALLPOWER-ShenZhen-Quan-Li-Semiconductor-/AP3722AT :
   import jitx/commands
   import ocdb/utils/box-symbol
   ; User Includes
-  import ocdb/utils/bundles
   import ocdb/utils/property-structs
   import ocdb/utils/generic-components
+
+  import jsl/bundles
 
 pcb-pad circle-smd-pad :
   name = "circle-smd-pad"
@@ -78,7 +79,7 @@ pcb-symbol sym-AP3722AT :
   layer("foreground") = Rectangle(12.700, 7.620)
   layer("foreground") = Circle(-5.080, 2.540, 0.381)
 
-public pcb-component int-component :
+public pcb-component component :
   name = "C918198"
   description = "Omnidirectional -42dB 220Ω 57dB SMD-4P,2.2x3.8mm  MEMS Microphones ROHS"
   manufacturer = "ALLPOWER(ShenZhen Quan Li Semiconductor)"
@@ -112,15 +113,15 @@ public pcb-component int-component :
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; User Provided Modifications
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-public pcb-module component:
+public pcb-module module:
   pin out
   port vin : power
 
-  public inst mic : components/ALLPOWER-ShenZhen-Quan-Li-Semiconductor-/AP3722AT/int-component
+  public inst mic : components/ALLPOWER-ShenZhen-Quan-Li-Semiconductor-/AP3722AT/component
   net (mic.OUT, out)
 
-  net (vin.vdd, mic.VDD)
-  net (vin.gnd, mic.GND0)
+  net (vin.V+, mic.VDD)
+  net (vin.V-, mic.GND0)
 
   property(mic.VDD.power-pin) = PowerPin(min-max(1.6, 3.6))
 

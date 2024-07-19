@@ -6,7 +6,8 @@ defpackage components/MYOUNG/MY-1632-03 :
   import jitx
   import jitx/commands
   import ocdb/utils/box-symbol
-  import ocdb/utils/bundles
+
+  import jsl/bundles
 
 pcb-pad rectangle-smd-pad :
   name = "rectangle-smd-pad"
@@ -170,5 +171,5 @@ public pcb-module module :
 
   public inst holder : components/MYOUNG/MY-1632-03/component 
 
-  net (vout.vdd, holder.p[1])
-  net (vout.gnd, holder.p[2])
+  net (vout.V+, holder.p[1])
+  net (vout.V-, holder.p[2])

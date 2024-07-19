@@ -7,8 +7,11 @@ defpackage components/STMicroelectronics/TS971ILT :
   import jitx/commands
   import ocdb/utils/box-symbol
   ; User Includes
-  import ocdb/utils/bundles
   import ocdb/utils/property-structs
+
+  import jsl/bundles
+  import bundles
+
   import helpers
 
 pcb-pad rectangle-smd-pad :
@@ -95,7 +98,7 @@ pcb-symbol sym-TS971ILT :
     Point(-5.080, 5.080)
     Point(-5.080, -5.080)])
 
-public pcb-component int-component :
+public pcb-component component :
   name = "C2802553"
   description = " SOT-23-5  Operational Amplifier ROHS"
   manufacturer = "STMICROELECTRONICS"
@@ -137,16 +140,17 @@ public pcb-component int-component :
   ; User Provided Modifications
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-public pcb-module component : 
+
+public pcb-module module : 
 
   port supply : power
   port amp : op-amp()
 
-  public inst IC : components/STMicroelectronics/TS971ILT/int-component
+  public inst IC : components/STMicroelectronics/TS971ILT/component
 
   net (amp.in+, IC.IN+)
   net (amp.in-, IC.IN-)
   net (amp.out, IC.OUT)
 
-  net (supply.vdd, IC.VCC)
-  net (supply.gnd, IC.VDD)
+  net (supply.V+, IC.VCC)
+  net (supply.V-, IC.VDD)

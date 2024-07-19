@@ -6,7 +6,6 @@ defpackage components/STMicroelectronics/LIS3DHTR :
   import jitx
   import jitx/commands
   import ocdb/utils/defaults
-  import ocdb/utils/bundles
   import ocdb/utils/landpatterns
   import ocdb/utils/generator-utils
   import ocdb/utils/generic-components
@@ -14,6 +13,8 @@ defpackage components/STMicroelectronics/LIS3DHTR :
   import ocdb/utils/box-symbol
   import ocdb/utils/property-structs
   import ocdb/utils/checks
+
+  import jsl/bundles
 
 
 pcb-landpattern xdcr-lis3dhtr :
@@ -113,27 +114,30 @@ public pcb-component component :
   property(self.INT[1].digital-output) = drive-props
   property(self.CS.digital-input) = input-props
 
+
+val spi-mb = spi-with-cs()
+
 public pcb-module module :
 
   port power:power
   port i2c:i2c
-  port spi:spi-peripheral()
+  port spi:spi-mb
   port adc:pin[[1 2 3]]
   port int: pin[[1 2]]
   pin vio
 
   public inst acc : components/STMicroelectronics/LIS3DHTR/component
 
-  net (power.gnd, acc.GND, acc.RES)
-  net (power.vdd, acc.VDD)
+  net (power.V-, acc.GND, acc.RES)
+  net (power.V+, acc.VDD)
   net (vio, acc.VDD_IO)
 
   bypass-cap-strap(acc.VDD, acc.GND, 10.0e-6)
   bypass-cap-strap(acc.VDD_IO, acc.GND, 0.1e-6)
 
   net (i2c.scl, spi.sck, acc.SPC)
-  net (i2c.sda, spi.sdo, acc.SDO)
-  net (spi.sdi, acc.SA0)
+  net (i2c.sda, spi.cipo, acc.SDO)
+  net (spi.copi, acc.SA0)
   net (spi.cs, acc.CS)
 
   for i in 1 through 3 do : net (adc[i] acc.ADC[i])

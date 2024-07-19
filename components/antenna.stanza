@@ -11,6 +11,8 @@ defpackage components/antenna :
   import ocdb/utils/defaults
 
   import helpers
+  import jsl/si
+
 ; ========================================================
 ; ===================== Antennas =========================
 ; ========================================================
@@ -45,8 +47,8 @@ pcb-landpattern antenna-2GHz4-inverted-f-geometry :
   ref-label()
 
 public pcb-component inverted-f-antenna-component :
-  pin launch
-  pin gnd
+  port launch
+  port gnd
   description = "2.4 GHz Inverted F trace antenna"
   val pkg = antenna-2GHz4-inverted-f-geometry
   val sym = antenna-symbol(1, 1)
@@ -57,9 +59,9 @@ public pcb-component inverted-f-antenna-component :
 
 pcb-module pi-filter :
   ; @TODO - parameterization
-  pin vin
-  pin vout
-  pin gnd
+  port vin
+  port vout
+  port gnd
 
   inst C-F : ceramic-cap(["capacitance" => 0.8e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
   inst C-R : ceramic-cap(["capacitance" => 0.5e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
@@ -67,12 +69,15 @@ pcb-module pi-filter :
 
   ; @TODO - here is where I want to use `Network.stanza` to make this
   ;   more expressive and readable.
-  net A (vin C-F.p[1] L.p[1])
-  net B (vout L.p[2] C-R.p[1])
+  topo-net(vin => C-F.p[1] => L.p[1])
+  pin-model(L.p[1] L.p[2]) = PinModel(typ(0.0), typ(0.0))
+  topo-net(L.p[2] => C-R.p[1] => vout)
   net (gnd C-F.p[2] C-R.p[2])
 
-  property(A.net-class) = CBCPW
-  property(B.net-class) = CBCPW
+  ; rf-routing-structure(rf-constraint, vin C-F.p[1])
+  ; rf-routing-structure(rf-constraint, C-F.p[1] L.p[1])
+  ; rf-routing-structure(rf-constraint, L.p[2] C-R.p[1])
+  ; rf-routing-structure(rf-constraint, C-R.p[1] vout)
 
   schematic-group(self) = PI-FILTER
   place(C-F) at loc( 1.100, 0.600, 0.0) on Top
@@ -80,8 +85,8 @@ pcb-module pi-filter :
   place(L) at loc(0.000, 1.00, 270.00) on Top
 
 public pcb-module inverted-f-antenna :
-  pin rf-in
-  pin gnd
+  port rf-in
+  port gnd
 
   public inst ant : inverted-f-antenna-component
   instance-status(ant) :
@@ -92,18 +97,25 @@ public pcb-module inverted-f-antenna :
   public inst pi : pi-filter
   ; place(pi) at loc(0.0, 0.0, 0.0) on Top
 
-  net RF-IN (rf-in pi.vin)
-  net LAUNCH (pi.vout ant.launch)
+  topo-net(rf-in pi.vin)
+  topo-net(pi.vout ant.launch)
   net GND (gnd, ant.gnd pi.gnd)
 
-  property(RF-IN.net-class) = CBCPW
-  property(LAUNCH.net-class) = CBCPW
+  set-signal-end(rf-in, ant.launch)
+  ; rf-routing-structure(rf-constraint, rf-in pi.vin)
+  ; rf-routing-structure(rf-constraint, pi.vout ant.launch)
+
+  ; property(RF-IN.net-class) = CBCPW
+  ; property(LAUNCH.net-class) = CBCPW
 
   schematic-group(self) = inverted-f-antenna
 
+  defn not-skip-index (a) -> True|False :
+    a < 4 or a > 5 and a < 7 or a > 11
+
   val y = -0.1
   for x in 0 to 19 do :
-    if (x < 4 or x > 5) and (x < 7 or x > 11):
+    if not-skip-index(x) :
       val x-d = to-double(x)
       geom(GND) :
         via(minimum-via) at Point(x-d - 4.4, y)
@@ -111,20 +123,27 @@ public pcb-module inverted-f-antenna :
 ; view(inverted-f-antenna-component)
 
 public pcb-module test-RF-conn :
-  pin sig
-  pin gnd
+  port sig
+  port gnd
 
   ; We add a u.FL connector with a separate inductor and capacitor that are
   ;   generally DNP. This will be used for FCC verification.
   inst C-R : ceramic-cap(["capacitance" => 0.5e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
   inst L : smd-inductor(["inductance" => 4.7e-9 "min-self-resonant-frequency" => 7.0e6 "min-quality-factor" => 8.0 "case" => "0402"])
-  inst test-uFL : components/HRS/U-FL-R-SMT-10-/component
+  inst test-uFL : components/HRS/U-FL-R-SMT-10-/module
 
-  net SIG (sig, L.p[1])
-  net TEST-LAUNCH (L.p[2], C-R.p[1], test-uFL.sig)
+  topo-net(sig => L.p[1])
+  pin-model(L.p[1] L.p[2]) = PinModel(typ(0.0), typ(0.0))
+  topo-net(L.p[2] => C-R.p[1] => test-uFL.sig)
+  set-signal-end(sig, test-uFL.sig)
+  
   net (gnd, C-R.p[2], test-uFL.gnd)
 
   dnp([C-R, L, test-uFL])
 
-  property(SIG.net-class) = CBCPW
-  property(TEST-LAUNCH.net-class) = CBCPW
+  ; rf-routing-structure(rf-constraint, sig L.p[1])
+  ; rf-routing-structure(rf-constraint, L.p[2] C-R.p[1])
+  ; rf-routing-structure(rf-constraint, C-R.p[1] test-uFL.sig)
+  
+  ; property(SIG.net-class) = CBCPW
+  ; property(TEST-LAUNCH.net-class) = CBCPW
