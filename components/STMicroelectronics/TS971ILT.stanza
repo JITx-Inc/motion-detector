@@ -44,7 +44,7 @@ pcb-landpattern lp :
   model3d = Model3D("../../3d-models/jitx-64d18bebb789d8dc4b8318fc.stp",
     Vec3D(0.0, 0.0, 0.0),
     Vec3D(1.000, 1.000, 1.000),
-    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(0.0, 0.0, 180.0),
     [],
     )
 
@@ -75,24 +75,24 @@ pcb-symbol sym-TS971ILT :
     number-size = 1.000
     name-size = 1.000
 
-  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 6.080))
-  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 7.080))
-  layer("foreground") = Polyline(0.254, [
+  draw("value") = Text(">VALUE", 0.7056, C, loc(0.0, 6.080))
+  draw("reference") = Text(">REF", 0.7056, C, loc(0.0, 7.080))
+  draw("foreground") = Polyline(0.254, [
     Point(0.0, -2.540)
     Point(0.0, -5.080)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.0, 5.080)
     Point(0.0, 2.540)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-3.302, -1.778)
     Point(-3.302, -3.302)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-4.064, -2.540)
     Point(-2.540, -2.540)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-4.064, 2.540)
     Point(-2.540, 2.540)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-5.080, -5.080)
     Point(5.080, 0.0)
     Point(-5.080, 5.080)

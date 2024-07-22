@@ -36,7 +36,7 @@ pcb-landpattern lp :
   model3d = Model3D("../../3d-models/jitx-64d1420ab789d8dc4b7a5690.stp",
     Vec3D(0.0, 0.0, 0.0),
     Vec3D(1.000, 1.000, 1.000),
-    Vec3D(0.0, 0.0, 0.0),
+    Vec3D(0.0, 0.0, 180.0),
     [],
     )
 
@@ -57,72 +57,72 @@ pcb-symbol sym-NTA4151PT1G :
     number-size = 1.000
     name-size = 1.000
 
-  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 6.207))
-  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 7.207))
-  layer("foreground") = Circle(-5.080, -2.540, 0.127)
-  layer("foreground") = Circle(2.540, -2.540, 0.127)
-  layer("foreground") = Circle(2.540, 0.0, 0.127)
-  layer("foreground") = Circle(2.540, 5.080, 0.127)
-  layer("foreground") = Circle(2.540, 0.762, 0.127)
-  layer("foreground") = Polyline(0.254, [
+  draw("value") = Text(">VALUE", 0.7056, C, loc(0.0, 6.207))
+  draw("reference") = Text(">REF", 0.7056, C, loc(0.0, 7.207))
+  draw("foreground") = Circle(-5.080, -2.540, 0.127)
+  draw("foreground") = Circle(2.540, -2.540, 0.127)
+  draw("foreground") = Circle(2.540, 0.0, 0.127)
+  draw("foreground") = Circle(2.540, 5.080, 0.127)
+  draw("foreground") = Circle(2.540, 0.762, 0.127)
+  draw("foreground") = Polyline(0.254, [
     Point(2.540, 0.0)
     Point(5.080, 0.0)
     Point(5.080, 2.032)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(2.540, 4.318)
     Point(2.540, 5.080)
     Point(5.080, 5.080)
     Point(5.080, 3.302)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(2.540, 4.318)
     Point(0.0, 4.318)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.0, 2.540)
     Point(2.540, 2.540)
     Point(2.540, 0.0)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(2.540, 0.762)
     Point(0.0, 0.762)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-0.508, 4.826)
     Point(-0.508, 0.254)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.0, 3.810)
     Point(0.0, 4.826)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.0, 2.032)
     Point(0.0, 3.048)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.0, 0.254)
     Point(0.0, 1.270)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-2.540, 2.540)
     Point(-0.508, 2.540)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(5.842, 2.032)
     Point(5.588, 2.032)
     Point(4.572, 2.032)
     Point(4.318, 2.032)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-1.016, -3.302)
     Point(-1.016, -1.778)
     Point(0.0, -2.540)
     Point(-1.016, -3.302)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-2.794, -3.556)
     Point(-2.794, -1.524)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-2.794, -2.540)
     Point(-1.778, -3.302)
     Point(-1.778, -1.778)
     Point(-2.794, -2.540)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(2.540, -2.540)
     Point(-5.080, -2.540)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(2.540, -2.540)
     Point(2.540, 0.0)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-2.540, 2.540)
     Point(-2.794, 3.048)
     Point(-3.048, 2.032)
@@ -133,26 +133,26 @@ pcb-symbol sym-NTA4151PT1G :
     Point(-4.826, 2.540)
     Point(-5.080, 2.540)
     Point(-5.080, -2.540)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-2.286, -4.064)
     Point(-2.794, -3.556)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-2.794, -1.524)
     Point(-3.302, -1.016)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.0, -3.556)
     Point(0.0, -1.524)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.508, -4.064)
     Point(0.0, -3.556)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.0, -1.524)
     Point(-0.508, -1.016)])
-  layer("foreground") = Polygon([
+  draw("foreground") = Polygon([
     Point(2.540, 2.540)
     Point(1.016, 3.048)
     Point(1.016, 2.032)])
-  layer("foreground") = Polygon([
+  draw("foreground") = Polygon([
     Point(5.080, 2.032)
     Point(5.842, 3.302)
     Point(4.318, 3.302)])

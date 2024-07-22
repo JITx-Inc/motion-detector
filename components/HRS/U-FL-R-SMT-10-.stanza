@@ -1097,9 +1097,9 @@ pcb-symbol sym-U_FL-R-SMT-10- :
     number-size = 1.000
     name-size = 1.000
 
-  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 8.620))
-  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 9.620))
-  layer("foreground") = Rectangle(15.240, 10.160, loc(0.0, 2.540))
+  draw("value") = Text(">VALUE", 0.7056, C, loc(0.0, 8.620))
+  draw("reference") = Text(">REF", 0.7056, C, loc(0.0, 9.620))
+  draw("foreground") = Rectangle(15.240, 10.160, loc(0.0, 2.540))
 
 public pcb-component component :
   name = "u.FL Connector"

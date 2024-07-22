@@ -262,7 +262,7 @@ public pcb-component component :
                           FractionalVoltage(0.7, self.VDD[0]), self.VDD[0], self.VSS, 50.0e-9)
 
   pcb-bundle io-pin : 
-    pin p
+    port p
 
   for p in pins(self.P0) do :
     supports io-pin :

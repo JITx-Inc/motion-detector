@@ -105,7 +105,7 @@ in the project code because they are dependant on the stack-up and other factors
 <DOC>
 public pcb-routing-structure rf-constraint :
   name = "50 Ohm RF single-ended routing structure"
-  layer(Top) :
+  layer-constraints(Top) :
     trace-width = 0.500  ; mm
     clearance   = 0.200  ; mm
     velocity = 0.19e12   ; mm/s
