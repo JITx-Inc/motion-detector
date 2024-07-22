@@ -18,27 +18,15 @@ defpackage components/antenna :
 ; ========================================================
 
 pcb-landpattern antenna-2GHz4-inverted-f-geometry :
-
-  pcb-pad launch-pad :
-    name  = "Ant Launch Pad"
-    type  = SMD
-    shape = Polygon([Point(-0.25, -0.25)
-                    ; Game the "center" point choice.
-                    Point(-0.15, -0.25) Point(0.0, -0.25) Point(0.15, -0.25)
-                    Point(0.25, -0.25)
-                    Point(0.25, 1.25) Point(-0.25, 1.25)])
-
-  pad launch : launch-pad at loc(0.0, 0.25)
+  pad launch : smd-pad(0.5, 1.5) at loc(0.0, 0.55)
   pad gnd : smd-pad(0.9, 0.5) at loc(-2.1, 0.25)
 
   copper(LayerIndex(0)) = Line(0.5, [Point(-2.1, 5.15), Point(2.2, 5.15), Point(2.2, 2.51), 
                                 Point(4.7, 2.51),  Point(4.7, 5.15), Point(6.9, 5.15), 
                                 Point(6.9, 2.51),  Point(9.4, 2.51), Point(9.4, 5.15), 
                                 Point(11.6, 5.15), Point(11.6, 0.96)])
-  ; copper(LayerIndex(0)) = Line(0.5, [Point(0.0, 0.0),   Point(0.0, 5.15)])
-  ; copper(LayerIndex(0)) = Rectangle(0.9, 5.4, loc(-2.1, 2.7))
   layer(ForbidCopper(LayerIndex(0), LayerIndex(0, Bottom))) = Rectangle(20.0, 5.5, loc(5.0, 3.25))
-  copper(LayerIndex(0)) = Rectangle(0.5, 4.10 loc(0., 3.325)) ; [Point(0.0, 0.0),   Point(0.0, 5.15)])
+  copper(LayerIndex(0)) = Rectangle(0.5, 4.10 loc(0., 3.325))
   copper(LayerIndex(0)) = Rectangle(0.9, 4.9, loc(-2.1, 2.95))
   layer(SolderMask(Top)) = Rectangle(20.0, 5.5, loc(5.0, 3.25))
   layer(Courtyard(Top)) = Rectangle(20.0, 5.5, loc(5.0, 3.25))
@@ -58,7 +46,6 @@ public pcb-component inverted-f-antenna-component :
   property(self.rated-temperature) = false
 
 pcb-module pi-filter :
-  ; @TODO - parameterization
   port vin
   port vout
   port gnd
@@ -67,17 +54,10 @@ pcb-module pi-filter :
   inst C-R : ceramic-cap(["capacitance" => 0.5e-12 "temperature-coefficient.code" => "C0G" "case" => "0402"])
   inst L : smd-inductor(["inductance" => 4.7e-9 "min-self-resonant-frequency" => 7.0e6 "min-quality-factor" => 8.0 "case" => "0402"])
 
-  ; @TODO - here is where I want to use `Network.stanza` to make this
-  ;   more expressive and readable.
   topo-net(vin => C-F.p[1] => L.p[1])
   pin-model(L.p[1] L.p[2]) = PinModel(typ(0.0), typ(0.0))
   topo-net(L.p[2] => C-R.p[1] => vout)
   net (gnd C-F.p[2] C-R.p[2])
-
-  ; rf-routing-structure(rf-constraint, vin C-F.p[1])
-  ; rf-routing-structure(rf-constraint, C-F.p[1] L.p[1])
-  ; rf-routing-structure(rf-constraint, L.p[2] C-R.p[1])
-  ; rf-routing-structure(rf-constraint, C-R.p[1] vout)
 
   schematic-group(self) = PI-FILTER
   place(C-F) at loc( 1.100, 0.600, 0.0) on Top
@@ -95,21 +75,15 @@ public pcb-module inverted-f-antenna :
   place(ant) at loc(0.0, 0.0, 0.0) on Top
   ; PI filter
   public inst pi : pi-filter
-  ; place(pi) at loc(0.0, 0.0, 0.0) on Top
 
   topo-net(rf-in pi.vin)
   topo-net(pi.vout ant.launch)
-  net GND (gnd, ant.gnd pi.gnd)
-
   set-signal-end(rf-in, ant.launch)
-  ; rf-routing-structure(rf-constraint, rf-in pi.vin)
-  ; rf-routing-structure(rf-constraint, pi.vout ant.launch)
-
-  ; property(RF-IN.net-class) = CBCPW
-  ; property(LAUNCH.net-class) = CBCPW
+  net GND (gnd, ant.gnd pi.gnd)
 
   schematic-group(self) = inverted-f-antenna
 
+  ; add some via stitching next to the antenna
   defn not-skip-index (a) -> True|False :
     a < 4 or a > 5 and a < 7 or a > 11
 
@@ -120,8 +94,6 @@ public pcb-module inverted-f-antenna :
       geom(GND) :
         via(minimum-via) at Point(x-d - 4.4, y)
   
-; view(inverted-f-antenna-component)
-
 public pcb-module test-RF-conn :
   port sig
   port gnd
@@ -139,11 +111,6 @@ public pcb-module test-RF-conn :
   
   net (gnd, C-R.p[2], test-uFL.gnd)
 
-  dnp([C-R, L, test-uFL])
-
-  ; rf-routing-structure(rf-constraint, sig L.p[1])
-  ; rf-routing-structure(rf-constraint, L.p[2] C-R.p[1])
-  ; rf-routing-structure(rf-constraint, C-R.p[1] test-uFL.sig)
-  
-  ; property(SIG.net-class) = CBCPW
-  ; property(TEST-LAUNCH.net-class) = CBCPW
+  for i in [C-R, L, test-uFL] do :
+    instance-status(i) :
+      bom-status = NotInBOM

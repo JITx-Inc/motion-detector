@@ -30,27 +30,27 @@ public pcb-module nRF-mcu :
 
   ; Nordic MCU with Wireless Interface
   public inst nrf : components/Nordic-Semicon/NRF52840-QIAA-R/module(include-LFO? = false, include-antenna? = false, power-config = 6)
-  net (supply, nrf.vin)
-  topo-net(ant, nrf.mcu.ANT)
-  ; set-signal-end(ant, nrf.mcu.ANT)
-  ; rf-routing-structure(rf-constraint, nrf.mcu.ANT ant)
+  net (supply nrf.vin)
+  ; add a topology connection between the module port and the pin on the mcu
+  topo-net(ant nrf.mcu.ANT)
 
   require tap-detect:gpio from nrf.mcu
-  net WAKE (wake, tap-detect.gpio)
+  net WAKE (wake tap-detect.gpio)
 
   require voice:adc from nrf.mcu
-  net (mic-in, voice.adc)
+  net (mic-in voice.adc)
 
   require acc-i2c:i2c from nrf.mcu
-  net I2C (i2c-bus, acc-i2c)
+  net I2C (i2c-bus acc-i2c)
 
   require vdda-sw:gpio from nrf.mcu
-  net (vdda-en, vdda-sw.gpio)
+  net (vdda-en vdda-sw.gpio)
 
   add-open-drain-pullups(i2c-bus, supply.V+)
 
   require debug : swd(SWD-SWO) from nrf.mcu
 
+  ; we create our own debug connections
   inst dbg-conn : smd-testpoint-cmp(0.75)[5]
 
   net (dbg-conn[0].p supply.V+)
@@ -81,9 +81,6 @@ public pcb-module RF-frontend :
   topo-net(sig => test.sig => ant.rf-in)
 
   set-signal-end(sig, ant.rf-in)
-
-  ; rf-routing-structure(rf-constraint, sig ant.rf-in)
-  ; rf-routing-structure(rf-constraint, sig test.sig)
 
   schematic-group(self) = RF
   layout-group(self) = RF-layout

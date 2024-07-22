@@ -20,23 +20,22 @@ defpackage nrf-motion:
   import nRF
 
 public val board-shape:Shape = Rectangle(31.0, 20.0)
-public val explore-BOM:True|False = false
 
 OPTIMIZE-FOR = ["area"]
 OPERATING-TEMPERATURE = min-max(0.0 50.0)
 MIN-PKG = "0402"
 
-
+; top level design
 pcb-module nrf-motion :
-
-  ; Coin Cell
+  ; Coin cell holder placed on bottom
   inst bat : components/MYOUNG/MY-1632-03/module
   place(bat.holder) at loc(-2.4, 2.413, 0.0) on Bottom
 
+  ; setup voltage range for design
   val vbat-range = min-max(2.8, 3.0)
   setup-supply-rail(bat.vout, vbat-range)
 
-  ; MCU
+  ; MCU instantiation
   inst mcu : nRF-mcu
 
   ; Accelerometer
@@ -50,8 +49,7 @@ pcb-module nrf-motion :
 
   ; Connect the XL to the NRF's i2c bus
   net (mcu.i2c-bus, xl.i2c)
-  ;  We use the interrupt from the XL to wake the
-  ;   MCU from deep sleep
+  ;  We use the interrupt from the XL to wake the MCU from deep sleep
   net (mcu.wake, xl.int[1])
 
   ; RF Interface for the MCU
@@ -66,8 +64,8 @@ pcb-module nrf-motion :
   ;   We want to be able to turn this section off while we
   ;   are sleeping to reduce power usage.
 
-  val PMOS_def = components/ON-Semiconductor/NTA4151PT1G/component
-  inst load-sw : load-switch/high-side-mosfet-switch(PMOS_def)
+  val PMOS-def = components/ON-Semiconductor/NTA4151PT1G/component
+  inst load-sw : load-switch/high-side-mosfet-switch(PMOS-def)
 
   net (always-on, load-sw.vin)
   net (mcu.vdda-en, load-sw.control)
@@ -80,9 +78,7 @@ pcb-module nrf-motion :
 
   ; Analog Interface
   inst mic : components/ALLPOWER-ShenZhen-Quan-Li-Semiconductor-/AP3722AT/module
-  ; Gain bandwidth of this opamp is insufficient and causes the low pass
-  ;   edge of the bandpass to be lower than expected.
-  ; val OpAmpType = components/Microchip-Tech/MCP6001T-EOT/component
+
   ; This opamp shows proper corner frequency at 20kHz as expected.
   val OpAmpType = components/STMicroelectronics/TS971ILT/module
 
@@ -103,41 +99,18 @@ pcb-module nrf-motion :
   net GND (self.GND)
   net VDD (self.VDD)
 
-  ; ; should not need to do this here
-  ; property(GND.net-class)  = NetClass(`Gnd, [`min-trace => 0.150])
-  ; property(VDDA.net-class) = NetClass(`Vdda, [`min-trace => 0.200])
-
   via-stitch(board-shape, GND)
 
   ; Run the schematic review
   check-design(self)
 
-if explore-BOM :
-  for disti in ["DigiKey" "Mouser" "JLCPCB"] do :
-    for qty in [10 10000] do :
-      val d-name = to-string("nrf-%_-%_" % [disti qty])
-      set-current-design(d-name)
-      setup-bill-of-materials(qty, disti)
+; compile the design
+set-current-design("nrf-design")
+set-paper(ANSI-B)
+setup-board(board-shape)
 
-      set-paper(ANSI-B)
-      setup-board(board-shape)
+var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
+set-main-module(main-module) ; Treat the provided module as a design, and compile it.
 
-      var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
-      set-main-module(main-module) ; Treat the provided module as a design, and compile it.
-
-      ; run-checks("checks.txt")
-      ; View the results
-      ; view-design-explorer()
-      view-schematic()
-      view-board()
-      bom-view-export()
-else :
-  set-current-design("nrf-pours")
-  set-paper(ANSI-B)
-  setup-board(board-shape)
-
-  var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
-  set-main-module(main-module) ; Treat the provided module as a design, and compile it.
-
-  view-schematic()
-  view-board()
+view-schematic()
+view-board()

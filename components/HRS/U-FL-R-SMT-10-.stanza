@@ -1138,8 +1138,3 @@ public pcb-module module:
   topo-net(sig uFL.SIG)
   net (gnd, uFL.GND0)
   net (gnd, uFL.GND1)
-
-  ; needs run-final-passes() but we can't run that right now.
-  eval-when not connected?(uFL.GND1):
-    net (uFL.GND0, uFL.GND1)
-
