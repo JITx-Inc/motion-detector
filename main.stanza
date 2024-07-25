@@ -63,7 +63,6 @@ pcb-module nrf-motion :
   ; Power switch for the Analog Power Domain
   ;   We want to be able to turn this section off while we
   ;   are sleeping to reduce power usage.
-
   val PMOS-def = components/ON-Semiconductor/NTA4151PT1G/component
   inst load-sw : load-switch/high-side-mosfet-switch(PMOS-def)
 
