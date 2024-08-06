@@ -142,7 +142,7 @@ pcb-landpattern lp :
 
   layer(Courtyard(Top)) = Rectangle(7.252, 7.252)
 
-  model3d = Model3D("../../3d-models/jitx-64d132b5b789d8dc4b788223.stp",
+  model3d = Model3D("${JITX_PROJECT_ROOT}/3d-models/jitx-64d132b5b789d8dc4b788223.stp",
     Vec3D(0.0, 0.0, 0.0),
     Vec3D(1.000, 1.000, 1.000),
     Vec3D(0.0, 0.0, 0.0),
