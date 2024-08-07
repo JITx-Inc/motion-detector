@@ -185,6 +185,7 @@ pcb-module nrf-motion :
   check-design(self)
 
 set-current-design("nrf-pours")
+set-export-backend(`kicad) ; set the CAD software for export to be `altium or `kicad)
 set-paper(ANSI-B)
 setup-board()
 
