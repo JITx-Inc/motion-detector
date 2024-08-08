@@ -45,7 +45,7 @@ public pcb-component inverted-f-antenna-component :
   reference-prefix = "ANT"
   property(self.rated-temperature) = false
 
-pcb-module pi-filter (-- spacing:Double = 1.0):
+public pcb-module pi-filter (-- spacing:Double = 1.0):
   port vin
   port vout
   port gnd
@@ -74,7 +74,7 @@ public pcb-module inverted-f-antenna :
 
   place(ant) at loc(0.0, 0.0, 0.0) on Top
   ; PI filter
-  public inst pi : pi-filter
+  public inst pi : pi-filter(spacing = 1.0)
 
   topo-net(rf-in pi.vin)
   topo-net(pi.vout ant.launch)
