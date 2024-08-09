@@ -15,7 +15,7 @@ package components/Microchip/MCP6001T-E-OT defined-in "components/Microchip/MCP6
 package components/MYOUNG/BS-08-B2AA016 defined-in "components/MYOUNG/BS-08-B2AA016.stanza"
 package components/ON-Semiconductor/NTA4151PT1G defined-in "components/ON-Semiconductor/NTA4151PT1G.stanza"
 package components/Nordic-Semicon/NRF52840-QIAA-R defined-in "components/Nordic-Semicon/NRF52840-QIAA-R.stanza"
-package components/STMicroelectronics/TS971ILT defined-in "components/STMICROELECTRONICS/TS971ILT.stanza"
+package components/STMicroelectronics/TS971ILT defined-in "components/STMicroelectronics/TS971ILT.stanza"
 
 package components/Changjiang-Electronics-Tech--CJ-/BSS138 defined-in "components/Changjiang-Electronics-Tech--CJ-/BSS138.stanza"
 package components/Foshan-NationStar-Optoelectronics/FM-B2020RGBA-HG defined-in "components/Foshan-NationStar-Optoelectronics/FM-B2020RGBA-HG.stanza"
