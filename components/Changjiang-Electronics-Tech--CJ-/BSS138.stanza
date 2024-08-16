@@ -37,7 +37,7 @@ pcb-landpattern lp :
     Arc(1.460, -1.100, 0.100, 0.0, -360.000)])
   layer(Courtyard(Top)) = Rectangle(3.352, 3.205)
 
-  model3d = Model3D("${JITX_PROJECT_ROOT}/3d-models/jitx-64d1421bb789d8dc4b7a5878.stp",
+  model3d = Model3D("{USER_PROJECT_ROOT}/3d-models/jitx-64d1421bb789d8dc4b7a5878.stp",
     Vec3D(0.0, 0.0, 0.0),
     Vec3D(1.000, 1.000, 1.000),
     Vec3D(0.0, 0.0, 180.0),

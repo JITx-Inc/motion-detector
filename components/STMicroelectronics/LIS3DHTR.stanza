@@ -39,7 +39,7 @@ pcb-landpattern xdcr-lis3dhtr :
   layer(Silkscreen("F-SilkS", Top)) = Circle(Point(-2.0, 1.275), 0.1)
   ref-label()
 
-  model3d = Model3D("${JITX_PROJECT_ROOT}/3d-models/jitx-64d144a5b789d8dc4b7aa228.stp",
+  model3d = Model3D("{USER_PROJECT_ROOT}/3d-models/jitx-64d144a5b789d8dc4b7aa228.stp",
     Vec3D(0.0, 0.0, 0.0),
     Vec3D(1.000, 1.000, 1.000),
     Vec3D(0.0, 0.0, 0.0),
