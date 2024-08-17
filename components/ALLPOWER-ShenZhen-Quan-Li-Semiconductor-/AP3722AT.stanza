@@ -124,13 +124,13 @@ public pcb-module module:
   net (vin.V-, mic.GND0)
 
   property(mic.VDD.power-pin) = PowerPin(min-max(1.6, 3.6))
-
+  net (mic.GND0, mic.GND1)
   bypass-cap-strap(mic.VDD, mic.GND0, 0.1e-6)
 
-  ; There are two grounds for the casing. I'm leaving 
-  ;   the option open for the user to connected GND1 differently
-  ;   but if they don't then it will short to GND0
-  ; NOTE: This only works because GND1 is not connected in this 
-  ;   module. If you add a connection here this will not work. 
-  eval-when not connected?(mic.GND1):
-    net (mic.GND0, mic.GND1)
+  ; ; There are two grounds for the casing. I'm leaving 
+  ; ;   the option open for the user to connected GND1 differently
+  ; ;   but if they don't then it will short to GND0
+  ; ; NOTE: This only works because GND1 is not connected in this 
+  ; ;   module. If you add a connection here this will not work. 
+  ; eval-when not connected?(mic.GND1):
+  ;   net (mic.GND0, mic.GND1)
