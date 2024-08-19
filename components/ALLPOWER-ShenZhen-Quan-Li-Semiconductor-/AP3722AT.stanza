@@ -74,10 +74,10 @@ pcb-symbol sym-AP3722AT :
     number-size = 1.000
     name-size = 1.000
 
-  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.921))
-  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.921))
-  layer("foreground") = Rectangle(12.700, 7.620)
-  layer("foreground") = Circle(-5.080, 2.540, 0.381)
+  draw("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.921))
+  draw("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.921))
+  draw("foreground") = Rectangle(12.700, 7.620)
+  draw("foreground") = Circle(-5.080, 2.540, 0.381)
 
 public pcb-component component :
   name = "C918198"
@@ -114,7 +114,7 @@ public pcb-component component :
 ; User Provided Modifications
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 public pcb-module module:
-  pin out
+  port out
   port vin : power
 
   public inst mic : components/ALLPOWER-ShenZhen-Quan-Li-Semiconductor-/AP3722AT/component

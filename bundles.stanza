@@ -9,18 +9,18 @@ defpackage bundles :
   import jitx/commands
 
 public pcb-bundle rgb-led :
-  pin r
-  pin g
-  pin b
-  pin a
+  port r
+  port g
+  port b
+  port a
 
 public pcb-bundle low-freq-oscillator :
-  pin lo-in
-  pin lo-out
+  port lo-in
+  port lo-out
 
 public pcb-bundle high-freq-oscillator : 
-  pin hi-in
-  pin hi-out
+  port hi-in
+  port hi-out
 
 
 ; Operational Amplifier's are typically a differential input
@@ -32,9 +32,9 @@ public pcb-enum bundles/OpAmp :
   TRIM-OFFSET
 
 public pcb-bundle op-amp (pins:Tuple<bundles/OpAmp>) :
-  pin in+
-  pin in-
-  pin out
+  port in+
+  port in-
+  port out
   for p in pins do :
     switch(p) :
       TRIM-OFFSET : 

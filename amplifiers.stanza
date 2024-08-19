@@ -112,8 +112,8 @@ defn perc (v:Int) -> Double :
 ; @NOTE- I'm using a closure here because `config` isn't a JITX object
 public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
   pcb-module microphone-preamp-mod :
-    pin in
-    pin out
+    port in
+    port out
     port vin : power
 
     inst opa : AMP_t

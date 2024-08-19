@@ -118,18 +118,18 @@ pcb-symbol sym-MY-1632-03 :
     number-size = 1.000
     name-size = 1.000
 
-  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.286))
-  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.286))
-  layer("foreground") = Polyline(0.254, [
+  draw("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.286))
+  draw("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.286))
+  draw("foreground") = Polyline(0.254, [
     Point(-1.270, 2.286)
     Point(-1.270, -1.778)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-0.508, 1.270)
     Point(-0.508, -1.016)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.254, 2.286)
     Point(0.254, -1.778)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(1.016, 1.270)
     Point(1.016, -1.016)])
 

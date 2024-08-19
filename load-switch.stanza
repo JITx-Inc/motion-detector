@@ -20,7 +20,7 @@ defpackage load-switch :
 ; High-side power switch configuration. 
 public pcb-module high-side-mosfet-switch (PFET:InstantiableType) :
   ; Active High Enable with respect to 
-  pin control
+  port control
   ; I'm using the 'power' bundle here to make it easier 
   ;   to connect the input and output rails.
   ;   Note that this isn't an isolated two power design.

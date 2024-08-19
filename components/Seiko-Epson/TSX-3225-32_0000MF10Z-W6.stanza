@@ -68,40 +68,40 @@ pcb-symbol sym-TSX-3225_32_0000MF10Z-W6 :
     number-size = 1.000
     name-size = 1.000
 
-  layer("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.540))
-  layer("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.540))
-  layer("foreground") = Rectangle(10.160, 10.160)
-  layer("foreground") = Polyline(0.254, [
+  draw("value") = Text(">VALUE", 0.7056, C, loc(0.0, 3.540))
+  draw("reference") = Text(">REF", 0.7056, C, loc(0.0, 4.540))
+  draw("foreground") = Rectangle(10.160, 10.160)
+  draw("foreground") = Polyline(0.254, [
     Point(-1.270, -1.016)
     Point(-1.270, 1.016)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.762, -1.778)
     Point(-0.762, -1.778)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(1.270, -1.016)
     Point(1.270, 1.016)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-0.762, -1.778)
     Point(-0.762, 1.778)
     Point(0.762, 1.778)
     Point(0.762, -1.778)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(5.080, 2.540)
     Point(2.540, 2.540)
     Point(2.540, 0.0)
     Point(1.524, 0.0)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-5.080, -2.540)
     Point(-2.540, -2.540)
     Point(-2.540, 0.0)
     Point(-1.524, 0.0)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(1.270, -1.778)
     Point(1.270, 1.778)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(-1.270, -1.778)
     Point(-1.270, 1.778)])
-  layer("foreground") = Polyline(0.254, [
+  draw("foreground") = Polyline(0.254, [
     Point(0.762, 1.778)
     Point(0.762, -1.778)
     Point(-0.762, -1.778)
