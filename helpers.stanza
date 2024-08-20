@@ -24,7 +24,7 @@ public defn setup-board (board-shape:Shape) :
   set-board(ocdb/utils/defaults/default-board(ocdb/manufacturers/stackups/jlcpcb-2-layer, board-shape))
   set-rules(ocdb/manufacturers/rules/jlcpcb-basic-rules)
   set-use-layout-groups()
-  set-export-backend(`kicad) ; set the CAD software for export to be `altium or `kicad)
+  set-export-backend(`altium) ; set the CAD software for export to be `altium or `kicad)
 
 ; =====================
 ; Run the design checks
