@@ -53,15 +53,13 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [
-        "track_dangling|149872648|114600000|7984a1a6-38fc-43ac-b511-fb697cffb58d|00000000-0000-0000-0000-000000000000"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
       },
       "rule_severities": {
-        "annular_width": "ignore",
+        "annular_width": "error",
         "clearance": "error",
         "connection_width": "warning",
         "copper_edge_clearance": "error",
@@ -81,7 +79,7 @@
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
-        "items_not_allowed": "ignore",
+        "items_not_allowed": "error",
         "length_out_of_range": "error",
         "lib_footprint_issues": "warning",
         "lib_footprint_mismatch": "warning",
@@ -471,46 +469,6 @@
     "netclass_patterns": [
       {
         "netclass": "Default",
-        "pattern": "gnd"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "mcu_vdda-sw_gpio"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "r"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "launch"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "XC1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "VDD"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "signal"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "vref"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "mcu_debug_swo"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "L_p2"
-      },
-      {
-        "netclass": "Default",
         "pattern": "acc_INT2"
       },
       {
@@ -519,15 +477,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "VDDA"
-      },
-      {
-        "netclass": "Default",
         "pattern": "D"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "SA0"
       },
       {
         "netclass": "Default",
@@ -535,7 +485,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "mcu_control-pins1_timer"
+        "pattern": "mcu_vdda-sw_gpio"
       },
       {
         "netclass": "Default",
@@ -547,11 +497,75 @@
       },
       {
         "netclass": "Default",
+        "pattern": "g"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "L_p2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Cin_p2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "VDDA"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "mcu_debug_swo"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "SA0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "acc_ADC2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "DEC3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "b"
+      },
+      {
+        "netclass": "Default",
         "pattern": "CS"
       },
       {
         "netclass": "Default",
-        "pattern": "g"
+        "pattern": "acc_ADC3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "ANT"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "mcu_debug_swdio"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "mcu_control-pins1_timer"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "DEC2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "DEC6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "acc_ADC1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "gnd"
       },
       {
         "netclass": "Default",
@@ -563,11 +577,11 @@
       },
       {
         "netclass": "Default",
-        "pattern": "mcu_debug_swdio"
+        "pattern": "r"
       },
       {
         "netclass": "Default",
-        "pattern": "Cin_p2"
+        "pattern": "launch"
       },
       {
         "netclass": "Default",
@@ -579,7 +593,11 @@
       },
       {
         "netclass": "Default",
-        "pattern": "acc_ADC1"
+        "pattern": "XC1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "VDD"
       },
       {
         "netclass": "Default",
@@ -587,35 +605,15 @@
       },
       {
         "netclass": "Default",
-        "pattern": "DEC3"
+        "pattern": "signal"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "vref"
       },
       {
         "netclass": "Default",
         "pattern": "I2C_scl"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "acc_ADC2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "b"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "ANT"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "acc_ADC3"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "DEC6"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "DEC2"
       }
     ]
   },
