@@ -262,12 +262,12 @@
 (symbol "resistor_sym_1_0"
 
       (pin unspecified line (at 0.0 2.54 270) (length 0.0)
-        (name "1" (effects (font (size 0.0 0.0))))
+        (name "2" (effects (font (size 0.0 0.0))))
         (number "~" (effects (font (size 0.0 0.0))))
       )
 
       (pin unspecified line (at 0.0 -2.54 90) (length 0.0)
-        (name "2" (effects (font (size 0.0 0.0))))
+        (name "1" (effects (font (size 0.0 0.0))))
         (number "~" (effects (font (size 0.0 0.0))))
       )
       (polyline (pts (xy 0.0 -2.54) (xy 0.0 -1.5875)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))
@@ -1844,12 +1844,12 @@
 (symbol "resistor_sym_8_1_0"
 
       (pin unspecified line (at 0.0 2.54 270) (length 0.0)
-        (name "2" (effects (font (size 0.0 0.0))))
+        (name "1" (effects (font (size 0.0 0.0))))
         (number "~" (effects (font (size 0.0 0.0))))
       )
 
       (pin unspecified line (at 0.0 -2.54 90) (length 0.0)
-        (name "1" (effects (font (size 0.0 0.0))))
+        (name "2" (effects (font (size 0.0 0.0))))
         (number "~" (effects (font (size 0.0 0.0))))
       )
       (polyline (pts (xy 0.0 -2.54) (xy 0.0 -1.5875)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))
@@ -3823,29 +3823,29 @@
 )
     )
 
-    (symbol "C276273" 
+    (symbol "my_resistor_4" 
       (in_bom yes) (on_board yes)
       
       (property "Reference" "R" (id 0) (at 1.27 1.27 0.0)
         (effects (font (size 0.508 0.508))  (justify left )))
       
-      (property "Value" "C276273" (id 1) (at 1.27 -1.27 0.0)
+      (property "Value" "my_resistor_4" (id 1) (at 1.27 -1.27 0.0)
         (effects (font (size 0.508 0.508))  (justify left )))
       (property "Footprint" "" (id 2) (at 0 0 0)
         (effects (font (size 0.635 0.635)) hide))
       (property "Datasheet" "~" (id 3) (at 0 0 0)
         (effects (font (size 0.635 0.635)) hide))
       
-(symbol "C276273_1_0"
+(symbol "my_resistor_4_1_0"
 
       (pin unspecified line (at 0.0 2.54 270) (length 0.0)
-        (name "2" (effects (font (size 0.0 0.0))))
-        (number "2" (effects (font (size 0.0 0.0))))
+        (name "1" (effects (font (size 0.0 0.0))))
+        (number "1" (effects (font (size 0.0 0.0))))
       )
 
       (pin unspecified line (at 0.0 -2.54 90) (length 0.0)
-        (name "1" (effects (font (size 0.0 0.0))))
-        (number "1" (effects (font (size 0.0 0.0))))
+        (name "2" (effects (font (size 0.0 0.0))))
+        (number "2" (effects (font (size 0.0 0.0))))
       )
       (polyline (pts (xy 0.0 -2.54) (xy 0.0 -1.5875)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))
       (polyline (pts (xy 0.0 -1.5875) (xy -0.762 -1.27)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy -0.762 -1.27) (xy 0.762 -0.635)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy 0.762 -0.635) (xy -0.762 0.0)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy -0.762 0.0) (xy 0.762 0.635)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy 0.762 0.635) (xy -0.762 1.27)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy -0.762 1.27) (xy 0.0 1.5875)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))
@@ -3884,20 +3884,20 @@
 )
     )
 
-    (symbol "my_resistor_4" 
+    (symbol "my_resistor_5" 
       (in_bom yes) (on_board yes)
       
       (property "Reference" "R" (id 0) (at 1.27 1.27 0.0)
         (effects (font (size 0.508 0.508))  (justify left )))
       
-      (property "Value" "my_resistor_4" (id 1) (at 1.27 -1.27 0.0)
+      (property "Value" "my_resistor_5" (id 1) (at 1.27 -1.27 0.0)
         (effects (font (size 0.508 0.508))  (justify left )))
       (property "Footprint" "" (id 2) (at 0 0 0)
         (effects (font (size 0.635 0.635)) hide))
       (property "Datasheet" "~" (id 3) (at 0 0 0)
         (effects (font (size 0.635 0.635)) hide))
       
-(symbol "my_resistor_4_1_0"
+(symbol "my_resistor_5_1_0"
 
       (pin unspecified line (at 0.0 2.54 270) (length 0.0)
         (name "1" (effects (font (size 0.0 0.0))))
@@ -4127,29 +4127,29 @@
 )
     )
 
-    (symbol "my_resistor_5" 
+    (symbol "C93949" 
       (in_bom yes) (on_board yes)
       
       (property "Reference" "R" (id 0) (at 1.27 1.27 0.0)
         (effects (font (size 0.508 0.508))  (justify left )))
       
-      (property "Value" "my_resistor_5" (id 1) (at 1.27 -1.27 0.0)
+      (property "Value" "C93949" (id 1) (at 1.27 -1.27 0.0)
         (effects (font (size 0.508 0.508))  (justify left )))
       (property "Footprint" "" (id 2) (at 0 0 0)
         (effects (font (size 0.635 0.635)) hide))
       (property "Datasheet" "~" (id 3) (at 0 0 0)
         (effects (font (size 0.635 0.635)) hide))
       
-(symbol "my_resistor_5_1_0"
+(symbol "C93949_1_0"
 
       (pin unspecified line (at 0.0 2.54 270) (length 0.0)
-        (name "1" (effects (font (size 0.0 0.0))))
-        (number "1" (effects (font (size 0.0 0.0))))
+        (name "2" (effects (font (size 0.0 0.0))))
+        (number "2" (effects (font (size 0.0 0.0))))
       )
 
       (pin unspecified line (at 0.0 -2.54 90) (length 0.0)
-        (name "2" (effects (font (size 0.0 0.0))))
-        (number "2" (effects (font (size 0.0 0.0))))
+        (name "1" (effects (font (size 0.0 0.0))))
+        (number "1" (effects (font (size 0.0 0.0))))
       )
       (polyline (pts (xy 0.0 -2.54) (xy 0.0 -1.5875)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))
       (polyline (pts (xy 0.0 -1.5875) (xy -0.762 -1.27)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy -0.762 -1.27) (xy 0.762 -0.635)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy 0.762 -0.635) (xy -0.762 0.0)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy -0.762 0.0) (xy 0.762 0.635)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy 0.762 0.635) (xy -0.762 1.27)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))       (polyline (pts (xy -0.762 1.27) (xy 0.0 1.5875)) (stroke (width 0.254) (type solid) (color 0 0 0 0)) (fill (type background)))
