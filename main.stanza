@@ -7,7 +7,7 @@ defpackage nrf-motion:
 
   import ocdb/utils/checks
   import ocdb/utils/generic-components
-  import ocdb/utils/defaults
+  ; import ocdb/utils/defaults
   import ocdb/utils/generator-utils
   import ocdb/utils/design-vars
   import ocdb/artwork/jitx-logo
@@ -29,7 +29,7 @@ MIN-PKG = "0402"
 pcb-module nrf-motion :
   ; Coin cell holder placed on bottom
   inst bat : components/MYOUNG/MY-1632-03/module
-  place(bat.holder) at loc(-2.4, 2.413, 0.0) on Bottom
+  place(bat.holder) at loc(-2.401, 2.413, 0.0) on Bottom
 
   ; setup voltage range for design
   val vbat-range = min-max(2.8, 3.0)

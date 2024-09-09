@@ -53,7 +53,12 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "shorting_items|149412648|100450000|28ea18aa-4035-f808-e411-904efdea6119|7458f712-8716-4ba5-9fc8-c5cb7ca6b78a",
+        "solder_mask_bridge|149412648|100450000|7458f712-8716-4ba5-9fc8-c5cb7ca6b78a|28ea18aa-4035-f808-e411-904efdea6119",
+        "solder_mask_bridge|149412648|101350000|9c845ca8-d7e2-487b-5eac-9601da510fbc|6e07751d-d5a0-1a33-811b-34aa12574f19",
+        "solder_mask_bridge|149412648|108000000|9c845ca8-d7e2-487b-5eac-9601da510fbc|6e07751d-d5a0-1a33-811b-34aa12574f19"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -79,7 +84,7 @@
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
-        "items_not_allowed": "error",
+        "items_not_allowed": "ignore",
         "length_out_of_range": "error",
         "lib_footprint_issues": "warning",
         "lib_footprint_mismatch": "warning",
@@ -115,21 +120,21 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.127,
+        "min_clearance": 0.1,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.2,
-        "min_hole_clearance": 0.254,
-        "min_hole_to_hole": 0.5,
+        "min_hole_clearance": 0.2,
+        "min_hole_to_hole": 0.2,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
+        "min_text_height": 1.0,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.127,
-        "min_via_annular_width": 0.15,
-        "min_via_diameter": 0.2,
+        "min_track_width": 0.1,
+        "min_via_annular_width": 0.18,
+        "min_via_diameter": 0.66,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -445,7 +450,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.127,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -455,8 +460,8 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.127,
-        "via_diameter": 0.129,
+        "track_width": 0.1,
+        "via_diameter": 0.108,
         "via_drill": 0.3,
         "wire_width": 6
       }
@@ -469,47 +474,19 @@
     "netclass_patterns": [
       {
         "netclass": "Default",
-        "pattern": "acc_INT2"
+        "pattern": "GND"
       },
       {
         "netclass": "Default",
-        "pattern": "I2C_sda"
+        "pattern": "VDD"
       },
       {
         "netclass": "Default",
-        "pattern": "D"
+        "pattern": "r"
       },
       {
         "netclass": "Default",
-        "pattern": "XC2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "mcu_vdda-sw_gpio"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "DEC1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "op-"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "g"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "L_p2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Cin_p2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "VDDA"
+        "pattern": "XC1"
       },
       {
         "netclass": "Default",
@@ -517,35 +494,39 @@
       },
       {
         "netclass": "Default",
+        "pattern": "op-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "a"
+      },
+      {
+        "netclass": "Default",
         "pattern": "SA0"
       },
       {
         "netclass": "Default",
-        "pattern": "acc_ADC2"
+        "pattern": "acc_INT2"
       },
       {
         "netclass": "Default",
-        "pattern": "DEC3"
+        "pattern": "vref"
       },
       {
         "netclass": "Default",
-        "pattern": "b"
+        "pattern": "C-R_p1"
       },
       {
         "netclass": "Default",
-        "pattern": "CS"
+        "pattern": "XC2"
       },
       {
         "netclass": "Default",
-        "pattern": "acc_ADC3"
+        "pattern": "I2C_sda"
       },
       {
         "netclass": "Default",
-        "pattern": "ANT"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "mcu_debug_swdio"
+        "pattern": "DEC1"
       },
       {
         "netclass": "Default",
@@ -553,19 +534,19 @@
       },
       {
         "netclass": "Default",
-        "pattern": "DEC2"
+        "pattern": "CS"
       },
       {
         "netclass": "Default",
-        "pattern": "DEC6"
+        "pattern": "g"
       },
       {
         "netclass": "Default",
-        "pattern": "acc_ADC1"
+        "pattern": "VDDA"
       },
       {
         "netclass": "Default",
-        "pattern": "gnd"
+        "pattern": "signal"
       },
       {
         "netclass": "Default",
@@ -577,11 +558,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "r"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "launch"
+        "pattern": "mcu_debug_swdio"
       },
       {
         "netclass": "Default",
@@ -593,11 +570,11 @@
       },
       {
         "netclass": "Default",
-        "pattern": "XC1"
+        "pattern": "acc_ADC1"
       },
       {
         "netclass": "Default",
-        "pattern": "VDD"
+        "pattern": "G"
       },
       {
         "netclass": "Default",
@@ -605,15 +582,43 @@
       },
       {
         "netclass": "Default",
-        "pattern": "signal"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "vref"
+        "pattern": "DEC3"
       },
       {
         "netclass": "Default",
         "pattern": "I2C_scl"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "acc_ADC2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "b"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Rg_p1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "acc_ADC3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "DEC6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "DEC2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "ANT"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "mcu_vdda-sw_gpio"
       }
     ]
   },

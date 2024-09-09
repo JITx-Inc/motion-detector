@@ -8,7 +8,7 @@ defpackage components/antenna :
   import ocdb/utils/generator-utils
   import ocdb/utils/landpatterns
   import ocdb/utils/symbols
-  import ocdb/utils/defaults
+  ; import ocdb/utils/defaults
 
   import helpers
   import jsl/si
@@ -21,29 +21,48 @@ pcb-landpattern antenna-2GHz4-inverted-f-geometry :
   pad launch : smd-pad(0.5, 1.5) at loc(0.0, 0.55)
   pad gnd : smd-pad(0.9, 0.5) at loc(-2.1, 0.25)
 
-  copper(LayerIndex(0)) = Line(0.5, [Point(-2.1, 5.15), Point(2.2, 5.15), Point(2.2, 2.51), 
-                                Point(4.7, 2.51),  Point(4.7, 5.15), Point(6.9, 5.15), 
-                                Point(6.9, 2.51),  Point(9.4, 2.51), Point(9.4, 5.15), 
-                                Point(11.6, 5.15), Point(11.6, 0.96)])
-  layer(ForbidCopper(LayerIndex(0), LayerIndex(0, Bottom))) = Rectangle(20.0, 5.5, loc(5.0, 3.25))
-  copper(LayerIndex(0)) = Rectangle(0.5, 4.10 loc(0., 3.325))
-  copper(LayerIndex(0)) = Rectangle(0.9, 4.9, loc(-2.1, 2.95))
   layer(SolderMask(Top)) = Rectangle(20.0, 5.5, loc(5.0, 3.25))
   layer(Courtyard(Top)) = Rectangle(20.0, 5.5, loc(5.0, 3.25))
   layer(Courtyard(Bottom)) = Rectangle(20.0, 5.5, loc(5.0, 3.25))
-  layer(BoardEdge()) = Line(0.0, [Point(17.0, 6.0), Point(-7.0, 6.0)])
+  layer(CustomLayer("Fab", Top)) = Line(0.01, [Point(15.0, 6.0), Point(-5.0, 6.0)])
+  layer(ForbidCopper(LayerIndex(0), LayerIndex(0, Bottom))) = Rectangle(20.0, 5.5, loc(5.0, 3.25))
+
   ref-label()
 
 public pcb-component inverted-f-antenna-component :
   port launch
   port gnd
-  description = "2.4 GHz Inverted F trace antenna"
+  description = "2.4GHz Inverted-F printed antenna"
   val pkg = antenna-2GHz4-inverted-f-geometry
   val sym = antenna-symbol(1, 1)
   landpattern = pkg(launch => pkg.launch, gnd => pkg.gnd)
   symbol = sym(launch => sym.p[1], gnd => sym.p[2])
   reference-prefix = "ANT"
   property(self.rated-temperature) = false
+
+public pcb-module antenna-2GHz4-inverted-f-module :
+  port launch
+  port gnd
+
+  public inst antenna : components/antenna/inverted-f-antenna-component
+  place(antenna) at loc(0.0, 0.0) on Top
+
+  net a ()
+  topo-net(launch antenna.launch)
+  net (a launch)
+  net (gnd antenna.gnd)
+  ; net (a gnd) ; to avoid DRC errors?
+
+  geom(a) :
+    copper(LayerIndex(0)) = Line(0.5, [Point(-2.1, 5.15), Point(2.2, 5.15), Point(2.2, 2.51), 
+                                  Point(4.7, 2.51),  Point(4.7, 5.15), Point(6.9, 5.15), 
+                                  Point(6.9, 2.51),  Point(9.4, 2.51), Point(9.4, 5.15), 
+                                  Point(11.6, 5.15), Point(11.6, 0.96)])
+    copper(LayerIndex(0)) = Rectangle(0.5, 4.10 loc(0., 3.325))
+    copper(LayerIndex(0)) = Rectangle(0.9, 4.9, loc(-2.1, 2.95))
+
+  instance-status(antenna) :
+    bom-status = NotInBOM
 
 public pcb-module pi-filter (-- spacing:Double = 1.0):
   port vin
@@ -60,17 +79,17 @@ public pcb-module pi-filter (-- spacing:Double = 1.0):
   net (gnd C-F.p[2] C-R.p[2])
 
   schematic-group(self) = PI-FILTER
-  place(C-F) at loc( 1.100 * spacing, 0.600, 0.0) on Top
-  place(C-R) at loc(-1.100 * spacing, 0.600, 0.0) on Top
+  place(C-F) at loc( 1.200 * spacing, 0.600, 0.0) on Top
+  place(C-R) at loc(-1.200 * spacing, 0.600, 0.0) on Top
   place(L) at loc(0.000, 1.00, 270.00) on Top
 
 public pcb-module inverted-f-antenna :
   port rf-in
   port gnd
 
-  public inst ant : inverted-f-antenna-component
-  instance-status(ant) :
-    bom-status = NotInBOM
+  public inst ant : antenna-2GHz4-inverted-f-module
+  ; instance-status(ant.antenna) :
+  ;   bom-status = NotInBOM
 
   place(ant) at loc(0.0, 0.0, 0.0) on Top
   ; PI filter
@@ -92,7 +111,7 @@ public pcb-module inverted-f-antenna :
     if not-skip-index(x) :
       val x-d = to-double(x)
       geom(GND) :
-        via(minimum-via) at Point(x-d - 4.4, y)
+        via(small-via) at Point(x-d - 4.4, y)
   
 public pcb-module test-RF-conn :
   port sig
