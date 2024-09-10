@@ -96,7 +96,7 @@ public defn setup-board (board-shape:Shape) :
   set-board(motion-detector-board(board-shape))
   set-rules(new-jlcpcb-basic-rules)
   set-use-layout-groups()
-  set-export-backend(`kicad) ; set the CAD software for export to be `altium or `kicad)
+  set-export-backend(`altium) ; set the CAD software for export to be `altium or `kicad)
 
 ; =====================
 ; Run the design checks

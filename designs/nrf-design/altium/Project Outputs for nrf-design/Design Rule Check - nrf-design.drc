@@ -1,234 +1,559 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\itadm\Documents\motion-detector\designs\nrf-design\altium\nrf-design.PcbDoc
-Date     : 9/3/2024
-Time     : 11:57:51 AM
+Date     : 9/10/2024
+Time     : 3:41:53 PM
 
-Processing Rule : Clearance Constraint (Gap=0.127mm) (All),(All)
-   Violation between Clearance Constraint: (0.125mm < 0.127mm) Between Arc (5.155mm,5.423mm) on L1 And Via (5.344mm,5.216mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Arc (7.003mm,-2.711mm) on L1 And Via (7.003mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad ANT1-gnd(9.663mm,7.1mm) on L1 And Region (0 hole(s)) L1 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad ANT1-launch(9.963mm,5mm) on L1 And Region (0 hole(s)) L1 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad C10-2(2.258mm,4.413mm) on L1 And Via (2.23mm,3.874mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.006mm < 0.127mm) Between Pad C16-2(5.895mm,5.492mm) on L1 And Via (5.344mm,5.216mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.1mm < 0.127mm) Between Pad C16-2(5.895mm,5.492mm) on L1 And Via (6.575mm,5.504mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.039mm < 0.127mm) Between Pad C19-1(-6.258mm,0.225mm) on L1 And Via (-6.562mm,0.57mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad C6-2(-0.587mm,3.849mm) on L1 And Via (-0.396mm,4.382mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.1265mm (4.9821mil) < 0.127mm (5mil)) Between Pad J1-2(-2.4mm,-0.003mm) on L3 And Track (-2.747mm,3.787mm)(-2.414mm,3.803mm) on L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad J1-2(-2.4mm,-0.003mm) on L3 And Via (-3.363mm,-0.524mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad J1-2(-2.4mm,-0.003mm) on L3 And Via (-5.378mm,-1.169mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.058mm < 0.127mm) Between Pad Q1-3(-6.969mm,-4.052mm) on L1 And Via (-7.473mm,-3.555mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.125mm < 0.127mm) Between Pad R1-1(1.695mm,-5.977mm) on L1 And Via (2.074mm,-6.593mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.115mm < 0.127mm) Between Pad R6-2(-7.58mm,-0.397mm) on L1 And Via (-8.078mm,-0.91mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.105mm < 0.127mm) Between Pad TP1-p(7.363mm,-2.019mm) on L1 And Via (7.003mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.075mm < 0.127mm) Between Pad TP1-p(7.363mm,-2.019mm) on L1 And Via (7.653mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (0.311mm,-2.883mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (0.841mm,-3.433mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (1.195mm,1.729mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (1.371mm,-2.894mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (1.696mm,1.209mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (1.913mm,-2.334mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (2.224mm,0.679mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (2.453mm,-1.759mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (2.729mm,0.178mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (2.998mm,-1.185mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad U2-74(1.042mm,-0.804mm) on L1 And Via (3.274mm,-0.367mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.05mm < 0.127mm) Between Pad U8-2(-5.663mm,4.159mm) on L1 And Via (-6.264mm,4.76mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L1 And Via (-0.396mm,4.382mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L1 And Via (-0.396mm,4.382mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L1 And Via (2.23mm,3.874mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L1 And Via (2.23mm,3.874mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L1 And Via (-4.817mm,3.154mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (-0.396mm,4.382mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.05mm < 0.127mm) Between Region (0 hole(s)) L3 And Via (-10.521mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (-10.521mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (-11.171mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (-11.171mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.05mm < 0.127mm) Between Region (0 hole(s)) L3 And Via (-11.171mm,-3.213mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (-11.171mm,-3.213mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.05mm < 0.127mm) Between Region (0 hole(s)) L3 And Via (-11.821mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (-11.821mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (-5.499mm,2.618mm) from L1 to L3 
-   Violation between Clearance Constraint: (0mm < 0.127mm) Between Region (0 hole(s)) L3 And Via (7.003mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (-7.473mm,-3.555mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (7.653mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (-8.078mm,-0.91mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Region (0 hole(s)) L3 And Via (8.303mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (0.311mm,-2.883mm)(0.841mm,-3.433mm) on L3 And Via (0.311mm,-2.883mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (0.311mm,-2.883mm)(0.841mm,-3.433mm) on L3 And Via (0.841mm,-3.433mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-0.38mm,3.801mm)(2.23mm,3.874mm) on L3 And Via (2.23mm,3.874mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (0.841mm,-3.433mm)(1.371mm,-2.894mm) on L3 And Via (0.841mm,-3.433mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (0.841mm,-3.433mm)(1.371mm,-2.894mm) on L3 And Via (1.371mm,-2.894mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.042mm,-0.804mm)(1.245mm,-4.183mm) on L1 And Via (0.841mm,-3.433mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.042mm,-0.804mm)(1.245mm,-4.183mm) on L1 And Via (1.371mm,-2.894mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.042mm,-0.804mm)(1.926mm,2.201mm) on L1 And Via (1.696mm,1.209mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.16mm,5.692mm)(1.884mm,6.096mm) on L1 And Via (1.16mm,5.692mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.195mm,1.729mm)(1.696mm,1.209mm) on L3 And Via (1.195mm,1.729mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.195mm,1.729mm)(1.696mm,1.209mm) on L3 And Via (1.696mm,1.209mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-1.295mm,-5.827mm)(-0.474mm,-5.955mm) on L1 And Via (-1.295mm,-5.827mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.371mm,-2.894mm)(1.913mm,-2.334mm) on L3 And Via (1.371mm,-2.894mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.371mm,-2.894mm)(1.913mm,-2.334mm) on L3 And Via (1.913mm,-2.334mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.695mm,-5.977mm)(2.074mm,-6.593mm) on L1 And Via (2.074mm,-6.593mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.696mm,1.209mm)(2.224mm,0.679mm) on L3 And Via (1.696mm,1.209mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.696mm,1.209mm)(2.224mm,0.679mm) on L3 And Via (2.224mm,0.679mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.913mm,-2.334mm)(2.453mm,-1.759mm) on L3 And Via (1.913mm,-2.334mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (1.913mm,-2.334mm)(2.453mm,-1.759mm) on L3 And Via (2.453mm,-1.759mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-10.521mm,-2.563mm)(-7.001mm,-0.977mm) on L1 And Via (-10.521mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-11.171mm,-2.563mm)(-10.521mm,-2.563mm) on L3 And Via (-10.521mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-11.171mm,-2.563mm)(-10.521mm,-2.563mm) on L3 And Via (-11.171mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-11.171mm,-3.213mm)(-7.239mm,-4.917mm) on L1 And Via (-11.171mm,-3.213mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-11.821mm,-2.563mm)(-11.171mm,-2.563mm) on L3 And Via (-11.171mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-11.821mm,-2.563mm)(-11.171mm,-2.563mm) on L3 And Via (-11.821mm,-2.563mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-12.4mm,0mm)(-5.499mm,2.618mm) on L3 And Via (-5.499mm,2.618mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (2.074mm,-6.593mm)(3.625mm,-4.978mm) on L3 And Via (2.074mm,-6.593mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (2.074mm,-6.593mm)(3.625mm,-4.978mm) on L3 And Via (3.625mm,-4.978mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (2.224mm,0.679mm)(2.729mm,0.178mm) on L3 And Via (2.224mm,0.679mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (2.224mm,0.679mm)(2.729mm,0.178mm) on L3 And Via (2.729mm,0.178mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (2.453mm,-1.759mm)(2.998mm,-1.185mm) on L3 And Via (2.453mm,-1.759mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (2.453mm,-1.759mm)(2.998mm,-1.185mm) on L3 And Via (2.998mm,-1.185mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-2.4mm,0mm)(0.311mm,-2.883mm) on L3 And Via (0.311mm,-2.883mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-2.4mm,0mm)(1.195mm,1.729mm) on L3 And Via (1.195mm,1.729mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (2.729mm,0.178mm)(3.274mm,-0.367mm) on L3 And Via (2.729mm,0.178mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (2.729mm,0.178mm)(3.274mm,-0.367mm) on L3 And Via (3.274mm,-0.367mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-2.843mm,6.38mm)(-0.558mm,5.39mm) on L1 And Via (-0.558mm,5.39mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-3.141mm,4.781mm)(-2.307mm,3.062mm) on L1 And Via (-3.141mm,4.781mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (3.379mm,-6.669mm)(4.318mm,-7.343mm) on L1 And Via (3.379mm,-6.669mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (3.423mm,5.965mm)(3.623mm,5.391mm) on L1 And Via (3.423mm,5.965mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (3.625mm,-4.978mm)(4.911mm,-4.847mm) on L1 And Via (3.625mm,-4.978mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (3.637mm,2.148mm)(5.176mm,3.315mm) on L1 And Via (3.637mm,2.148mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (3.637mm,2.148mm)(5.176mm,3.315mm) on L1 And Via (5.176mm,3.315mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-4.116mm,-0.22mm)(-3.363mm,-0.524mm) on L1 And Via (-3.363mm,-0.524mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.123mm < 0.127mm) Between Track (4.212mm,4.767mm)(4.85mm,5.644mm) on L1 And Via (5.344mm,5.216mm) from L1 to L3 
-   Violation between Clearance Constraint: (0mm < 0.127mm) Between Track (4.327mm,-3.111mm)(7.008mm,-3.074mm) on L1 And Via (7.003mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-4.817mm,3.154mm)(-3.807mm,3.533mm) on L3 And Via (-4.817mm,3.154mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (5.176mm,3.315mm)(6.156mm,3.634mm) on L1 And Via (5.176mm,3.315mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (5.176mm,3.315mm)(6.156mm,3.634mm) on L1 And Via (6.156mm,3.634mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-5.378mm,-1.169mm)(-4.684mm,-1.81mm) on L1 And Via (-5.378mm,-1.169mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-5.499mm,2.618mm)(-4.656mm,1.467mm) on L1 And Via (-5.499mm,2.618mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (5.895mm,5.492mm)(6.575mm,5.504mm) on L1 And Via (6.575mm,5.504mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (6.156mm,3.634mm)(7.258mm,3.736mm) on L1 And Via (6.156mm,3.634mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (6.156mm,3.634mm)(7.258mm,3.736mm) on L1 And Via (7.258mm,3.736mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-6.187mm,7.381mm)(-3.141mm,4.781mm) on L3 And Via (-3.141mm,4.781mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-6.187mm,7.381mm)(-3.141mm,4.781mm) on L3 And Via (-6.187mm,7.381mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-6.227mm,-1.966mm)(-5.378mm,-1.169mm) on L1 And Via (-5.378mm,-1.169mm) from L1 to L3 
-   Violation between Clearance Constraint: (0.04mm < 0.127mm) Between Track (6.261mm,-3.952mm)(7.255mm,-4.571mm) on L1 And Via (6.798mm,-3.835mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-6.264mm,4.76mm)(-5.663mm,4.159mm) on L1 And Via (-6.264mm,4.76mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-6.562mm,0.57mm)(-2.4mm,0mm) on L3 And Via (-6.562mm,0.57mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-6.562mm,0.57mm)(-6.258mm,0.225mm) on L1 And Via (-6.562mm,0.57mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (6.798mm,-3.835mm)(7.255mm,-4.571mm) on L1 And Via (6.798mm,-3.835mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-6.829mm,6.67mm)(-6.187mm,7.381mm) on L1 And Via (-6.187mm,7.381mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (7.003mm,-2.711mm)(7.653mm,-2.711mm) on L3 And Via (7.003mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (7.003mm,-2.711mm)(7.653mm,-2.711mm) on L3 And Via (7.653mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (0mm < 0.127mm) Between Track (7.206mm,-3.012mm)(7.653mm,-2.711mm) on L1 And Via (7.003mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (7.206mm,-3.012mm)(7.653mm,-2.711mm) on L1 And Via (7.653mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (7.258mm,3.736mm)(8.61mm,3.781mm) on L1 And Via (7.258mm,3.736mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (7.258mm,3.736mm)(8.61mm,3.781mm) on L1 And Via (8.61mm,3.781mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-7.473mm,-3.555mm)(-6.969mm,-4.052mm) on L1 And Via (-7.473mm,-3.555mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (7.653mm,-2.711mm)(7.835mm,-5.151mm) on L1 And Via (7.653mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (7.653mm,-2.711mm)(8.303mm,-2.711mm) on L3 And Via (7.653mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (7.653mm,-2.711mm)(8.303mm,-2.711mm) on L3 And Via (8.303mm,-2.711mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (7.919mm,0.057mm)(8.61mm,3.781mm) on L1 And Via (8.61mm,3.781mm) from L1 to L3 
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Track (-8.078mm,-0.91mm)(-7.58mm,-0.397mm) on L1 And Via (-8.078mm,-0.91mm) from L1 to L3 
-Rule Violations :124
+ERROR : More than 500 violations detected, DRC was stopped
+
+Processing Rule : Clearance Constraint (Gap=3.937mil) (All),(All)
+   Violation between Clearance Constraint: (0mil < 3.937mil) Between Pad ANT1-gnd(380.419mil,279.527mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (3.885mil < 3.937mil) Between Pad C10-2(88.892mil,173.738mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad C10-2(88.892mil,173.738mil) on L1 And Via (87.794mil,152.533mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.926mil < 3.937mil) Between Pad C1-1(-158.428mil,-97.39mil) on L1 And Track (-151.254mil,-114.883mil)(-150.638mil,-114.514mil) on L1 
+   Violation between Clearance Constraint: (3.926mil < 3.937mil) Between Pad C1-1(-158.428mil,-97.39mil) on L1 And Track (-151.91mil,-115.175mil)(-151.254mil,-114.883mil) on L1 
+   Violation between Clearance Constraint: (3.91mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-112.373mil,253.238mil)(-111.395mil,252.679mil) on L1 
+   Violation between Clearance Constraint: (3.91mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-113.226mil,253.974mil)(-112.373mil,253.238mil) on L1 
+   Violation between Clearance Constraint: (3.91mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-113.924mil,254.857mil)(-113.226mil,253.974mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.242mil,271.738mil)(-113.771mil,272.52mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.242mil,271.738mil)(-113.771mil,272.52mil) on L1 
+   Violation between Clearance Constraint: (3.91mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.441mil,255.858mil)(-113.924mil,254.857mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.586mil,270.892mil)(-114.242mil,271.738mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.586mil,270.892mil)(-114.242mil,271.738mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.764mil,256.964mil)(-114.461mil,255.908mil) on L1 
+   Violation between Clearance Constraint: (3.91mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.76mil,256.938mil)(-114.441mil,255.858mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.796mil,270.004mil)(-114.586mil,270.892mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.796mil,270.004mil)(-114.586mil,270.892mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.867mil,258.059mil)(-114.764mil,256.964mil) on L1 
+   Violation between Clearance Constraint: (3.91mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.867mil,258.059mil)(-114.76mil,256.938mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.867mil,269.094mil)(-114.796mil,270.004mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C13-1(-97.15mil,263.576mil) on L1 And Track (-114.867mil,269.094mil)(-114.796mil,270.004mil) on L1 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad C16-2(228.162mil,216.237mil) on L1 And Via (205.266mil,206.215mil) from L1 to L3 
+   Violation between Clearance Constraint: (1.945mil < 3.937mil) Between Pad C16-2(228.162mil,216.237mil) on L1 And Via (254.911mil,216.678mil) from L1 to L3 
+   Violation between Clearance Constraint: (2.911mil < 3.937mil) Between Pad C17-2(322.651mil,216.237mil) on L1 And Via (348.229mil,229.714mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.866mil < 3.937mil) Between Pad C18-2(142.648mil,212.25mil) on L1 And Via (134.773mil,234.851mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad C19-1(-246.388mil,8.877mil) on L1 And Via (-258.334mil,22.451mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.861mil < 3.937mil) Between Pad C25-2(-149.619mil,284.838mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Pad C5-1(-20.488mil,-236.774mil) on L1 And Track (-12.677mil,-253.883mil)(-11.862mil,-253.203mil) on L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Pad C5-1(-20.488mil,-236.774mil) on L1 And Track (-13.601mil,-254.406mil)(-12.677mil,-253.883mil) on L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Pad C5-1(-20.488mil,-236.774mil) on L1 And Track (-14.603mil,-254.756mil)(-13.601mil,-254.406mil) on L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Pad C5-1(-20.488mil,-236.774mil) on L1 And Track (-15.651mil,-254.92mil)(-14.603mil,-254.756mil) on L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Pad C5-1(-20.488mil,-236.774mil) on L1 And Track (-16.712mil,-254.894mil)(-15.651mil,-254.92mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C5-1(-20.488mil,-236.774mil) on L1 And Track (-2.632mil,-243.088mil)(-2.412mil,-242.202mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C5-1(-20.488mil,-236.774mil) on L1 And Track (-2.986mil,-243.93mil)(-2.632mil,-243.088mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C5-1(-20.488mil,-236.774mil) on L1 And Track (-3.466mil,-244.707mil)(-2.986mil,-243.93mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad C5-1(-20.488mil,-236.774mil) on L1 And Track (-4.06mil,-245.4mil)(-3.466mil,-244.707mil) on L1 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad C6-2(-23.123mil,151.52mil) on L1 And Via (-15.592mil,172.511mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.926mil < 3.937mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-154.719mil,-185.968mil)(-154.029mil,-185.753mil) on L1 
+   Violation between Clearance Constraint: (3.926mil < 3.937mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-155.429mil,-186.096mil)(-154.719mil,-185.968mil) on L1 
+   Violation between Clearance Constraint: (3.82mil < 3.937mil) Between Pad J1-2(-94.528mil,0mil) on L3 And Track (-108.145mil,148.025mil)(-95.043mil,148.649mil) on L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad J1-2(-94.528mil,0mil) on L3 And Via (-133.803mil,-19.342mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad J1-2(-94.528mil,0mil) on L3 And Via (-211.726mil,-46.017mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.931mil < 3.937mil) Between Pad Q1-3(-274.375mil,-159.546mil) on L1 And Track (-284.326mil,-192.13mil)(-283.802mil,-192.322mil) on L1 
+   Violation between Clearance Constraint: (1.117mil < 3.937mil) Between Pad Q1-3(-274.375mil,-159.546mil) on L1 And Via (-294.212mil,-139.943mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.915mil < 3.937mil) Between Pad Q2-1(-211.589mil,29.476mil) on L1 And Track (-190.803mil,23.087mil)(-190.503mil,24.067mil) on L1 
+   Violation between Clearance Constraint: (3.915mil < 3.937mil) Between Pad Q2-1(-211.589mil,29.476mil) on L1 And Track (-191.268mil,22.174mil)(-190.803mil,23.087mil) on L1 
+   Violation between Clearance Constraint: (3.915mil < 3.937mil) Between Pad Q2-1(-211.589mil,29.476mil) on L1 And Track (-191.883mil,21.355mil)(-191.268mil,22.174mil) on L1 
+   Violation between Clearance Constraint: (3.898mil < 3.937mil) Between Pad Q2-2(-183.305mil,57.76mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (2.915mil < 3.937mil) Between Pad R1-1(66.741mil,-235.321mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.92mil < 3.937mil) Between Pad R1-2(89.561mil,-212.501mil) on L1 And Track (71.484mil,-207.073mil)(71.699mil,-206.203mil) on L1 
+   Violation between Clearance Constraint: (3.92mil < 3.937mil) Between Pad R1-2(89.561mil,-212.501mil) on L1 And Track (71.699mil,-206.203mil)(72.044mil,-205.376mil) on L1 
+   Violation between Clearance Constraint: (3.92mil < 3.937mil) Between Pad R1-2(89.561mil,-212.501mil) on L1 And Track (72.044mil,-205.376mil)(72.509mil,-204.61mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Track (125.725mil,-153.545mil)(125.877mil,-154.621mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Track (125.877mil,-154.621mil)(126.224mil,-155.651mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Track (126.224mil,-155.651mil)(126.753mil,-156.599mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Track (126.753mil,-156.599mil)(127.448mil,-157.435mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Track (135.25mil,-165.238mil)(135.944mil,-165.831mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Track (135.944mil,-165.831mil)(136.721mil,-166.311mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Track (136.721mil,-166.311mil)(137.562mil,-166.665mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Track (137.562mil,-166.665mil)(138.448mil,-166.886mil) on L1 
+   Violation between Clearance Constraint: (3.921mil < 3.937mil) Between Pad R3-1(-104.746mil,-105.512mil) on L1 And Track (-110.083mil,-87.421mil)(-109.199mil,-87.354mil) on L1 
+   Violation between Clearance Constraint: (3.921mil < 3.937mil) Between Pad R3-1(-104.746mil,-105.512mil) on L1 And Track (-110.946mil,-87.619mil)(-110.083mil,-87.421mil) on L1 
+   Violation between Clearance Constraint: (3.921mil < 3.937mil) Between Pad R3-1(-104.746mil,-105.512mil) on L1 And Track (-111.77mil,-87.944mil)(-110.946mil,-87.619mil) on L1 
+   Violation between Clearance Constraint: (3.92mil < 3.937mil) Between Pad R3-1(-104.746mil,-105.512mil) on L1 And Track (-112.536mil,-88.389mil)(-111.77mil,-87.944mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R5-1(-65.336mil,-191.335mil) on L1 And Track (-47.48mil,-197.65mil)(-47.26mil,-196.763mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R5-1(-65.336mil,-191.335mil) on L1 And Track (-47.834mil,-198.491mil)(-47.48mil,-197.65mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R5-1(-65.336mil,-191.335mil) on L1 And Track (-48.314mil,-199.268mil)(-47.834mil,-198.491mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R5-1(-65.336mil,-191.335mil) on L1 And Track (-48.908mil,-199.962mil)(-48.314mil,-199.268mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad R5-1(-65.336mil,-191.335mil) on L1 And Track (-57.47mil,-208.405mil)(-56.71mil,-207.764mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad R5-1(-65.336mil,-191.335mil) on L1 And Track (-58.326mil,-208.91mil)(-57.47mil,-208.405mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad R5-1(-65.336mil,-191.335mil) on L1 And Track (-59.255mil,-209.264mil)(-58.326mil,-208.91mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad R5-1(-65.336mil,-191.335mil) on L1 And Track (-60.23mil,-209.457mil)(-59.255mil,-209.264mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad R5-1(-65.336mil,-191.335mil) on L1 And Track (-61.224mil,-209.484mil)(-60.23mil,-209.457mil) on L1 
+   Violation between Clearance Constraint: (3.922mil < 3.937mil) Between Pad R5-2(-42.516mil,-168.515mil) on L1 And Track (-49.809mil,-151.085mil)(-49.049mil,-150.736mil) on L1 
+   Violation between Clearance Constraint: (3.922mil < 3.937mil) Between Pad R5-2(-42.516mil,-168.515mil) on L1 And Track (-50.511mil,-151.539mil)(-49.809mil,-151.085mil) on L1 
+   Violation between Clearance Constraint: (3.922mil < 3.937mil) Between Pad R5-2(-42.516mil,-168.515mil) on L1 And Track (-51.142mil,-152.086mil)(-50.511mil,-151.539mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R5-2(-42.516mil,-168.515mil) on L1 And Track (-59.539mil,-160.583mil)(-58.945mil,-159.889mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R5-2(-42.516mil,-168.515mil) on L1 And Track (-60.019mil,-161.359mil)(-59.539mil,-160.583mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R5-2(-42.516mil,-168.515mil) on L1 And Track (-60.373mil,-162.201mil)(-60.019mil,-161.359mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R5-2(-42.516mil,-168.515mil) on L1 And Track (-60.593mil,-163.087mil)(-60.373mil,-162.201mil) on L1 
+   Violation between Clearance Constraint: (3.333mil < 3.937mil) Between Pad R6-2(-298.433mil,-15.646mil) on L1 And Via (-318.038mil,-35.831mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad R8-1(-281.196mil,299.18mil) on L1 And Track (-263.097mil,302.791mil)(-263.043mil,303.884mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad R8-1(-281.196mil,299.18mil) on L1 And Track (-263.191mil,304.969mil)(-263.043mil,303.884mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad R8-1(-281.196mil,299.18mil) on L1 And Track (-263.536mil,306.007mil)(-263.191mil,304.969mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad R8-1(-281.196mil,299.18mil) on L1 And Track (-264.068mil,306.964mil)(-263.536mil,306.007mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Pad R8-1(-281.196mil,299.18mil) on L1 And Track (-264.767mil,307.807mil)(-264.068mil,306.964mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R8-1(-281.196mil,299.18mil) on L1 And Track (-273.263mil,316.203mil)(-272.57mil,315.609mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R8-1(-281.196mil,299.18mil) on L1 And Track (-274.04mil,316.683mil)(-273.263mil,316.203mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R8-1(-281.196mil,299.18mil) on L1 And Track (-274.881mil,317.037mil)(-274.04mil,316.683mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad R8-1(-281.196mil,299.18mil) on L1 And Track (-275.767mil,317.257mil)(-274.881mil,317.037mil) on L1 
+   Violation between Clearance Constraint: (3.93mil < 3.937mil) Between Pad R8-2(-304.016mil,322mil) on L1 And Track (-300.478mil,340.088mil)(-299.908mil,340.149mil) on L1 
+   Violation between Clearance Constraint: (2.97mil < 3.937mil) Between Pad TP1-p(289.897mil,-79.486mil) on L1 And Via (275.674mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (1.757mil < 3.937mil) Between Pad TP1-p(289.897mil,-79.486mil) on L1 And Via (301.265mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.863mil < 3.937mil) Between Pad TP5-p(289.897mil,6.316mil) on L1 And Track (307.712mil,-4.166mil)(309.22mil,-1.022mil) on L1 
+   Violation between Clearance Constraint: (3.863mil < 3.937mil) Between Pad TP5-p(289.897mil,6.316mil) on L1 And Track (309.22mil,-1.022mil)(310.179mil,2.33mil) on L1 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (107.402mil,6.995mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (117.983mil,-46.664mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (12.193mil,-113.488mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (128.862mil,-14.447mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (33.074mil,-135.159mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (46.994mil,68.054mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (53.954mil,-113.927mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (66.714mil,47.596mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (75.273mil,-91.887mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (87.524mil,26.715mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Pad U2-74(41.023mil,-31.665mil) on L1 And Via (96.523mil,-69.267mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.933mil < 3.937mil) Between Pad U2-AC5(61.902mil,-163.899mil) on L1 And Track (50.612mil,-164.713mil)(50.674mil,-165.335mil) on L1 
+   Violation between Clearance Constraint: (3.92mil < 3.937mil) Between Pad U2-AD16(152.378mil,-101.262mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (3.886mil < 3.937mil) Between Pad U2-AD23(208.056mil,-45.584mil) on L1 And Track (196.905mil,-43.638mil)(197.474mil,-41.567mil) on L1 
+   Violation between Clearance Constraint: (3.886mil < 3.937mil) Between Pad U2-AD23(208.056mil,-45.584mil) on L1 And Track (197.474mil,-41.567mil)(198.422mil,-39.641mil) on L1 
+   Violation between Clearance Constraint: (3.886mil < 3.937mil) Between Pad U2-AD23(208.056mil,-45.584mil) on L1 And Track (198.422mil,-39.641mil)(199.718mil,-37.929mil) on L1 
+   Violation between Clearance Constraint: (3.886mil < 3.937mil) Between Pad U2-AD23(208.056mil,-45.584mil) on L1 And Track (199.718mil,-37.929mil)(201.314mil,-36.492mil) on L1 
+   Violation between Clearance Constraint: (3.886mil < 3.937mil) Between Pad U2-AD23(208.056mil,-45.584mil) on L1 And Track (201.314mil,-36.492mil)(203.152mil,-35.383mil) on L1 
+   Violation between Clearance Constraint: (3.905mil < 3.937mil) Between Pad U2-AD6(82.781mil,-170.859mil) on L1 And Track (91.98mil,-177.455mil)(92.861mil,-176.008mil) on L1 
+   Violation between Clearance Constraint: (3.905mil < 3.937mil) Between Pad U2-AD6(82.781mil,-170.859mil) on L1 And Track (92.861mil,-176.008mil)(93.516mil,-174.447mil) on L1 
+   Violation between Clearance Constraint: (3.905mil < 3.937mil) Between Pad U2-AD6(82.781mil,-170.859mil) on L1 And Track (93.516mil,-174.447mil)(93.931mil,-172.805mil) on L1 
+   Violation between Clearance Constraint: (3.757mil < 3.937mil) Between Pad U2-B24(54.942mil,135.368mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (3.884mil < 3.937mil) Between Pad U2-E24(82.781mil,107.529mil) on L1 And Track (90.149mil,98.937mil)(91.668mil,100.519mil) on L1 
+   Violation between Clearance Constraint: (3.884mil < 3.937mil) Between Pad U2-E24(82.781mil,107.529mil) on L1 And Track (91.668mil,100.519mil)(92.853mil,102.364mil) on L1 
+   Violation between Clearance Constraint: (3.884mil < 3.937mil) Between Pad U2-E24(82.781mil,107.529mil) on L1 And Track (92.853mil,102.364mil)(93.659mil,104.403mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-10(181.583mil,-263.721mil) on L1 And Track (176.015mil,-279.032mil)(176.761mil,-279.664mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-10(181.583mil,-263.721mil) on L1 And Track (176.761mil,-279.664mil)(177.602mil,-280.164mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-10(181.583mil,-263.721mil) on L1 And Track (177.602mil,-280.164mil)(178.513mil,-280.519mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-10(181.583mil,-263.721mil) on L1 And Track (178.513mil,-280.519mil)(179.471mil,-280.718mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-10(181.583mil,-263.721mil) on L1 And Track (179.471mil,-280.718mil)(180.448mil,-280.756mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-10(181.583mil,-263.721mil) on L1 And Track (180.448mil,-280.756mil)(181.418mil,-280.633mil) on L1 
+   Violation between Clearance Constraint: (3.909mil < 3.937mil) Between Pad U4-11(195.502mil,-277.64mil) on L1 And Track (191.953mil,-294.273mil)(193.056mil,-294.587mil) on L1 
+   Violation between Clearance Constraint: (3.909mil < 3.937mil) Between Pad U4-11(195.502mil,-277.64mil) on L1 And Track (193.056mil,-294.587mil)(194.198mil,-294.681mil) on L1 
+   Violation between Clearance Constraint: (3.909mil < 3.937mil) Between Pad U4-11(195.502mil,-277.64mil) on L1 And Track (194.198mil,-294.681mil)(195.337mil,-294.552mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad U4-13(223.341mil,-305.479mil) on L1 And Track (219.535mil,-322.005mil)(220.474mil,-322.333mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad U4-13(223.341mil,-305.479mil) on L1 And Track (220.474mil,-322.333mil)(221.454mil,-322.5mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad U4-13(223.341mil,-305.479mil) on L1 And Track (221.454mil,-322.5mil)(222.449mil,-322.499mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad U4-13(223.341mil,-305.479mil) on L1 And Track (222.449mil,-322.499mil)(223.429mil,-322.332mil) on L1 
+   Violation between Clearance Constraint: (3.861mil < 3.937mil) Between Pad U4-16(277.627mil,-263.721mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (3.931mil < 3.937mil) Between Pad U4-16(277.627mil,-263.721mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (3.895mil < 3.937mil) Between Pad U4-16(277.627mil,-263.721mil) on L1 And Track (301.493mil,-259.84mil)(302.161mil,-261.896mil) on L1 
+   Violation between Clearance Constraint: (3.894mil < 3.937mil) Between Pad U4-16(277.627mil,-263.721mil) on L1 And Track (301.493mil,-270.386mil)(302.161mil,-268.33mil) on L1 
+   Violation between Clearance Constraint: (3.894mil < 3.937mil) Between Pad U4-16(277.627mil,-263.721mil) on L1 And Track (302.161mil,-261.896mil)(302.499mil,-264.032mil) on L1 
+   Violation between Clearance Constraint: (3.894mil < 3.937mil) Between Pad U4-16(277.627mil,-263.721mil) on L1 And Track (302.161mil,-268.33mil)(302.499mil,-266.194mil) on L1 
+   Violation between Clearance Constraint: (3.894mil < 3.937mil) Between Pad U4-16(277.627mil,-263.721mil) on L1 And Track (302.499mil,-266.194mil)(302.499mil,-264.032mil) on L1 
+   Violation between Clearance Constraint: (3.861mil < 3.937mil) Between Pad U4-2(277.627mil,-223.355mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (3.914mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (236.669mil,-164.585mil)(237.713mil,-164.573mil) on L1 
+   Violation between Clearance Constraint: (3.914mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (237.713mil,-164.573mil)(238.744mil,-164.745mil) on L1 
+   Violation between Clearance Constraint: (3.914mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (238.744mil,-164.745mil)(239.728mil,-165.096mil) on L1 
+   Violation between Clearance Constraint: (3.914mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (239.728mil,-165.096mil)(240.635mil,-165.614mil) on L1 
+   Violation between Clearance Constraint: (3.914mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (240.635mil,-165.614mil)(241.436mil,-166.285mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (251.18mil,-176.029mil)(251.811mil,-176.775mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (251.811mil,-176.775mil)(252.312mil,-177.615mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (252.312mil,-177.615mil)(252.666mil,-178.527mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (252.666mil,-178.527mil)(252.865mil,-179.484mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (252.78mil,-181.432mil)(252.904mil,-180.462mil) on L1 
+   Violation between Clearance Constraint: (3.917mil < 3.937mil) Between Pad U4-5(235.868mil,-181.596mil) on L1 And Track (252.865mil,-179.484mil)(252.904mil,-180.462mil) on L1 
+   Violation between Clearance Constraint: (3.923mil < 3.937mil) Between Pad U4-7(195.502mil,-209.435mil) on L1 And Track (193.698mil,-192.408mil)(194.522mil,-192.409mil) on L1 
+   Violation between Clearance Constraint: (3.923mil < 3.937mil) Between Pad U4-7(195.502mil,-209.435mil) on L1 And Track (194.522mil,-192.409mil)(195.337mil,-192.523mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad U4-9(167.663mil,-249.802mil) on L1 And Track (151.277mil,-253.897mil)(151.757mil,-254.675mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad U4-9(167.663mil,-249.802mil) on L1 And Track (151.757mil,-254.675mil)(152.352mil,-255.369mil) on L1 
+   Violation between Clearance Constraint: (3.921mil < 3.937mil) Between Pad U8-2(-222.939mil,163.758mil) on L1 And Track (-215.964mil,135.752mil)(-215.136mil,136.021mil) on L1 
+   Violation between Clearance Constraint: (3.921mil < 3.937mil) Between Pad U8-2(-222.939mil,163.758mil) on L1 And Track (-216.821mil,135.607mil)(-215.964mil,135.752mil) on L1 
+   Violation between Clearance Constraint: (3.921mil < 3.937mil) Between Pad U8-2(-222.939mil,163.758mil) on L1 And Track (-217.691mil,135.59mil)(-216.821mil,135.607mil) on L1 
+   Violation between Clearance Constraint: (0.787mil < 3.937mil) Between Pad U8-2(-222.939mil,163.758mil) on L1 And Via (-246.602mil,187.421mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad U8-3(-196.492mil,190.205mil) on L1 And Track (-187.51mil,163.115mil)(-186.754mil,163.752mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad U8-3(-196.492mil,190.205mil) on L1 And Track (-188.362mil,162.613mil)(-187.51mil,163.115mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad U8-3(-196.492mil,190.205mil) on L1 And Track (-189.286mil,162.26mil)(-188.362mil,162.613mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad U8-3(-196.492mil,190.205mil) on L1 And Track (-190.256mil,162.066mil)(-189.286mil,162.26mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Pad U8-3(-196.492mil,190.205mil) on L1 And Track (-191.244mil,162.037mil)(-190.256mil,162.066mil) on L1 
+   Violation between Clearance Constraint: (3.861mil < 3.937mil) Between Pad U8-4(-268.873mil,262.586mil) on L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Pad U8-4(-268.873mil,262.586mil) on L1 And Track (-259.678mil,228.044mil)(-258.409mil,228.494mil) on L1 
+   Violation between Clearance Constraint: (3.924mil < 3.937mil) Between Pad X1-4(43.521mil,264.817mil) on L1 And Track (10.056mil,242.179mil)(10.109mil,241.391mil) on L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Pad X1-4(43.521mil,264.817mil) on L1 And Track (10.056mil,287.455mil)(10.152mil,288.513mil) on L1 
+   Violation between Clearance Constraint: (3.924mil < 3.937mil) Between Pad X1-4(43.521mil,264.817mil) on L1 And Track (10.109mil,241.391mil)(10.267mil,240.616mil) on L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Pad X1-4(43.521mil,264.817mil) on L1 And Track (10.152mil,288.513mil)(10.435mil,289.536mil) on L1 
+   Violation between Clearance Constraint: (3.924mil < 3.937mil) Between Pad X1-4(43.521mil,264.817mil) on L1 And Track (10.267mil,240.616mil)(10.527mil,239.869mil) on L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Pad X1-4(43.521mil,264.817mil) on L1 And Track (10.435mil,289.536mil)(10.897mil,290.492mil) on L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Pad X1-4(43.521mil,264.817mil) on L1 And Track (10.897mil,290.492mil)(11.523mil,291.35mil) on L1 
+   Violation between Clearance Constraint: (3.885mil < 3.937mil) Between Region (0 hole(s)) L1 And Region (0 hole(s)) L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (125.725mil,-153.545mil)(125.877mil,-154.621mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (125.877mil,-154.621mil)(126.224mil,-155.651mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (126.224mil,-155.651mil)(126.753mil,-156.599mil) on L1 
+   Violation between Clearance Constraint: (3.912mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (126.753mil,-156.599mil)(127.448mil,-157.435mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (135.25mil,-165.238mil)(135.944mil,-165.831mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (135.944mil,-165.831mil)(136.721mil,-166.311mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (136.721mil,-166.311mil)(137.562mil,-166.665mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (137.562mil,-166.665mil)(138.448mil,-166.886mil) on L1 
+   Violation between Clearance Constraint: (3.898mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (-183.996mil,142.978mil)(-180.769mil,141.299mil) on L1 
+   Violation between Clearance Constraint: (3.922mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (-187.486mil,144.006mil)(-183.996mil,142.978mil) on L1 
+   Violation between Clearance Constraint: (3.906mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (-191.107mil,144.347mil)(-187.486mil,144.006mil) on L1 
+   Violation between Clearance Constraint: (3.913mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (-194.727mil,143.988mil)(-191.107mil,144.347mil) on L1 
+   Violation between Clearance Constraint: (3.928mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (196.905mil,-43.638mil)(197.474mil,-41.567mil) on L1 
+   Violation between Clearance Constraint: (3.898mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (197.474mil,-41.567mil)(198.422mil,-39.641mil) on L1 
+   Violation between Clearance Constraint: (3.916mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (-198.212mil,142.941mil)(-194.727mil,143.988mil) on L1 
+   Violation between Clearance Constraint: (3.893mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (199.718mil,-37.929mil)(201.314mil,-36.492mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (314.292mil,-279.949mil)(316.075mil,-276.334mil) on L1 
+   Violation between Clearance Constraint: (3.928mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (316.075mil,-276.334mil)(317.348mil,-272.509mil) on L1 
+   Violation between Clearance Constraint: (3.885mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (90.149mil,98.937mil)(91.668mil,100.519mil) on L1 
+   Violation between Clearance Constraint: (3.884mil < 3.937mil) Between Region (0 hole(s)) L1 And Track (92.853mil,102.364mil)(93.659mil,104.403mil) on L1 
+   Violation between Clearance Constraint: (2.319mil < 3.937mil) Between Region (0 hole(s)) L1 And Via (134.773mil,234.851mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (-15.592mil,172.511mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (-15.592mil,172.511mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (-191.059mil,125.449mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (205.266mil,206.215mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (205.266mil,206.215mil) from L1 to L3 
+   Violation between Clearance Constraint: (1.945mil < 3.937mil) Between Region (0 hole(s)) L1 And Via (254.911mil,216.678mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (254.911mil,216.678mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (290.873mil,218.018mil) from L1 to L3 
+   Violation between Clearance Constraint: (2.911mil < 3.937mil) Between Region (0 hole(s)) L1 And Via (348.229mil,229.714mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (348.229mil,229.714mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (87.794mil,152.533mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L1 And Via (87.794mil,152.533mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.071mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-108.145mil,148.025mil)(-95.043mil,148.649mil) on L3 
+   Violation between Clearance Constraint: (3.053mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-108.915mil,147.96mil)(-108.145mil,148.025mil) on L3 
+   Violation between Clearance Constraint: (3.053mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-115.429mil,147.181mil)(-108.915mil,147.96mil) on L3 
+   Violation between Clearance Constraint: (3.131mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-115.939mil,147.108mil)(-115.429mil,147.181mil) on L3 
+   Violation between Clearance Constraint: (3.143mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-122.408mil,146.02mil)(-115.939mil,147.108mil) on L3 
+   Violation between Clearance Constraint: (3.386mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-122.914mil,145.923mil)(-122.408mil,146.02mil) on L3 
+   Violation between Clearance Constraint: (3.398mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-129.325mil,144.528mil)(-122.914mil,145.923mil) on L3 
+   Violation between Clearance Constraint: (3.618mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-129.825mil,144.407mil)(-129.325mil,144.528mil) on L3 
+   Violation between Clearance Constraint: (3.635mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-136.162mil,142.709mil)(-129.825mil,144.407mil) on L3 
+   Violation between Clearance Constraint: (3.876mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-94.532mil,148.661mil)(-15.582mil,148.692mil) on L3 
+   Violation between Clearance Constraint: (3.834mil < 3.937mil) Between Region (0 hole(s)) L3 And Track (-95.043mil,148.649mil)(-94.532mil,148.661mil) on L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-15.592mil,172.511mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.612mil < 3.937mil) Between Region (0 hole(s)) L3 And Via (-191.059mil,125.449mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-216.482mil,103.089mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (275.674mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-294.212mil,-139.943mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (301.265mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-318.038mil,-35.831mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (326.855mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.612mil < 3.937mil) Between Region (0 hole(s)) L3 And Via (366.64mil,-102.362mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-414.269mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-414.269mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-439.859mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-439.859mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-439.859mil,-126.511mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-439.859mil,-126.511mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-465.45mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Region (0 hole(s)) L3 And Via (-465.45mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (100.009mil,-255.047mil)(100.535mil,-258.698mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (100.342mil,-262.381mil)(100.535mil,-258.698mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (107.402mil,6.995mil)(128.862mil,-14.447mil) on L3 And Via (107.402mil,6.995mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (107.402mil,6.995mil)(128.862mil,-14.447mil) on L3 And Via (128.862mil,-14.447mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-111.395mil,252.679mil)(-21.969mil,212.223mil) on L1 And Via (-21.969mil,212.223mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.86mil < 3.937mil) Between Track (115.828mil,-270.375mil)(117.515mil,-273.344mil) on L1 And Via (133.036mil,-262.565mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.86mil < 3.937mil) Between Track (117.515mil,-273.344mil)(119.708mil,-275.962mil) on L1 And Via (133.036mil,-262.565mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.86mil < 3.937mil) Between Track (119.708mil,-275.962mil)(122.336mil,-278.141mil) on L1 And Via (133.036mil,-262.565mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (12.193mil,-113.488mil)(33.074mil,-135.159mil) on L3 And Via (12.193mil,-113.488mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (12.193mil,-113.488mil)(33.074mil,-135.159mil) on L3 And Via (33.074mil,-135.159mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.86mil < 3.937mil) Between Track (122.336mil,-278.141mil)(125.313mil,-279.813mil) on L1 And Via (133.036mil,-262.565mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-123.668mil,188.239mil)(-90.841mil,120.551mil) on L1 And Via (-123.668mil,188.239mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.903mil < 3.937mil) Between Track (124.328mil,-200.365mil)(124.989mil,-202.541mil) on L1 And Via (142.708mil,-195.972mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.903mil < 3.937mil) Between Track (124.989mil,-202.541mil)(125.907mil,-204.622mil) on L1 And Via (142.708mil,-195.972mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (133.036mil,-262.565mil)(173.086mil,-286.663mil) on L1 And Via (133.036mil,-262.565mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (134.773mil,234.851mil)(142.648mil,212.25mil) on L1 And Via (134.773mil,234.851mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-14.704mil,148.709mil)(87.794mil,152.533mil) on L3 And Via (87.794mil,152.533mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (142.708mil,-195.972mil)(193.698mil,-192.408mil) on L1 And Via (142.708mil,-195.972mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (143.191mil,84.56mil)(190.658mil,99.587mil) on L1 And Via (143.191mil,84.56mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (143.191mil,84.56mil)(190.658mil,99.587mil) on L1 And Via (190.658mil,99.587mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.933mil < 3.937mil) Between Track (-15.582mil,148.692mil)(-14.704mil,148.709mil) on L3 And Via (-15.592mil,172.511mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-163.463mil,-7.381mil)(-133.803mil,-19.342mil) on L1 And Via (-133.803mil,-19.342mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (170.339mil,-122.484mil)(301.265mil,-106.721mil) on L1 And Via (275.674mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (170.339mil,-122.484mil)(301.265mil,-106.721mil) on L1 And Via (301.265mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.889mil < 3.937mil) Between Track (173.086mil,-286.663mil)(175.158mil,-287.684mil) on L1 And Track (176.761mil,-279.664mil)(177.602mil,-280.164mil) on L1 
+   Violation between Clearance Constraint: (3.889mil < 3.937mil) Between Track (173.086mil,-286.663mil)(175.158mil,-287.684mil) on L1 And Track (177.602mil,-280.164mil)(178.513mil,-280.519mil) on L1 
+   Violation between Clearance Constraint: (3.935mil < 3.937mil) Between Track (183.942mil,222.434mil)(185.285mil,224.061mil) on L1 And Via (205.266mil,206.215mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.849mil < 3.937mil) Between Track (-183.996mil,142.978mil)(-180.769mil,141.299mil) on L1 And Via (-191.059mil,125.449mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.935mil < 3.937mil) Between Track (186.668mil,225.499mil)(188.243mil,226.902mil) on L1 And Via (205.266mil,206.215mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.849mil < 3.937mil) Between Track (-187.486mil,144.006mil)(-183.996mil,142.978mil) on L1 And Via (-191.059mil,125.449mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (190.658mil,99.587mil)(247.042mil,142.15mil) on L1 And Via (190.658mil,99.587mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (190.658mil,99.587mil)(247.042mil,142.15mil) on L1 And Via (247.042mil,142.15mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-191.059mil,125.449mil)(-136.609mil,142.579mil) on L3 And Via (-191.059mil,125.449mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.849mil < 3.937mil) Between Track (-191.107mil,144.347mil)(-187.486mil,144.006mil) on L1 And Via (-191.059mil,125.449mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.849mil < 3.937mil) Between Track (-194.727mil,143.988mil)(-191.107mil,144.347mil) on L1 And Via (-191.059mil,125.449mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.849mil < 3.937mil) Between Track (-198.212mil,142.941mil)(-194.727mil,143.988mil) on L1 And Via (-191.059mil,125.449mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-211.726mil,-46.017mil)(-184.401mil,-71.276mil) on L1 And Via (-211.726mil,-46.017mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-216.482mil,103.089mil)(-183.305mil,57.76mil) on L1 And Via (-216.482mil,103.089mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.92mil < 3.937mil) Between Track (237.713mil,-164.573mil)(238.744mil,-164.745mil) on L1 And Track (240.583mil,-157.088mil)(242.118mil,-157.566mil) on L1 
+   Violation between Clearance Constraint: (3.92mil < 3.937mil) Between Track (238.744mil,-164.745mil)(239.728mil,-165.096mil) on L1 And Track (240.583mil,-157.088mil)(242.118mil,-157.566mil) on L1 
+   Violation between Clearance Constraint: (3.914mil < 3.937mil) Between Track (238.744mil,-164.745mil)(239.728mil,-165.096mil) on L1 And Track (242.118mil,-157.566mil)(243.587mil,-158.219mil) on L1 
+   Violation between Clearance Constraint: (3.914mil < 3.937mil) Between Track (239.728mil,-165.096mil)(240.635mil,-165.614mil) on L1 And Track (242.118mil,-157.566mil)(243.587mil,-158.219mil) on L1 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-243.57mil,290.599mil)(-123.668mil,188.239mil) on L3 And Via (-123.668mil,188.239mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-243.57mil,290.599mil)(-123.668mil,188.239mil) on L3 And Via (-243.57mil,290.599mil) from L1 to L3 
+   Violation between Clearance Constraint: (2.489mil < 3.937mil) Between Track (243.587mil,-158.219mil)(285.649mil,-179.958mil) on L1 And Via (267.625mil,-151.001mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-245.158mil,-77.408mil)(-211.726mil,-46.017mil) on L1 And Via (-211.726mil,-46.017mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-246.602mil,187.421mil)(-222.939mil,163.758mil) on L1 And Via (-246.602mil,187.421mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (247.042mil,142.15mil)(285.756mil,147.095mil) on L1 And Via (247.042mil,142.15mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (247.042mil,142.15mil)(285.756mil,147.095mil) on L1 And Via (285.756mil,147.095mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-258.334mil,22.451mil)(-246.388mil,8.877mil) on L1 And Via (-258.334mil,22.451mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-258.334mil,22.451mil)(-94.528mil,0mil) on L3 And Via (-258.334mil,22.451mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (267.625mil,-151.001mil)(285.649mil,-179.958mil) on L1 And Via (267.625mil,-151.001mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-268.873mil,262.586mil)(-243.57mil,290.599mil) on L1 And Via (-243.57mil,290.599mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (275.674mil,-106.721mil)(301.265mil,-106.721mil) on L3 And Via (275.674mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (275.674mil,-106.721mil)(301.265mil,-106.721mil) on L3 And Via (301.265mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (285.756mil,147.095mil)(338.976mil,148.876mil) on L1 And Via (285.756mil,147.095mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (285.756mil,147.095mil)(338.976mil,148.876mil) on L1 And Via (338.976mil,148.876mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-294.212mil,-139.943mil)(-274.375mil,-159.546mil) on L1 And Via (-294.212mil,-139.943mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (301.265mil,-106.721mil)(308.469mil,-202.778mil) on L1 And Via (301.265mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (301.265mil,-106.721mil)(326.855mil,-106.721mil) on L3 And Via (301.265mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (301.265mil,-106.721mil)(326.855mil,-106.721mil) on L3 And Via (326.855mil,-106.721mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.898mil < 3.937mil) Between Track (301.493mil,-270.386mil)(302.161mil,-268.33mil) on L1 And Track (314.292mil,-279.949mil)(316.075mil,-276.334mil) on L1 
+   Violation between Clearance Constraint: (3.903mil < 3.937mil) Between Track (301.493mil,-270.386mil)(302.161mil,-268.33mil) on L1 And Track (316.075mil,-276.334mil)(317.348mil,-272.509mil) on L1 
+   Violation between Clearance Constraint: (3.919mil < 3.937mil) Between Track (302.161mil,-268.33mil)(302.499mil,-266.194mil) on L1 And Track (316.075mil,-276.334mil)(317.348mil,-272.509mil) on L1 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (310.179mil,2.33mil)(338.976mil,148.876mil) on L1 And Via (338.976mil,148.876mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-318.038mil,-35.831mil)(-298.433mil,-15.646mil) on L1 And Via (-318.038mil,-35.831mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (33.074mil,-135.159mil)(53.954mil,-113.927mil) on L3 And Via (33.074mil,-135.159mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (33.074mil,-135.159mil)(53.954mil,-113.927mil) on L3 And Via (53.954mil,-113.927mil) from L1 to L3 
+   Violation between Clearance Constraint: (0.408mil < 3.937mil) Between Track (41.023mil,-31.665mil)(50.612mil,-164.713mil) on L1 And Via (33.074mil,-135.159mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (41.023mil,-31.665mil)(50.612mil,-164.713mil) on L1 And Via (53.954mil,-113.927mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (41.023mil,-31.665mil)(75.821mil,86.65mil) on L1 And Via (66.714mil,47.596mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-414.269mil,-100.921mil)(-275.613mil,-38.466mil) on L1 And Via (-414.269mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-439.859mil,-100.921mil)(-414.269mil,-100.921mil) on L3 And Via (-414.269mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-439.859mil,-100.921mil)(-414.269mil,-100.921mil) on L3 And Via (-439.859mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-439.859mil,-126.511mil)(-284.326mil,-192.13mil) on L1 And Via (-439.859mil,-126.511mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (45.666mil,224.081mil)(72.118mil,240.507mil) on L1 And Via (45.666mil,224.081mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (46.994mil,68.054mil)(66.714mil,47.596mil) on L3 And Via (46.994mil,68.054mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (46.994mil,68.054mil)(66.714mil,47.596mil) on L3 And Via (66.714mil,47.596mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-465.45mil,-100.921mil)(-439.859mil,-100.921mil) on L3 And Via (-439.859mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-465.45mil,-100.921mil)(-439.859mil,-100.921mil) on L3 And Via (-465.45mil,-100.921mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-488.228mil,0mil)(-216.482mil,103.089mil) on L3 And Via (-216.482mil,103.089mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-52.794mil,-231.729mil)(-20.489mil,-236.774mil) on L1 And Via (-52.794mil,-231.729mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (53.954mil,-113.927mil)(75.273mil,-91.887mil) on L3 And Via (53.954mil,-113.927mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (53.954mil,-113.927mil)(75.273mil,-91.887mil) on L3 And Via (75.273mil,-91.887mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.934mil < 3.937mil) Between Track (-55.669mil,-250.407mil)(-54.95mil,-250.503mil) on L1 And Via (-52.794mil,-231.729mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (66.714mil,47.596mil)(87.524mil,26.715mil) on L3 And Via (66.714mil,47.596mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (66.714mil,47.596mil)(87.524mil,26.715mil) on L3 And Via (87.524mil,26.715mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (66.741mil,-235.321mil)(81.657mil,-259.554mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (69.058mil,-273.639mil)(72.034mil,-275.818mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (72.034mil,-275.818mil)(75.377mil,-277.377mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (75.273mil,-91.887mil)(96.523mil,-69.267mil) on L3 And Via (75.273mil,-91.887mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (75.273mil,-91.887mil)(96.523mil,-69.267mil) on L3 And Via (96.523mil,-69.267mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (75.377mil,-277.377mil)(78.959mil,-278.258mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (78.959mil,-278.258mil)(82.643mil,-278.426mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (81.657mil,-259.554mil)(142.708mil,-195.972mil) on L3 And Via (142.708mil,-195.972mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (81.657mil,-259.554mil)(142.708mil,-195.972mil) on L3 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (82.643mil,-278.426mil)(86.29mil,-277.875mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (86.29mil,-277.875mil)(89.761mil,-276.626mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (87.524mil,26.715mil)(107.402mil,6.995mil) on L3 And Via (107.402mil,6.995mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (87.524mil,26.715mil)(107.402mil,6.995mil) on L3 And Via (87.524mil,26.715mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (89.761mil,-276.626mil)(92.922mil,-274.727mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (92.922mil,-274.727mil)(95.655mil,-272.249mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-94.528mil,0mil)(12.193mil,-113.488mil) on L3 And Via (12.193mil,-113.488mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (-94.528mil,0mil)(46.994mil,68.054mil) on L3 And Via (46.994mil,68.054mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (95.655mil,-272.249mil)(97.855mil,-269.288mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (96.523mil,-69.267mil)(117.983mil,-46.664mil) on L3 And Via (117.983mil,-46.664mil) from L1 to L3 
+   Violation between Clearance Constraint: (Collision < 3.937mil) Between Track (96.523mil,-69.267mil)(117.983mil,-46.664mil) on L3 And Via (96.523mil,-69.267mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (97.855mil,-269.288mil)(99.437mil,-265.957mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (3.847mil < 3.937mil) Between Track (99.437mil,-265.957mil)(100.342mil,-262.381mil) on L1 And Via (81.657mil,-259.554mil) from L1 to L3 
+   Violation between Clearance Constraint: (2.898mil < 3.937mil) Between Via (348.229mil,229.714mil) from L1 to L3 And Via (366.64mil,251.969mil) from L1 to L3 
+Rule Violations :346
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=3.937mil) (Max=3937.008mil) (Preferred=3.937mil) (isTrack)
 Rule Violations :0
 
 Processing Rule : Routing Topology Rule(Topology=Shortest) (All)
 Rule Violations :0
 
-Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Hole To Hole Clearance (Gap=0.5mm) (All),(All)
-   Violation between Hole To Hole Clearance Constraint: (0.464mm < 0.5mm) Between Via (0.311mm,-2.883mm) from L1 to L3 And Via (0.841mm,-3.433mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.456mm < 0.5mm) Between Via (0.841mm,-3.433mm) from L1 to L3 And Via (1.371mm,-2.894mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.422mm < 0.5mm) Between Via (1.195mm,1.729mm) from L1 to L3 And Via (1.696mm,1.209mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.479mm < 0.5mm) Between Via (1.371mm,-2.894mm) from L1 to L3 And Via (1.913mm,-2.334mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.449mm < 0.5mm) Between Via (1.696mm,1.209mm) from L1 to L3 And Via (2.224mm,0.679mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.488mm < 0.5mm) Between Via (1.913mm,-2.334mm) from L1 to L3 And Via (2.453mm,-1.759mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.35mm < 0.5mm) Between Via (-10.521mm,-2.563mm) from L1 to L3 And Via (-11.171mm,-2.563mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.35mm < 0.5mm) Between Via (-11.171mm,-2.563mm) from L1 to L3 And Via (-11.171mm,-3.213mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.35mm < 0.5mm) Between Via (-11.171mm,-2.563mm) from L1 to L3 And Via (-11.821mm,-2.563mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.411mm < 0.5mm) Between Via (2.224mm,0.679mm) from L1 to L3 And Via (2.729mm,0.178mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.492mm < 0.5mm) Between Via (2.453mm,-1.759mm) from L1 to L3 And Via (2.998mm,-1.185mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.471mm < 0.5mm) Between Via (2.729mm,0.178mm) from L1 to L3 And Via (3.274mm,-0.367mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.46mm < 0.5mm) Between Via (6.575mm,5.504mm) from L1 to L3 And Via (7.288mm,5.538mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.35mm < 0.5mm) Between Via (7.003mm,-2.711mm) from L1 to L3 And Via (7.653mm,-2.711mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.35mm < 0.5mm) Between Via (7.653mm,-2.711mm) from L1 to L3 And Via (8.303mm,-2.711mm) from L1 to L3 
-   Violation between Hole To Hole Clearance Constraint: (0.441mm < 0.5mm) Between Via (9.101mm,5.738mm) from L1 to L3 And Via (9.313mm,6.4mm) from L1 to L3 
-Rule Violations :16
+Processing Rule : Minimum Annular Ring (Minimum=7.087mil) (All)
+Rule Violations :0
 
-Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
-   Violation between Board Outline Clearance(Outline Edge): (0.234mm < 0.254mm) Between Board Edge And Text "X1" (0.053mm,9.551mm) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (0mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (0mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-10mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-10mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-11mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-11mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-12mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-12mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-13mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-13mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-14mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-14mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,0.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-0.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,1.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-1.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,2.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-2.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,3.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-3.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,4.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-4.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,5.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-5.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,6.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-6.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,7.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-7.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,8.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-8.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-15mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (1mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (1mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-1mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-1mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (2mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (2mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-2mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-2mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (3mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (3mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-3mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-3mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (4mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (4mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-4mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-4mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (5mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (5mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-5mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-5mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (6mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (6mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-6mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-6mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (7mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (7mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-7mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-7mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (8mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (8mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-8mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-8mm,-9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-9mm,9.5mm) from L1 to L3 
-   Violation between Board Outline Clearance(Outline Edge): (0.221mm < 0.254mm) Between Board Edge And Via (-9mm,-9.5mm) from L1 to L3 
-Rule Violations :67
+Processing Rule : Hole Size Constraint (Min=11.811mil) (Max=3937.008mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=7.874mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (7.334mil < 10mil) Between Pad C1-2(-135.608mil,-74.57mil) on L1 And Text "C1" (-167.897mil,-65.101mil) on Top Overlay [Top Overlay] to [L0] clearance [7.334mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.521mil < 10mil) Between Pad C16-2(228.162mil,216.237mil) on L1 And Text "C16" (198.635mil,200.101mil) on Top Overlay [Top Overlay] to [L0] clearance [0.521mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.689mil < 10mil) Between Pad C17-2(322.651mil,216.237mil) on L1 And Text "C17" (293.123mil,200.101mil) on Top Overlay [Top Overlay] to [L0] clearance [0.689mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C19-1(-246.388mil,8.877mil) on L1 And Text "R6" (-266.144mil,-6.177mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.941mil < 10mil) Between Pad C19-1(-246.388mil,8.877mil) on L1 And Track (-248.921mil,47.822mil)(-235.893mil,34.793mil) on Top Overlay [Top Overlay] to [L0] clearance [9.941mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (1.802mil < 10mil) Between Pad C21-2(-276.755mil,71.196mil) on L1 And Text "C21" (-309.044mil,80.665mil) on Top Overlay [Top Overlay] to [L0] clearance [1.802mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.553mil < 10mil) Between Pad C25-1(-172.439mil,307.658mil) on L1 And Text "U8" (-185.83mil,315.006mil) on Top Overlay [Top Overlay] to [L0] clearance [0.553mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C6-2(-23.123mil,151.52mil) on L1 And Text "C11" (-39.346mil,155.9mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.129mil < 10mil) Between Pad C7-1(193.159mil,-145.304mil) on L1 And Text "C7" (160.87mil,-154.773mil) on Top Overlay [Top Overlay] to [L0] clearance [5.129mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.801mil < 10mil) Between Pad C7-2(170.339mil,-122.484mil) on L1 And Text "C7" (160.87mil,-154.773mil) on Top Overlay [Top Overlay] to [L0] clearance [9.801mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.387mil < 10mil) Between Pad C7-2(170.339mil,-122.484mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [7.387mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.734mil < 10mil) Between Pad C8-1(252.002mil,-84.898mil) on L1 And Text "C8" (219.713mil,-94.367mil) on Top Overlay [Top Overlay] to [L0] clearance [3.734mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.801mil < 10mil) Between Pad C8-2(229.183mil,-62.078mil) on L1 And Text "C8" (219.713mil,-94.367mil) on Top Overlay [Top Overlay] to [L0] clearance [9.801mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (6.281mil < 10mil) Between Pad C8-2(229.183mil,-62.078mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [6.281mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.855mil < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Region (0 hole(s)) Top Overlay [Top Overlay] to [L0] clearance [9.855mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Text "C1" (-167.897mil,-65.101mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.385mil < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Text "C9" (-193.87mil,-38.987mil) on Top Overlay [Top Overlay] to [L0] clearance [7.385mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (6.971mil < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-141.322mil,-46.976mil)(-141.071mil,-47.227mil) on Top Overlay [Top Overlay] to [L0] clearance [6.971mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (6.971mil < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-141.322mil,-46.976mil)(-141.322mil,-19.137mil) on Top Overlay [Top Overlay] to [L0] clearance [6.971mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-155.556mil,-44.816mil)(-155.48mil,-45.584mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-155.556mil,-46.352mil)(-155.48mil,-45.584mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-155.78mil,-44.078mil)(-155.556mil,-44.816mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-155.78mil,-47.091mil)(-155.556mil,-46.352mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-156.143mil,-43.397mil)(-155.78mil,-44.078mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-156.144mil,-47.772mil)(-155.78mil,-47.091mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (6.862mil < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,-229.321mil) on Top Overlay [Top Overlay] to [L0] clearance [6.863mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-156.633mil,-42.8mil)(-156.143mil,-43.397mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-156.633mil,-48.368mil)(-156.144mil,-47.772mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-157.23mil,-42.311mil)(-156.633mil,-42.8mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-157.23mil,-48.858mil)(-156.633mil,-48.368mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-157.91mil,-41.947mil)(-157.23mil,-42.311mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-157.91mil,-49.222mil)(-157.23mil,-48.858mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-158.649mil,-41.723mil)(-157.91mil,-41.947mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-158.649mil,-49.446mil)(-157.91mil,-49.222mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-159.417mil,-41.647mil)(-158.649mil,-41.723mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-159.417mil,-49.521mil)(-158.649mil,-49.446mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-160.185mil,-41.723mil)(-159.417mil,-41.647mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-160.185mil,-49.446mil)(-159.417mil,-49.521mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-160.924mil,-41.947mil)(-160.185mil,-41.723mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-160.924mil,-49.222mil)(-160.185mil,-49.446mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-161.604mil,-42.311mil)(-160.924mil,-41.947mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-161.604mil,-48.858mil)(-160.924mil,-49.222mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-162.201mil,-42.8mil)(-161.604mil,-42.311mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-162.201mil,-48.368mil)(-161.604mil,-48.858mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-162.691mil,-43.397mil)(-162.201mil,-42.8mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-162.691mil,-47.772mil)(-162.201mil,-48.368mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-163.054mil,-44.078mil)(-162.691mil,-43.397mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-163.054mil,-47.091mil)(-162.691mil,-47.772mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-163.278mil,-44.816mil)(-163.054mil,-44.078mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-163.278mil,-46.352mil)(-163.054mil,-47.091mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-163.354mil,-45.584mil)(-163.278mil,-44.816mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C9-2(-161.581mil,-48.456mil) on L1 And Track (-163.354mil,-45.584mil)(-163.278mil,-46.352mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.945mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-149.137mil,-135.606mil)(-86.444mil,-198.299mil) on Top Overlay [Top Overlay] to [L0] clearance [5.945mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-153.48mil,-139.949mil)(-149.137mil,-135.606mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (6.166mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-169.115mil,-131.946mil)(-169.02mil,-132.906mil) on Top Overlay [Top Overlay] to [L0] clearance [6.166mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.554mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-169.115mil,-133.866mil)(-169.02mil,-132.906mil) on Top Overlay [Top Overlay] to [L0] clearance [5.554mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (6.912mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-169.395mil,-131.023mil)(-169.115mil,-131.946mil) on Top Overlay [Top Overlay] to [L0] clearance [6.912mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.099mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-169.395mil,-134.789mil)(-169.115mil,-133.866mil) on Top Overlay [Top Overlay] to [L0] clearance [5.099mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.763mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-169.85mil,-130.172mil)(-169.395mil,-131.023mil) on Top Overlay [Top Overlay] to [L0] clearance [7.763mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.819mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-169.85mil,-135.64mil)(-169.395mil,-134.789mil) on Top Overlay [Top Overlay] to [L0] clearance [4.819mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (8.686mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-170.462mil,-129.426mil)(-169.85mil,-130.172mil) on Top Overlay [Top Overlay] to [L0] clearance [8.686mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.724mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-170.462mil,-136.386mil)(-169.85mil,-135.64mil) on Top Overlay [Top Overlay] to [L0] clearance [4.724mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.646mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-171.207mil,-128.814mil)(-170.462mil,-129.426mil) on Top Overlay [Top Overlay] to [L0] clearance [9.646mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.724mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-171.207mil,-136.998mil)(-170.462mil,-136.386mil) on Top Overlay [Top Overlay] to [L0] clearance [4.724mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.819mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-172.058mil,-137.453mil)(-171.207mil,-136.998mil) on Top Overlay [Top Overlay] to [L0] clearance [4.819mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.099mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-172.981mil,-137.733mil)(-172.058mil,-137.453mil) on Top Overlay [Top Overlay] to [L0] clearance [5.099mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.554mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-173.941mil,-137.827mil)(-172.981mil,-137.733mil) on Top Overlay [Top Overlay] to [L0] clearance [5.554mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (6.166mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-174.901mil,-137.733mil)(-173.941mil,-137.827mil) on Top Overlay [Top Overlay] to [L0] clearance [6.166mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (6.912mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-175.825mil,-137.453mil)(-174.901mil,-137.733mil) on Top Overlay [Top Overlay] to [L0] clearance [6.912mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.763mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-176.675mil,-136.998mil)(-175.825mil,-137.453mil) on Top Overlay [Top Overlay] to [L0] clearance [7.763mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (8.686mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-177.421mil,-136.386mil)(-176.675mil,-136.998mil) on Top Overlay [Top Overlay] to [L0] clearance [8.686mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.646mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-178.033mil,-135.64mil)(-177.421mil,-136.386mil) on Top Overlay [Top Overlay] to [L0] clearance [9.646mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.775mil < 10mil) Between Pad D1-1(-157.516mil,-159.353mil) on L1 And Track (-224.279mil,-194.387mil)(-183.857mil,-153.965mil) on Top Overlay [Top Overlay] to [L0] clearance [3.775mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.945mil < 10mil) Between Pad D1-2(-110.191mil,-206.679mil) on L1 And Track (-149.137mil,-135.606mil)(-86.444mil,-198.299mil) on Top Overlay [Top Overlay] to [L0] clearance [5.945mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad D1-2(-110.191mil,-206.679mil) on L1 And Track (-90.787mil,-202.642mil)(-86.444mil,-198.299mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.906mil < 10mil) Between Pad D1-4(-188.139mil,-189.976mil) on L1 And Track (-211.858mil,-198.327mil)(-149.165mil,-261.02mil) on Top Overlay [Top Overlay] to [L0] clearance [5.906mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad D1-4(-188.139mil,-189.976mil) on L1 And Track (-211.858mil,-198.327mil)(-207.515mil,-193.984mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.695mil < 10mil) Between Pad D1-4(-188.139mil,-189.976mil) on L1 And Track (-224.279mil,-194.387mil)(-183.857mil,-153.965mil) on Top Overlay [Top Overlay] to [L0] clearance [3.695mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.078mil < 10mil) Between Pad J2-3(181.027mil,316.731mil) on L1 And Track (207.129mil,265.511mil)(211.302mil,265.511mil) on Top Overlay [Top Overlay] to [L0] clearance [4.078mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (2.677mil < 10mil) Between Pad Q1-2(-245.158mil,-77.408mil) on L1 And Track (-239.033mil,-98.788mil)(-213.672mil,-124.149mil) on Top Overlay [Top Overlay] to [L0] clearance [2.677mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.945mil < 10mil) Between Pad Q1-2(-245.158mil,-77.408mil) on L1 And Track (-309.271mil,-109.394mil)(-268.849mil,-68.973mil) on Top Overlay [Top Overlay] to [L0] clearance [5.945mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad R10-2(-180.413mil,249.638mil) on L1 And Text "R10" (-212.702mil,240.169mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.626mil < 10mil) Between Pad R1-1(66.741mil,-235.321mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [7.626mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.975mil < 10mil) Between Pad R11-1(-163.062mil,232.961mil) on L1 And Text "R11" (-172.531mil,200.672mil) on Top Overlay [Top Overlay] to [L0] clearance [9.975mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad R11-2(-140.242mil,210.141mil) on L1 And Text "R11" (-172.531mil,200.672mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.626mil < 10mil) Between Pad R1-2(89.561mil,-212.501mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [7.626mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.768mil < 10mil) Between Pad R2-1(166.696mil,-171.629mil) on L1 And Text "C7" (160.87mil,-154.773mil) on Top Overlay [Top Overlay] to [L0] clearance [4.768mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.922mil < 10mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Text "C7" (160.87mil,-154.773mil) on Top Overlay [Top Overlay] to [L0] clearance [5.922mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.289mil < 10mil) Between Pad R2-2(143.876mil,-148.809mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [7.289mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad R4-1(-71.423mil,-140.244mil) on L1 And Text "R5" (-74.805mil,-159.046mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (8.015mil < 10mil) Between Pad R4-1(-71.423mil,-140.244mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,-229.321mil) on Top Overlay [Top Overlay] to [L0] clearance [8.015mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad TP5-p(289.897mil,6.316mil) on L1 And Text "TP5" (289.897mil,6.316mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-A10(-70.333mil,37.932mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,165.991mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-A12(-56.413mil,51.852mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,165.991mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-A18(-14.655mil,93.61mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,165.991mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-A20(-0.736mil,107.529mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,165.991mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-A22(13.184mil,121.449mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,165.991mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-A8(-84.252mil,24.013mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,165.991mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-AD2(54.942mil,-198.698mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-AD22(194.136mil,-59.504mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-AD23(208.056mil,-45.584mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-AD6(82.781mil,-170.859mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-AD8(96.7mil,-156.94mil) on L1 And Track (41.023mil,-229.321mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-R1(-28.575mil,-143.02mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,-229.321mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-R24(152.378mil,37.932mil) on L1 And Track (41.023mil,165.991mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-U1(-14.655mil,-156.94mil) on L1 And Track (-156.633mil,-31.665mil)(41.023mil,-229.321mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-U24(166.297mil,24.013mil) on L1 And Track (41.023mil,165.991mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.401mil < 10mil) Between Pad U2-W24(180.217mil,10.094mil) on L1 And Track (41.023mil,165.991mil)(238.678mil,-31.665mil) on Top Overlay [Top Overlay] to [L0] clearance [3.401mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.82mil < 10mil) Between Pad U7-2(-442.372mil,94.742mil) on L1 And Track (-443.652mil,58.663mil)(-332.297mil,170.018mil) on Top Overlay [Top Overlay] to [L0] clearance [5.82mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (8.891mil < 10mil) Between Pad U7-2(-442.372mil,94.742mil) on L1 And Track (-511.356mil,124.585mil)(-444.543mil,57.772mil) on Top Overlay [Top Overlay] to [L0] clearance [8.891mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.82mil < 10mil) Between Pad U7-3(-474.386mil,126.757mil) on L1 And Track (-511.356mil,124.585mil)(-399.11mil,236.832mil) on Top Overlay [Top Overlay] to [L0] clearance [5.82mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (8.891mil < 10mil) Between Pad U7-3(-474.386mil,126.757mil) on L1 And Track (-511.356mil,124.585mil)(-444.543mil,57.772mil) on Top Overlay [Top Overlay] to [L0] clearance [8.891mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad U7-4(-400.363mil,200.78mil) on L1 And Text "R7" (-381.583mil,224.179mil) on Top Overlay [Top Overlay] to [L0] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.592mil < 10mil) Between Pad U7-4(-400.363mil,200.78mil) on L1 And Track (-399.11mil,236.832mil)(-332.297mil,170.018mil) on Top Overlay [Top Overlay] to [L0] clearance [7.592mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (5.82mil < 10mil) Between Pad U7-4(-400.363mil,200.78mil) on L1 And Track (-511.356mil,124.585mil)(-399.11mil,236.832mil) on Top Overlay [Top Overlay] to [L0] clearance [5.821mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (6.811mil < 10mil) Between Pad U8-3(-196.492mil,190.205mil) on L1 And Track (-241.034mil,268.154mil)(-190.924mil,218.044mil) on Top Overlay [Top Overlay] to [L0] clearance [6.811mil]
+Rule Violations :116
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (2.44mil < 10mil) Between Text "C1" (-167.897mil,-65.101mil) on Top Overlay And Track (-158.649mil,-49.446mil)(-157.91mil,-49.222mil) on Top Overlay Silk Text to Silk Clearance [2.44mil]
+   Violation between Silk To Silk Clearance Constraint: (2.079mil < 10mil) Between Text "C1" (-167.897mil,-65.101mil) on Top Overlay And Track (-159.417mil,-49.521mil)(-158.649mil,-49.446mil) on Top Overlay Silk Text to Silk Clearance [2.079mil]
+   Violation between Silk To Silk Clearance Constraint: (1.914mil < 10mil) Between Text "C1" (-167.897mil,-65.101mil) on Top Overlay And Track (-160.185mil,-49.446mil)(-159.417mil,-49.521mil) on Top Overlay Silk Text to Silk Clearance [1.914mil]
+   Violation between Silk To Silk Clearance Constraint: (1.914mil < 10mil) Between Text "C1" (-167.897mil,-65.101mil) on Top Overlay And Track (-160.924mil,-49.222mil)(-160.185mil,-49.446mil) on Top Overlay Silk Text to Silk Clearance [1.914mil]
+   Violation between Silk To Silk Clearance Constraint: (9.152mil < 10mil) Between Text "C10" (120.233mil,161.491mil) on Top Overlay And Text "C18" (130.401mil,180.909mil) on Top Overlay Silk Text to Silk Clearance [9.152mil]
+   Violation between Silk To Silk Clearance Constraint: (8.541mil < 10mil) Between Text "C12" (118.641mil,360.814mil) on Top Overlay And Text "J2" (102.227mil,349.346mil) on Top Overlay Silk Text to Silk Clearance [8.541mil]
+   Violation between Silk To Silk Clearance Constraint: (1.026mil < 10mil) Between Text "C20" (-365.231mil,136.253mil) on Top Overlay And Track (-335.849mil,141.102mil)(-335.081mil,141.026mil) on Top Overlay Silk Text to Silk Clearance [1.026mil]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 10mil) Between Text "C20" (-365.231mil,136.253mil) on Top Overlay And Track (-443.652mil,58.663mil)(-332.297mil,170.018mil) on Top Overlay Silk Text to Silk Clearance [0mil]
+   Violation between Silk To Silk Clearance Constraint: (4.786mil < 10mil) Between Text "L2" (119.744mil,120.562mil) on Top Overlay And Track (41.023mil,165.991mil)(238.678mil,-31.665mil) on Top Overlay Silk Text to Silk Clearance [4.786mil]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 10mil) Between Text "R10" (-212.702mil,240.169mil) on Top Overlay And Track (-241.034mil,268.154mil)(-190.924mil,218.044mil) on Top Overlay Silk Text to Silk Clearance [0mil]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 10mil) Between Text "R7" (-381.583mil,224.179mil) on Top Overlay And Track (-399.11mil,236.832mil)(-332.297mil,170.018mil) on Top Overlay Silk Text to Silk Clearance [0mil]
+   Violation between Silk To Silk Clearance Constraint: (7.577mil < 10mil) Between Text "R7" (-381.583mil,224.179mil) on Top Overlay And Track (-511.356mil,124.585mil)(-399.11mil,236.832mil) on Top Overlay Silk Text to Silk Clearance [7.577mil]
+Rule Violations :12
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+   Violation between Net Antennae: Track (107.402mil,6.995mil)(128.862mil,-14.447mil) on L3 
+   Violation between Net Antennae: Track (-111.395mil,252.679mil)(-21.969mil,212.223mil) on L1 
+   Violation between Net Antennae: Track (-123.668mil,188.239mil)(-90.841mil,120.551mil) on L1 
+   Violation between Net Antennae: Track (133.036mil,-262.565mil)(173.086mil,-286.663mil) on L1 
+   Violation between Net Antennae: Track (134.773mil,234.851mil)(142.648mil,212.25mil) on L1 
+   Violation between Net Antennae: Track (-14.704mil,148.709mil)(87.794mil,152.533mil) on L3 
+   Violation between Net Antennae: Track (142.708mil,-195.972mil)(193.698mil,-192.408mil) on L1 
+   Violation between Net Antennae: Track (143.191mil,84.56mil)(190.658mil,99.587mil) on L1 
+   Violation between Net Antennae: Track (-163.463mil,-7.381mil)(-133.803mil,-19.342mil) on L1 
+   Violation between Net Antennae: Track (-216.482mil,103.089mil)(-183.305mil,57.76mil) on L1 
+   Violation between Net Antennae: Track (-243.57mil,290.599mil)(-123.668mil,188.239mil) on L3 
+   Violation between Net Antennae: Track (-243.57mil,290.599mil)(-123.668mil,188.239mil) on L3 
+   Violation between Net Antennae: Track (-246.602mil,187.421mil)(-222.939mil,163.758mil) on L1 
+   Violation between Net Antennae: Track (-258.334mil,22.451mil)(-246.388mil,8.877mil) on L1 
+   Violation between Net Antennae: Track (-258.334mil,22.451mil)(-94.528mil,0mil) on L3 
+   Violation between Net Antennae: Track (267.625mil,-151.001mil)(285.649mil,-179.958mil) on L1 
+   Violation between Net Antennae: Track (-318.038mil,-35.831mil)(-298.433mil,-15.646mil) on L1 
+   Violation between Net Antennae: Track (408.372mil,-259.842mil)(573.333mil,-259.842mil) on L1 
+   Violation between Net Antennae: Track (-414.269mil,-100.921mil)(-275.613mil,-38.466mil) on L1 
+   Violation between Net Antennae: Track (-439.859mil,-100.921mil)(-414.269mil,-100.921mil) on L3 
+   Violation between Net Antennae: Track (-439.859mil,-126.511mil)(-284.326mil,-192.13mil) on L1 
+   Violation between Net Antennae: Track (45.666mil,224.081mil)(72.118mil,240.507mil) on L1 
+   Violation between Net Antennae: Track (-52.794mil,-231.729mil)(-20.489mil,-236.774mil) on L1 
+   Violation between Net Antennae: Track (66.741mil,-235.321mil)(81.657mil,-259.554mil) on L1 
+   Violation between Net Antennae: Track (96.523mil,-69.267mil)(117.983mil,-46.664mil) on L3 
+Rule Violations :25
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+   Violation between Board Outline Clearance(Outline Edge): (9.282mil < 10mil) Between Board Edge And Text "X1" (0.214mil,376.038mil) on Top Overlay 
+Rule Violations :1
+
+Processing Rule : Height Constraint (Min=0mil) (Max=23622.047mil) (Prefered=0mil) (All)
+Rule Violations :0
 
 
-Violations Detected : 207
+Violations Detected : 500
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02
