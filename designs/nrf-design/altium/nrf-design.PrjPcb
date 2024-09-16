@@ -38,7 +38,7 @@ OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
-CrossRefSheetStyle=2
+CrossRefSheetStyle=1
 CrossRefLocationStyle=1
 CrossRefPorts=3
 CrossRefCrossSheets=1
@@ -64,7 +64,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=FHBUAPXF
+DocumentUniqueId=KWWFNNSB
 
 [Document2]
 DocumentPath=nrf-design.PcbDoc
@@ -81,7 +81,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=ACJYIKFY
+DocumentUniqueId=WGBRMSMJ
 
 [Document3]
 DocumentPath=nrf-design.SchLib
@@ -98,7 +98,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=AKPAOUWA
+DocumentUniqueId=QVWBLNRR
 
 [Document4]
 DocumentPath=nrf-design.SchDoc
@@ -115,11 +115,15 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=HIYNCZEX
+DocumentUniqueId=VSRAKHQK
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for nrf-design\Design Rule Check - nrf-design.html
+DItemRevisionGUID=
 
 [Parameter1]
 Name=JITx_Date
-Value=9/12/2024 3:53 PM
+Value=9/16/2024 4:32 PM
 
 [Parameter2]
 Name=JITx_Machine
@@ -131,7 +135,7 @@ Value=itadm
 
 [Parameter4]
 Name=JITx_Version
-Value=1.0.50.2400
+Value=1.0.51.0
 
 [Configuration1]
 Name=Sources
@@ -1099,4 +1103,7 @@ ComparisonOptions2=Kind=Component Class|MinPercent=75|MinMatch=3|ShowMatch=0|Use
 ComparisonOptions3=Kind=Rule|MinPercent=75|MinMatch=3|ShowMatch=0|UseName=-1|InclAllRules=0
 ComparisonOptions4=Kind=Differential Pair|MinPercent=50|MinMatch=1|ShowMatch=0|UseName=0|InclAllRules=0
 ComparisonOptions5=Kind=Structure Class|MinPercent=75|MinMatch=3|ShowMatch=0|UseName=-1|InclAllRules=0
+
+[SmartPDF]
+PageOptions=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 
