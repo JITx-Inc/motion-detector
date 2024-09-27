@@ -4,29 +4,22 @@ defpackage nrf-motion:
   import math
   import jitx
   import jitx/commands
+  import jitx/parts
 
-  import ocdb/utils/checks
-  import ocdb/utils/generic-components
-  ; import ocdb/utils/defaults
   import ocdb/utils/generator-utils
-  import ocdb/utils/design-vars
-  import ocdb/artwork/jitx-logo
 
   import jsl/bundles
   import jsl/si
 
+  import board
   import amplifiers
   import helpers
   import nRF
 
 public val board-shape:Shape = Rectangle(31.0, 20.0)
 
-OPTIMIZE-FOR = ["area"]
-OPERATING-TEMPERATURE = min-max(0.0 50.0)
-MIN-PKG = "0402"
-
 ; top level design
-pcb-module nrf-motion :
+public pcb-module nrf-motion :
   ; Coin cell holder placed on bottom
   inst bat : components/MYOUNG/MY-1632-03/module
   place(bat.holder) at loc(-2.401, 2.413, 0.0) on Bottom
@@ -100,16 +93,37 @@ pcb-module nrf-motion :
 
   via-stitch(board-shape, GND)
 
-  ; Run the schematic review
-  check-design(self)
-
 ; compile the design
-set-current-design("nrf-design")
+set-current-design("nrf-design-introspect")
 set-paper(ANSI-B)
 setup-board(board-shape)
+setup-export()
 
 var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
 set-main-module(main-module) ; Treat the provided module as a design, and compile it.
-
 view-schematic()
 view-board()
+
+; val finished-module = get-merged-physical-design-module()
+; set-main-module(introspect-design(finished-module))
+
+
+public defn introspect-design (module:Instantiable) :
+  inside pcb-module :
+    within transform-module(module) :
+      ; val netlist = GlobalNetList(module)
+      ; val nets = nets(netlist)
+      ;   $> filter{{not empty?(pins(_))}, _}
+
+      ; val all-components = populated-components(self)
+      val all-components = component-instances(self)
+      for component in all-components do :
+        println("Component: %_" % [ref(component)])
+        val component-pins = pins(component)
+        for pin in component-pins do :
+          println("  Pin: %_" % [ref(pin)])
+          if connected?(pin) :
+            val connected-pins = connected-pins(pin)
+            println("    Connected to: %," % [seq(ref, connected-pins)])
+          else :
+            println("    Unconnected")

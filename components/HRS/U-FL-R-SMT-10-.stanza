@@ -1129,8 +1129,9 @@ public pcb-component component :
   property(self.case) = "SMD"
   property(self.mounting) = "smd"
   property(self.rated-temperature) = Toleranced(25.0, 65.0, 65.0)
+  property(self.LCSC) = "C434808"
 
-public pcb-module module: 
+public pcb-module module:
   port sig
   port gnd
 

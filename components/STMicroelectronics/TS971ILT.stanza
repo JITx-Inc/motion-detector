@@ -99,7 +99,7 @@ pcb-symbol sym-TS971ILT :
     Point(-5.080, -5.080)])
 
 public pcb-component component :
-  name = "C2802553"
+  name = "TS971ILT"
   description = " SOT-23-5  Operational Amplifier ROHS"
   manufacturer = "STMICROELECTRONICS"
   mpn = "TS971ILT"
@@ -127,11 +127,12 @@ public pcb-component component :
   property(self.area) = 12.417
   property(self.case) = "SOT-23-5"
   property(self.mounting) = "smd"
+  property(self.LCSC) = "C2802553"
   property(self.temperature-range) = min-max(-40.0, 125.0)
 
-  property(self.VCC.power-pin) = PowerPin(min-max(2.7, 10.0)) 
+  property(self.VCC.power-pin) = PowerPin(min-max(2.7, 10.0))
   property(self.slew-rate) = 4.0e6 ; V/S
-  property(self.input-offset-V) = tol(0.0, 0.001) ; Typical 
+  property(self.input-offset-V) = tol(0.0, 0.001) ; Typical
   property(self.input-noise-v-density) = 4.0e-9 ; V / sqrt(Hz)
   property(self.input-noise-i-density) = 250.0e-15 ; A / sqrt(Hz)
   property(self.noise-corner-freq) = 1.0e3 ; Hz
@@ -141,7 +142,7 @@ public pcb-component component :
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-public pcb-module module : 
+public pcb-module module :
 
   port supply : power
   port amp : op-amp()

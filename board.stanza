@@ -1,0 +1,88 @@
+; ====================
+; A number of helpful functions to implement your design, export to CAD, 
+; update your design in CAD, etc.
+; ====================
+#use-added-syntax(jitx)
+defpackage board :
+  import core
+  import jitx
+  import jitx/commands
+
+;==== Materials ================================================================
+
+pcb-material copper :
+  type = Conductor
+  name = "Copper"
+
+pcb-material core-45 :
+  type = Dielectric
+  dielectric-coefficient = 4.5
+  name = "4.5 DK FR4 Core"
+
+pcb-material soldermask :
+  type = Dielectric
+  dielectric-coefficient = 3.9
+  name = "Taiyo BSN4000"
+
+; see https://jlcpcb.com/capabilities/pcb-capabilities
+; for more details on PCB design rules
+public pcb-rules new-jlcpcb-basic-rules :
+  min-copper-width = 0.100 ; 3.5mil ; 0.100 for 1 or 2-copper-layer designs
+  min-copper-copper-space = 0.100 ; 3.5mil ; 0.100 for 1 or 2-copper-layer designs
+  min-copper-hole-space = 0.200 ; 8 mil
+  min-copper-edge-space = 0.2 ; 7.87mil
+  min-annular-ring = 0.180 ;
+  min-drill-diameter = 0.3 ; 7.87mil
+  min-silkscreen-width = 0.153 ; 6mil
+  min-pitch-leaded = 0.3 ; 11.81mil (guess)
+  min-pitch-bga = 0.377 ; 14.84mil
+  max-board-width = 670.0 ; 15.74in
+  max-board-height = 600.0 ; 19.68in
+  min-silk-solder-mask-space = 0.15
+  min-silkscreen-text-height = 1.00
+  solder-mask-registration = 0.038
+  min-th-pad-expand-outer = 0.26
+  min-soldermask-opening = 0.10 ; solder bridge - solder mask opening/expansion DIAMETER
+  min-soldermask-bridge = 0.1 ; green
+  min-hole-to-hole = 0.2
+  min-pth-pin-solder-clearance = 3.0 ; TODO: lookup actual value
+
+public pcb-via regular-via :
+  name = "Regular TH"
+  start = LayerIndex(0, Top)
+  stop = LayerIndex(0, Bottom)
+  diameter = 0.66
+  hole-diameter = 0.3
+  type = MechanicalDrill
+
+public pcb-via small-via :
+  name = "Minimum TH"
+  start = LayerIndex(0, Top)
+  stop = LayerIndex(0, Bottom)
+  val annular = 0.18
+  val drill = 0.3
+  diameter = drill + annular * 2.0
+  hole-diameter = drill
+  type = MechanicalDrill
+
+public pcb-stackup new-jlcpcb-2-layer :
+  name = "JLCPCB 2-layer 1.6mm"
+  stack(0.019, soldermask) ; 0.5mil over conductor
+  stack(0.035, copper)
+  stack(1.5, core-45)
+  stack(0.035, copper)
+  stack(0.019, soldermask) ; 0.5mil over conductor
+
+; Creates a pcb-board with default stackup given the number of layers and board outline.
+public pcb-board motion-detector-board (outline:Shape) :
+  stackup = new-jlcpcb-2-layer
+  boundary = outline
+  signal-boundary = outline
+  vias = [regular-via small-via]
+
+; =====================
+; Setup the board
+; =====================
+public defn setup-board (board-shape:Shape) :
+  set-board(motion-detector-board(board-shape))
+  set-rules(new-jlcpcb-basic-rules)

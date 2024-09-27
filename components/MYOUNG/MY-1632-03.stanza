@@ -134,7 +134,7 @@ pcb-symbol sym-MY-1632-03 :
     Point(1.016, -1.016)])
 
 public pcb-component component :
-  name = "C2902337"
+  name = "MY-1632-03"
   description = "Battery button CR1632 SMD  Battery Connectors ROHS"
   manufacturer = "MYOUNG"
   mpn = "MY-1632-03"
@@ -160,16 +160,16 @@ public pcb-component component :
   property(self.case) = "SMD"
   property(self.mounting) = "smd"
   property(self.rated-temperature) = Toleranced(30.0, 55.0, 55.0)
-
+  property(self.LCSC) = "C2902337"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;User Provided Modifications
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-public pcb-module module : 
+public pcb-module module :
   ; Provide the Power bundle port for easier integration.
   port vout : power
 
-  public inst holder : components/MYOUNG/MY-1632-03/component 
+  public inst holder : components/MYOUNG/MY-1632-03/component
 
   net (vout.V+, holder.p[1])
   net (vout.V-, holder.p[2])

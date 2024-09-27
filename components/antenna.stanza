@@ -8,9 +8,9 @@ defpackage components/antenna :
   import ocdb/utils/generator-utils
   import ocdb/utils/landpatterns
   import ocdb/utils/symbols
-  ; import ocdb/utils/defaults
 
   import helpers
+  import board
   import jsl/si
 
 ; ========================================================
@@ -54,9 +54,9 @@ public pcb-module antenna-2GHz4-inverted-f-module :
   ; net (a gnd) ; to avoid DRC errors?
 
   geom(a) :
-    copper(LayerIndex(0)) = Line(0.5, [Point(-2.1, 5.15), Point(2.2, 5.15), Point(2.2, 2.51), 
-                                  Point(4.7, 2.51),  Point(4.7, 5.15), Point(6.9, 5.15), 
-                                  Point(6.9, 2.51),  Point(9.4, 2.51), Point(9.4, 5.15), 
+    copper(LayerIndex(0)) = Line(0.5, [Point(-2.1, 5.15), Point(2.2, 5.15), Point(2.2, 2.51),
+                                  Point(4.7, 2.51),  Point(4.7, 5.15), Point(6.9, 5.15),
+                                  Point(6.9, 2.51),  Point(9.4, 2.51), Point(9.4, 5.15),
                                   Point(11.6, 5.15), Point(11.6, 0.96)])
     copper(LayerIndex(0)) = Rectangle(0.5, 4.10 loc(0., 3.325))
     copper(LayerIndex(0)) = Rectangle(0.9, 4.9, loc(-2.1, 2.95))
@@ -112,7 +112,7 @@ public pcb-module inverted-f-antenna :
       val x-d = to-double(x)
       geom(GND) :
         via(small-via) at Point(x-d - 4.4, y)
-  
+
 public pcb-module test-RF-conn :
   port sig
   port gnd
@@ -127,7 +127,7 @@ public pcb-module test-RF-conn :
   pin-model(L.p[1] L.p[2]) = PinModel(typ(0.0), typ(0.0))
   topo-net(L.p[2] => C-R.p[1] => test-uFL.sig)
   set-signal-end(sig, test-uFL.sig)
-  
+
   net (gnd, C-R.p[2], test-uFL.gnd)
 
   for i in [C-R, L, test-uFL] do :

@@ -619,7 +619,7 @@ pcb-landpattern lp :
     )
 
 public pcb-component component :
-  name = "C108793"
+  name = "FM-B2020RGBA-HG"
   description = "RGB SMD,2.1x2.1mm  Light Emitting Diodes (LED) ROHS"
   manufacturer = "Foshan NationStar Optoelectronics"
   mpn = "FM-B2020RGBA-HG"
@@ -650,6 +650,7 @@ public pcb-component component :
   property(self.area) = 6.017
   property(self.case) = "SMD,2.1x2.1mm"
   property(self.mounting) = "smd"
+  property(self.LCSC) = "C108793"
 
   property(led.r.max-current) = 20.0e-3
   property(led.r.forward-voltage) = 2.0

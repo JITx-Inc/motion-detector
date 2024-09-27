@@ -5,16 +5,18 @@ defpackage components/STMicroelectronics/LIS3DHTR :
   import core
   import jitx
   import jitx/commands
-  import ocdb/utils/defaults
+  
   import ocdb/utils/landpatterns
   import ocdb/utils/generator-utils
-  import ocdb/utils/generic-components
   import ocdb/utils/symbols
   import ocdb/utils/box-symbol
   import ocdb/utils/property-structs
   import ocdb/utils/checks
 
   import jsl/bundles
+  import jsl/circuits
+
+  import helpers
 
 
 pcb-landpattern xdcr-lis3dhtr :
@@ -47,7 +49,7 @@ pcb-landpattern xdcr-lis3dhtr :
     )
 
 public pcb-component component :
-  name = "C15134"
+  name = "LIS3DHTR"
   description = "X,Y,Z LGA-16(3x3)  Attitude Sensor/Gyroscope ROHS"
   manufacturer = "STMICROELECTRONICS"
   mpn = "LIS3DHTR"
@@ -85,6 +87,7 @@ public pcb-component component :
   property(self.area) = 13.705
   property(self.case) = "LGA-16(3x3)"
   property(self.mounting) = "smd"
+  property(self.LCSC) = "C15134"
 
   no-connect(self.NC[0])
   no-connect(self.NC[1])
@@ -95,12 +98,11 @@ public pcb-component component :
 
   property(self.VDD.power-pin) = PowerPin(min-typ-max(1.71, 2.5, 3.6))
   property(self.rated-temperature) = min-max(-40.0, 85.0)
-  
   val drive-props = DigitalOutput(
     CMOSOutput(FractionalVoltage(0.1, self.VDD_IO)
-               FractionalVoltage(0.9, self.VDD_IO)), 
+               FractionalVoltage(0.9, self.VDD_IO)),
                false, self.VDD_IO, self.GND)
-  
+
   val input-props = DigitalInput(
     FractionalVoltage(0.2, self.VDD_IO)
     FractionalVoltage(0.8, self.VDD_IO)
@@ -132,8 +134,8 @@ public pcb-module module :
   net (power.V+, acc.VDD)
   net (vio, acc.VDD_IO)
 
-  bypass-cap-strap(acc.VDD, acc.GND, 10.0e-6)
-  bypass-cap-strap(acc.VDD_IO, acc.GND, 0.1e-6)
+  insert-bypass(acc.VDD, acc.GND, elem-type = 10.0e-6 qb = cap-query)
+  insert-bypass(acc.VDD_IO, acc.GND, elem-type = 0.1e-6 qb = cap-query)
 
   net (i2c.scl, spi.sck, acc.SPC)
   net (i2c.sda, spi.cipo, acc.SDO)

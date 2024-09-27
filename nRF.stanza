@@ -1,6 +1,5 @@
 ; ====================
-; A number of helpful functions to check your designs, export to CAD, 
-; update your design in CAD, etc.
+; nRF design
 ; ====================
 #use-added-syntax(jitx)
 defpackage nRF :

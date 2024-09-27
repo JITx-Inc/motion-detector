@@ -5,18 +5,22 @@ defpackage amplifiers :
   import math
   import jitx
   import jitx/commands
-  import ocdb/utils/defaults
-  import ocdb/utils/generic-components
+  import jitx/parts
+
+  ; import ocdb/utils/generic-components
   import ocdb/utils/generator-utils
 
   import ocdb/utils/checks
   import ocdb/utils/passive-checks/utils
-  import ocdb/utils/design-vars
-
   import ocdb/utils/property-structs
+  ; import ocdb/utils/design-vars
+
   import noise
+  import helpers
 
   import jsl/bundles
+  import jsl/circuits
+  import jsl/design/E-Series
 
 public defstruct BandpassConfig :
   ; Gain expressed as `vout/vin`
@@ -98,10 +102,6 @@ public pcb-check within-accepted? (t:Toleranced, value:Toleranced, name:String) 
     locators =             []
     )
 
-; Helper for Percentages - working on (1 %) operator.
-defn perc (v:Int) -> Double :
-  to-double(v) / 100.0
-
 ; App Note for pre-amp circuit to a MEMS microhpone.
 ; https://www.st.com/resource/en/application_note/an4598-preamplifying-the-analog-output-of-a-mems-microphone-stmicroelectronics.pdf
 
@@ -119,8 +119,8 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
     inst opa : AMP_t
     net (opa.supply, vin)
 
-    bypass-cap-strap(opa.supply.V+, opa.supply.V-, 10.0e-6)
-    bypass-cap-strap(opa.supply.V+, opa.supply.V-, 10.0e-9)
+    insert-bypass(opa.supply.V+, opa.supply.V-, elem-type = 10.0e-6, qb = cap-query)
+    insert-bypass(opa.supply.V+, opa.supply.V-, elem-type = 10.0e-9, qb = cap-query)
 
     ;  Amplifier is a standard inverting amplifier in a bandpass
     ;    configuration.
@@ -138,14 +138,16 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
 
     ; Shorting resistor to test amplifier noise
     ;   This will be DNP except for testing.
-    val R-short = res-strap(in, vin.V-, 0.0)
+    inst R-short : create-resistor(res-query, resistance = 0.0)
+    net (R-short.p[1] in)
+    net (R-short.p[2] vin.V-)
     dnp(R-short)
 
     ; Feedback for setting the gain in the
     ;  pass band.
 
     val Rf_v = 51.0e3
-    val Rg_v = closest-std-val(Rf_v / G, 1.0)
+    val Rg_v = closest-std-val(Rf_v / G, percentage(1))
 
     val valid-R-values = min-max(1.0e3, 1.0e6)
     check within-accepted?(valid-R-values, typ(Rf_v), "Rf")
@@ -159,7 +161,7 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
     ; Compute the capacitor values.
     ;  The feedback cap sets the upper freq limit
     ;    for the bandpass filter.
-    val capTol = 10.0
+    val capTol = percentage(10)
     val Cf_v = closest-std-val{_, capTol} $ compute-C(f-high, Rf_v)
     ;  The input blocking cap sets the lower freq limit
     val Cin_v = closest-std-val{_, capTol} $ compute-C(f-low, Rg_v)
@@ -187,16 +189,16 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
     check slew-rate-check(opa, minSlewRate)
 
     ; Input High Pass
-    inst Cin : ceramic-cap(Cin_v, perc(10))
-    inst Rg : chip-resistor(Rg_v, perc(1))
+    inst Cin : create-capacitor(CapacitorQuery(cap-query, capacitance = Cin_v, precision = percentage(10)))
+    inst Rg : create-resistor(ResistorQuery(res-query, resistance = Rg_v, precision = percentage(1)));  chip-resistor(Rg_v, perc(1))
 
     net signal (in, Cin.p[1])
     net (Cin.p[2], Rg.p[1])
     net op- (opa.amp.in-, Rg.p[2] )
 
     ; Feedback Low Pass
-    inst Cf : ceramic-cap(Cf_v, perc(1))
-    inst Rf : chip-resistor(Rf_v, perc(1))
+    inst Cf : create-capacitor(CapacitorQuery(cap-query, capacitance = Cf_v, precision = percentage(10))) ; ceramic-cap(Cf_v, perc(1))
+    inst Rf : create-resistor(ResistorQuery(res-query, resistance = Rf_v, precision = percentage(1))); chip-resistor(Rf_v, perc(1))
 
     net (op- Cf.p[1], Rf.p[1])
     net vout (Cf.p[2], Rf.p[2], opa.amp.out, out)
@@ -206,8 +208,8 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
     ;  This is reusing the feedback resistance to
     ;  create a reference that is 0.5 * VDD
 
-    inst R1 : chip-resistor(Rf_v, perc(1))
-    inst R2 : chip-resistor(Rf_v, perc(1))
+    inst R1 : create-resistor(ResistorQuery(res-query, resistance = Rf_v, precision = percentage(1))); chip-resistor(Rf_v, perc(1))
+    inst R2 : create-resistor(ResistorQuery(res-query, resistance = Rf_v, precision = percentage(1))); chip-resistor(Rf_v, perc(1))
 
     net (R1.p[1] vin.V+)
     net vref (R1.p[2] R2.p[1])
@@ -238,10 +240,10 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
 
     ; Add a touch of filtering to the ref set point.
     ;  @TODO - check rise time on reference from power off.
-    ; bypass-cap-strap(op-amp.VIN+, vin.gnd, 1.0e-6)
+    ; insert-bypass(op-amp.VIN+, vin.gnd, 1.0e-6)
 
     val Cref_t = tol%(10.0e-9, 20.0)
-    bypass-cap-strap(opa.amp.in+, vin.V-, typ(Cref_t), 0.20)
+    insert-bypass(opa.amp.in+, vin.V-, elem-type = typ(Cref_t) qb = cap-query)
 
     ; time constant for this circuit is t = (R*C) / 2.0
     val tau = Rft * Cref_t

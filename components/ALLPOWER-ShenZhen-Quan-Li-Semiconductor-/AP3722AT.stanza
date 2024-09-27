@@ -8,9 +8,11 @@ defpackage components/ALLPOWER-ShenZhen-Quan-Li-Semiconductor-/AP3722AT :
   import ocdb/utils/box-symbol
   ; User Includes
   import ocdb/utils/property-structs
-  import ocdb/utils/generic-components
 
   import jsl/bundles
+  import jsl/circuits
+
+  import helpers
 
 pcb-pad circle-smd-pad :
   name = "circle-smd-pad"
@@ -80,7 +82,7 @@ pcb-symbol sym-AP3722AT :
   draw("foreground") = Circle(-5.080, 2.540, 0.381)
 
 public pcb-component component :
-  name = "C918198"
+  name = "AP3722AT"
   description = "Omnidirectional -42dB 220Ω 57dB SMD-4P,2.2x3.8mm  MEMS Microphones ROHS"
   manufacturer = "ALLPOWER(ShenZhen Quan Li Semiconductor)"
   mpn = "AP3722AT"
@@ -107,6 +109,7 @@ public pcb-component component :
   property(self.area) = 11.375
   property(self.case) = "SMD-4P,2.2x3.8mm"
   property(self.mounting) = "smd"
+  property(self.LCSC) = "C918198"
 
   property(self.temperature-range) = min-max(-40.0, 105.0)
 
@@ -125,12 +128,5 @@ public pcb-module module:
 
   property(mic.VDD.power-pin) = PowerPin(min-max(1.6, 3.6))
   net (mic.GND0, mic.GND1)
-  bypass-cap-strap(mic.VDD, mic.GND0, 0.1e-6)
+  insert-bypass(mic.VDD, mic.GND0, elem-type = 0.1e-6 qb = cap-query)
 
-  ; ; There are two grounds for the casing. I'm leaving 
-  ; ;   the option open for the user to connected GND1 differently
-  ; ;   but if they don't then it will short to GND0
-  ; ; NOTE: This only works because GND1 is not connected in this 
-  ; ;   module. If you add a connection here this will not work. 
-  ; eval-when not connected?(mic.GND1):
-  ;   net (mic.GND0, mic.GND1)

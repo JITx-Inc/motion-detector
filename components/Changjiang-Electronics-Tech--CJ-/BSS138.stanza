@@ -108,7 +108,7 @@ pcb-symbol sym-BSS138 :
     Point(5.842, -0.762)])
 
 public pcb-component component :
-  name = "C78284"
+  name = "BSS138"
   description = "50V 220mA 3.5Ω@10V,220mA 360mW N Channel SOT-23  MOSFETs ROHS"
   manufacturer = "Changjiang Electronics Tech (CJ)"
   mpn = "BSS138"
@@ -133,5 +133,6 @@ public pcb-component component :
   property(self.area) = 10.743
   property(self.case) = "SOT-23"
   property(self.mounting) = "smd"
+  property(self.LCSC) = "C78284"
 
   property(self.rated-temperature) = Toleranced(30.0, 55.0, 55.0)

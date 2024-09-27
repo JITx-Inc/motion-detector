@@ -158,7 +158,7 @@ pcb-symbol sym-NTA4151PT1G :
     Point(4.318, 3.302)])
 
 public pcb-component component :
-  name = "C54876"
+  name = "NTA4151PT1G"
   description = "20V 760mA 360mΩ@4.5V,350mA 301mW P Channel -  MOSFETs ROHS"
   manufacturer = "ON Semiconductor"
   mpn = "NTA4151PT1G"
@@ -183,7 +183,7 @@ public pcb-component component :
   property(self.y) = 1.954
   property(self.area) = 3.326
   property(self.case) = "-"
-
+  property(self.LCSC) = "C54876"
   ; Junction Temperature Range
   property(self.temperature-range) = min-max(-55.0, 150.0)
 
@@ -193,6 +193,6 @@ public pcb-component component :
   property(self.Vgs) = min-max(-6.0, 6.0)
   property(self.Vgs-th) = min-max(-1.2, -0.45)
   property(self.Id-cont) = -0.76 ; A
-  ; @TODO - want to have an enum definition for 
-  ;   PMOS vs NMOS ? 
+  ; @TODO - want to have an enum definition for
+  ;   PMOS vs NMOS ?
   property(self.mode) = "P" ; as opposed to N

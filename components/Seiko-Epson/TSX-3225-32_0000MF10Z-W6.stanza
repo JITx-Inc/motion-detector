@@ -109,7 +109,7 @@ pcb-symbol sym-TSX-3225_32_0000MF10Z-W6 :
     Point(0.762, 1.778)])
 
 public pcb-component component :
-  name = "C1986412"
+  name = "TSX-3225 32.0000MF10Z-W6"
   description = "32 MHz ±10ppm Crystal 12pF 40 Ohms 4-SMD, No Lead"
   manufacturer = "Seiko Epson"
   mpn = "TSX-3225 32.0000MF10Z-W6"
@@ -136,6 +136,7 @@ public pcb-component component :
   property(self.area) = 16.589
   property(self.case) = "SMD-4P"
   property(self.mounting) = "smd"
+  property(self.LCSC) = "C1986412"
 
   val [cl cs cm esr f df dl] = [12.0e-12  1.31e-12  4.41e-15  40.0  32.0e6  10.0e-6 100.0e-6]
 

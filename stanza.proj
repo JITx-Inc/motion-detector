@@ -1,6 +1,7 @@
 include? ".slm/stanza.proj"
 pkg-cache: ".slm/pkg-cache"
 package main defined-in "main.stanza"
+package board defined-in "board.stanza"
 package helpers defined-in "helpers.stanza"
 package bundles defined-in "bundles.stanza"
 package amplifiers defined-in "amplifiers.stanza"

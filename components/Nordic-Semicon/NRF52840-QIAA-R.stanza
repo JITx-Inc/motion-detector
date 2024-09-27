@@ -9,22 +9,21 @@ defpackage components/Nordic-Semicon/NRF52840-QIAA-R :
     prefix(min-max) => lang-
   import jitx
   import jitx/commands
+  import jitx/parts
 
-  import ocdb/utils/defaults
   import ocdb/utils/landpatterns
   import ocdb/utils/symbols
   import ocdb/utils/symbol-utils
-  import ocdb/utils/generic-components
   import ocdb/utils/box-symbol
   import ocdb/utils/property-structs
   import ocdb/utils/generator-utils
-  import ocdb/utils/checks
   import ocdb/utils/passive-checks/resonator-checks
 
   import jsl/bundles
   import jsl/protocols
-  import bundles
+  import jsl/circuits
 
+  import bundles
   import helpers
 
 defn nrf-bga-pad (copper-diameter:Double) :
@@ -158,74 +157,74 @@ public pcb-component component :
   manufacturer = "Nordic Semiconductor"
   description = " AQFN-73-EP(7x7) Advanced Bluetooth 5, Thread and Zigbee multiprotocol SoC"
   datasheet = "https://datasheet.lcsc.com/lcsc/2304140030_Nordic-Semicon-NRF52840-QIAA-R_C190794.pdf"
-  reference-prefix = "U"  
+  reference-prefix = "U"
   ;=========================================================================
   pin-properties :
     [ pin:Ref | pads:Ref ... | side:Dir | bank:Ref]
-    [ P0[00]  | D2      | Right | io-0 ] ;XL1 
-    [ P0[01]  | F2      | Right | io-0 ] ;XL2 
-    [ P0[02]  | A12     | Right | io-0 ] ;AIN0 
-    [ P0[03]  | B13     | Right | io-0 ] ;AIN1 
-    [ P0[04]  | J1      | Right | io-0 ] ;AIN2 
-    [ P0[05]  | K2      | Right | io-0 ] ;AIN3 
-    [ P0[06]  | L1      | Right | io-0 ]
-    [ P0[07]  | M2      | Right | io-0 ] ;TRACECLK 
-    [ P0[08]  | N1      | Right | io-0 ]
-    [ P0[09]  | L24     | Right | io-0 ] ;NFC1 
-    [ P0[10]  | J24     | Right | io-0 ] ;NFC2 
-    [ P0[11]  | T2      | Right | io-0 ] ;TRACEDATA2 
-    [ P0[12]  | U1      | Right | io-0 ] ;TRACEDATA1 
-    [ P0[13]  | AD8     | Right | io-0 ]
-    [ P0[14]  | AC9     | Right | io-0 ]
-    [ P0[15]  | AD10    | Right | io-0 ]
-    [ P0[16]  | AC11    | Right | io-0 ]
-    [ P0[17]  | AD12    | Right | io-0 ]
-    [ P0[18]  | AC13    | Right | io-0 ] ;NRESET 
-    [ P0[19]  | AC15    | Right | io-0 ]
-    [ P0[20]  | AD16    | Right | io-0 ]
-    [ P0[21]  | AC17    | Right | io-0 ]
-    [ P0[22]  | AD18    | Right | io-0 ]
-    [ P0[23]  | AC19    | Right | io-0 ]
-    [ P0[24]  | AD20    | Right | io-0 ]
-    [ P0[25]  | AC21    | Right | io-0 ]
-    [ P0[26]  | G1      | Right | io-0 ]
-    [ P0[27]  | H2      | Right | io-0 ]
-    [ P0[28]  | B11     | Right | io-0 ] ;AIN4 
-    [ P0[29]  | A10     | Right | io-0 ] ;AIN5 
-    [ P0[30]  | B9      | Right | io-0 ] ;AIN6 
-    [ P0[31]  | A8      | Right | io-0 ] ;AIN7 
-    [ P1[00]  | AD22    | Right | io ] ;TRACEDATA0 
-    [ P1[01]  | Y23     | Right | io ]
-    [ P1[02]  | W24     | Right | io ]
-    [ P1[03]  | V23     | Right | io ]
-    [ P1[04]  | U24     | Right | io ]
-    [ P1[05]  | T23     | Right | io ]
-    [ P1[06]  | R24     | Right | io ]
-    [ P1[07]  | P23     | Right | io ]
-    [ P1[08]  | P2      | Right | io ]
-    [ P1[09]  | R1      | Right | io ] ;TRACEDATA3 
-    [ P1[10]  | A20     | Right | io ]
-    [ P1[11]  | B19     | Right | io ]
-    [ P1[12]  | B17     | Right | io ]
-    [ P1[13]  | A16     | Right | io ]
-    [ P1[14]  | B15     | Right | io ]
-    [ P1[15]  | A14     | Right | io ]
-    [ D-      | AD4     | Left  | util ]
-    [ D+      | AD6     | Left  | util ]
-    [ SWDCLK  | AA24    | Left  | util ]
-    [ SWDIO   | AC24    | Left  | util ]
-    [ XC1     | B24     | Left  | util ]
-    [ XC2     | A23     | Left  | util ]
-    [ ANT     | H23     | Right  | util ]
-    [ VBUS    | AD2     | Left | power ]
-    [ VDD[0]  | A22     | Left | power ]
-    [ VDD[1]  | AD14    | Left | power ]
-    [ VDD[2]  | AD23    | Left | power ]
-    [ VDD[3]  | B1      | Left | power ]
-    [ VDD[4]  | W1      | Left | power ]
-    [ VDDH    | Y2      | Left | power ]
-    [ VSS     | p[74] B7| Down | power ]
-    [ VSS_PA  | F23     | Down | power ]
+    [ P0[00]  | D2      | Right | io-0  ] ;XL1
+    [ P0[01]  | F2      | Right | io-0  ] ;XL2
+    [ P0[02]  | A12     | Right | io-0  ] ;AIN0
+    [ P0[03]  | B13     | Right | io-0  ] ;AIN1
+    [ P0[04]  | J1      | Right | io-0  ] ;AIN2
+    [ P0[05]  | K2      | Right | io-0  ] ;AIN3
+    [ P0[06]  | L1      | Right | io-0  ]
+    [ P0[07]  | M2      | Right | io-0  ] ;TRACECLK
+    [ P0[08]  | N1      | Right | io-0  ]
+    [ P0[09]  | L24     | Right | io-0  ] ;NFC1
+    [ P0[10]  | J24     | Right | io-0  ] ;NFC2
+    [ P0[11]  | T2      | Right | io-0  ] ;TRACEDATA2
+    [ P0[12]  | U1      | Right | io-0  ] ;TRACEDATA1
+    [ P0[13]  | AD8     | Right | io-0  ]
+    [ P0[14]  | AC9     | Right | io-0  ]
+    [ P0[15]  | AD10    | Right | io-0  ]
+    [ P0[16]  | AC11    | Right | io-0  ]
+    [ P0[17]  | AD12    | Right | io-0  ]
+    [ P0[18]  | AC13    | Right | io-0  ] ;NRESET
+    [ P0[19]  | AC15    | Right | io-0  ]
+    [ P0[20]  | AD16    | Right | io-0  ]
+    [ P0[21]  | AC17    | Right | io-0  ]
+    [ P0[22]  | AD18    | Right | io-0  ]
+    [ P0[23]  | AC19    | Right | io-0  ]
+    [ P0[24]  | AD20    | Right | io-0  ]
+    [ P0[25]  | AC21    | Right | io-0  ]
+    [ P0[26]  | G1      | Right | io-0  ]
+    [ P0[27]  | H2      | Right | io-0  ]
+    [ P0[28]  | B11     | Right | io-0  ] ;AIN4
+    [ P0[29]  | A10     | Right | io-0  ] ;AIN5
+    [ P0[30]  | B9      | Right | io-0  ] ;AIN6
+    [ P0[31]  | A8      | Right | io-0  ] ;AIN7
+    [ P1[00]  | AD22    | Right | io    ] ;TRACEDATA0
+    [ P1[01]  | Y23     | Right | io    ]
+    [ P1[02]  | W24     | Right | io    ]
+    [ P1[03]  | V23     | Right | io    ]
+    [ P1[04]  | U24     | Right | io    ]
+    [ P1[05]  | T23     | Right | io    ]
+    [ P1[06]  | R24     | Right | io    ]
+    [ P1[07]  | P23     | Right | io    ]
+    [ P1[08]  | P2      | Right | io    ]
+    [ P1[09]  | R1      | Right | io    ] ;TRACEDATA3
+    [ P1[10]  | A20     | Right | io    ]
+    [ P1[11]  | B19     | Right | io    ]
+    [ P1[12]  | B17     | Right | io    ]
+    [ P1[13]  | A16     | Right | io    ]
+    [ P1[14]  | B15     | Right | io    ]
+    [ P1[15]  | A14     | Right | io    ]
+    [ D-      | AD4     | Left  | util  ]
+    [ D+      | AD6     | Left  | util  ]
+    [ SWDCLK  | AA24    | Left  | util  ]
+    [ SWDIO   | AC24    | Left  | util  ]
+    [ XC1     | B24     | Left  | util  ]
+    [ XC2     | A23     | Left  | util  ]
+    [ ANT     | H23     | Right | util  ]
+    [ VBUS    | AD2     | Left  | power ]
+    [ VDD[0]  | A22     | Left  | power ]
+    [ VDD[1]  | AD14    | Left  | power ]
+    [ VDD[2]  | AD23    | Left  | power ]
+    [ VDD[3]  | B1      | Left  | power ]
+    [ VDD[4]  | W1      | Left  | power ]
+    [ VDDH    | Y2      | Left  | power ]
+    [ VSS     | p[74] B7| Down  | power ]
+    [ VSS_PA  | F23     | Down  | power ]
     [ DCC     | B3      | Right | power ]
     [ DCCH    | AB2     | Right | power ]
     [ DEC1    | C1      | Right | power ]
@@ -253,22 +252,20 @@ public pcb-component component :
   property(self.area) = 52.592
   property(self.case) = "AQFN-73-EP(7x7)"
   property(self.mounting) = "smd"
+  property(self.LCSC) = "C190794"
 
-  check connected(self.SWDCLK)
-  check connected(self.SWDIO)
-
-  val driver = DigitalIO( CMOSOutput(min-max(0.0, 0.4), OffsetVoltage(-0.4, self.VDD[0])), 
-                          FractionalVoltage(0.3, self.VDD[0]), 
+  val driver = DigitalIO( CMOSOutput(min-max(0.0, 0.4), OffsetVoltage(-0.4, self.VDD[0])),
+                          FractionalVoltage(0.3, self.VDD[0]),
                           FractionalVoltage(0.7, self.VDD[0]), self.VDD[0], self.VSS, 50.0e-9)
 
-  pcb-bundle io-pin : 
+  pcb-bundle io-pin :
     port p
 
   for p in pins(self.P0) do :
     supports io-pin :
       io-pin.p => p
     property(p.digital-io) = driver
-    
+
   for p in pins(self.P1) do :
     supports io-pin :
       io-pin.p => p
@@ -276,22 +273,22 @@ public pcb-component component :
 
   for i in 0 to 48 do :
     supports gpio :
-      require io:io-pin 
+      require io:io-pin
       gpio.gpio => io.p
     ; @see Datasheet Section 6.17.5
     ;   Register PSEL.OUT[N] - allows PWM to select
     ;     any GPIO pin as output
-    supports timer : 
+    supports timer :
       require io:io-pin
       timer.timer => io.p
 
   for i in [02 03 04 05 28 29 30 31] do :
     supports adc :
       adc.adc => self.P0[i]
-    
+
   for i in 0 to 2 do :
     supports i2c :
-      require pins:io-pin[2] 
+      require pins:io-pin[2]
       i2c.sda => pins[0].p
       i2c.scl => pins[1].p
 
@@ -299,7 +296,7 @@ public pcb-component component :
   val spi = spi-with-cs()
   for i in 0 to 3 do :
     supports spi :
-      require pins:io-pin[4] 
+      require pins:io-pin[4]
       spi.copi => pins[0].p
       spi.cipo => pins[1].p
       spi.sck => pins[2].p
@@ -337,14 +334,12 @@ doc: \<DOC>
   NRF52840 reference module.
   ## Args:
   `include-lfo?:True|False = true` - include a 32.768kHz resonator in the design
-
   `include-antenna?:True|False = true` - include an antenna and matching circuit in the design
-
   `power-config:Int = 5` - circuit configuration from https://infocenter.nordicsemi.com/index.jsp?topic=%2Fps_nrf52840%2Fref_circuitry.html (currently supports 5, 6)
-  
+
   ## Example use:
   ```
-    inst nrf : ocdb/components/nordic/nRF52840/module(include-lfo? = false, power-config = 6)
+    inst nrf : components/Nordic-Semicon/NRF52840-QIAA-R/module(include-lfo? = false, power-config = 6)
   ```
 <DOC>
 public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:True|False = true, power-config:Int = 5) :
@@ -355,9 +350,9 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
 
   ; Setup Bypass caps
   switch(power-config) :
-    5 : 
+    5 :
       port usb : usb-2-connector ; USB enabled
-      
+
       net (gnd, usb.vbus.V-)
       net (mcu.VBUS, usb.vbus.V+)
       ; Configure to be in normal voltage mode, DCDC1 enabled (config 5 from datasheet)
@@ -375,24 +370,28 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
         mcu.VDD[3]  => 1.0e-6,
         mcu.VDD[4]  => 1.0e-6
       ]) do:
-        val c = bypass-cap-strap(pin_, gnd, cap_)
+        val c = insert-bypass(pin_, gnd, elem-type = cap_ qb = cap-query)
         schematic-group(c) = power
         layout-group(c) = power
 
-      inst pwr-ind : smd-inductor([
-        "inductance" => 10.0e-6 
-        "min-current-rating" => 50.0e-3 ])
-      
-      inst filt-ind : smd-inductor([
-        "inductance" => 15.0e-9, 
-        "min-self-resonant-frequency" => 2.0e9,
-        "material-core" => "ceramic"])
-      
+      ; inst pwr-ind : smd-inductor([
+      ;   "inductance" => 10.0e-6
+      ;   "min-current-rating" => 50.0e-3 ])
+
+      ; inst filt-ind : smd-inductor([
+      ;   "inductance" => 15.0e-9,
+      ;   "min-self-resonant-frequency" => 2.0e9,
+      ;   "material-core" => "ceramic"])
+
+      inst pwr-ind : create-inductor(InductorQuery(smd-query inductance = 10.0e-6 current-rating = 50.0e-3))
+
+      inst filt-ind : create-inductor(InductorQuery(smd-query inductance = 15.0e-9 self-resonant-frequency = 2.0e9 material-core = "ceramic"))
+
       net (pwr-ind.p[1] mcu.DCCH)
       net (pwr-ind.p[2] filt-ind.p[1])
       net (mcu.DEC4 mcu.DEC6 filt-ind.p[2])
 
-      for i in 0 through 4 do : 
+      for i in 0 through 4 do :
         net (vin.V+ mcu.VDDH mcu.VDD[i])
     6 :
       ; Battery power only, no USB, no NFC
@@ -407,7 +406,7 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
         mcu.VDD[2]  => 0.1e-6,
         mcu.VDD[3]  => 1.0e-6,
       ]) do:
-        val c = bypass-cap-strap(pin_, gnd, cap_)
+        val c = insert-bypass(pin_, gnd, elem-type = cap_ qb = cap-query)
         schematic-group(c) = power
         layout-group(c) = power
 
@@ -418,7 +417,7 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
 
       ; Add a bypass to dec6 and make it dnp so that we can
       ;  optionally stuff during testing.
-      val dec6Cap = bypass-cap-strap(mcu.DEC6, gnd, 0.1e-6)
+      val dec6Cap = insert-bypass(mcu.DEC6, gnd, elem-type = 0.1e-6 qb = cap-query)
       schematic-group(dec6Cap) = power
       layout-group(dec6Cap) = power
       dnp(dec6Cap)
@@ -428,7 +427,7 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
       net (vin.V+ mcu.VDDH)
       no-connect(mcu.D+)
       no-connect(mcu.D-)
-      for i in 0 through 4 do : 
+      for i in 0 through 4 do :
         net (vin.V+ mcu.VDD[i])
         ; Normal voltage mode.
         property(mcu.VDD[i].power-pin) = PowerPin(min-typ-max(1.7, 3.0, 3.6))
@@ -438,12 +437,12 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
       false
 
   ; Not stuffed per reference material.
-  val decCap = bypass-cap-strap(mcu.DEC2, gnd, 0.1e-6)
+  val decCap = insert-bypass(mcu.DEC2, gnd, elem-type = 0.1e-6 qb = cap-query)
   schematic-group(decCap) = power
   layout-group(decCap) = power
   dnp(decCap)
 
-  if include-LFO? :  
+  if include-LFO? :
     inst lfosc : ocdb/components/epson/FC-135/component
     require lfo : low-freq-oscillator from mcu
     net (lfo.lo-in lfosc.p[1])

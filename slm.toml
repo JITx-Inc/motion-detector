@@ -1,4 +1,6 @@
 name = "motion-detector"
 version = "0.1.0"
 [dependencies]
-JITX3 = { path = "{SLM_ROOT}/JITX3" }
+# JITX3 = { path = "{SLM_ROOT}/JITX3" }
+jsl = { git = "JITX-Inc/jsl", version = "0.6.1"}
+ocdb = { git = "JITX-Inc/open-components-database", version = "3.17.0"}
