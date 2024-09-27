@@ -94,7 +94,7 @@ public pcb-module nrf-motion :
   via-stitch(board-shape, GND)
 
 ; compile the design
-set-current-design("nrf-design-introspect")
+set-current-design("nrf-design-final")
 set-paper(ANSI-B)
 setup-board(board-shape)
 setup-export()
