@@ -93,6 +93,10 @@ public pcb-module nrf-motion :
 
   via-stitch(board-shape, GND)
 
+  ; logo
+  inst logo : ocdb/artwork/jitx-logo/logo(5.0)
+  place(logo) at loc(-15.9, -10.0, 0.0) on Top
+
 ; compile the design
 set-current-design("nrf-design-final")
 set-paper(ANSI-B)
@@ -103,27 +107,3 @@ var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Anal
 set-main-module(main-module) ; Treat the provided module as a design, and compile it.
 view-schematic()
 view-board()
-
-; val finished-module = get-merged-physical-design-module()
-; set-main-module(introspect-design(finished-module))
-
-
-public defn introspect-design (module:Instantiable) :
-  inside pcb-module :
-    within transform-module(module) :
-      ; val netlist = GlobalNetList(module)
-      ; val nets = nets(netlist)
-      ;   $> filter{{not empty?(pins(_))}, _}
-
-      ; val all-components = populated-components(self)
-      val all-components = component-instances(self)
-      for component in all-components do :
-        println("Component: %_" % [ref(component)])
-        val component-pins = pins(component)
-        for pin in component-pins do :
-          println("  Pin: %_" % [ref(pin)])
-          if connected?(pin) :
-            val connected-pins = connected-pins(pin)
-            println("    Connected to: %," % [seq(ref, connected-pins)])
-          else :
-            println("    Unconnected")

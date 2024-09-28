@@ -59,7 +59,7 @@ public pcb-module nRF-mcu :
   net (dbg-conn[4].p debug.swo)
 
   for i in 0 to 5 do :
-    component-status(dbg-conn[i]) :
+    instance-status(dbg-conn[i]) :
       bom-status = NotInBOM
 
   ; Debugging - we will need to detect when we are connected to the

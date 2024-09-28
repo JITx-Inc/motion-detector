@@ -1,0 +1,16 @@
+(footprint SMD_TESTPT (version 20221018) (generator jitx) (layer F.Cu) (tstamp db39d939-dff3-51a4-9db9-c275a23a44bf) 
+  (pad p smd circle
+    (at 0.0 0.0 0.0)
+    (size 0.75 0.75)
+    (layers F.Cu F.Mask)
+    (solder_mask_margin 0.038)
+    (tstamp 8039a7de-db87-f12f-09d9-12ce433c02e6))
+  (fp_text value ">VALUE" (at 0.0 0.0 0.0) (layer F.SilkS) hide 
+    (effects (font (size 1.0 1.0) (thickness 0.10)) )
+    (tstamp 9b634d9a-8544-9776-3c03-f8c904e1efdc)
+    )
+  (fp_circle (center 0.0 0.0) (end 0.375 0.0) (layer F.CrtYd) (stroke (width 0.05) (type solid)) (tstamp 0e2cd239-cf4e-2223-295e-ced67a53117b))
+  (fp_text reference ">REF" (at 0.0 0.0 0.0) (layer F.SilkS) 
+    (effects (font (size 1.0 1.0) (thickness 0.10)) )
+    (tstamp a93d9a3a-cfbc-9b65-eb08-9e2ea646954b)
+    ))

@@ -141,7 +141,8 @@ public defn microphone-preamp (AMP_t:InstantiableType, config:BandpassConfig):
     inst R-short : create-resistor(res-query, resistance = 0.0)
     net (R-short.p[1] in)
     net (R-short.p[2] vin.V-)
-    dnp(R-short)
+    instance-status(R-short) :
+      bom-status = NotInBOM
 
     ; Feedback for setting the gain in the
     ;  pass band.
