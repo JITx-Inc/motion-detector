@@ -16,7 +16,7 @@ defpackage components/Nordic-Semicon/NRF52840-QIAA-R :
   import ocdb/utils/symbol-utils
   import ocdb/utils/box-symbol
   import ocdb/utils/property-structs
-  import ocdb/utils/generator-utils
+  ; import ocdb/utils/generator-utils
   import ocdb/utils/passive-checks/resonator-checks
 
   import jsl/bundles
@@ -417,10 +417,11 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
 
       ; Add a bypass to dec6 and make it dnp so that we can
       ;  optionally stuff during testing.
-      val dec6Cap = insert-bypass(mcu.DEC6, gnd, elem-type = 0.1e-6 qb = cap-query)
-      schematic-group(dec6Cap) = power
-      layout-group(dec6Cap) = power
-      dnp(dec6Cap)
+      val dec6cap = insert-bypass(mcu.DEC6, gnd, elem-type = 0.1e-6 qb = cap-query)
+      schematic-group(dec6cap) = power
+      layout-group(dec6cap) = power
+      instance-status(dec6cap) :
+        bom-status = NotInBOM
 
       net (mcu.VBUS gnd)
       net (mcu.DEC4 mcu.DEC6)
@@ -440,14 +441,15 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
   val decCap = insert-bypass(mcu.DEC2, gnd, elem-type = 0.1e-6 qb = cap-query)
   schematic-group(decCap) = power
   layout-group(decCap) = power
-  dnp(decCap)
+  instance-status(decCap) :
+    bom-status = NotInBOM
 
   if include-LFO? :
     inst lfosc : ocdb/components/epson/FC-135/component
     require lfo : low-freq-oscillator from mcu
     net (lfo.lo-in lfosc.p[1])
     net (lfo.lo-out lfosc.p[2])
-    val lf-cb = add-xtal-caps(lfosc, gnd)
+    val lf-cb = add-xtal-load-caps(lfosc, gnd)
     check-resonator(lfosc, property(mcu.P0[1].crystal-oscillator), lf-cb)
 
   inst hfosc : components/Seiko-Epson/TSX-3225-32_0000MF10Z-W6/component ; ocdb/components/epson/TSX-3225/component(32.0e6)
@@ -477,3 +479,4 @@ public pcb-module module (-- include-LFO?:True|False = true, include-antenna?:Tr
   layout-group(self) = NRF52840
 
 ; view(component)
+

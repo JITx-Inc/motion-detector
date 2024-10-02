@@ -1,3 +1,1041 @@
 {
-	"preferredparts":	[]
+	"preferredparts":	[{
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"amp"
+						},
+						"field":	{
+							"name":	"V+-byp"
+						}
+					},
+					"ref":	"C21",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"name":	"xl"
+						},
+						"field":	{
+							"name":	"VDD-byp"
+						}
+					},
+					"ref":	"C3",
+					"fileinfo":	null
+				}],
+			"vendor":	"JLCPCB",
+			"mpn":	"CL05A106MQ5NUNC",
+			"manufacturer":	"Samsung Electro-Mechanics",
+			"query_properties":	{
+				"capacitance":	1e-05,
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	["X7R", "X5R"],
+				"rated-voltage":	6,
+				"category":	"capacitor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"rgb"
+							}
+						},
+						"field":	{
+							"name":	"element"
+						}
+					},
+					"ref":	"R12",
+					"fileinfo":	null
+				}],
+			"vendor":	"JLCPCB",
+			"mpn":	"RC0603JR-07510RL",
+			"manufacturer":	"YAGEO",
+			"query_properties":	{
+				"resistance":	510,
+				"category":	"resistor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000,
+				"_sort":	["price"]
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"load-sw"
+						},
+						"field":	{
+							"name":	"element"
+						}
+					},
+					"ref":	"R6",
+					"fileinfo":	null
+				}],
+			"vendor":	"JLCPCB",
+			"mpn":	"RC0402JR-071ML",
+			"manufacturer":	"YAGEO",
+			"query_properties":	{
+				"tolerance":	0.05,
+				"min-resistance":	900000,
+				"max-resistance":	1500000,
+				"category":	"resistor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000,
+				"_sort":	["price"]
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"rgb"
+							}
+						},
+						"field":	{
+							"name":	"element"
+						}
+					},
+					"ref":	"R13",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"rgb"
+							}
+						},
+						"field":	{
+							"name":	"element"
+						}
+					},
+					"ref":	"R14",
+					"fileinfo":	null
+				}],
+			"vendor":	"JLCPCB",
+			"mpn":	"RC0603JR-071K8L",
+			"manufacturer":	"YAGEO",
+			"query_properties":	{
+				"resistance":	1800,
+				"category":	"resistor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000,
+				"_sort":	["price"]
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"VDDH-byp"
+						}
+					},
+					"ref":	"C5",
+					"fileinfo":	null
+				}],
+			"vendor":	"JLCPCB",
+			"mpn":	"CL05A475MQ5NRNC",
+			"manufacturer":	"Samsung Electro-Mechanics",
+			"query_properties":	{
+				"capacitance":	4.7e-06,
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	["X7R", "X5R"],
+				"rated-voltage":	6,
+				"category":	"capacitor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"amp"
+						},
+						"field":	{
+							"name":	"R2"
+						}
+					},
+					"ref":	"R11",
+					"fileinfo":	{
+						"filename":	"amplifiers.stanza",
+						"line":	213,
+						"column":	4
+					}
+				}, {
+					"inst":	{
+						"ref":	{
+							"name":	"amp"
+						},
+						"field":	{
+							"name":	"R1"
+						}
+					},
+					"ref":	"R10",
+					"fileinfo":	{
+						"filename":	"amplifiers.stanza",
+						"line":	212,
+						"column":	4
+					}
+				}, {
+					"inst":	{
+						"ref":	{
+							"name":	"amp"
+						},
+						"field":	{
+							"name":	"Rf"
+						}
+					},
+					"ref":	"R9",
+					"fileinfo":	{
+						"filename":	"amplifiers.stanza",
+						"line":	202,
+						"column":	4
+					}
+				}],
+			"vendor":	"JLCPCB",
+			"mpn":	"RC0402FR-0751KL",
+			"manufacturer":	"YAGEO",
+			"query_properties":	{
+				"tolerance":	0.01,
+				"resistance":	51000,
+				"category":	"resistor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000,
+				"_sort":	["price"]
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"amp"
+						},
+						"field":	{
+							"name":	"Cin"
+						}
+					},
+					"ref":	"C23",
+					"fileinfo":	{
+						"filename":	"amplifiers.stanza",
+						"line":	193,
+						"column":	4
+					}
+				}, {
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"VDD[3]-byp"
+						}
+					},
+					"ref":	"C9",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"DEC4-byp"
+						}
+					},
+					"ref":	"C4",
+					"fileinfo":	null
+				}],
+			"vendor":	"JLCPCB",
+			"mpn":	"CL05A105KQ5NNNC",
+			"manufacturer":	"Samsung Electro-Mechanics",
+			"query_properties":	{
+				"tolerance":	0.1,
+				"capacitance":	1e-06,
+				"category":	"capacitor",
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	["X7R", "X5R"],
+				"rated-voltage":	6,
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"rgb"
+							}
+						},
+						"field":	{
+							"name":	"led"
+						}
+					},
+					"ref":	"D1",
+					"fileinfo":	{
+						"filename":	"helpers.stanza",
+						"line":	228,
+						"column":	6
+					}
+				}],
+			"vendor":	"JLCPCB",
+			"mpn":	"FM-B2020RGBA-HG",
+			"manufacturer":	"Foshan NationStar Optoelectronics",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"load-sw"
+						},
+						"field":	{
+							"name":	"Nctl"
+						}
+					},
+					"ref":	"Q1",
+					"fileinfo":	{
+						"filename":	"load-switch.stanza",
+						"line":	37,
+						"column":	2
+					}
+				}],
+			"vendor":	"JLCPCB",
+			"mpn":	"BSS138",
+			"manufacturer":	"Changjiang Electronics Tech (CJ)",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"amp"
+							},
+							"field":	{
+								"name":	"opa"
+							}
+						},
+						"field":	{
+							"name":	"IC"
+						}
+					},
+					"ref":	"U8",
+					"fileinfo":	{
+						"filename":	"components/STMicroelectronics/TS971ILT.stanza",
+						"line":	150,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"TS971ILT",
+			"manufacturer":	"STMICROELECTRONICS",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"ref":	{
+									"name":	"RF"
+								},
+								"field":	{
+									"name":	"test"
+								}
+							},
+							"field":	{
+								"name":	"test-uFL"
+							}
+						},
+						"field":	{
+							"name":	"uFL"
+						}
+					},
+					"ref":	"J2",
+					"fileinfo":	{
+						"filename":	"components/HRS/U-FL-R-SMT-10-.stanza",
+						"line":	1138,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"U.FL-R-SMT(10)",
+			"manufacturer":	"HIROSE ELECTRIC CO LTD",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"xl"
+						},
+						"field":	{
+							"name":	"acc"
+						}
+					},
+					"ref":	"U4",
+					"fileinfo":	{
+						"filename":	"components/STMicroelectronics/LIS3DHTR.stanza",
+						"line":	131,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"LIS3DHTR",
+			"manufacturer":	"STMICROELECTRONICS",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"mcu"
+						}
+					},
+					"ref":	"U2",
+					"fileinfo":	{
+						"filename":	"components/Nordic-Semicon/NRF52840-QIAA-R.stanza",
+						"line":	348,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"NRF52840-QIAA-R",
+			"manufacturer":	"Nordic Semiconductor",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"load-sw"
+						},
+						"field":	{
+							"name":	"Psw"
+						}
+					},
+					"ref":	"Q2",
+					"fileinfo":	{
+						"filename":	"load-switch.stanza",
+						"line":	36,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"NTA4151PT1G",
+			"manufacturer":	"ON Semiconductor",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"DEC3-byp"
+						}
+					},
+					"ref":	"C2",
+					"fileinfo":	null
+				}],
+			"vendor":	null,
+			"mpn":	"GMC04X7R101K6R3NT",
+			"manufacturer":	"CAL-CHIP ELECTRONICS, INC.",
+			"query_properties":	{
+				"capacitance":	1e-10,
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	["X7R", "X5R"],
+				"rated-voltage":	6,
+				"category":	"capacitor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"amp"
+						},
+						"field":	{
+							"name":	"Cf"
+						}
+					},
+					"ref":	"C24",
+					"fileinfo":	{
+						"filename":	"amplifiers.stanza",
+						"line":	201,
+						"column":	4
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"0603Y0100151KXT",
+			"manufacturer":	"Knowles",
+			"query_properties":	{
+				"tolerance":	0.1,
+				"capacitance":	1.5e-10,
+				"category":	"capacitor",
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	["X7R", "X5R"],
+				"rated-voltage":	6,
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"ref":	{
+									"name":	"RF"
+								},
+								"field":	{
+									"name":	"ant"
+								}
+							},
+							"field":	{
+								"name":	"pi"
+							}
+						},
+						"field":	{
+							"name":	"L"
+						}
+					},
+					"ref":	"L1",
+					"fileinfo":	{
+						"filename":	"components/antenna.stanza",
+						"line":	75,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"PE-0402CL4N7STT",
+			"manufacturer":	"Pulse Elec",
+			"query_properties":	{
+				"self-resonant-frequency":	4000000000,
+				"quality-factor":	8,
+				"inductance":	4.7e-09,
+				"category":	"inductor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000,
+				"_sort":	["price"]
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"mic"
+						},
+						"field":	{
+							"name":	"mic"
+						}
+					},
+					"ref":	"U7",
+					"fileinfo":	{
+						"filename":	"components/ALLPOWER-ShenZhen-Quan-Li-Semiconductor-/AP3722AT.stanza",
+						"line":	123,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"AP3722AT",
+			"manufacturer":	"ALLPOWER(ShenZhen Quan Li Semiconductor)",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"bat"
+						},
+						"field":	{
+							"name":	"holder"
+						}
+					},
+					"ref":	"J1",
+					"fileinfo":	{
+						"filename":	"components/MYOUNG/MY-1632-03.stanza",
+						"line":	172,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"MY-1632-03",
+			"manufacturer":	"MYOUNG",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"amp"
+						},
+						"field":	{
+							"name":	"in+-byp"
+						}
+					},
+					"ref":	"C25",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"name":	"amp"
+						},
+						"field":	{
+							"name":	"V+-byp"
+						}
+					},
+					"ref":	"C26",
+					"fileinfo":	null
+				}],
+			"vendor":	null,
+			"mpn":	"GMC04X7R103K6R3NT",
+			"manufacturer":	"CAL-CHIP ELECTRONICS, INC.",
+			"query_properties":	{
+				"capacitance":	1e-08,
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	["X7R", "X5R"],
+				"rated-voltage":	6,
+				"category":	"capacitor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"name":	"mic"
+						},
+						"field":	{
+							"name":	"VDD-byp"
+						}
+					},
+					"ref":	"C20",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"name":	"load-sw"
+						},
+						"field":	{
+							"name":	"S-byp"
+						}
+					},
+					"ref":	"C19",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"name":	"xl"
+						},
+						"field":	{
+							"name":	"VDD_IO-byp"
+						}
+					},
+					"ref":	"C14",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"VDD[2]-byp"
+						}
+					},
+					"ref":	"C8",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"VDD[1]-byp"
+						}
+					},
+					"ref":	"C7",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"VDD[0]-byp"
+						}
+					},
+					"ref":	"C6",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"DEC1-byp"
+						}
+					},
+					"ref":	"C1",
+					"fileinfo":	null
+				}],
+			"vendor":	null,
+			"mpn":	"GMC04X5R104M6R3NT",
+			"manufacturer":	"CAL-CHIP ELECTRONICS, INC.",
+			"query_properties":	{
+				"capacitance":	1e-07,
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	["X7R", "X5R"],
+				"rated-voltage":	6,
+				"category":	"capacitor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"hfosc"
+						}
+					},
+					"ref":	"X1",
+					"fileinfo":	{
+						"filename":	"components/Nordic-Semicon/NRF52840-QIAA-R.stanza",
+						"line":	455,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"TSX-3225 32.0000MF10Z-W6",
+			"manufacturer":	"Seiko Epson",
+			"query_properties":	null
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"element"
+						}
+					},
+					"ref":	"C13",
+					"fileinfo":	null
+				}, {
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"name":	"mcu"
+							},
+							"field":	{
+								"name":	"nrf"
+							}
+						},
+						"field":	{
+							"name":	"element"
+						}
+					},
+					"ref":	"C12",
+					"fileinfo":	null
+				}],
+			"vendor":	null,
+			"mpn":	"MA0402CG150K100",
+			"manufacturer":	"Meritek",
+			"query_properties":	{
+				"capacitance":	1.5e-11,
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	"C0G",
+				"category":	"capacitor",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"ref":	{
+									"name":	"RF"
+								},
+								"field":	{
+									"name":	"ant"
+								}
+							},
+							"field":	{
+								"name":	"pi"
+							}
+						},
+						"field":	{
+							"name":	"C-F"
+						}
+					},
+					"ref":	"C16",
+					"fileinfo":	{
+						"filename":	"components/antenna.stanza",
+						"line":	73,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"MA0402CG0R8B160",
+			"manufacturer":	"Meritek",
+			"query_properties":	{
+				"capacitance":	8e-13,
+				"category":	"capacitor",
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	"C0G",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"ref":	{
+									"name":	"RF"
+								},
+								"field":	{
+									"name":	"ant"
+								}
+							},
+							"field":	{
+								"name":	"pi"
+							}
+						},
+						"field":	{
+							"name":	"C-R"
+						}
+					},
+					"ref":	"C17",
+					"fileinfo":	{
+						"filename":	"components/antenna.stanza",
+						"line":	74,
+						"column":	2
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"MA0402CG0R5D100",
+			"manufacturer":	"Meritek",
+			"query_properties":	{
+				"capacitance":	5e-13,
+				"category":	"capacitor",
+				"type":	"ceramic",
+				"_sort":	["rated-voltage"],
+				"temperature-coefficient.code":	"C0G",
+				"min-rated-temperature.max":	0,
+				"max-rated-temperature.min":	50,
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"mounting":	"smd",
+				"_sellers":	["JLCPCB"],
+				"min-stock":	1000,
+				"max-minimum_quantity":	1000
+			}
+		}, {
+			"insts":	[{
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"ref":	{
+									"name":	"mcu"
+								},
+								"field":	{
+									"name":	"rs"
+								}
+							},
+							"field":	{
+								"name":	"r"
+							}
+						},
+						"index":	1
+					},
+					"ref":	"R2",
+					"fileinfo":	{
+						"filename":	"/Users/bgupta/src/JITX/motion-detector/.slm/deps/ocdb/utils/generator-utils.stanza",
+						"line":	46,
+						"column":	6
+					}
+				}, {
+					"inst":	{
+						"ref":	{
+							"ref":	{
+								"ref":	{
+									"name":	"mcu"
+								},
+								"field":	{
+									"name":	"rs"
+								}
+							},
+							"field":	{
+								"name":	"r"
+							}
+						},
+						"index":	0
+					},
+					"ref":	"R1",
+					"fileinfo":	{
+						"filename":	"/Users/bgupta/src/JITX/motion-detector/.slm/deps/ocdb/utils/generator-utils.stanza",
+						"line":	46,
+						"column":	6
+					}
+				}],
+			"vendor":	null,
+			"mpn":	"RC0402JR-078K2L",
+			"manufacturer":	"YAGEO",
+			"query_properties":	{
+				"case":	["0402", "1005m", "0505", "1414m", "0508", "1220m", "Wide 0805", "0603", "1608m", "0612", "1632m", "Wide 1206", "0805", "2012m", "1111", "2828m", "1206", "3216m", "1210", "3225m", "1218", "3246m", "Wide 1812", "1225", "3263m", "Wide 2512", "1530", "3876m", "Wide 3015", "1808", "4520m", "1812", "4532m", "1825", "4564m", "1835", "4589", "Wide 3518", "5020m", "2010", "5025m", "2043", "Wide 4320", "2220", "5750m", "2225", "5763m", "2312", "6032m", "2512", "6331m", "2725", "7142m", "2728", "7142m", "Wide 2827", "2816", "2817", "7142m", "2953", "Wide 5929", "3920", "1052m"],
+				"_sellers":	["JLCPCB"],
+				"min-rated-temperature.max":	25,
+				"max-rated-temperature.min":	0,
+				"_stock":	100,
+				"mounting":	"smd",
+				"resistance":	8200,
+				"min-stock":	500,
+				"_sort":	["area"],
+				"category":	"resistor"
+			}
+		}]
 }

@@ -95,15 +95,16 @@ public pcb-module nrf-motion :
 
   ; logo
   inst logo : ocdb/artwork/jitx-logo/logo(5.0)
-  place(logo) at loc(-15.9, -10.0, 0.0) on Top
+  place(logo) at loc(-16.05, -10.45, 0.0) on Top
 
-; compile the design
-set-current-design("nrf-design-final")
-set-paper(ANSI-B)
-setup-board(board-shape)
-setup-export()
+; setup the design
+setup-design(current-dir = "nrf-design-final", shape = board-shape, paper = ANSI-B)
 
+; analyze the design
 var main-module = ocdb/utils/generator-utils/run-final-passes(nrf-motion) ; Analyze design with a pass
+; set new main module post-analysis
 set-main-module(main-module) ; Treat the provided module as a design, and compile it.
+
 view-schematic()
+view-bom(BOM-STD)
 view-board()

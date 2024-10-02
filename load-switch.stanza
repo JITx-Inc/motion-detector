@@ -49,11 +49,7 @@ public pcb-module high-side-mosfet-switch (PFET:InstantiableType) :
 
   ; Connect the pull-up resistor between the power pin and the P-channel MOSFET gate
   ;   This will make sure that the VDDA power domain is OFF by default.
-  ; inst r-strap : create-resistor(res-query resistance = min-max(900.0e3, 1.5e6) tolerance = to-double(5) / 100.0)
-  ; net (r-strap.p[1] vin.V+)
-  ; net (r-strap.p[2] Psw.G)
   insert-resistor(vin.V+ Psw.G resistance = min-max(900.0e3, 1.5e6) tolerance = to-double(5) / 100.0 res-query)
-  ; res-strap(vin.V+, Psw.G, ["resistance" => min-max(900.0e3, 1.5e6), "tolerance" => 0.05])
 
   ; Add a bit of ESD protection to the Source by adding a capacitor.
   ;  In a more industrial application we might add a MOV or TVS here.

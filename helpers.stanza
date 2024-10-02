@@ -21,12 +21,15 @@ defpackage helpers :
 ;===============================================
 ; new component query interface
 ;===============================================
+public var DISTRIBUTORS = ["JLCPCB"]
+public var PART-QUANTITY = 1000
+public var MOQ = 1000
 
-set-global-query-defaults!(min-stock = 1000, quantity-needed = 1000, price = FindMinimum)
+set-global-query-defaults!(min-stock = PART-QUANTITY, quantity-needed = MOQ, price = FindMinimum)
 
 public var OPERATING-TEMPERATURE = min-max(0.0, 50.0)
 ; public val general-query = BaseQuery(sellers! = ["DigiKey" "Future" "Mouser" "Arrow" "Avnet" "Newark"])
-public val general-query = BaseQuery(sellers! = ["JLCPCB"])
+public val general-query = BaseQuery(sellers! = DISTRIBUTORS)
 public val smd-query = add(general-query,
                             mounting = "smd"
                             case = valid-smd-pkgs("0402"),
@@ -40,7 +43,7 @@ public val cap-query = CapacitorQuery(smd-query,
                                       sort! = SortKey(rated-voltage = Increasing)
                                       )
 
-public val xtal-cap-query = CapacitorQuery(smd-query,
+public val c0g-cap-query = CapacitorQuery(smd-query,
                                             type = "ceramic",
                                             temperature-coefficient_code = "C0G",
                                             sort! = SortKey(rated-voltage = Increasing)
@@ -48,6 +51,17 @@ public val xtal-cap-query = CapacitorQuery(smd-query,
 
 public val res-query = ResistorQuery(smd-query)
 
+public val ind-query = InductorQuery(smd-query)
+
+
+; setup-design(current-dir = "nrf-design-final" shape = board-shape paper = ANSI-B)
+
+public defn setup-design (-- current-dir:String = "jitx-design" shape:Shape = Rectangle(30.0, 30.0) paper:Paper = ANSI-A) :
+  set-current-design(current-dir)
+  setup-bill-of-materials(PART-QUANTITY, DISTRIBUTORS)
+  set-paper(paper)
+  setup-board(shape)
+  setup-export()
 
 public defn setup-export () :
   set-use-layout-groups()
@@ -58,7 +72,8 @@ public defn setup-export () :
 ; Actual Export design
 ; ====================
 public defn export-to-cad () :
-  export-cad(["LCSC" => "LCSC"])
+  export-cad(["vendor_part_numbers.lcsc" => "LCSC"])
+  export-cad(["vendor_part_numbers.lcsc" => "LCSC"])
 
 ; ====================
 ; Export design to CAD
@@ -91,7 +106,7 @@ public defn update-design () :
 ; jitx/BOMFieldSubtotal
 ; jitx/BOMFieldPreferred
 
-public defn setup-bill-of-materials (qty:Int, vendors:String) :
+public defn setup-bill-of-materials (qty:Int, vendors:Tuple<String>) :
   set-bom-metrics([
     BOMMetric(BOMMetricLineItems, "Line Items"),
     BOMMetric(BOMMetricComponentCount, "Components"),
@@ -107,9 +122,10 @@ public defn setup-bill-of-materials (qty:Int, vendors:String) :
     BOMColumn(BOMFieldVendor, "Supplier", 10.0)
     BOMColumn(BOMFieldSKU, "SKU", 10.0)
     BOMColumn(BOMFieldDatasheet, "Datasheet", 10.0)
+    BOMColumn(BOMFieldPreferred, "Preferred", 5.0)
   ])
 
-  set-bom-vendors([vendors])
+  set-bom-vendors(vendors)
   set-bom-design-quantity(qty)
 
 public defn bom-view-export () :
@@ -220,16 +236,15 @@ public defn rgb-indicator (brightness:Double, proc:JITXObject, vin:JITXObject):
     net (control-pins rgb.control-pins)
     rgb
 
-
 ; Add load balancing caps to crystal oscillator
 public defn add-xtal-load-caps (xtal:JITXObject, gnd:JITXObject, stray-capacitance:Double) :
   inside pcb-module:
     val c-load = load-capacitance(property(xtal.crystal-resonator))
     val c-bal = closest-std-val(2.0 * (c-load - stray-capacitance), percentage(5))
     ; insert-capacitor(xtal.OSC1, gnd, ["capacitance" => c-bal "temperature-coefficient.code" => "C0G" ])
-    insert-capacitor(xtal.OSC1, gnd, xtal-cap-query capacitance = c-bal)
+    insert-capacitor(xtal.OSC1, gnd, c0g-cap-query capacitance = c-bal)
     ; val c = insert-capacitor(xtal.OSC2, gnd, ["capacitance" => c-bal "temperature-coefficient.code" => "C0G" ])
-    val c = insert-capacitor(xtal.OSC2, gnd, xtal-cap-query capacitance = c-bal)
+    val c = insert-capacitor(xtal.OSC2, gnd, c0g-cap-query capacitance = c-bal)
     c
 ; Default stray capacitance assumed 5pf.
 public defn add-xtal-load-caps (xtal:JITXObject, gnd:JITXObject) :
