@@ -1,6 +1,6 @@
 name = "motion-detector"
 version = "0.1.0"
 [dependencies]
-ocdb = { path = "{JITX_ROOT}/open-components-database" }
+ocdb = { git = "JITx-Inc/open-components-database", version = "3.18.0" }
 jsl = { git = "JITX-Inc/jsl", version = "0.5.0" }
 JITX = { path = "{SLM_ROOT}/JITX" }
