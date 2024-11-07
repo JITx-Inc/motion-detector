@@ -72,7 +72,7 @@ public pcb-module pi-filter (-- spacing:Double = 1.0):
 
   inst C-F : create-capacitor(CapacitorQuery(c0g-cap-query, capacitance = 0.8e-12))
   inst C-R : create-capacitor(CapacitorQuery(c0g-cap-query, capacitance = 0.5e-12))
-  inst L   : create-inductor(InductorQuery(ind-query, inductance = 4.7e-9 self-resonant-frequency = 4.0e9 quality-factor = 8.0))
+  inst L   : create-inductor(InductorQuery(ind-query, inductance = 4.7e-9 self-resonant-frequency = 6.0e9 quality-factor = 8.0))
 
   topo-net(vin => C-F.p[1] => L.p[1])
   pin-model(L.p[1] L.p[2]) = PinModel(typ(0.0), typ(0.0))
@@ -119,7 +119,7 @@ public pcb-module test-RF-conn :
   ; We add a u.FL connector with a separate inductor and capacitor that are
   ;   generally DNP. This will be used for FCC verification.
   inst C-R : create-capacitor(CapacitorQuery(c0g-cap-query, capacitance = 0.5e-12))
-  inst L   : create-inductor(InductorQuery(ind-query, inductance = 4.7e-9 self-resonant-frequency = 4.0e9 quality-factor = 8.0))
+  inst L   : create-inductor(InductorQuery(ind-query, inductance = 4.7e-9 self-resonant-frequency = 6.0e9 quality-factor = 8.0))
 
   inst test-uFL : components/HRS/U-FL-R-SMT-10-/module
 
